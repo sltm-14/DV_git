@@ -10,14 +10,16 @@ module counter
 	output					  o_timeout
 	);
 
+
+	logic                    l_val = '0;
 	logic 					 l_timeout;
 	logic [COUNT_LENGTH-1:0] l_count  = '0;
 
 always@(posedge i_clk, posedge i_rst)begin
 
-	l_count <= (i_rst)? '0 : l_count;
+	l_val <= (i_rst)? '0 : i_val;
 
-	if(l_count < i_val)begin
+	if(l_count < l_val)begin
 		l_count   <= l_count + 1'b1
 		l_timeout <= 1'b0;
 	end
