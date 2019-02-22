@@ -17,7 +17,7 @@ module clk_divider
 )
 (
 	// Input signals
-	input i_reset, 
+	input i_rst, 
 	input i_clk_FPGA,
 	
 	// Output signal
@@ -27,9 +27,9 @@ module clk_divider
 	logic [COUNT_LENGTH-1:0]counter = 0; // Frequency counter
 	localparam CONST    = (FRECUENCY_IN/FRECUENCY_OUT)/2; // Counter limit
 
-	always@(posedge i_clk_FPGA, posedge i_reset) begin
+	always@(posedge i_clk_FPGA, posedge i_rst) begin
 
-		if(i_reset) begin // Reset counter
+		if(i_rst) begin // Reset counter
 			o_clk   <= 0;
 			counter <= 0;
 		end
