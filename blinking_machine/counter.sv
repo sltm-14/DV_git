@@ -7,7 +7,7 @@ module counter
 	input 					  i_rst,
 	input  [COUNT_LENGTH-1:0] i_val,
 
-	output					  o_timeout,
+	output					  o_timeout
 	);
 
 	logic 					 l_timeout;

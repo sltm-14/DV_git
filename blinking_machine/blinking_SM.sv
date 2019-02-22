@@ -17,7 +17,7 @@ logic l_out;
      state <= (i_rst)? IDLE : next_state;
  end
 
- always(*)begin
+ always@(*)begin
  	case (state)
  		IDLE: begin
  			next_state = (i_start)? ON_1 : next_state;
