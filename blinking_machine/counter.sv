@@ -11,20 +11,20 @@ module counter
 	);
 
 	logic 					 l_timeout;
-	logic [COUNT_LENGTH-1:0] l_count;
+	logic [COUNT_LENGTH-1:0] l_count  = '0;
 
 always@(posedge i_clk, posedge i_rst)begin
 
 	l_count <= (i_rst)? '0 : l_count;
 
-	if(l_count == '0)begin
-		l_count   = i_val;
-		l_timeout = 1'b1;
+	if(l_count < i_val)begin
+		l_count   <= l_count + 1'b1
+		l_timeout <= 1'b0;
 	end
 
 	else begin
-		l_count   = l_count - 1'b1;
-		l_timeout = 1'b0;
+		l_count   <= '0;
+		l_timeout <= 1'b1;
 	end 
 
 end
