@@ -1,4 +1,4 @@
-module blinking_machine(
+module TOP_blinking_machine(
 	input  i_clk,
 	input  i_rst,
 	input  i_start,
