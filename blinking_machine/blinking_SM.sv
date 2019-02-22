@@ -1,6 +1,6 @@
 module blinking_SM(
 	input        i_clk,
-	input        i_rst
+	input        i_rst,
 	input        i_start,
 	input        i_ena,
 
