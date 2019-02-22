@@ -1,6 +1,8 @@
-module counter #( 
+module counter 
+#( 
 	parameter COUNT_LENGTH  =  $clog2(6) 
-	)(
+)
+(
 	input 					  i_clk,
 	input 					  i_rst,
 	input  [COUNT_LENGTH-1:0] i_val,
