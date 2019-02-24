@@ -8,7 +8,7 @@ module blinking_SM(
 	output [2:0] o_count_ena
 	);
 
-enum logic [2:0] {IDLE, ON_1, OFF_1, ON_2, OFF_2, ON_3, OFF_3} state, next_state; 
+enum logic [2:0] {IDLE, ON_1, OFF_1, ON_2, OFF_2, ON_3, OFF_3} state, next_state = IDLE; 
 
 logic       l_out;
 logic [2:0] l_count_ena;

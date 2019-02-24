@@ -21,8 +21,7 @@ module TB_blinking_machine;
 
 	    TB_start = 1;    #100;
 	    TB_start = 0;    #1000;
-	    TB_start = 1;    #100;
-	    TB_start = 0;
+
 	end
 	
 		TOP_blinking_machine TOP(
