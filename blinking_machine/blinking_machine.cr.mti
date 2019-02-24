@@ -1,0 +1,37 @@
+{C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv}
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module TOP_blinking_machine
+-- Compiling module TB_blinking_machine
+
+Top level modules:
+	TB_blinking_machine
+
+} {} {}} {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv}
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TOP_blinking_machine.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TOP_blinking_machine.sv}
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module TOP_blinking_machine
+
+Top level modules:
+	TOP_blinking_machine
+
+} {} {}} {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/clk _divider.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/clk _divider.sv}
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module clk_divider
+
+Top level modules:
+	clk_divider
+
+} {} {}} {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/blinking_SM.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/blinking_SM.sv}
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module blinking_SM
+
+Top level modules:
+	blinking_SM
+
+} {} {}}

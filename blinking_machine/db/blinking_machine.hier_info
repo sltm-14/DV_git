@@ -1,0 +1,120 @@
+|TB_blinking_machine
+
+
+|TB_blinking_machine|TOP_blinking_machine:TOP
+i_clk => i_clk.IN1
+i_rst => i_rst.IN3
+i_start => i_start.IN1
+o_out <= blinking_SM:SM.o_out
+o_clk_1hz <= w_clk_1hz.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TB_blinking_machine|TOP_blinking_machine:TOP|clk_divider:CD
+i_rst => counter[0].ACLR
+i_rst => counter[1].ACLR
+i_rst => counter[2].ACLR
+i_rst => counter[3].ACLR
+i_rst => counter[4].ACLR
+i_rst => counter[5].ACLR
+i_rst => counter[6].ACLR
+i_rst => counter[7].ACLR
+i_rst => counter[8].ACLR
+i_rst => counter[9].ACLR
+i_rst => counter[10].ACLR
+i_rst => counter[11].ACLR
+i_rst => counter[12].ACLR
+i_rst => counter[13].ACLR
+i_rst => counter[14].ACLR
+i_rst => counter[15].ACLR
+i_rst => counter[16].ACLR
+i_rst => counter[17].ACLR
+i_rst => counter[18].ACLR
+i_rst => counter[19].ACLR
+i_rst => counter[20].ACLR
+i_rst => counter[21].ACLR
+i_rst => counter[22].ACLR
+i_rst => counter[23].ACLR
+i_rst => counter[24].ACLR
+i_rst => counter[25].ACLR
+i_rst => l_clk.ACLR
+i_clk_FPGA => counter[0].CLK
+i_clk_FPGA => counter[1].CLK
+i_clk_FPGA => counter[2].CLK
+i_clk_FPGA => counter[3].CLK
+i_clk_FPGA => counter[4].CLK
+i_clk_FPGA => counter[5].CLK
+i_clk_FPGA => counter[6].CLK
+i_clk_FPGA => counter[7].CLK
+i_clk_FPGA => counter[8].CLK
+i_clk_FPGA => counter[9].CLK
+i_clk_FPGA => counter[10].CLK
+i_clk_FPGA => counter[11].CLK
+i_clk_FPGA => counter[12].CLK
+i_clk_FPGA => counter[13].CLK
+i_clk_FPGA => counter[14].CLK
+i_clk_FPGA => counter[15].CLK
+i_clk_FPGA => counter[16].CLK
+i_clk_FPGA => counter[17].CLK
+i_clk_FPGA => counter[18].CLK
+i_clk_FPGA => counter[19].CLK
+i_clk_FPGA => counter[20].CLK
+i_clk_FPGA => counter[21].CLK
+i_clk_FPGA => counter[22].CLK
+i_clk_FPGA => counter[23].CLK
+i_clk_FPGA => counter[24].CLK
+i_clk_FPGA => counter[25].CLK
+i_clk_FPGA => l_clk.CLK
+o_clk <= l_clk.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TB_blinking_machine|TOP_blinking_machine:TOP|blinking_SM:SM
+i_clk => state~6.CLK
+i_clk => state~0.CLK
+i_clk => state~1.CLK
+i_clk => state~2.CLK
+i_clk => state~3.CLK
+i_clk => state~4.CLK
+i_clk => state~5.CLK
+i_clk => next_state~8.DATAIN
+i_rst => state~6.PRESET
+i_rst => state~0.ACLR
+i_rst => state~1.ACLR
+i_rst => state~2.ACLR
+i_rst => state~3.ACLR
+i_rst => state~4.ACLR
+i_rst => state~5.ACLR
+i_start => next_state.OUTPUTSELECT
+i_start => next_state.OUTPUTSELECT
+i_start => next_state.OUTPUTSELECT
+i_start => next_state.OUTPUTSELECT
+i_start => next_state.OUTPUTSELECT
+i_start => next_state.OUTPUTSELECT
+i_start => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+i_ena => next_state.OUTPUTSELECT
+o_out <= always2.DB_MAX_OUTPUT_PORT_TYPE
+o_count_ena[0] <= <GND>
+o_count_ena[1] <= always2.DB_MAX_OUTPUT_PORT_TYPE
+o_count_ena[2] <= l_count_ena.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TB_blinking_machine|TOP_blinking_machine:TOP|counter:COUNT
+i_clk => l_timeout.CLK
+i_clk => l_counter[0].CLK
+i_clk => l_counter[1].CLK
+i_clk => l_counter[2].CLK
+i_rst => l_counter[0].ACLR
+i_rst => l_counter[1].ACLR
+i_rst => l_counter[2].ACLR
+i_rst => l_timeout.ENA
+i_val[0] => Equal0.IN2
+i_val[1] => Equal0.IN1
+i_val[2] => Equal0.IN0
+o_timeout <= l_timeout.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_out",
+					"strict" : false
+				},
+				{
+					"name" : "o_clk_1hz",
+					"strict" : false
+				},
+				{
+					"name" : "i_rst",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_start",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

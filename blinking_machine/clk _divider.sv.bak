@@ -11,7 +11,7 @@
 
 module clk_divider
 #(
-	parameter FRECUENCY_IN  = 10,
+	parameter FRECUENCY_IN  = 50_000_000,
 	parameter FRECUENCY_OUT = 1,
 
 	parameter COUNT_LENGTH  = $clog2(FRECUENCY_IN)

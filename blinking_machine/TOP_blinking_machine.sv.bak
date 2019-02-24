@@ -1,4 +1,3 @@
-
 module TOP_blinking_machine(
 	input  i_clk,
 	input  i_rst,
@@ -34,7 +33,7 @@ counter COUNT(
 	.i_rst(i_rst),
 	.i_val(w_count_ena),
 
-	.o_timeout(w_timeout)
+	.o_timeout(w_timeout),
 );
 
 assign o_clk_1hz = w_clk_1hz;
