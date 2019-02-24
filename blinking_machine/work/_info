@@ -57,38 +57,38 @@ R5
 R6
 vcounter
 R0
-!s110 1551035781
+!s110 1551037987
 !i10b 1
-!s100 2IcPo7m[:PETY?5KzniCT1
-Igdl8Y:`H[2[nYzj:YQI5m0
+!s100 A=l^J9Ub3XeeXh0lz=AcL0
+IogG3idKVS?>3ElM3=Nf3C1
 R2
 !s105 counter_sv_unit
 S1
 R3
-w1551035774
-8C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv
-FC:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv
+w1551037980
+8C:\Users\Tomoyo\Documents\ITESO\2019 -A Primavera\DYV\DV_git\blinking_machine\counter.sv
+FC:\Users\Tomoyo\Documents\ITESO\2019 -A Primavera\DYV\DV_git\blinking_machine\counter.sv
 L0 1
 R4
 r1
 !s85 0
 31
-!s108 1551035781.000000
-!s107 C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv|
+!s108 1551037987.000000
+!s107 C:\Users\Tomoyo\Documents\ITESO\2019 -A Primavera\DYV\DV_git\blinking_machine\counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Tomoyo\Documents\ITESO\2019 -A Primavera\DYV\DV_git\blinking_machine\counter.sv|
 !i113 1
 R6
 vTB_blinking_machine
 R0
-R1
+Z7 !s110 1551037921
 !i10b 1
-!s100 70Am8EMNOiFCQGl^K8AnG1
-Ih@<S4MdDk@mGf=?R2]W2d1
+!s100 d>fE[AmLfOTROaQeJk>9K1
+IQ_Q9ihdh5BY;j`HUK_4Io1
 R2
-Z7 !s105 TB_blinking_machine_sv_unit
+Z8 !s105 TB_blinking_machine_sv_unit
 S1
 R3
-w1551035607
+w1551037524
 8C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv
 L0 7
@@ -96,20 +96,20 @@ R4
 r1
 !s85 0
 31
-R5
-Z8 !s107 TOP_blinking_machine.sv|C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv|
-Z9 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv|
+Z9 !s108 1551037921.000000
+Z10 !s107 TOP_blinking_machine.sv|C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv|
 !i113 1
 R6
 n@t@b_blinking_machine
 vTOP_blinking_machine
 R0
-R1
+R7
 !i10b 1
 !s100 DOK@aEO>7B;]NOPOdY4gF2
 I]R=c6YBYRR_NB>4<M6zF_1
 R2
-R7
+R8
 S1
 R3
 w1551032441
@@ -120,9 +120,9 @@ R4
 r1
 !s85 0
 31
-R5
-R8
 R9
+R10
+R11
 !i113 1
 R6
 n@t@o@p_blinking_machine

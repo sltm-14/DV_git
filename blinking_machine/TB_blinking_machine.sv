@@ -17,7 +17,7 @@ module TB_blinking_machine;
 
 	initial begin
 	    TB_rst   = 1;    #1000;
-	    TB_rst   = 0;    #10000;
+	    TB_rst   = 0;    #1000;
 
 	    TB_start = 1;    #100;
 	    TB_start = 0;    #1000;
