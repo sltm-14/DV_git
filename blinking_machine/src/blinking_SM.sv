@@ -1,3 +1,23 @@
+/*******************************************************************
+* Nombre del modulo:
+*  blinking_SM.sv
+* Descripcion:
+*  Este modulo representa a la maquina de estados, la cual cambia el
+*  estado de la salida
+* Entradas:
+*  Clock, reset, start; senal que viene de un switch, y enable, el
+*  cual es una senal que viene desde el contador
+* Salidas: 
+*  La cantidad de conteos y la senal en On/Off, ademas de una bandera
+*  la cual avisa si al contador cuanto contar
+* Version: 
+*  1.0
+* Autores:
+*  Carem Bernabe
+*  Andres Hernandez
+* Fecha: 
+*  24/02/2019
+********************************************************************/
 module blinking_SM
 (
 	input        i_clk,
@@ -10,12 +30,14 @@ module blinking_SM
 	output [2:0] o_count_ena
 	);
 
+//Etiquetas de los estados
 enum logic [2:0] {IDLE, ON_1, OFF_1, ON_2, OFF_2, ON_3, OFF_3} state; 
 
 logic       l_out;
 logic			l_flag_counter;
 logic [2:0] l_count_ena;
 
+//Maquina de estados
  always_ff@(posedge i_clk, posedge i_rst)begin
 
 		if(i_rst)
@@ -70,6 +92,7 @@ logic [2:0] l_count_ena;
 		endcase // state		 
  end
 
+//Asignacion de los valores correspondientes de salida
  always_comb begin
 	if(state == ON_1 || state == ON_2 || state == ON_3)begin
 		l_flag_counter = 1'b1;
