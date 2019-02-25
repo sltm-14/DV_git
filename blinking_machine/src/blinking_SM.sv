@@ -41,47 +41,47 @@ logic [2:0] l_count_ena;
  always_ff@(posedge i_clk, posedge i_rst)begin
 
 		if(i_rst)
-			state <= IDLE;
+			state <= IDLE;//Inicia en el estado IDLE
 		else
 	 
 		case (state)
-			IDLE:
+			IDLE: // Mientras no se active Start se queda en IDLE
 				if(i_start == 1'b1)
 					state <= ON_1;
-				else
+				else 
 					state <= IDLE;
 
-			ON_1:
+			ON_1: //Mientras no se active Enable se queda en ese estado
 				if(i_enable == 1'b0)
 					state <= ON_1;
 				else
 					state <= OFF_1;
 				
-			OFF_1:
+			OFF_1: //Mientras no se active Enable se queda en ese estado
 				if(i_enable == 1'b0)
 					state <= OFF_1;
 				else
 					state <= ON_2;
 			
-			ON_2:
+			ON_2:  //Mientras no se active Enable se queda en ese estado
 				if(i_enable == 1'b0)
 					state <= ON_2;
 				else
 					state <= OFF_2;
 				
-			OFF_2:
+			OFF_2:  //Mientras no se active Enable se queda en ese estado
 				if(i_enable == 1'b0)
 					state <= OFF_2;
 				else
 					state <= ON_3;
 					
-			ON_3:
+			ON_3:  //Mientras no se active Enable se queda en ese estado
 				if(i_enable == 1'b0)
 					state <= ON_3;
 				else
 					state <= OFF_3;
 				
-			OFF_3:
+			OFF_3:  //Mientras no se active Enable se queda en ese estado
 				if(i_enable == 1'b0)
 					state <= OFF_3;
 				else
@@ -95,19 +95,19 @@ logic [2:0] l_count_ena;
 //Asignacion de los valores correspondientes de salida
  always_comb begin
 	if(state == ON_1 || state == ON_2 || state == ON_3)begin
-		l_flag_counter = 1'b1;
-		l_out       = 1'b1;
-		l_count_ena = 3'b110;
+		l_flag_counter = 1'b1; //Activa la bandera para conteo
+		l_out       = 1'b1; //Activa la salida en alto para el LED
+		l_count_ena = 3'b110; //Asigna el conteo a realizar
 	end
 	else if(state == OFF_1 || state == OFF_2 || state == OFF_3)begin
-		l_flag_counter = 1'b1;
-		l_out       = 1'b0;
-		l_count_ena = 3'b100;
+		l_flag_counter = 1'b1; //Activa la bandera para conteo
+		l_out       = 1'b0; //Desactiva la salida en bajo para el LED
+		l_count_ena = 3'b100; // Asigna el conteo a realizar
 	end
 	else	begin
-		l_flag_counter = 1'b0;
-		l_out       = 1'b0;
-		l_count_ena = 3'b000;
+		l_flag_counter = 1'b0; //Desactiva la bandera de conteo
+		l_out       = 1'b0; //Desactiva la salida en el LED
+		l_count_ena = 3'b000; //No asigna valor para el conteo
 	end
  end
  
