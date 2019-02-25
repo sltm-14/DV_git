@@ -1,5 +1,5 @@
 Analysis & Synthesis report for blinking_machine
-Sun Feb 24 13:33:10 2019
+Sun Feb 24 19:49:21 2019
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,7 +10,18 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |TOP_blinking_machine|blinking_SM:SM|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: clk_divider:CD
+ 12. Parameter Settings for User Entity Instance: counter:COUNT
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,20 +48,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Feb 24 13:33:10 2019           ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 24 19:49:21 2019       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; blinking_machine                            ;
 ; Top-level Entity Name              ; TOP_blinking_machine                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 65                                          ;
+;     Total combinational functions  ; 60                                          ;
+;     Dedicated logic registers      ; 37                                          ;
+; Total registers                    ; 37                                          ;
+; Total pins                         ; 5                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -152,31 +163,204 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; src/TOP_blinking_machine.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/TOP_blinking_machine.sv ;         ;
+; src/counter.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/counter.sv              ;         ;
+; src/clk _divider.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/clk _divider.sv         ;         ;
+; src/blinking_SM.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/blinking_SM.sv          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 65          ;
+;                                             ;             ;
+; Total combinational functions               ; 60          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 13          ;
+;     -- 3 input functions                    ; 6           ;
+;     -- <=2 input functions                  ; 41          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 35          ;
+;     -- arithmetic mode                      ; 25          ;
+;                                             ;             ;
+; Total registers                             ; 37          ;
+;     -- Dedicated logic registers            ; 37          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 5           ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; i_rst~input ;
+; Maximum fan-out                             ; 37          ;
+; Total fan-out                               ; 277         ;
+; Average fan-out                             ; 2.59        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |TOP_blinking_machine      ; 60 (0)            ; 37 (0)       ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |TOP_blinking_machine                ; work         ;
+;    |blinking_SM:SM|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_blinking_machine|blinking_SM:SM ; work         ;
+;    |clk_divider:CD|        ; 48 (48)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_blinking_machine|clk_divider:CD ; work         ;
+;    |counter:COUNT|         ; 5 (5)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_blinking_machine|counter:COUNT  ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |TOP_blinking_machine|blinking_SM:SM|state                                                ;
++-------------+-------------+------------+-------------+------------+-------------+------------+------------+
+; Name        ; state.OFF_3 ; state.ON_3 ; state.OFF_2 ; state.ON_2 ; state.OFF_1 ; state.ON_1 ; state.IDLE ;
++-------------+-------------+------------+-------------+------------+-------------+------------+------------+
+; state.IDLE  ; 0           ; 0          ; 0           ; 0          ; 0           ; 0          ; 0          ;
+; state.ON_1  ; 0           ; 0          ; 0           ; 0          ; 0           ; 1          ; 1          ;
+; state.OFF_1 ; 0           ; 0          ; 0           ; 0          ; 1           ; 0          ; 1          ;
+; state.ON_2  ; 0           ; 0          ; 0           ; 1          ; 0           ; 0          ; 1          ;
+; state.OFF_2 ; 0           ; 0          ; 1           ; 0          ; 0           ; 0          ; 1          ;
+; state.ON_3  ; 0           ; 1          ; 0           ; 0          ; 0           ; 0          ; 1          ;
+; state.OFF_3 ; 1           ; 0          ; 0           ; 0          ; 0           ; 0          ; 1          ;
++-------------+-------------+------------+-------------+------------+-------------+------------+------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; blinking_SM:SM|state~4                ; Lost fanout        ;
+; blinking_SM:SM|state~5                ; Lost fanout        ;
+; blinking_SM:SM|state~6                ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 37    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_divider:CD ;
++----------------+----------+---------------------------------+
+; Parameter Name ; Value    ; Type                            ;
++----------------+----------+---------------------------------+
+; FRECUENCY_IN   ; 50000000 ; Signed Integer                  ;
+; FRECUENCY_OUT  ; 1        ; Signed Integer                  ;
+; COUNT_LENGTH   ; 26       ; Signed Integer                  ;
++----------------+----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:COUNT ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; COUNT_LENGTH   ; 3     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 37                          ;
+;     CLR               ; 29                          ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 60                          ;
+;     arith             ; 25                          ;
+;         2 data inputs ; 25                          ;
+;     normal            ; 35                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 13                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 3.50                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sun Feb 24 13:32:57 2019
+    Info: Processing started: Sun Feb 24 19:49:06 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off blinking_machine -c blinking_machine
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file top_blinking_machine.sv
-    Info (12023): Found entity 1: TOP_blinking_machine File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TOP_blinking_machine.sv Line: 2
-Error (10228): Verilog HDL error at TOP_blinking_machine.sv(2): module "TOP_blinking_machine" cannot be declared more than once File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TOP_blinking_machine.sv Line: 2
-Info (10499): HDL info at TOP_blinking_machine.sv(2): see declaration for object "TOP_blinking_machine" File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TOP_blinking_machine.sv Line: 2
-Error (10112): Ignored design unit "TB_blinking_machine" at TB_blinking_machine.sv(7) due to previous errors File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/TB_blinking_machine.sv Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file tb_blinking_machine.sv
-Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
-    Info (12023): Found entity 1: counter File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/counter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file clk _divider.sv
-    Info (12023): Found entity 1: clk_divider File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/clk _divider.sv Line: 12
-Info (12021): Found 1 design units, including 1 entities, in source file blinking_sm.sv
-    Info (12023): Found entity 1: blinking_SM File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/blinking_SM.sv Line: 1
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4914 megabytes
-    Error: Processing ended: Sun Feb 24 13:33:10 2019
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:33
+Warning (12019): Can't analyze file -- file TOP_blinking_machine.sv is missing
+Warning (12019): Can't analyze file -- file counter.sv is missing
+Warning (12019): Can't analyze file -- file clk _divider.sv is missing
+Warning (12019): Can't analyze file -- file blinking_SM.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file src/top_blinking_machine.sv
+    Info (12023): Found entity 1: TOP_blinking_machine File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/TOP_blinking_machine.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file src/counter.sv
+    Info (12023): Found entity 1: counter File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/clk _divider.sv
+    Info (12023): Found entity 1: clk_divider File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/clk _divider.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file src/blinking_sm.sv
+    Info (12023): Found entity 1: blinking_SM File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/blinking_SM.sv Line: 1
+Info (12127): Elaborating entity "TOP_blinking_machine" for the top level hierarchy
+Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:CD" File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/TOP_blinking_machine.sv Line: 22
+Info (12128): Elaborating entity "blinking_SM" for hierarchy "blinking_SM:SM" File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/TOP_blinking_machine.sv Line: 34
+Info (12128): Elaborating entity "counter" for hierarchy "counter:COUNT" File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/TOP_blinking_machine.sv Line: 44
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 65 logic cells
+Info (144001): Generated suppressed messages file C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/output_files/blinking_machine.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4941 megabytes
+    Info: Processing ended: Sun Feb 24 19:49:21 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:36
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/output_files/blinking_machine.map.smsg.
 
 

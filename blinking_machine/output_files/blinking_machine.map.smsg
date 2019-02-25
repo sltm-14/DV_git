@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at blinking_SM.sv(20): always construct contains both blocking and non-blocking assignments File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/blinking_SM.sv Line: 20
+Warning (10268): Verilog HDL information at blinking_SM.sv(19): always construct contains both blocking and non-blocking assignments File: C:/Users/Tomoyo/Documents/ITESO/2019 -A Primavera/DYV/DV_git/blinking_machine/src/blinking_SM.sv Line: 19
