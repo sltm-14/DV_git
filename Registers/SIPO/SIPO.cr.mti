@@ -1,0 +1,15 @@
+C:/Users/c18560/Documents/Carem/DYV/Pruebas/registers/SIPO/sipo.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/Pruebas/registers/SIPO/sipo.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sipo
+
+Top level modules:
+	sipo
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/Pruebas/registers/SIPO/tb_sipo.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/Pruebas/registers/SIPO/tb_sipo.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_sipo
+
+Top level modules:
+	tb_sipo
+
+} {} {}}
