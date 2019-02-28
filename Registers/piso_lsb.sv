@@ -1,4 +1,4 @@
-module piso_msb #(
+module piso_lsb #(
 parameter DW = 4
 ) (
 input               clk,    // Clock

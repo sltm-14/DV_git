@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module tb_sipo;
+module tb_sipo_right;
 
 logic           clk;
 logic           rst;
