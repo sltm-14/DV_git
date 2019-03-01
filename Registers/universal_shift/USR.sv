@@ -1,13 +1,13 @@
 module usr #(
-	parameter DW  = 4
+	parameter DW  = 8
 	)(
 	input 			clock,
 	input 			reset,
 	input           enb,
-	input [1:0] 	selector,
+	input  [1:0] 	selector,
 	input 			i_serialLeft,
 	input 			i_serialRight,
-	input [DW-1:0]  i_parallel,
+	input  [DW-1:0] i_parallel,
 	
 	output [DW-1:0] out
 );
@@ -24,7 +24,7 @@ module usr #(
 				.clk(clock),
 				.rst(reset),
 				.i_slc(selector),
-				.i_data({i_parallel[i - 1'b1],w_data[i-1'b1],w_data[i+1'b1],w_data[i]}),
+				.i_data({i_parallel[i - 1'b1],w_data[i+1'b1],w_data[i-1'b1],w_data[i]}),
 
 				.o_out(w_mux_ff[i - 1'b1])
 			);
@@ -33,12 +33,12 @@ module usr #(
 				.clk(clock       ),
 				.rst(reset       ),
 				.enb(enb         ),
-				.inp(w_mux_ff[i] ),
+				.inp(w_mux_ff[i - 1'b1] ),
 				.out(w_data[i]   )
 			);
 		end: generate_USR
 	endgenerate
 
-	assign out = w_data[DW - 1'b1:1];
+	assign out = w_data[DW:1];
 	
 endmodule
