@@ -1,9 +1,7 @@
-module multiplexer
- #(
-	PARAMETER SLC = 2,
-	PARAMETER DW  = 4
-	)
-	(
+module multiplexer #(
+	parameter SLC = 2,
+	parameter DW  = 4
+	)(
 	input 				clk,
 	input 				rst,
 	input  [SLC-1:0]	i_slc,
