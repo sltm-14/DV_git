@@ -1,20 +1,14 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -divider {CTRL INPUTS}
-add wave -noupdate /tb_usr/USR/clock
-add wave -noupdate /tb_usr/USR/reset
-add wave -noupdate /tb_usr/USR/enb
-add wave -noupdate -divider INPUTS
-add wave -noupdate -radix unsigned /tb_usr/selector
-add wave -noupdate /tb_usr/i_serialLeft
-add wave -noupdate /tb_usr/i_serialRight
-add wave -noupdate /tb_usr/i_parallel
-add wave -noupdate -divider OUTPUTS
-add wave -noupdate -expand /tb_usr/out
+add wave -noupdate /tb_sipo_right/clk
+add wave -noupdate /tb_sipo_right/rst
+add wave -noupdate /tb_sipo_right/enb
+add wave -noupdate /tb_sipo_right/inp
+add wave -noupdate /tb_sipo_right/out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+WaveRestoreCursors {{Cursor 1} {3 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 104
+configure wave -namecolwidth 91
 configure wave -valuecolwidth 40
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -28,4 +22,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {110 ps}
+WaveRestoreZoom {0 ps} {42 ps}

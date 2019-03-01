@@ -4,7 +4,7 @@ add wave -noupdate -divider {CTRL INPUTS}
 add wave -noupdate /tb_usr/USR/clock
 add wave -noupdate /tb_usr/USR/reset
 add wave -noupdate /tb_usr/USR/enb
-add wave -noupdate -divider INPUTS
+add wave -noupdate -divider {DATA INPUTS}
 add wave -noupdate -radix unsigned /tb_usr/selector
 add wave -noupdate /tb_usr/i_serialLeft
 add wave -noupdate /tb_usr/i_serialRight
@@ -12,7 +12,7 @@ add wave -noupdate /tb_usr/i_parallel
 add wave -noupdate -divider OUTPUTS
 add wave -noupdate -expand /tb_usr/out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+WaveRestoreCursors {{Cursor 1} {39 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 104
 configure wave -valuecolwidth 40

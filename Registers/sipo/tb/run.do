@@ -3,6 +3,6 @@ vlib work
 vlog -f files.f
 onbreak {resume}
 set NoQuitOnFinish 1
-vsim -voptargs=+acc work.tb_adder
-do wave_review.do
-run 1300ms
+vsim -voptargs=+acc work.tb_sipo_right
+do wave.do
+run 40ps

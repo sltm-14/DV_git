@@ -1,7 +1,2 @@
-../src/
-../src/
-../src/
-../src/
-../src/
-tb_adder.sv
-
+../src/piso_lsb.sv
+tb_piso_lsb.sv

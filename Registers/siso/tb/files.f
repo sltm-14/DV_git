@@ -1,7 +1,2 @@
-../src/
-../src/
-../src/
-../src/
-../src/
-tb_adder.sv
-
+../src/siso_right.sv
+tb_siso_righ.sv

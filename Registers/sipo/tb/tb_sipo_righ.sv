@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+
 module tb_sipo_right;
 
 logic           clk;
@@ -8,7 +8,7 @@ logic           inp;
 logic  [3:0]    out;
 
 
-sipo    uut(
+sipo_right    uut(
 .clk    (clk    ),
 .rst    (rst    ),
 .enb    (enb    ),

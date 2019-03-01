@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+
 module tb_siso_right;
 
 logic           clk;
@@ -8,7 +8,7 @@ logic           inp;
 logic           out;
 
 
-siso_left uut(
+siso_right uut(
 .clk    (clk    ),
 .rst    (rst    ),
 .enb    (enb    ),
