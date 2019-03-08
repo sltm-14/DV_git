@@ -1,39 +1,41 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /tb_ms/TOP/SM/i_clk
-add wave -noupdate /tb_ms/TOP/SM/i_rst
-add wave -noupdate /tb_ms/TOP/SM/i_start
-add wave -noupdate -radix unsigned /tb_ms/TOP/i_multd_val
-add wave -noupdate -radix unsigned /tb_ms/TOP/i_multr_val
+add wave -noupdate -divider {INPUT CTRL}
+add wave -noupdate -group {Input Ctrl} /tb_ms/TOP/SM/i_clk
+add wave -noupdate -group {Input Ctrl} /tb_ms/TOP/SM/i_rst
+add wave -noupdate -group {Input Ctrl} /tb_ms/TOP/SM/i_start
+add wave -noupdate -divider {INPUT DATA}
+add wave -noupdate -radix unsigned /tb_ms/TOP/i_mltnd_val
+add wave -noupdate -radix unsigned /tb_ms/TOP/i_mlter_val
 add wave -noupdate -divider CTRL
-add wave -noupdate /tb_ms/TOP/SM/i_lsb
-add wave -noupdate -radix unsigned /tb_ms/TOP/SM/r_count
-add wave -noupdate /tb_ms/TOP/SM/state
-add wave -noupdate /tb_ms/TOP/SM/o_load
-add wave -noupdate /tb_ms/TOP/SM/o_add
-add wave -noupdate /tb_ms/TOP/SM/o_shift
-add wave -noupdate /tb_ms/TOP/SM/o_stop
-add wave -noupdate /tb_ms/TOP/SM/state
-add wave -noupdate -divider MLTD
-add wave -noupdate /tb_ms/TOP/MULTIPLICAND/i_load
-add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLICAND/i_data
-add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLICAND/o_out
-add wave -noupdate -divider ADD
-add wave -noupdate -radix unsigned /tb_ms/TOP/R_ADD/i_valA
-add wave -noupdate -radix unsigned /tb_ms/TOP/R_ADD/i_valB
-add wave -noupdate -radix unsigned /tb_ms/TOP/R_ADD/o_sum
-add wave -noupdate /tb_ms/TOP/R_ADD/o_carry
+add wave -noupdate -expand -group Ctrl /tb_ms/TOP/SM/i_start
+add wave -noupdate -expand -group Ctrl /tb_ms/TOP/SM/i_lsb
+add wave -noupdate -expand -group Ctrl -radix unsigned /tb_ms/TOP/SM/r_count
+add wave -noupdate -expand -group Ctrl /tb_ms/TOP/SM/state
+add wave -noupdate -expand -group Ctrl /tb_ms/TOP/SM/o_add
+add wave -noupdate -expand -group Ctrl /tb_ms/TOP/SM/o_stop
 add wave -noupdate -divider MLTR
-add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLIER/i_val
 add wave -noupdate /tb_ms/TOP/MULTIPLIER/i_load
-add wave -noupdate /tb_ms/TOP/MULTIPLIER/i_shift
-add wave -noupdate /tb_ms/TOP/MULTIPLIER/i_add
-add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLIER/i_sum
+add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLIER/i_data
+add wave -noupdate -radix unsigned -childformat {{{/tb_ms/TOP/MULTIPLIER/o_data[15]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[14]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[13]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[12]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[11]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[10]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[9]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[8]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[7]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[6]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[5]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[4]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[3]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[2]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[1]} -radix unsigned} {{/tb_ms/TOP/MULTIPLIER/o_data[0]} -radix unsigned}} -subitemconfig {{/tb_ms/TOP/MULTIPLIER/o_data[15]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[14]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[13]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[12]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[11]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[10]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[9]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[8]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[7]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[6]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[5]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[4]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[3]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[2]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[1]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLIER/o_data[0]} {-height 15 -radix unsigned}} /tb_ms/TOP/MULTIPLIER/o_data
 add wave -noupdate /tb_ms/TOP/MULTIPLIER/o_lsb
-add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLIER/o_rc
-add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLIER/o_rb
+add wave -noupdate -divider MLTD
+add wave -noupdate /tb_ms/TOP/MULTIPLICAND/i_clk
+add wave -noupdate /tb_ms/TOP/MULTIPLICAND/i_rst
+add wave -noupdate /tb_ms/TOP/MULTIPLICAND/i_load
+add wave -noupdate -radix unsigned -childformat {{{/tb_ms/TOP/MULTIPLICAND/i_data[7]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[6]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[5]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[4]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[3]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[2]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[1]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/i_data[0]} -radix unsigned}} -subitemconfig {{/tb_ms/TOP/MULTIPLICAND/i_data[7]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[6]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[5]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[4]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[3]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[2]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[1]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/i_data[0]} {-height 15 -radix unsigned}} /tb_ms/TOP/MULTIPLICAND/i_data
+add wave -noupdate -radix unsigned -childformat {{{/tb_ms/TOP/MULTIPLICAND/o_data[15]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[14]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[13]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[12]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[11]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[10]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[9]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[8]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[7]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[6]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[5]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[4]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[3]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[2]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[1]} -radix unsigned} {{/tb_ms/TOP/MULTIPLICAND/o_data[0]} -radix unsigned}} -subitemconfig {{/tb_ms/TOP/MULTIPLICAND/o_data[15]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[14]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[13]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[12]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[11]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[10]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[9]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[8]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[7]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[6]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[5]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[4]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[3]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[2]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[1]} {-height 15 -radix unsigned} {/tb_ms/TOP/MULTIPLICAND/o_data[0]} {-height 15 -radix unsigned}} /tb_ms/TOP/MULTIPLICAND/o_data
+add wave -noupdate -radix unsigned /tb_ms/TOP/MULTIPLICAND/r_mltnd
+add wave -noupdate -divider ADD
+add wave -noupdate /tb_ms/TOP/ADD/i_ena
+add wave -noupdate /tb_ms/TOP/ADD/i_clean
+add wave -noupdate -radix unsigned /tb_ms/TOP/ADD/i_valB
+add wave -noupdate -radix unsigned /tb_ms/TOP/ADD/o_sum
+add wave -noupdate -divider OUTPUT
+add wave -noupdate -radix unsigned /tb_ms/TOP/o_product
+add wave -noupdate /tb_ms/TOP/o_stop
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {16 ps} 0}
+WaveRestoreCursors {{Cursor 1} {10 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100

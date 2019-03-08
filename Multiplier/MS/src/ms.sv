@@ -1,66 +1,63 @@
 module ms#(
-	parameter DW = 8 
+	parameter DW = 8,
+	parameter D2W = DW*2
 	)(
 	input 			i_clk,
 	input 			i_rst,
 	input 			i_start,
-	input  [DW-1:0] i_multd_val,
-	input  [DW-1:0] i_multr_val,
+	input  [DW-1:0] i_mltnd_val,
+	input  [DW-1:0] i_mlter_val,
 
-	output 	[16:0] o_rc,
-	output 			o_stop
+	output 	[D2W:0] o_product,
+	output 		   o_stop
 	);
 
 	wire 		   w_load;
 	wire		   w_add;
-	wire		   w_shift;
 	wire  		   w_lsb;
-	wire           w_carry;
-	wire  [DW-1:0] w_multd_ripple_valA;
-	wire  [DW-1:0] w_multr_ripple_valB;
-	wire  [DW-1:0] w_sum;
+	wire  		   w_clean;
+	wire  [D2W-1:0] w_mltnd_out;
+	wire  [D2W-1:0] w_mlter_out;
+
 
 	control SM(
-		.i_clk	 (i_clk),
-		.i_rst 	 (i_rst),
-		.i_start (i_start),
-		.i_lsb	 (w_lsb),
+		.i_clk	  (i_clk),
+		.i_rst 	  (i_rst),
+		.i_start  (i_start),
+		.i_lsb	  (),
 
-		.o_load	 (w_load),
-		.o_add	 (w_add),
-		.o_shift (w_shift),
-		.o_stop	 (o_stop)
+		.o_load   (w_load),
+		.o_add	  (),
+		.o_stop	  (o_stop),
+		.o_clean  (w_clean)
 	);
 
-	ff_d MULTIPLICAND(
+	multiplicand MULTIPLICAND(
 		.i_clk	 (i_clk),
 		.i_rst 	 (i_rst),
 		.i_load	 (w_load),
-		.i_data	 (i_multd_val), 		// [DW-1:0]
+		.i_data	 (i_mltnd_val), // [DW-1:0]
 
-		.o_out	 (w_multd_ripple_valA) // [DW-1:0]
-	);
-
-	ripple_adder R_ADD(
-		.i_valA	 (w_multd_ripple_valA), // [AW-1:0]
-		.i_valB	 (w_multr_ripple_valB), // [AW-1:0]
-
-		.o_sum	 (w_sum), // [AW-1:0]
-		.o_carry (w_carry)
+		.o_data	 (w_mltnd_out) // [DW-1:0]
 	);
 
 	multiplier MULTIPLIER(
-		.i_clk	 (i_clk),
-		.i_rst   (i_rst),
-		.i_load  (w_load),
-		.i_shift (w_shift),
-		.i_add   (w_add),
-		.i_sum 	 ({w_carry,w_sum}), 		// [DW:0]
-		.i_val   (i_multr_val), // [DW-1:0]
+		.i_clk	(i_clk),
+		.i_rst  (i_rst),
+		.i_load (w_load),
+		.i_data	(i_mlter_val), 
 
 		.o_lsb 	(w_lsb),
-		.o_rc 	(o_rc),
-		.o_rb 	(w_multr_ripple_valB)
+		.o_data	(w_mlter_out) 	// [DW-1:0]
+	);
+
+	full_adder ADD(
+		.i_clk	 (i_clk),
+		.i_ena   (w_lsb),
+		.i_clean (w_clean), 	//[DW-1:0]
+		.i_valB  (w_mltnd_out), //[DW-1:0]
+
+		.o_sum   (o_product)	//[DW-1:0]
 	);
 
 endmodule

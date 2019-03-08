@@ -12,8 +12,8 @@ entity control is
         i_lsb           : in     vl_logic;
         o_load          : out    vl_logic;
         o_add           : out    vl_logic;
-        o_shift         : out    vl_logic;
-        o_stop          : out    vl_logic
+        o_stop          : out    vl_logic;
+        o_clean         : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of BW : constant is 1;

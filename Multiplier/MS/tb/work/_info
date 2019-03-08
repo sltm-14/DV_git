@@ -5,155 +5,133 @@ cModel Technology
 Z0 dC:\Users\c18560\Documents\Carem\DYV\DV_GIT\Multiplier\MS\tb
 vcontrol
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 !s100 =@?4`GSJadlBMNbnY<K?R3
-Z3 IHKHQXRAZMg`P7JkN>zMzF0
-Z4 V5gmbY9o8JG^;Yeom<`VU73
-Z5 !s105 control_sm_sv_unit
-S1
-Z6 dC:\Users\c18560\Documents\Carem\DYV\DV_GIT\Multiplier\MS\tb
-Z7 w1551999360
-Z8 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/control_sm.sv
-Z9 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/control_sm.sv
-L0 1
-Z10 OV;L;10.1d;51
-r1
-31
-Z11 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/control_sm.sv|
-Z12 o-work work -sv -O0
-Z13 !s108 1552001009.693000
-Z14 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/control_sm.sv|
 !i10b 1
-!s85 0
-!s101 -O0
-vff_d
-R1
-Z15 !s100 VFI[nh_mX1287Y_T07Q?01
-Z16 IY>iO22I<kW<=meXG4=?^B3
-Z17 VG1J`OZnZgbzZbR<HCEF?h2
-Z18 !s105 ff_d_sv_unit
+!s100 3cgmOe4LQTTfk;95<dm890
+I>7Gi7SiF83N@cKBW;8^2[2
+Vc0@o=:X4]VY1GP[]?0[^R3
+!s105 control_sm_sv_unit
 S1
-R6
-Z19 w1551728133
-Z20 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ff_d.sv
-Z21 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ff_d.sv
+Z2 dC:\Users\c18560\Documents\Carem\DYV\DV_GIT\Multiplier\MS\tb
+w1552074381
+8../src/control_sm.sv
+F../src/control_sm.sv
 L0 1
-R10
+Z3 OV;L;10.1d;51
 r1
-31
-Z22 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ff_d.sv|
-R12
-Z23 !s108 1552001009.822000
-Z24 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ff_d.sv|
-!i10b 1
 !s85 0
+31
+Z4 !s108 1552074937.588000
+Z5 !s107 tb_ms.sv|../src/ms.sv|../src/multiplier.sv|../src/full_adder.sv|../src/multiplicand.sv|../src/control_sm.sv|
+Z6 !s90 -reportprogress|300|-f|files.f|
 !s101 -O0
+o-O0
 vfull_adder
 R1
-Z25 !s100 [JfUoh@ILR]eE=nhH2nQl0
-Z26 I5^=PNOGQomXR=SSJ=onJ22
-Z27 VBPZdXKz;nOj`SIIBRXif<2
-Z28 !s105 full_adder_sv_unit
-S1
-R6
-Z29 w1551990376
-Z30 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/full_adder.sv
-Z31 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/full_adder.sv
-L0 1
-R10
-r1
-31
-Z32 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/full_adder.sv|
-R12
-Z33 !s108 1552001009.967000
-Z34 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/full_adder.sv|
 !i10b 1
+!s100 f`_hJh2za99W9XU^EWEAJ3
+INk4IiFdL]=9i;H?Y`92ah0
+V4@dfz_FQzcU;JKZj^=`c`0
+!s105 full_adder_sv_unit
+S1
+R2
+w1552071667
+8../src/full_adder.sv
+F../src/full_adder.sv
+L0 1
+R3
+r1
 !s85 0
+31
+R4
+R5
+R6
 !s101 -O0
+o-O0
 vms
 R1
-Z35 !s100 _QH<[omML8]dj1@36h2>F3
-Z36 ID01Vd82:EhQEzk0hf:H:P0
-Z37 VlO@cSPo:fJ74BRTPAQYJX0
-Z38 !s105 ms_sv_unit
-S1
-R6
-Z39 w1551992446
-Z40 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ms.sv
-Z41 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ms.sv
-L0 1
-R10
-r1
-31
-Z42 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ms.sv|
-R12
-Z43 !s108 1552001010.117000
-Z44 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ms.sv|
 !i10b 1
+!s100 @KizHje7f3XhW8:mA13_O1
+I[UBJe8OT>e4AI8Pl[8H951
+VY6GncV103iGPBRn@`E_eh2
+!s105 ms_sv_unit
+S1
+R2
+w1552074930
+8../src/ms.sv
+F../src/ms.sv
+L0 1
+R3
+r1
 !s85 0
+31
+R4
+R5
+R6
 !s101 -O0
+o-O0
+vmultiplicand
+R1
+!i10b 1
+!s100 5`75l>JFFP_MdaCT>MW]Y1
+InKfnA_OMl3<DL2_:C[Ke_1
+VV4L84?260<>]j@O1mCSKO1
+!s105 multiplicand_sv_unit
+S1
+R2
+w1552074807
+8../src/multiplicand.sv
+F../src/multiplicand.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!s101 -O0
+o-O0
 vmultiplier
 R1
-Z45 IbUa@GoJL>mKKZ[Pl=YdU63
-Z46 V]0ok_iAI``:44zUz]TEI13
-Z47 !s105 multiplier_sv_unit
-S1
-R6
-Z48 w1552001005
-Z49 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/multiplier.sv
-Z50 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/multiplier.sv
-L0 1
-R10
-r1
-31
-Z51 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/multiplier.sv|
-R12
-Z52 !s100 ?PVJ`P9>;1MBYeCJ_Mdg30
-Z53 !s108 1552001010.317000
-Z54 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/multiplier.sv|
 !i10b 1
-!s85 0
-!s101 -O0
-vripple_adder
-R1
-Z55 !s100 7:iMWg>;N2a=MgPMo=m5a3
-Z56 IYnfX_zEMZCYZ5gXzgZ9_z1
-Z57 V:2]CX1b2VUY68X3_La=BT3
-Z58 !s105 ripple_carry_sv_unit
+!s100 T^633O<6@zb5XEMGbC6EN0
+IgHIl0JDN;5Vc?LSc8f4Wj3
+VPk=[=BJZ?8@?kUBd`h<==0
+!s105 multiplier_sv_unit
 S1
-R6
-Z59 w1551727069
-Z60 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ripple_carry.sv
-Z61 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ripple_carry.sv
+R2
+w1552074814
+8../src/multiplier.sv
+F../src/multiplier.sv
 L0 1
-R10
+R3
 r1
-31
-Z62 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ripple_carry.sv|
-R12
-!i10b 1
 !s85 0
-Z63 !s108 1552001010.484000
-Z64 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/src/ripple_carry.sv|
+31
+R4
+R5
+R6
 !s101 -O0
+o-O0
 vtb_ms
 R1
 !i10b 1
-Z65 !s100 3>gVI9OZ>W6k]fGe9kSPX3
-Z66 Ii^TSeeT>cGhoC:IJ:FKCk0
-Z67 Vz3FWJDDa=Eobg]neP62G@2
-Z68 !s105 tb_ms_sv_unit
+!s100 Cda_7mN3IWUjQ=8JGTlXZ0
+IkamB?C43D<;cJZ<kYZ:nf1
+Vz3FWJDDa=Eobg]neP62G@2
+!s105 tb_ms_sv_unit
 S1
-R6
-Z69 w1552000199
-Z70 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/tb/tb_ms.sv
-Z71 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/tb/tb_ms.sv
+R2
+w1552073860
+8tb_ms.sv
+Ftb_ms.sv
 L0 1
-R10
+R3
 r1
 !s85 0
 31
-!s108 1552001010.631000
-!s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/tb/tb_ms.sv|
-Z72 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/Multiplier/MS/tb/tb_ms.sv|
+R4
+R5
+R6
 !s101 -O0
-R12
+o-O0

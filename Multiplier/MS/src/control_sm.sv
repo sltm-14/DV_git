@@ -9,20 +9,20 @@ module control#(
 
 	output 	o_load,
 	output 	o_add,
-	output 	o_shift,
-	output 	o_stop
+	output 	o_stop,
+	output  o_clean
 	);
 
 	enum logic [2:0] {IDLE, INIT, ADD_SHIFT} state; 
 
 	logic 	r_load;
 	logic 	r_add;
-	logic 	r_shift;
 	logic 	r_stop;
+	logic   r_clean;
 
 	logic [DW:0]  r_count = '0;
 
-	always_ff@(posedge i_clk, posedge i_rst)begin
+	always_ff@(posedge i_clk, negedge i_rst)begin
 
 		if(!i_rst)
 			state <= IDLE;
@@ -41,10 +41,10 @@ module control#(
 				end
 						
 				ADD_SHIFT: begin
-					if (BW == r_count)
-						state <= IDLE;
-					else
+					if (BW - 1'b1 > r_count)
 						state <= ADD_SHIFT;
+					else
+						state <= IDLE;
 				end
 							 
 				default:
@@ -54,12 +54,12 @@ module control#(
 		end
 	 end
 
-	 always@(posedge i_clk, posedge i_rst) begin
+	 always@(posedge i_clk, negedge i_rst) begin
 		if(!i_rst)begin
-			r_load  = 1'b0;
-			r_add   = 1'b0;
-			r_shift = 1'b0;
-			r_stop  = 1'b0;
+			r_load = 1'b0;
+			r_add    = 1'b0;
+			r_stop   = 1'b0;
+			r_clean  = 1'b1;
 
 			r_count = '0;
 		end
@@ -68,45 +68,45 @@ module control#(
 			case (state)
 				IDLE:  begin
 				    r_load  = 1'b0;
-					r_add   = 1'b0;
-				 	r_shift = 1'b0;
-					r_stop  = 1'b1;
-					r_count = '0;
+					r_add    = 1'b0;
+					r_stop   = 1'b1;
+					r_clean  = 1'b0;
+					r_count  = '0;
 				end
 
 				INIT:  begin
 					r_load  = 1'b1;
-					r_add   = 1'b0;
-				 	r_shift = 1'b0;
-					r_stop  = 1'b0;	
+					r_add    = 1'b0;
+					r_stop   = 1'b0;
+					r_clean  = 1'b1;	
 				end
 						
 				ADD_SHIFT: begin
-					if (i_lsb)
-						r_add   = 1'b1;
+					if (i_lsb == 1'b1)
+						r_add  = 1'b1;
 					else 
-						r_add   = 1'b0;
+						r_add  = 1'b0;
 					
-					r_load  = 1'b0;
-					r_stop  = 1'b0;
-					r_shift = 1'b1;
+					r_stop   = 1'b0;
+					r_load   = 1'b0;
+					r_clean  = 1'b0;
 
 					r_count = r_count + 1'b1;		
 				end
 							 
 				default:begin
 					r_load  = 1'b0;
-					r_add   = 1'b0;
-				 	r_shift = 1'b0;
-					r_stop  = 1'b0;	
+					r_add    = 1'b0;
+					r_stop   = 1'b0;
+					r_clean  = 1'b0;	
 				end
 			endcase // state	
 		end
 	 end
 	 
-	assign  o_load  = r_load;
-	assign	o_add	= r_add;
-	assign 	o_shift	= r_shift;
-	assign	o_stop	= r_stop;
+	assign  o_load   = r_load;
+	assign	o_add	 = r_add;
+	assign	o_stop	 = r_stop;
+	assign  o_clean  = r_clean;
 
 endmodule 

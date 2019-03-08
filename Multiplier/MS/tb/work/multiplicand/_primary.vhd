@@ -1,16 +1,18 @@
 library verilog;
 use verilog.vl_types.all;
-entity ff_d is
+entity multiplicand is
     generic(
-        DW              : integer := 8
+        DW              : integer := 8;
+        D2W             : vl_notype
     );
     port(
         i_clk           : in     vl_logic;
         i_rst           : in     vl_logic;
         i_load          : in     vl_logic;
         i_data          : in     vl_logic_vector;
-        o_out           : out    vl_logic_vector
+        o_data          : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of DW : constant is 1;
-end ff_d;
+    attribute mti_svvh_generic_type of D2W : constant is 3;
+end multiplicand;

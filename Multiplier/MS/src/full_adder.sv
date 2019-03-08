@@ -1,19 +1,30 @@
 module full_adder#(
-	parameter DW = 4
+	parameter DW = 8,
+	parameter D2W = DW*2
 	)(
-	input  [DW-1:0] i_valA,
-	input  [DW-1:0] i_valB,
-	input			i_carry,
+	input           i_clk,
+	input 			i_ena,
+	input   		i_clean,
+	input  [D2W-1:0] i_valB,
 
-	output [DW-1:0] o_sum,
-	output  	  	o_carry
+	output [D2W:0]   o_sum
 	);
 
-	logic [DW:0] r_sum;
+	logic [D2W:0] r_product = '0;
 
-	assign r_sum 	= i_valA + i_valB + i_carry;
-	
-	assign o_sum	= r_sum[DW-1:0];
-	assign o_carry	= r_sum[DW];
+
+	always @(posedge i_clk)begin
+		if (i_clean)begin
+			r_product = '0; 
+		end
+		else if (i_ena)begin
+			r_product = r_product + i_valB;
+		end
+		else begin
+			r_product = r_product;
+		end
+	end
+	 
+	assign o_sum	= r_product;
 
 endmodule

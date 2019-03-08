@@ -8,16 +8,18 @@ module tb_ms#(
 	logic  [DW-1:0] TB_multr_val; //[DW-1:0]
 
 	logic [15:0]	TB_rc;
-	logic 	 TB_stop;
+	logic 	 		TB_stop;
+
+
 
 	ms TOP(
 		.i_clk 		(TB_clk),
 		.i_rst 		(TB_rst),
 		.i_start 	(TB_start),
-		.i_multd_val(TB_multd_val), //[DW-1:0]
-		.i_multr_val(TB_multr_val), //[DW-1:0]
+		.i_mltnd_val(TB_multd_val), //[DW-1:0]
+		.i_mlter_val(TB_multr_val), //[DW-1:0]
 
-		.o_rc 		(TB_rc),
+		.o_product 		(TB_rc),
 		.o_stop 	(TB_stop)
 	);
 
