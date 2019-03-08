@@ -12,10 +12,9 @@ module ms#(
 	output 		   o_stop
 	);
 
-	wire 		   w_load;
-	wire		   w_add;
-	wire  		   w_lsb;
-	wire  		   w_clean;
+	wire 		    w_load;
+	wire  		    w_lsb;
+	wire  		    w_clean;
 	wire  [D2W-1:0] w_mltnd_out;
 	wire  [D2W-1:0] w_mlter_out;
 
@@ -24,10 +23,8 @@ module ms#(
 		.i_clk	  (i_clk),
 		.i_rst 	  (i_rst),
 		.i_start  (i_start),
-		.i_lsb	  (),
 
 		.o_load   (w_load),
-		.o_add	  (),
 		.o_stop	  (o_stop),
 		.o_clean  (w_clean)
 	);
@@ -38,7 +35,7 @@ module ms#(
 		.i_load	 (w_load),
 		.i_data	 (i_mltnd_val), // [DW-1:0]
 
-		.o_data	 (w_mltnd_out) // [DW-1:0]
+		.o_data	 (w_mltnd_out)  // [DW-1:0]
 	);
 
 	multiplier MULTIPLIER(

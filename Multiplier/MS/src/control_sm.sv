@@ -5,10 +5,8 @@ module control#(
 	input 	i_clk,
 	input 	i_rst,
 	input 	i_start,
-	input 	i_lsb,
 
 	output 	o_load,
-	output 	o_add,
 	output 	o_stop,
 	output  o_clean
 	);
@@ -16,7 +14,6 @@ module control#(
 	enum logic [2:0] {IDLE, INIT, ADD_SHIFT} state; 
 
 	logic 	r_load;
-	logic 	r_add;
 	logic 	r_stop;
 	logic   r_clean;
 
@@ -56,8 +53,7 @@ module control#(
 
 	 always@(posedge i_clk, negedge i_rst) begin
 		if(!i_rst)begin
-			r_load = 1'b0;
-			r_add    = 1'b0;
+			r_load   = 1'b0;
 			r_stop   = 1'b0;
 			r_clean  = 1'b1;
 
@@ -67,26 +63,19 @@ module control#(
 	 
 			case (state)
 				IDLE:  begin
-				    r_load  = 1'b0;
-					r_add    = 1'b0;
+				    r_load   = 1'b0;
 					r_stop   = 1'b1;
 					r_clean  = 1'b0;
 					r_count  = '0;
 				end
 
 				INIT:  begin
-					r_load  = 1'b1;
-					r_add    = 1'b0;
+					r_load   = 1'b1;
 					r_stop   = 1'b0;
 					r_clean  = 1'b1;	
 				end
 						
 				ADD_SHIFT: begin
-					if (i_lsb == 1'b1)
-						r_add  = 1'b1;
-					else 
-						r_add  = 1'b0;
-					
 					r_stop   = 1'b0;
 					r_load   = 1'b0;
 					r_clean  = 1'b0;
@@ -95,8 +84,7 @@ module control#(
 				end
 							 
 				default:begin
-					r_load  = 1'b0;
-					r_add    = 1'b0;
+					r_load   = 1'b0;
 					r_stop   = 1'b0;
 					r_clean  = 1'b0;	
 				end
@@ -105,7 +93,6 @@ module control#(
 	 end
 	 
 	assign  o_load   = r_load;
-	assign	o_add	 = r_add;
 	assign	o_stop	 = r_stop;
 	assign  o_clean  = r_clean;
 

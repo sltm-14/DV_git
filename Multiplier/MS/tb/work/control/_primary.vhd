@@ -9,9 +9,7 @@ entity control is
         i_clk           : in     vl_logic;
         i_rst           : in     vl_logic;
         i_start         : in     vl_logic;
-        i_lsb           : in     vl_logic;
         o_load          : out    vl_logic;
-        o_add           : out    vl_logic;
         o_stop          : out    vl_logic;
         o_clean         : out    vl_logic
     );
