@@ -108,7 +108,7 @@ set_location_assignment PIN_G16 -to o_led15
 set_location_assignment PIN_H15 -to o_led16
 set_location_assignment PIN_E21 -to o_ready
 set_global_assignment -name ENABLE_SIGNALTAP ON
-set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
-set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
-set_global_assignment -name SLD_FILE "C:/Users/C18561/Documents/ITESO/SYSTEMVERILOG/p1/output_files/stp1_auto_stripped.stp"
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SYSTEMVERILOG_FILE sign_reg.sv
+set_global_assignment -name SLD_FILE "C:/Users/C18561/Documents/ITESO/SYSTEMVERILOG/DV_git/p1/stp1_auto_stripped.stp"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

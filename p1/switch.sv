@@ -1,6 +1,16 @@
+/*-----------------------------------------------
+* MODULE: 	  switch.sv
+* DESCRITION: Switches such as inputs
+* INPUTS: 	  clock, reset and switches
+* OUTPUTS:    multiplier and multiplicand
+* VERSION:    1.0
+* AUTHORS:    Andres Hernandez, Carem Acosta
+* DATE:       10 / 03 / 19
+* ----------------------------------------------*/
 module switch
 import switch_pkg::*;
 (
+	/*Inputs*/
 	input				i_clk,
 	input				i_rst,
 	input				i_sw0,
@@ -22,6 +32,7 @@ import switch_pkg::*;
 	input				i_sw16,
 	input				i_sw17,
 	
+	/*Outputs*/
 	output  data_t	o_multiplier,
 	output  data_t	o_multiplicand
 );
@@ -30,10 +41,11 @@ registers_t r_data;
 
 always_ff@(posedge i_clk, negedge i_rst) begin: SWITCH 
 	if(!i_rst) begin
-		r_data.multiplier 	<= '0;
+		r_data.multiplier 	<= '0;	//Registers begins at zero
 		r_data.multiplicand	<= '0;
 	end
 	else begin
+		/*Assigns the data switch to the registers*/
 		r_data.multiplier		<= {i_sw8,i_sw7,i_sw6,i_sw5,i_sw4,i_sw3,i_sw2,i_sw1,i_sw0};
 		r_data.multiplicand	<= {i_sw17,i_sw16,i_sw15,i_sw14,i_sw13,i_sw12,i_sw11,i_sw10,i_sw9};
 	end

@@ -1,8 +1,8 @@
 /*-----------------------------------------------
 * MODULE: 	  multiplier.sv
 * DESCRITION: gets the less significant bit of the multiplier
-* INPUTS: 	  i_clk, i_rst, i_start, i_sw
-* OUTPUTS:    o_leds, o_ready
+* INPUTS: 	  i_clk, i_rst, i_load, i_data
+* OUTPUTS:    o_done, o_lsb
 * VERSION:    1.0
 * AUTHORS:    Andres Hernandez, Carem Acosta
 * DATE:       10 / 03 / 19
