@@ -1,5 +1,0 @@
-module switch
-import switch_pkg::*;
-(
-	
-);
