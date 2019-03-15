@@ -8,15 +8,15 @@
 * DATE:       10 / 03 / 19
 * ----------------------------------------------*/
 module multiplier 
-import mult_pkg::*;
+import pkg_mult::*;
 (
 input          	i_clk,	/* Clk */
-input       		i_rst,	/* Rst */
-input 				i_load,	/* Load */
+input       	i_rst,	/* Rst */
+input 			i_load,	/* Load */
 input  	data_t	i_data,	/* Data */
 
-output          	o_done,
-output   			o_lsb	/* Less Significant Bit */
+output          o_done,
+output   		o_lsb	/* Less Significant Bit */
 );
 
 multiplier_t	r_multiplier;

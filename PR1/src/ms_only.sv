@@ -1,5 +1,5 @@
 module ms_for_simulation
-	import mult_pkg::*;
+	import pkg_mult::*;
 	(
 	input 			i_clk,
 	input 			i_rst,

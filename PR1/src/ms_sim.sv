@@ -1,12 +1,12 @@
-module ms_mult
-import mult_pkg::*;
+module ms_sim
+import pkg_mult::*;
 (
 	input 			i_clk,
 	input 			i_rst,
 	input 			i_start,
-	input	[17:0]	i_sw,
+	input sw_sim_t	i_sw,
 
-	output	[16:0]	o_led,
+	output	leds_t	o_led,
 	output 		   	o_ready
 	
 );

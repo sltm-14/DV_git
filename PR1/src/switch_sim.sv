@@ -1,9 +1,9 @@
 module switch_sim
-import switch_pkg::*;
+import pkg_mult::*;
 (
 	input				i_clk,
 	input				i_rst,
-	input	[17:0]		i_sw,
+	input	sw_sim_t	i_sw,
 	
 	output  data_t	o_multiplier,
 	output  data_t	o_multiplicand
@@ -17,8 +17,8 @@ always_ff@(posedge i_clk, negedge i_rst) begin: SWITCH
 		r_data.multiplicand	<= '0;
 	end
 	else begin
-		r_data.multiplier	<= i_sw[8:0];
-		r_data.multiplicand	<= i_sw[17:9];
+		r_data.multiplier	<= i_sw[DW:0];
+		r_data.multiplicand	<= i_sw[DW2+1:DW+1];
 	end
 end: SWITCH 
 
