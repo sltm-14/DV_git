@@ -9,13 +9,13 @@
 * DATE:       10 / 03 / 19
 * ----------------------------------------------*/
 module multiplicand 
-import mult_pkg::*;
+import pkg_mult::*;
 (      
 	input    		i_clk,				/* Clk */
 	input    		i_rst,				/* Rst */
-	input				i_load,				/* Load */
+	input			i_load,				/* Load */
 	input data_t	i_data,				/* Data */
-	input				i_stop,
+	input			i_stop,
 
 	output multiplicand_t o_data		/* Data after shift */
 );

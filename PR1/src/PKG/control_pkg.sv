@@ -7,12 +7,12 @@
 * ----------------------------------------------*/
 package control_pkg;
 
-localparam BW 		= 8;			/* Width for counter */
-localparam DW 		= $clog2(BW);	/* Width for data */
-localparam MAX_CNTR = BW - 1'b1;	/* Max value of counter */
+localparam DW 		= 8;			/* Width for counter */
+localparam BW 		= $clog2(DW);	/* Width for data */
+localparam MAX_CNTR = DW - 1'b1;	/* Max value of counter */
 
 typedef logic 				signal_t;	/*signal  */
-typedef logic 		[DW:0] 	count_t;	/* count */
+typedef logic 		[BW:0] 	count_t;	/* count */
 typedef enum logic  [2:0]	{IDLE, INIT, ADD_SHIFT} state_t;	/* enum for states */
 
 /* Struct for ctrl module */

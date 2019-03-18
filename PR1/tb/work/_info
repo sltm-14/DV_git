@@ -1,12 +1,8 @@
 m255
-K4
-z2
+K3
 13
-!s112 1.1
-!i10d 8192
-!i10e 25
-!i10f 100
 cModel Technology
+<<<<<<< HEAD
 Z0 dC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR1/tb
 vadder
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
@@ -525,3 +521,6 @@ R7
 R8
 R9
 !i113 1
+=======
+dC:\Users\c18560\Documents\Carem\DYV\DV_GIT\PR1\tb
+>>>>>>> 9a10b36b827b137c0e8550177b6f707772d2dc9d

@@ -9,7 +9,7 @@
 //----------------------------------------------
 
 module clkDivider
-import clk_pkg::*;
+import pkg_mult::*;
 (
 	// Input signals
 	input 			i_reset, 

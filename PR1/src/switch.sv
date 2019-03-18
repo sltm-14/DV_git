@@ -8,7 +8,7 @@
 * DATE:       10 / 03 / 19
 * ----------------------------------------------*/
 module switch
-import switch_pkg::*;
+import pkg_mult::*;
 (
 	/*Inputs*/
 	input				i_clk,
@@ -46,7 +46,7 @@ always_ff@(posedge i_clk, negedge i_rst) begin: SWITCH
 	end
 	else begin
 		/*Assigns the data switch to the registers*/
-		r_data.multiplier		<= {i_sw8,i_sw7,i_sw6,i_sw5,i_sw4,i_sw3,i_sw2,i_sw1,i_sw0};
+		r_data.multiplier	<= {i_sw8,i_sw7,i_sw6,i_sw5,i_sw4,i_sw3,i_sw2,i_sw1,i_sw0};
 		r_data.multiplicand	<= {i_sw17,i_sw16,i_sw15,i_sw14,i_sw13,i_sw12,i_sw11,i_sw10,i_sw9};
 	end
 end: SWITCH 

@@ -10,7 +10,7 @@
 * DATE:       10 / 03 / 19
 * ----------------------------------------------*/
 module complement2
-import comp2_pkg::*;
+import pkg_mult::*;
 (
 	/*Inputs*/
 	input 	val_t	i_val,

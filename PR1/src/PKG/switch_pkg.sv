@@ -8,12 +8,12 @@
 package switch_pkg;
 
 localparam DW = 8;				/*Data width*/
-typedef logic [DW:0]data_t;	/*Data with sign*/
+typedef logic [DW:0]sw_in_t;	/*Data with sign*/
 
 typedef struct						/*Struct with registers*/
 {
-	data_t	multiplier;	
-	data_t	multiplicand;
+	sw_in_t	multiplier;	
+	sw_in_t	multiplicand;
 }registers_t;
 
 endpackage: switch_pkg

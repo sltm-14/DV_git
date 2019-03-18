@@ -8,19 +8,19 @@
 * DATE:       10 / 03 / 19
 * ----------------------------------------------*/
 module leds_sim
-import leds_pkg::*;
+import pkg_mult::*;
 (
 
 	input	product_t 	i_product,
 	input				i_sign,
 	input 				i_stop,
 	
-	output	[16:0]	 	o_led,
+	output	leds_t	 	o_led,
 	output				o_ready
 );
 
-assign o_led[15:0] = (i_stop) ? i_product : '0 ;
-assign o_led[16]   = (i_stop) ? i_sign    : '0 ;
+assign o_led[D2W-1'b1:0] = (i_stop) ? i_product : '0 ;
+assign o_led[D2W]   	 = (i_stop) ? i_sign    : '0 ;
 
 assign o_ready = i_stop;
 
