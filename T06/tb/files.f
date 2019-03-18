@@ -1,0 +1,9 @@
+../src/pkg_bin_to_thto.sv
+../src/add_con.sv
+../src/add.sv
+../src/bin_to_thto.sv
+../src/complement_a2.sv
+../src/bin_to_7seg.sv
+../src/displays.sv
+../src/TOP_bcd_7seg.sv
+TB_bcd_7seg.sv
