@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(11): object "A" differs only in case from object "a" in the same scope
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(12): object "B" differs only in case from object "b" in the same scope
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(13): object "C" differs only in case from object "c" in the same scope
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(14): object "D" differs only in case from object "d" in the same scope
