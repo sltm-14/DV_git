@@ -41,24 +41,7 @@ set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY ms
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:41:00  MARCH 12, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name SYSTEMVERILOG_FILE switch_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE switch.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PLL.sv
-set_global_assignment -name SYSTEMVERILOG_FILE multiplier.sv
-set_global_assignment -name SYSTEMVERILOG_FILE multiplicand.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mult_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ms.sv
-set_global_assignment -name SYSTEMVERILOG_FILE leds_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE leds.sv
-set_global_assignment -name SYSTEMVERILOG_FILE control_sm.sv
-set_global_assignment -name SYSTEMVERILOG_FILE control_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE complement2.sv
-set_global_assignment -name SYSTEMVERILOG_FILE comp2Product.sv
-set_global_assignment -name SYSTEMVERILOG_FILE comp2_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE clkDivider.sv
-set_global_assignment -name SYSTEMVERILOG_FILE clk_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -109,6 +92,19 @@ set_location_assignment PIN_H15 -to o_led16
 set_location_assignment PIN_E21 -to o_ready
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
-set_global_assignment -name SYSTEMVERILOG_FILE sign_reg.sv
-set_global_assignment -name SLD_FILE "C:/Users/C18561/Documents/ITESO/SYSTEMVERILOG/DV_git/p1/stp1_auto_stripped.stp"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE src/switch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/PLL.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/pkg_mult.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/multiplicand.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/MS.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/leds.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/control_sm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/complement2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/comp2Product.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/clkDivider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/sign_reg.sv
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"

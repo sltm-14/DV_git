@@ -33,8 +33,8 @@ import pkg_mult::*;
 	input				i_sw17,
 	
 	/*Outputs*/
-	output  data_t	o_multiplier,
-	output  data_t	o_multiplicand
+	output  sw_in_t	o_multiplier,
+	output  sw_in_t	o_multiplicand
 );
 
 registers_t r_data;

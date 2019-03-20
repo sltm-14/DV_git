@@ -73,7 +73,7 @@ import pkg_mult::*;
 	
 	/*The switches register the value and send the value into two registers*/
 	switch SW(
-		.i_clk			(wires_ms.clk),
+		.i_clk			(i_clk),
 		.i_rst			(i_rst),
 		.i_sw0			(i_sw0),
 		.i_sw1			(i_sw1),
@@ -117,7 +117,7 @@ import pkg_mult::*;
 
 	/*Holds the sign values*/
 	sign_reg	SIGN(
-		.i_clk		(wires_ms.clk),
+		.i_clk		(i_clk),
 		.i_rst		(i_rst),
 		.i_load		(wires_ms.load),
 		.i_val1		(wires_ms.sign_mlter),
@@ -129,7 +129,7 @@ import pkg_mult::*;
 
 	/*State machine with three states*/
 	control SM(
-		.i_clk	  	(wires_ms.clk),
+		.i_clk	  	(i_clk),
 		.i_rst 	  	(i_rst),
 		.i_start  	(i_start),
 		.i_mltr_done(wires_ms.mltr_done),
@@ -140,7 +140,7 @@ import pkg_mult::*;
 
 	/*Calculates the multiplicand shifted*/
 	multiplicand MULTIPLICAND(
-		.i_clk	 	(wires_ms.clk),
+		.i_clk	 	(i_clk),
 		.i_rst 	 	(i_rst),
 		.i_load	 	(wires_ms.load),
 		.i_stop  	(wires_ms.mltr_done),
@@ -151,7 +151,7 @@ import pkg_mult::*;
 
 	/*Calculates the LSB of multiplier*/
 	multiplier MULTIPLIER(
-		.i_clk		(wires_ms.clk),
+		.i_clk		(i_clk),
 		.i_rst  	(i_rst),
 		.i_load 	(wires_ms.load),
 		.i_data		(wires_ms.data_mlter), 
@@ -162,7 +162,7 @@ import pkg_mult::*;
 
 	/*Add the results of multiplicand*/
 	adder ADDER(
-		.i_clk	 	(wires_ms.clk),
+		.i_clk	 	(i_clk),
 		.i_rst	 	(i_rst),
 		.i_stop   	(wires_ms.mltr_done),
 		.i_enable   (wires_ms.lsb),

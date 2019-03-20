@@ -25,9 +25,13 @@ typedef	logic [DW2-1:0]	product_t;			/*Length for product*/
 typedef logic [DW2+1:0] sw_sim_t;
 typedef logic [DW2:0] 	leds_t;
 typedef logic [BW:0] 	count_t;			/* count */
-typedef logic [DW:0]	sw_in_t;			/*Data with sign*/
+typedef logic [DW:0]	sw_in_t;/*Data with sign*/
 typedef	logic 			signal_t;			/*Single signal*/
 typedef logic 			sign_t;
+typedef logic [DW-1:0]  out_t;		/* Type out signal */
+typedef logic [31:0] counter_t; 	 /* Counter type */
+typedef logic [DW:0]    val_t;		/* Type value */
+
 
 typedef enum logic  [2:0]	{IDLE, INIT, ADD_SHIFT} state_t;	/* enum for states */
 
@@ -50,8 +54,8 @@ typedef struct{ /*Struct for TOP module*/
 	signal_t		load;
 	signal_t		lsb;
 	signal_t		clean;
-	comp2_t			real_mltnd;
-	comp2_t			real_mlter;
+	sw_in_t			real_mltnd;
+	sw_in_t			real_mlter;
 	data_t			data_mltnd;
 	data_t			data_mlter;
 }ms_t;
@@ -81,4 +85,4 @@ typedef struct{		/*Struct with registers*/
 
 
 
-endpackage: mult_pkg
+endpackage: pkg_mult
