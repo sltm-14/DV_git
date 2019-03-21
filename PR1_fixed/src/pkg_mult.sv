@@ -15,13 +15,13 @@ typedef	logic [DW-1:0]	data_t;				/*Absolute data*/
 typedef	logic [DW2-1:0]	multiplier_t;		/*Length for multiplier*/
 typedef	logic [DW2-1:0]	multiplicand_t;		/*Length for multiplicand*/
 typedef	logic [DW2-1:0]	product_t;			/*Length for product*/
-typedef logic [DW2-1:0] 	leds_t;
-typedef logic [DW-1:0]  	full_val_t;
-typedef logic [DW-1:0]    val_t;		/* Type out signal */
-typedef logic [BW:0] 	count_t;			/* count */
-typedef logic [FC:0] 	counter_t; 	 /* Counter type */
-typedef logic [DW2+1:0]	sw_in_t;			/*Data with sign*/
-typedef	logic 			signal_t;			/*Single signal*/
+typedef logic [DW2:0] 	leds_t;
+typedef logic [DW-1:0]  full_val_t;
+typedef logic [DW-1:0]  val_t;		/* Type out signal */
+typedef logic [BW:0] 	count_t;	/* count */
+typedef logic [FC:0] 	counter_t; 	/* Counter type */
+typedef logic [DW2+1:0]	sw_in_t;	/*Data with sign*/
+typedef	logic 			signal_t;	/*Single signal*/
 typedef logic 			sign_t;
 
 typedef enum logic  [2:0]	{IDLE, INIT, ADD_SHIFT} state_t;	/* enum for states */

@@ -4,10 +4,10 @@ module tb_ms
 	bit 			TB_clk =0;
 	bit 			TB_rst;
 	bit 			TB_start;
-	logic  [DW:0] TB_multd_val; //[DW-1:0]
-	logic  [DW:0] TB_multr_val; //[DW-1:0]
+	logic  [DW:0] TB_multd_val; 
+	logic  [DW:0] TB_multr_val; 
 
-	logic	[DW2:0]	TB_leds;
+	logic	[DW2-1:0]	TB_leds;
 	logic 	 		TB_ready;
 
 	logic			TB_o_clk;
@@ -28,19 +28,21 @@ module tb_ms
 	always #1 TB_clk <= ~TB_clk;
 
 	initial begin
-		 TB_start  	 = 1;       #20;
+	    TB_multd_val = 0; 	
+	    TB_multr_val = 0; 		#8;
+
+		TB_start  	 = 1;       #20;
 	    TB_rst    	 = 0;       #20;
 	    TB_rst   	 = 1;       #3;
 
 	    TB_multd_val = -256; 	
-	    TB_multr_val = -256; 	#8;
+	    TB_multr_val = -256; 	#20;
  
 	    TB_start 	 = 0;       #2;
 	    TB_start  	 = 1;       #20;
 
-
-	    TB_multd_val = 7; 	
-	    TB_multr_val = 7; 	#8;
+	    TB_multd_val = 255; 	
+	    TB_multr_val = 255; 	#20;
  
 	    TB_start 	 = 0;       #2;
 	    TB_start  	 = 1;       #20;

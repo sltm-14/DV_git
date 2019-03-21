@@ -17,7 +17,7 @@ import pkg_mult::*;
 	input 					i_rst,			/* Rst signal */
 	input					i_stop,			/* Ready signal */
 	input 					i_enable,		/* Enable signal */
-	input   				i_clean,			/* Clean signal */
+	input   				i_clean,		/* Clean signal */
 	input multiplicand_t	i_val,			/* Value to be added */
 
 	output product_t		o_sum				/* Result of addition */

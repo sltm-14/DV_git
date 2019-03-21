@@ -24,6 +24,7 @@ import pkg_mult::*;
 
 	output 	o_load,			/* Load */
 	output	o_clean,			/* Clean */
+	output  o_ready,
 	output  o_ovf
 );
 
@@ -67,6 +68,8 @@ always@(r_control.state) begin: outputs
 	if(!i_rst)begin
 		r_control.load 	<= 1'b0;
 		r_control.clean <= 1'b1;
+		r_control.enb 	<= 1'b0;
+		r_control.ready <= 1'b0;
 	end
 	else begin
  
@@ -75,24 +78,28 @@ always@(r_control.state) begin: outputs
 				r_control.load   <= 1'b0;
 				r_control.clean  <= 1'b0;
 				r_control.enb    <= 1'b0;
+				r_control.ready  <= 1'b1;
 			end
 
 			INIT:  begin 		/* Signat to load value */
 				r_control.load   <= 1'b1;
 				r_control.clean  <= 1'b1;
 				r_control.enb    <= 1'b1;
+				r_control.ready  <= 1'b0;
 			end
 					
 			ADD_SHIFT: begin /* Add 1 to counter */
 				r_control.load   <= 1'b0;
 				r_control.clean  <= 1'b0;
 				r_control.enb    <= 1'b1;
+				r_control.ready  <= 1'b0;
 			end
 		
 			default:begin
 				r_control.load   <= 1'b0;
 				r_control.clean  <= 1'b0;
 				r_control.enb    <= 1'b0;
+				r_control.ready  <= 1'b0;
 			end
 		endcase // state	
 	end
@@ -103,6 +110,8 @@ always_ff@(posedge i_clk, negedge i_rst)begin: counter
         r_control.count     <=  '0;
     else if (r_control.enb)
         r_control.count     <= r_control.count + 1'b1;
+    else
+    	r_control.count 	<=  '0;
 end:counter
 
 always_comb begin
@@ -115,6 +124,7 @@ end
 
  
 /* Assignatioin of outputs */
+assign 		o_ready		= r_control.ready;
 assign 		o_ovf		= r_control.ovf;
 assign  	o_load  	= r_control.load;
 assign  	o_clean 	= r_control.clean;

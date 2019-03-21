@@ -72,15 +72,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_led17",
+					"strict" : false
+				},
+				{
 					"name" : "o_ready",
 					"strict" : false
 				},
 				{
-					"name" : "i_clk",
+					"name" : "i_rst",
 					"strict" : false
 				},
 				{
-					"name" : "i_rst",
+					"name" : "i_clk",
 					"strict" : false
 				},
 				{
@@ -92,11 +96,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_sw17",
+					"name" : "i_sw10",
 					"strict" : false
 				},
 				{
-					"name" : "i_sw10",
+					"name" : "i_sw17",
 					"strict" : false
 				},
 				{
@@ -124,15 +128,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_sw8",
-					"strict" : false
-				},
-				{
 					"name" : "i_sw0",
 					"strict" : false
 				},
 				{
 					"name" : "i_sw1",
+					"strict" : false
+				},
+				{
+					"name" : "i_sw8",
 					"strict" : false
 				},
 				{

@@ -6,7 +6,7 @@ import pkg_mult::*;
 	input 			i_start,
 	input sw_in_t	i_sw,
 
-	output	leds_t	o_led,
+	output	[DW2-1:0]	o_led,
 	output 		   	o_ready
 	
 );
@@ -58,6 +58,7 @@ import pkg_mult::*;
 
 		.o_load   	(wires_ms.load),
 		.o_clean  	(wires_ms.clean),
+		.o_ready	(wires_ms.ready),
 		.o_ovf		(wires_ms.ovf)
 	);
 
@@ -86,7 +87,7 @@ import pkg_mult::*;
 	adder ADDER(
 		.i_clk	 	(i_clk),
 		.i_rst	 	(i_rst),
-		.i_stop   	(wires_ms.ovf),
+		.i_stop   	(wires_ms.ready),
 		.i_enable   (wires_ms.lsb),
 		.i_clean 	(wires_ms.clean), 	
 		.i_val	  	(wires_ms.mltnd_out), 
@@ -108,7 +109,7 @@ import pkg_mult::*;
 	leds_sim LED(
 		.i_product	(wires_ms.finalProduct),
 		.i_sign		(wires_ms.finalSign),
-		.i_stop   	(wires_ms.ovf),
+		.i_stop   	(wires_ms.ready),
 		
 		.o_led		(o_led),
 		.o_ready	(o_ready)

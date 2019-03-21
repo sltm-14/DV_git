@@ -51,6 +51,7 @@ import pkg_mult::*;
 	output		o_led14,
 	output		o_led15,
 	output		o_led16,
+	output		o_led17,
 	output 		o_ready
 );
 
@@ -135,6 +136,7 @@ import pkg_mult::*;
 
 		.o_load   	(wires_ms.load),
 		.o_clean  	(wires_ms.clean),
+		.o_ready	(wires_ms.ready),
 		.o_ovf		(wires_ms.ovf)
 	);
 
@@ -163,7 +165,7 @@ import pkg_mult::*;
 	adder ADDER(
 		.i_clk	 	(i_clk),
 		.i_rst	 	(i_rst),
-		.i_stop   	(wires_ms.ovf),
+		.i_stop   	(wires_ms.ready),
 		.i_enable   (wires_ms.lsb),
 		.i_clean 	(wires_ms.clean), 	
 		.i_val	  	(wires_ms.mltnd_out), 
@@ -186,7 +188,7 @@ import pkg_mult::*;
 	leds LED(
 		.i_product	(wires_ms.finalProduct),
 		.i_sign		(wires_ms.finalSign),
-		.i_stop   	(wires_ms.mltr_done),
+		.i_stop   	(wires_ms.ready),
 		
 		.o_led0		(o_led0),
 		.o_led1		(o_led1),
@@ -205,6 +207,7 @@ import pkg_mult::*;
 		.o_led14	(o_led14),
 		.o_led15	(o_led15),
 		.o_led16	(o_led16),
+		.o_led17 (o_led17),
 		.o_ready	(o_ready)
 	);
 
