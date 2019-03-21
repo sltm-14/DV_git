@@ -21,10 +21,10 @@ import pkg_mult::*;
 	input 	i_clk,			/* Clk */
 	input 	i_rst,			/* Rst */
 	input 	i_start,			/* Start */
-	input   i_mltr_done,	/* Multiplier is done */
 
 	output 	o_load,			/* Load */
-	output	o_clean			/* Clean */
+	output	o_clean,			/* Clean */
+	output  o_ovf
 );
 
 control_t r_control;
@@ -49,7 +49,7 @@ always_ff@(posedge i_clk, negedge i_rst)begin: state_machine
 					
 			ADD_SHIFT: /* Stays here until multiplication is done */
 			begin
-				if ( (i_mltr_done) && (!r_control.load) ) 
+				if ( (r_control.ovf) && (!r_control.load) ) 
 					r_control.state <= IDLE;
 				
 				else
@@ -63,7 +63,7 @@ always_ff@(posedge i_clk, negedge i_rst)begin: state_machine
 	end
 end: state_machine
 
-always@(posedge i_clk, negedge i_rst) begin: outputs
+always@(r_control.state) begin: outputs
 	if(!i_rst)begin
 		r_control.load 	<= 1'b0;
 		r_control.clean <= 1'b1;
@@ -74,27 +74,48 @@ always@(posedge i_clk, negedge i_rst) begin: outputs
 			IDLE:  begin 		/* Is ready to receive anew value */
 				r_control.load   <= 1'b0;
 				r_control.clean  <= 1'b0;
+				r_control.enb    <= 1'b0;
 			end
 
 			INIT:  begin 		/* Signat to load value */
 				r_control.load   <= 1'b1;
 				r_control.clean  <= 1'b1;
+				r_control.enb    <= 1'b1;
 			end
 					
 			ADD_SHIFT: begin /* Add 1 to counter */
 				r_control.load   <= 1'b0;
 				r_control.clean  <= 1'b0;
+				r_control.enb    <= 1'b1;
 			end
 		
 			default:begin
 				r_control.load   <= 1'b0;
 				r_control.clean  <= 1'b0;
+				r_control.enb    <= 1'b0;
 			end
 		endcase // state	
 	end
 end: outputs 
+
+always_ff@(posedge i_clk, negedge i_rst)begin: counter
+    if (!i_rst)
+        r_control.count     <=  '0;
+    else if (r_control.enb)
+        r_control.count     <= r_control.count + 1'b1;
+end:counter
+
+always_comb begin
+    if (r_control.count > DW)
+        r_control.ovf     =   1'b1;    
+    else
+        r_control.ovf     =   1'b0;
+end
+
+
  
 /* Assignatioin of outputs */
+assign 		o_ovf		= r_control.ovf;
 assign  	o_load  	= r_control.load;
 assign  	o_clean 	= r_control.clean;
 

@@ -1,30 +1,23 @@
-/*-----------------------------------------------
-* MODULE: 	  mult_pkg.sv
-* DESCRITION: Packege for general signals
-* VERSION:    1.0
-* AUTHORS:    Andres Hernandez, Carem Acosta
-* DATE:       10 / 03 / 19
-* ----------------------------------------------*/
 package pkg_mult;
 
 localparam	FREQUENCY_IN 	= 10000; 		/* Value of input frequency */
 localparam	FREQUENCY_OUT	= 2; 	 		/* Value of output frequency */
 localparam	MAX_COUNT		= (FREQUENCY_IN/FREQUENCY_OUT)/2; /* Value of counter */
 
-localparam	DW 				= 8;			/*Data width*/	
+localparam	DW 				= 9;			/*Data width*/	
 localparam	DW2 			= DW*2;			/*Length of product*/
 localparam	BW 				= $clog2(DW);	/* Width for data */
 localparam	MAX_CNTR 		= DW - 1'b1;	/* Max value of counter */
 localparam	FC 				= $clog2(MAX_COUNT);	
 
-typedef	logic [DW:0]	comp2_t;			/*Data with sign*/
+typedef	logic [DW-1:0]	comp2_t;			/*Data with sign*/
 typedef	logic [DW-1:0]	data_t;				/*Absolute data*/
 typedef	logic [DW2-1:0]	multiplier_t;		/*Length for multiplier*/
 typedef	logic [DW2-1:0]	multiplicand_t;		/*Length for multiplicand*/
 typedef	logic [DW2-1:0]	product_t;			/*Length for product*/
-typedef logic [DW2:0] 	leds_t;
-typedef logic [DW:0]  	full_val_t;
-typedef logic [DW-1:0]  val_t;		/* Type out signal */
+typedef logic [DW2-1:0] 	leds_t;
+typedef logic [DW-1:0]  	full_val_t;
+typedef logic [DW-1:0]    val_t;		/* Type out signal */
 typedef logic [BW:0] 	count_t;			/* count */
 typedef logic [FC:0] 	counter_t; 	 /* Counter type */
 typedef logic [DW2+1:0]	sw_in_t;			/*Data with sign*/
@@ -52,6 +45,7 @@ typedef struct{ /*Struct for TOP module*/
 	signal_t		load;
 	signal_t		lsb;
 	signal_t		clean;
+	signal_t		ovf;
 	comp2_t			real_mltnd;
 	comp2_t			real_mlter;
 	data_t			data_mltnd;
@@ -71,6 +65,9 @@ typedef struct{
 typedef struct{
 	signal_t	load;
 	signal_t	ready;
+	signal_t	ovf;
+	signal_t	enb;
+	count_t     count;
 	signal_t	clean;
 	state_t		state;
 }control_t;

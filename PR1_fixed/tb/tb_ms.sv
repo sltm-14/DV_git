@@ -28,11 +28,12 @@ module tb_ms
 	always #1 TB_clk <= ~TB_clk;
 
 	initial begin
-	    TB_rst    	 = 0;       #2;
+		 TB_start  	 = 1;       #20;
+	    TB_rst    	 = 0;       #20;
 	    TB_rst   	 = 1;       #3;
 
-	    TB_multd_val = -7; 	
-	    TB_multr_val = -7; 	#8;
+	    TB_multd_val = -256; 	
+	    TB_multr_val = -256; 	#8;
  
 	    TB_start 	 = 0;       #2;
 	    TB_start  	 = 1;       #20;

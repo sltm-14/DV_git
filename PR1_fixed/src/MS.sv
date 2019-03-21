@@ -132,10 +132,10 @@ import pkg_mult::*;
 		.i_clk	  	(i_clk),
 		.i_rst 	  	(i_rst),
 		.i_start  	(i_start),
-		.i_mltr_done(wires_ms.mltr_done),
 
 		.o_load   	(wires_ms.load),
-		.o_clean  	(wires_ms.clean)
+		.o_clean  	(wires_ms.clean),
+		.o_ovf		(wires_ms.ovf)
 	);
 
 	/*Calculates the multiplicand shifted*/
@@ -143,7 +143,7 @@ import pkg_mult::*;
 		.i_clk	 	(i_clk),
 		.i_rst 	 	(i_rst),
 		.i_load	 	(wires_ms.load),
-		.i_stop  	(wires_ms.mltr_done),
+		.i_stop  	(wires_ms.ovf),
 		.i_data	 	(wires_ms.data_mltnd), 
  
 		.o_data	 	(wires_ms.mltnd_out)  
@@ -156,15 +156,14 @@ import pkg_mult::*;
 		.i_load 	(wires_ms.load),
 		.i_data		(wires_ms.data_mlter), 
 
-		.o_lsb 		(wires_ms.lsb),
-		.o_done		(wires_ms.mltr_done)
+		.o_lsb 		(wires_ms.lsb)
 	);
 
 	/*Add the results of multiplicand*/
 	adder ADDER(
 		.i_clk	 	(i_clk),
 		.i_rst	 	(i_rst),
-		.i_stop   	(wires_ms.mltr_done),
+		.i_stop   	(wires_ms.ovf),
 		.i_enable   (wires_ms.lsb),
 		.i_clean 	(wires_ms.clean), 	
 		.i_val	  	(wires_ms.mltnd_out), 

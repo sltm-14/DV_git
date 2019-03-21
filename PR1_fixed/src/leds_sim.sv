@@ -19,8 +19,8 @@ import pkg_mult::*;
 	output				o_ready
 );
 
-assign o_led[DW2-1'b1:0] = (i_stop) ? i_product : '0 ;
-assign o_led[DW2]   	 = (i_stop) ? i_sign    : '0 ;
+assign o_led[DW2-2:0] = (i_stop) ? i_product : '0 ;
+assign o_led[DW2-1]   	 = (i_stop) ? i_sign    : '0 ;
 
 assign o_ready = i_stop;
 

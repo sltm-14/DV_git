@@ -15,7 +15,7 @@ input       	i_rst,	/* Rst */
 input 			i_load,	/* Load */
 input  	val_t	i_data,	/* Data */
 
-output          o_done,
+
 output   		o_lsb	/* Less Significant Bit */
 );
 
@@ -25,13 +25,13 @@ always_ff@(posedge i_clk, negedge i_rst) begin:shift_right
 	if(!i_rst)	/* Resets value */
 		r_multiplier  <= '0;
 	else if (i_load)	/* Load new value */
-		r_multiplier  <= i_data;
+		r_multiplier  <= {'0,i_data};
 	else	/* Shifts value to righ */
 		r_multiplier  <= r_multiplier >> 1'b1;
 end:shift_right
 
 /* Assigns less significant bit of multiplier to output */
 assign o_lsb  = r_multiplier[0];
-assign o_done = (r_multiplier == '0) ? 1'b1 : 1'b0;
+
 
 endmodule

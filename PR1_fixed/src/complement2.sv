@@ -25,8 +25,8 @@ positivo se hace complemento A2  de lo contrario el valor continua igual */
 comp2_st comp2;
 
 always_comb begin: inputs
-	comp2.val 	= ( i_val[DW] ) ? ( ~(i_val[DW:0]) + 1'b1) : i_val[DW:0]; 
-	comp2.sign 	= i_val[DW];
+	comp2.val 	= ( i_val[DW-1] ) ? ( ~(i_val[DW-1:0]) + 1'b1) : i_val[DW-1:0]; 
+	comp2.sign 	= i_val[DW-1];
 end: inputs
 
 /* Value after A2 complement */
