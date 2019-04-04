@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Multiplier
-Wed Mar 20 23:43:56 2019
+Wed Mar 20 23:50:44 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 20 23:43:56 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 20 23:50:44 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Multiplier                                  ;
 ; Top-level Entity Name              ; ms                                          ;
@@ -1201,7 +1201,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Mar 20 23:43:14 2019
+    Info: Processing started: Wed Mar 20 23:49:58 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplier -c Multiplier
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1328,7 +1328,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: C:/Users/C18561/Documents/ITESO/SYSTEMVERILOG/DV_git/DV_git/PR1_fixed/db/cmpr_ngc.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2019.03.20.23:43:43 Progress: Loading sld06f7e198/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.03.20.23:50:29 Progress: Loading sld06f7e198/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1365,8 +1365,8 @@ Info (21057): Implemented 1639 device resources after synthesis - the final reso
     Info (21064): Implemented 62 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 733 megabytes
-    Info: Processing ended: Wed Mar 20 23:43:56 2019
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:01:17
+    Info: Processing ended: Wed Mar 20 23:50:44 2019
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:01:20
 
 

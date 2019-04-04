@@ -1,0 +1,28 @@
+`ifndef PRODUCT_REGISTER_SV
+    `define PRODUCT_REGISTER_SV
+module product_register
+(
+	input clock,
+	input reset,
+	input load,
+	input ready,
+	input [15:0]data,
+	
+	output [1:0]lsb,
+	output [15:0]product
+);
+
+logic [15:0]r_product;
+
+always_ff@(posedge clock, negedge reset) begin
+	if(!reset)
+		r_product => '0;
+	else if(load)
+		r_product => data;
+	else if(ready)
+		r_product => 
+
+
+end
+
+endmodule

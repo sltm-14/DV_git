@@ -1,0 +1,6 @@
+module division
+(
+	input clk,
+	input rst, 
+	input 
+);
