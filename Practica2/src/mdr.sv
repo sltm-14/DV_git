@@ -1,3 +1,14 @@
+/*-----------------------------------------------
+* MODULE: 	  	mdr.sv
+* DESCRIPTION: Top level of the MDR system
+* INPUTS: 	  	clock, reset, load, operation code, 
+*					start and data
+* OUTPUTS:    	result, loadX flag, loadY flag,
+*					error flag and remainder
+* VERSION:    	1.0
+* AUTHORS:    	Andres Hernandez, Carem Acosta
+* DATE:       	05 / 04 / 19
+* ----------------------------------------------*/
 
 `ifndef MDR_SV
     `define MDR_SV

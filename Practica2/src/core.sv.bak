@@ -1,17 +1,6 @@
-/*-----------------------------------------------
-* MODULE: 	  	core.sv
-* DESCRIPTION: Module MDR, instances from multiplication
-*					division and square root				
-* INPUTS: 	  	clock, reset, dataX, dataY, enable
-* OUTPUTS:    	Done flag, result and remainder
-* VERSION:    	1.0
-* AUTHORS:    	Andres Hernandez, Carem Acosta
-* DATE:       	05 / 04 / 19
-* ----------------------------------------------*/
 
 `ifndef CORE_SV
     `define CORE_SV
-	 
 module core
 import system_mdr_pkg::*;
 (
@@ -55,5 +44,4 @@ import system_mdr_pkg::*;
 	);
 	
 endmodule
-
 `endif

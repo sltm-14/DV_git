@@ -13,7 +13,6 @@ import system_mdr_pkg::*;
 	output data_t o_remainder
 );
 
-
 	
 
 endmodule

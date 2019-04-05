@@ -1,3 +1,11 @@
+/*-----------------------------------------------
+* MODULE: 	  	system_mdr_pkg.sv
+* DESCRIPTION: This modules contains the variables
+					and data types of the system
+* VERSION:    	1.0
+* AUTHORS:    	Andres Hernandez, Carem Acosta
+* DATE:       	05 / 04 / 19
+* ----------------------------------------------*/
 `ifndef SYSTEM_MDR_PKG_SV
     `define SYSTEM_MDR_PKG_SV
 	 

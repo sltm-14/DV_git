@@ -1,3 +1,13 @@
+/*-----------------------------------------------
+* MODULE: 	  	mdr_if.sv
+* DESCRIPTION: Interface with modports of the all 
+*					the modules					
+*					error
+* VERSION:    	1.0
+* AUTHORS:    	Andres Hernandez, Carem Acosta
+* DATE:       	05 / 04 / 19
+* ----------------------------------------------*/
+
 `ifndef MDR_IF_SV
     `define MDR_IF_SV
 	 
@@ -14,6 +24,10 @@ logic 	i_error;
 data_t	i_dataX;
 data_t	i_dataY;
 logic		i_switch[SW-1:0];
+logic		i_stop;
+logic		i_loadX;
+logic		i_loadY;
+logic		i_ready;
 
 logic 	o_error;
 logic		o_ready;
@@ -28,11 +42,6 @@ data_t	o_result;
 data_t	o_remainder;
 data_t	o_data;
 op_t		o_op;
-
-logic		i_stop;
-logic		i_loadX;
-logic		i_loadY;
-logic		i_ready;
 logic		o_leds[LW-1:0]
 
 modport pipo
@@ -102,4 +111,3 @@ modport led
 endinterface
 
 `endif
-
