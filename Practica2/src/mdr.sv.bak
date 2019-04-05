@@ -22,13 +22,6 @@ import system_mdr_pkg::*;
 
 mdr_if	top_itf();
 
-switch SWITCH
-(
-	.clk				(clk),
-	.rst				(rst),
-	.switch_if		(top_if.switch)
-);
-
 pipo PIPO_DATA1
 (
 	.clk				(clk),
@@ -63,13 +56,7 @@ core MDR
 	.rst				(rst),
 	.core_if			(top_itf.core)
 );
-
-leds LEDS
-(	
-	.clk				(clk),
-	.rst				(rst),
-	.led_if			(top_itf.led)
-);
+	
 
 endmodule
 

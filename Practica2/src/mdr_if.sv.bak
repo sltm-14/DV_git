@@ -13,7 +13,6 @@ logic 	i_done;
 logic 	i_error;
 data_t	i_dataX;
 data_t	i_dataY;
-logic		i_switch[SW-1:0];
 
 logic 	o_error;
 logic		o_ready;
@@ -26,14 +25,6 @@ data_t	o_dataY;
 logic		o_done;
 data_t	o_result;
 data_t	o_remainder;
-data_t	o_data;
-op_t		o_op;
-
-logic		i_stop;
-logic		i_loadX;
-logic		i_loadY;
-logic		i_ready;
-logic		o_leds[LW-1:0]
 
 modport pipo
 (
@@ -79,27 +70,7 @@ modport core
 	output	o_remainder
 );
 
-modport switch
-(
-	input		i_load,
-	input		i_sw[SW-1:0],
-	
-	output	o_data,
-	output	o_op
-);
-
-modport led
-(	
-	input		i_stop,
-	input		i_loadX,
-	input		i_loadY,
-	input		i_error,
-	input		i_ready,
-	
-	output	o_leds[LW-1:0]
-);
-	 
 endinterface
-
+	 
 `endif
 
