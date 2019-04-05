@@ -18,14 +18,14 @@
 #
 # Quartus Prime
 # Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-# Date created = 12:43:21  April 02, 2019
+# Date created = 09:58:59  April 05, 2019
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		multiplier_assignment_defaults.qdf
+#		MDR_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -38,22 +38,22 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY mdr
+set_global_assignment -name TOP_LEVEL_ENTITY MDR
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:43:21  APRIL 02, 2019"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:58:59  APRIL 05, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
-set_global_assignment -name SYSTEMVERILOG_FILE multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/validation.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/system_mdr_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/root.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/product_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/pipo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/mdr_if.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/mdr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/division.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/core.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/control.sv
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name SYSTEMVERILOG_FILE mdr.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pipo.sv
-set_global_assignment -name SYSTEMVERILOG_FILE control.sv
-set_global_assignment -name SYSTEMVERILOG_FILE validation.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core.sv
-set_global_assignment -name SYSTEMVERILOG_FILE division.sv
-set_global_assignment -name SYSTEMVERILOG_FILE root.sv
-set_global_assignment -name SYSTEMVERILOG_FILE product_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE system_mdr_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mdr_if.sv
