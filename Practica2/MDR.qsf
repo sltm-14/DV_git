@@ -58,3 +58,12 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SYSTEMVERILOG_FILE src/switch.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/leds.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/add.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/add_con.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/bin_to_7seg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/bin_to_thto.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/complement_a2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/displays.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/pkg_bin_to_thto.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/TOP_bcd_7seg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/display_if.sv

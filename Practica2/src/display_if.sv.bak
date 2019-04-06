@@ -1,0 +1,4 @@
+
+interface display_if();
+import system_mdr_pkg::*;
+
