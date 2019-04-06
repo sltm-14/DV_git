@@ -24,6 +24,7 @@ import system_mdr_pkg::*;
 (
 	input					clk,
 	input					rst,
+	input					i_sw[SW-1:0],
 	
 	mdr_if.switch		switch_if
 );
@@ -38,8 +39,8 @@ always_ff@(posedge clk, negedge rst) begin: switch
 	end
 	else if(i_load) begin
 		/*Assigns the data switch to the registers*/
-		r_switch.data 	<= switch.i_sw[DW-1:0];
-		r_switch.op		<=	switch.i_sw[SW-1:SW-2];
+		r_switch.data 	<= i_sw[DW-1:0];
+		r_switch.op		<=	i_sw[SW-1:SW-2];
 	end
 	else begin
 		/*Clear the registers*/

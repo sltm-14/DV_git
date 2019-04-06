@@ -16,19 +16,20 @@
 module mdr
 import system_mdr_pkg::*;
 (
-	input clk,
-	input rst,
-	input i_load,
-	input i_op,
-	input i_start,
-	input data_t i_data,
+	input 			clk,
+	input 			rst,
+	input 			i_load,
+	input op_t 		i_op,
+	input 			i_start,
+	input data_t 	i_data,
 	
-	output data_t o_result,
-	output o_ready,
-	output o_loadX,
-	output o_loadY,
-	output o_error
-	output data_t o_reaminder
+	output 			o_ready,
+	output 			o_loadX,
+	output 			o_loadY,
+	output 			o_error
+	output data_t 	o_reaminder,
+	output data_t 	o_result,
+
 );
 
 mdr_if	top_itf();
@@ -37,27 +38,17 @@ switch SWITCH
 (
 	.clk				(clk),
 	.rst				(rst),
+	.i_sw				(i_data),
 	.switch_if		(top_if.switch)
-);
-
-pipo PIPO_DATA1
-(
-	.clk				(clk),
-	.rst				(rst),
-	.pipo_if			(top_itf.pipo)
-);
-
-pipo PIPO_DATA2
-(
-	.clk				(clk),
-	.rst				(rst),
-	.pipo_if			(top_itf.pipo)
 );
 
 control CONTROL
 (
 	.clk				(clk),
 	.rst				(rst),
+	.i_load			(i_load),
+	.i_op				(i_op),
+	.i_start			(i_start),
 	.control_if		(top_itf.control)
 );
 
@@ -73,13 +64,21 @@ core MDR
 	.clk				(clk),
 	.rst				(rst),
 	.core_if			(top_itf.core)
+	
+	.o_result		(o_result),
+	.o_remainder	(o_remainder)
 );
 
 leds LEDS
 (	
 	.clk				(clk),
 	.rst				(rst),
-	.led_if			(top_itf.led)
+	.led_if			(top_itf.led),
+	
+	.o_loadX			(o_loadX),
+	.o_loadY			(o_loadY),
+	.o_ready			(o_ready),
+	.o_error			(o_error)
 );
 
 endmodule

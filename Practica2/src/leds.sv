@@ -1,14 +1,14 @@
 /*-----------------------------------------------
-* MODULE: 	  leds.sv
+* MODULE: 	  	leds.sv
 * DESCRIPTION: Shows the state of the system
 *					
-* INPUTS: 	  clock, reset and control signals:
+* INPUTS: 	  	clock, reset and control signals:
 *					stop, ready, loadX, loadY, error				
-* OUTPUTS:    Control signals: ready, loadX, loadY,
+* OUTPUTS:    	Control signals: ready, loadX, loadY,
 *					error
-* VERSION:    1.0
-* AUTHORS:    Andres Hernandez, Carem Acosta
-* DATE:       05 / 04 / 19
+* VERSION:    	1.0
+* AUTHORS:    	Andres Hernandez, Carem Acosta
+* DATE:       	05 / 04 / 19
 * ----------------------------------------------*/
 
 `ifndef LEDS_SV
@@ -19,14 +19,19 @@ import system_mdr_pkg::*;
 (
 	input 			clk, 
 	input 			rst, 
-
+	
+	output			o_loadX,
+	output			o_loadY,
+	output			o_ready,
+	output			o_error,
+	
 	mdr_if.led		led_if
 );
 
-assign led_if.o_leds[0]	=	(led_if.i_stop) ? led_if.i_loadX:	'0;
-assign led_if.o_leds[1]	=	(led_if.i_stop) ? led_if.i_loadY:	'0;
-assign led_if.o_leds[2]	=	(led_if.i_stop) ? led_if.i_error:	'0;
-assign led_if.o_leds[3]	=	(led_if.i_stop) ? led_if.i_ready:	'0;
+assign o_loadX	=	(led_if.o_loadX_ctrl) ? ON:	'0;
+assign o_loadY	=	(led_if.o_loadY_ctrl) ? ON:	'0;
+assign o_error	=	(led_if.o_error_ctrl) ? ON:	'0;
+assign o_ready	=	(led_if.o_ready_ctrl) ? ON:	'0;
 
 endmodule
 

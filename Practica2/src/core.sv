@@ -18,6 +18,9 @@ import system_mdr_pkg::*;
 	input 			clk,
 	input 			rst,
 	mddr_if.core	core_if
+	
+	output data_t 	o_reaminder,
+	output data_t 	o_result,
 );
 
 	multiplier MULT

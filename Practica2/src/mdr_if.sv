@@ -14,98 +14,66 @@
 interface mdr_if ();
 import system_mdr_pkg::*;
 
-logic 	i_enable;
-data_t 	i_data;
-logic		i_load;
-logic		i_op;
-logic 	i_start;
-logic 	i_done;
-logic 	i_error;
-data_t	i_dataX;
-data_t	i_dataY;
-logic		i_switch[SW-1:0];
-logic		i_stop;
-logic		i_loadX;
-logic		i_loadY;
-logic		i_ready;
+data_t	o_data_sw;
+data_t	o_dataX_val;
+data_t	o_dataY_val;
 
-logic 	o_error;
-logic		o_ready;
-logic		o_loadX;
-logic		o_loadY;
-enb_t		o_enable;
-data_t 	o_out;
-data_t	o_dataX;
-data_t	o_dataY;
-logic		o_done;
-data_t	o_result;
-data_t	o_remainder;
-data_t	o_data;
-op_t		o_op;
-logic		o_leds[LW-1:0]
+logic 	o_done_core;
+logic		o_error_val;
+logic 	o_error_ctrl;
+logic		o_ready_ctrl;
+logic 	o_loadX_ctrl;
+logic		o_loadY_ctrl;
+logic 	o_load_ctrl;
+logic		o_enable_ctrl;
+logic 	o_error_val;
+logic 	o_done_core;
+logic 	o_load_ctrl;
 
-modport pipo
+modport switch
 (
-	input    i_enable,
-	input		i_data,
+	input		o_load_ctrl,	
 	
-	output	o_out
+	output	o_data_sw			
 );
 
 modport control
-(
-	input		i_load,
-	input 	i_op,
-	input		i_start,
-	input		i_done,
-	input		i_error,
+(	
+	input		o_done_core,			
+	input		o_error_val,		
 	
-	output	o_error,
-	output	o_ready,
-	output	o_loadX,
-	output	o_loadY,
-	output	o_enable
+	output	o_error_ctrl,		
+	output	o_ready_ctrl,			
+	output	o_loadX_ctrl,		
+	output	o_loadY_ctrl,		
+	output	o_load_ctrl,		
+	output	o_enable_ctrl				
 );
 
 modport validation
 (
-	input 	i_dataX,
-	input 	i_dataY,
+	input 	o_data_sw,		
 	
-	output 	o_error,
-	output	o_dataX,
-	output	o_dataY
+	output 	o_error_val,	
+	output	o_dataX_val,	
+	output	o_dataY_val		
 );
 
 modport core
 (
-	input		i_dataX,
-	input		i_dataY,
-	input		i_enable,
+	input		o_dataX_val,	
+	input		o_dataY_val,	
+	input		o_enable_ctrl,	
 	
-	output	o_done,
-	output	o_result,
-	output	o_remainder
-);
-
-modport switch
-(
-	input		i_load,
-	input		i_sw[SW-1:0],
-	
-	output	o_data,
-	output	o_op
+	output	o_done_core,	
 );
 
 modport led
 (	
-	input		i_stop,
-	input		i_loadX,
-	input		i_loadY,
-	input		i_error,
-	input		i_ready,
-	
-	output	o_leds[LW-1:0]
+	input		o_readY_ctrl,
+	input		o_loadX_ctrl,
+	input		o_loadY_ctrl,
+	input		o_error_ctrl,
 );
 	 
 endinterface

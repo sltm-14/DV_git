@@ -17,6 +17,9 @@ import system_mdr_pkg::*;
 (
 	input					clk,
 	input 				rst,
+	input					i_load,
+	input	op_t			i_op,
+	input					i_start,
 
 	mdr_if.control		control_if
 );

@@ -14,6 +14,7 @@ package system_mdr_pkg;
     localparam		DW = 16;
 	 localparam		SW = 18;
 	 localparam		LW = 4;
+	 localparam		ON = 1'b1;
 
     typedef logic [DW-1:0]		data_t;
     typedef logic [1:0]			enb_t;

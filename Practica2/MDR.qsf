@@ -46,7 +46,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE src/validation.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/system_mdr_pkg.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/root.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/product_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE src/pipo.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/multiplier.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/mdr_if.sv
 set_global_assignment -name SYSTEMVERILOG_FILE src/mdr.sv
