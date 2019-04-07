@@ -14,16 +14,14 @@
 module bin_to_thto
  import pkg_bin_to_thto::*;
  (
-	input  [IVW-1:0]   i_Bin, /* Se introduce el valor que se quiere separar en unidades, decenas y centenas */
- 
-	output [FVW-1:0]   o_Full_Val
+	display_if.thto	thto_if
  );
 
  /* cables para pasar y hacer shift de cada uno de los modulos sumadores */
  struct_thto  wires;
 
  /* Para iniciar se toman los valores de entrada y se recorren en cada suma */
- assign wires.full_val[0] = {'0,i_Bin[IVW-1:0]};
+ assign wires.full_val[0] = {'0,thto_if.o_Val_com[IVW-1:0]};
 
  /* Se pasan los valores con shift para sus respectivas sumas, esto para separarlos entre unidades, decenas... */
  generate 
@@ -37,7 +35,7 @@ module bin_to_thto
  endgenerate
 
  /* Se reparte el valor entero a sus unidades, decenas y centenas */
- assign o_Full_Val = wires.full_val[IVW-1'b1] << 1'b1;
+ assign thto_if.o_Full_Val_thto = wires.full_val[IVW-1'b1] << 1'b1;
 
     
 endmodule
