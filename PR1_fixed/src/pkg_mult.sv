@@ -21,7 +21,7 @@ typedef logic [DW-1:0]  val_t;		/* Type out signal */
 typedef logic [BW:0] 	count_t;	/* count */
 typedef logic [FC:0] 	counter_t; 	/* Counter type */
 typedef logic [DW2+1:0]	sw_in_t;	/*Data with sign*/
-typedef	logic 			signal_t;	/*Single signal*/
+typedef	logic 			logic;	/*Single signal*/
 typedef logic 			sign_t;
 
 typedef enum logic  [2:0]	{IDLE, INIT, ADD_SHIFT} state_t;	/* enum for states */
@@ -32,20 +32,20 @@ typedef struct{ /*Struct for TOP module*/
 	multiplicand_t	mltnd_out;
 	product_t		finalProduct;
 	product_t		product;
-	signal_t		mltr_done;
-	signal_t		mltd_done;
-	signal_t		clkPLL;
-	signal_t		clk;
-	signal_t		finalSign;
-	signal_t		sign_mltnd;
-	signal_t		sign_mlter;
-	signal_t		reg_mltnd;
-	signal_t		reg_mlter;
-	signal_t		ready;
-	signal_t		load;
-	signal_t		lsb;
-	signal_t		clean;
-	signal_t		ovf;
+	logic		mltr_done;
+	logic		mltd_done;
+	logic		clkPLL;
+	logic		clk;
+	logic		finalSign;
+	logic		sign_mltnd;
+	logic		sign_mlter;
+	logic		reg_mltnd;
+	logic		reg_mlter;
+	logic		ready;
+	logic		load;
+	logic		lsb;
+	logic		clean;
+	logic		ovf;
 	comp2_t			real_mltnd;
 	comp2_t			real_mlter;
 	data_t			data_mltnd;
@@ -62,14 +62,22 @@ typedef struct{
 	sign_t	sign;
 }comp2_st;
 
+				r_control.clean 	<= 1'b0;					
+				r_control.loadX 	<= 1'b0;
+				r_control.loadY 	<= 1'b0;
+				r_control.veri 		<= 1'b0;
+				r_control.error 	<= 1'b0;
+				r_control.enable 	<= 1'b0;
+				r_control.ready 	<= 1'b0;
+
 typedef struct{
-	signal_t	load;
-	signal_t	ready;
-	signal_t	ovf;
-	signal_t	enb;
-	count_t     count;
-	signal_t	clean;
-	state_t		state;
+	logic	load;
+	logic	ready;
+	logic	ovf;
+	logic	enb;
+	count_t count;
+
+	state_t	state;
 }control_t;
 
 typedef struct{		/*Struct with registers*/

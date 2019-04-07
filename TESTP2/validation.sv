@@ -3,7 +3,7 @@
     `define VALIDATION_SV
 	 
 module validation
-import system_mdr_pkg::*;
+import pkg_system_mdr::*;
 (
 	input						clk,
 	input 					rst, 

@@ -6,7 +6,7 @@ import system_mdr_pkg::*;
 (
 	input 			clk,
 	input 			rst,
-	mddr_if.core	core_if
+	if_mdr.core	core_if
 );
 
 	multiplier MULT

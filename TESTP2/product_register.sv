@@ -1,7 +1,7 @@
 `ifndef PRODUCT_REGISTER_SV
     `define PRODUCT_REGISTER_SV
 module product_register
-import system_mdr_pkg::*;
+import pkg_system_mdr::*;
 (
 	input clock,
 	input reset,
