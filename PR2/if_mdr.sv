@@ -52,15 +52,6 @@ modport control
 	output  w_ovf
 );
 
-modport alu_op(
-	input  [1:0] 	w_product_2lsb,
-	input  op_t  	w_op,
-	input 		 	w_enable,
-	input 			w_r_mb,
-
-	output alu_op_t	w_alu_op
-);
-
 modport validation(
 	input 	w_veri,
 	input 	w_data_X,
@@ -74,6 +65,15 @@ modport pipo_X(
 	input   w_dataIn_X,
 	
 	output	w_data_X
+);
+
+modport alu_op(
+	input  [1:0] 	w_product_2lsb,
+	input  op_t  	w_op,
+	input 		 	w_enable,
+	input 			w_r_mb,
+
+	output alu_op_t	w_alu_op
 );
 
 modport pipo_Y(
