@@ -29,6 +29,8 @@ logic		o_enable_ctrl;
 logic 	o_error_val;
 logic 	o_done_core;
 logic 	o_load_ctrl;
+data_t	o_result;
+data_t	o_remainder;
 
 modport switch
 (
@@ -65,7 +67,9 @@ modport core
 	input		o_dataY_val,	
 	input		o_enable_ctrl,	
 	
-	output	o_done_core,	
+	output	o_done_core,
+	output	o_result,
+	output	o_remainder
 );
 
 modport led
@@ -76,6 +80,10 @@ modport led
 	input		o_error_ctrl,
 );
 	 
+modport bcd
+(
+	input		o_result
+);
 endinterface
 
 `endif
