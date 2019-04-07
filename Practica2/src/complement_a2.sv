@@ -14,16 +14,15 @@
 module complement_a2
 import pkg_bin_to_thto::*;
 (
-	input  [IVW-1:0] 	i_Val, 	/* Valor inicial en complemento a2 */
-
-	output [IVW-1:0] 	o_Val,		/* Valor sin complemento */
-	output      	 	o_Signo 	/* Signo de la entrada */	
+		input	t_iv	i_Val,
+		output		o_Signo,
+		display_if.complement	complement_if
 );
 
 /* El valor del septimo bit indica si el signo es positivo o negativo, en caso de ser positivo 
 ** se hace complemento A2 de lo contrario el valor continua igual */
-assign o_Val   =  ( i_Val[IVW-1] ) ? ( (~i_Val) + 1'b1 ) : i_Val; 
-assign o_Signo = ~( i_Val[IVW-1] ) ? 1'b1 : 1'b0;
+assign complement_if.o_Val   	=  ( i_Val[IVW-1] ) ? ( (~i_Val) + 1'b1 ) : i_Val; 
+assign o_Signo 					= ~( i_Val[IVW-1] ) ? 1'b1 : 1'b0;
 
 endmodule
 
