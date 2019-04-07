@@ -10,12 +10,29 @@
 `ifndef DISPLAY_IF_SV
 	`define DISPLAY_IF_SV
 
-interface display_if();
-import system_mdr_pkg::*;
+interface display_if ();
+import pkg_bin_to_thto;
+
+t_iv	o_Val_com;
+t_fv	o_Full_Val_thto;
 
 
+modport complement
+(
+	output	o_Val_com
+);
 
+modport thto
+(
+	input	o_Val_com,
+	
+	output	o_Full_Val_thto
+);
 
+modport display
+(
+	input	o_Full_Val_thto,
+);
 endinterface
 
 `endif
