@@ -10,10 +10,15 @@ localparam	DW2 = DW<<2;
 typedef logic [DW-1:0]	data_t;
 typedef logic [1:0]		enb_t;
 typedef	logic [DWB-1:0]	count_t;
+typedef logic [1:0]		alu_op_t;
+
 
 typedef enum logic  [3:0]	{IDLE, CLEAN, WAIT_X, WAIT_Y,
 							 VERIFICATION, CALCULATION,
 							 READY } state_t;	/* enum for states */
+
+typedef enum logic [1:0] {MULT, DIV, ROOT} op_t;
+typedef enum logic [1:0] {NULL, SUBS, ADD} alu_op_t;
 
 typedef struct{
 	logic 		clean;
@@ -31,7 +36,8 @@ typedef struct{
 }st_control;
 
 typedef struct{
-	
+	data_t  data_val;
+	op_t	op;
 }st_data;
 
 typedef struct{
@@ -45,6 +51,7 @@ typedef struct{
 typedef struct{
 	
 }st_alu;
+
 
 endpackage
 

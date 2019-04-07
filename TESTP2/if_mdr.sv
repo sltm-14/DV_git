@@ -33,7 +33,6 @@ interface if_mdr ();
 /* VAL */
 
 
-//data_t r_reaminder;
 
 
 modport control
@@ -51,6 +50,15 @@ modport control
 	output	w_ready,
 
 	output  w_ovf
+);
+
+modport alu_op(
+	input  [1:0] 	w_product_2lsb,
+	input  op_t  	w_op,
+	input 		 	w_enable,
+	input 			w_r_mb,
+
+	output alu_op_t	w_alu_op
 );
 
 modport validation(
@@ -114,29 +122,18 @@ modport mux_rd(
 );
 
 modport alu(
-	input data_t w_mux_data_alu,
-	input data_t w_mux_rem_alu,
-	input alu_op_t w_alu_op,
+	input data_t   	w_mux_data_alu,
+	input data_t   	w_mux_rem_alu,
+	input alu_op_t	w_alu_op
 
-	output data_t w_alu_rem
+	output data_t 	w_alu_rem
 );
 
+modport reminder (
 
 
-
-/*
-modport core
-(
-	input	w_dataX,
-	input	w_dataY,
-	input	w_enable,
-	
-	output	w_done,
-	output	w_result,
-	output	w_remainder
-);*/
-
-
+	output w_r_mb
+);
 
 endinterface
 	 

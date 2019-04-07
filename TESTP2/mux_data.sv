@@ -3,7 +3,9 @@
 
 module mux_data
 import pkg_system_mdr::*;(
-
+	if_mdr.mux_data mux
 	);
+
+	
 
 endmodule
