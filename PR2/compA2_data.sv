@@ -8,7 +8,7 @@ import pkg_system_mdr::*;(
 
 	);
 
-comp_A2Data.val = ( comp_A2Data.w_data_Y_a2[DW] ) ? ( ~(comp_A2Dataw_data_Y. - 1'b1)) :
- 										comp_A2Data.w_data_Y; 
+assign comp_A2Data.w_data_Y_a2 = (comp_A2Data.w_data_Y[DW-1] ) ? ( ~( comp_A2Data.w_data_Y - 1'b1)) : comp_A2Data.w_data_Y; 
 
 endmodule 
+`endif

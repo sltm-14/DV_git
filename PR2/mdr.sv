@@ -5,58 +5,127 @@
 module mdr
 import pkg_system_mdr::*;
 (
-	input 		 clk,
-	input  		 rst
-/*	input 		 i_load,
-	input 		 i_op,
-	input 		 i_start,
-	input data_t i_data,
-	
-	output data_t o_result,
-	output 		  o_ready,
-	output 		  o_loadX,
-	output 		  o_loadY,
-	output 		  o_error,
-	output data_t o_reaminder*/
-);
+	input	 clk,
+	input	 rst,
 
-mdr_if	top_itf();
+	if_mdr     mdr_itf
 
-control CONTROL(
-	.clk				(clk),
-	.rst				(rst),
-
-	.control_if		(top_itf.control)
-);
-
-pipo PIPO_X(
-	.clk				(clk),
-	.rst				(rst),
-
-	.pipo_if			(top_itf.pipo_X)
-);
-
-pipo PIPO_Y(
-	.clk				(clk),
-	.rst				(rst),
-	
-	.pipo_if			(top_itf.pipo_Y)
 );
 
 
-validation VALIDATION(
-	.val 			()
-//	.clk			(clk),
-//	.rst			(rst),
 
-	.validation_if	(top_itf.validation)
+control CTRL(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.control_if  (mdr_itf.control) 
 );
 
-core MDR(
-	.clk				(clk),
-	.rst				(rst),
+validation VAL(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
 
-	.core_if			(top_itf.core)
+	.validation_if  (mdr_itf.validation) 
+);
+
+pipo_x PIPOX(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.pipo_ifx  (mdr_itf.pipo_X) 
+);
+
+alu_operation ALUOP(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.itf_alu_op  (mdr_itf.alu_op) 
+);
+
+pipo_y PIPOY(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.pipo_if  (mdr_itf.pipo_Y) 
+);
+
+compA2_data COMPA2DATA(
+	//.clk    (clk),   // Core clock
+	//.rst    (rst),   // asynchronous reset low active.
+
+	.comp_A2Data  (mdr_itf.compA2_data) 
+);
+
+mux_data MUXDATA(
+	//.clk    (clk),   // Core clock
+	//.rst    (rst),   // asynchronous reset low active.
+
+	.mux   (mdr_itf.mux_data) 
+);
+
+data DATA(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.data_if  (mdr_itf.data) 
+);
+
+or_gate ORGATE(
+	//.clk    (clk),   // Core clock
+	//.rst    (rst),   // asynchronous reset low active.
+
+	.or_if  (mdr_itf.or_gate) 
+);
+
+mux_rd MUXRD(
+	//.clk    (clk),   // Core clock
+	//.rst    (rst),   // asynchronous reset low active.
+
+	.mux  (mdr_itf.mux_rd) 
+);
+
+alu ALU(
+	//.clk    (clk),   // Core clock
+	//.rst    (rst),   // asynchronous reset low active.
+
+	.itf_alu  (mdr_itf.alu) 
+);
+
+compA2_reminder COMPA2REM(
+	.comp_A2rem  (mdr_itf.compA2_rem) 
+);
+
+mux_reminder MUXREM(
+	.mux   (mdr_itf.mux_rem) 
+);
+
+compA2_quotient COMPA2QUO(
+	.comp_A2quo  (mdr_itf.compA2_quo) 
+);
+
+mux_quotient MUXQUO(
+	.mux   (mdr_itf.mux_quo) 
+);
+
+reminder REM(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.rem  (mdr_itf.reminder) 
+);
+
+quotient QUO(
+	.clk    (clk),   // Core clock
+	.rst    (rst),   // asynchronous reset low active.
+
+	.quo_if  (mdr_itf.quotient) 
+);
+
+mux_rq MUXRQ(
+	//.clk    (clk),   // Core clock
+	//.rst    (rst),   // asynchronous reset low active.
+
+	.mux  (mdr_itf.mux_rq) 
 );
 	
 

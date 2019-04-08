@@ -1,20 +1,21 @@
-`ifndef SYSTEM_MDR_PKG_SV
-    `define SYSTEM_MDR_PKG_SV
+`ifndef PKG_SYSTEM_MDR_SV
+    `define PKG_SYSTEM_MDR_SV
 	 
 package pkg_system_mdr;
 
 localparam  DW      	= 16;
+localparam  DWH = DW>>1;
 localparam  DWB = $clog2(DW);
-localparam	DW2 = DW<<2;
+localparam	DW2 = DW<<1;
 
-typedef logic [DW-1:0]	data_t;
+typedef logic [DW-1:0]	data_in_t;
+typedef logic [DW2-1:0]	data_t;
 typedef logic [1:0]		enb_t;
-typedef	logic [DWB-1:0]	count_t;
-typedef logic [1:0]		alu_op_t;
-
+typedef logic [1:0]		lsb2_t;
+typedef	logic [DWB:0]	count_t;
 
 typedef enum logic  [3:0]	{IDLE, CLEAN, WAIT_X, WAIT_Y,
-							 VERIFICATION, CALCULATION,
+							 VERIFICATION, INIT, CALCULATION,
 							 READY } state_t;	/* enum for states */
 
 typedef enum logic [1:0] {MULT, DIV, ROOT} op_t;
@@ -28,6 +29,8 @@ typedef struct{
 	logic 		error;
 	logic 		enable;
 	logic 		ready;
+	logic		init;
+
 
 	logic		ovf;
 	count_t     count;
@@ -37,20 +40,19 @@ typedef struct{
 
 typedef struct{
 	data_t  data_val;
-	op_t	op;
 }st_data;
 
 typedef struct{
-	
+	data_t  rem_val;
 }st_reminder;
 
 typedef struct{
-	
+	data_t	quo_val;
 }st_quotient;
 
-typedef struct{
+/*typedef struct{
 	
-}st_alu;
+}st_alu;*/
 
 
 endpackage
