@@ -72,6 +72,14 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	validation
 
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/pipo_x.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/pipo_x.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module pipo_x
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	pipo_x
+
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_reminder.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_reminder.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module mux_reminder
@@ -96,14 +104,6 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	mux_rd
 
-} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/pipo_x.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/pipo_x.sv
-Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module pipo_x
--- Importing package pkg_system_mdr
-
-Top level modules:
-	pipo_x
-
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/pkg_system_mdr.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/pkg_system_mdr.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling package pkg_system_mdr
@@ -119,14 +119,6 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	control
 
-} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_quotient.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_quotient.sv
-Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module compA2_quotient
--- Importing package pkg_system_mdr
-
-Top level modules:
-	compA2_quotient
-
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_quotient.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_quotient.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module mux_quotient
@@ -135,13 +127,21 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	mux_quotient
 
-} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mdr.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mdr.sv
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_quotient.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_quotient.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module mdr
+-- Compiling module compA2_quotient
 -- Importing package pkg_system_mdr
 
 Top level modules:
-	mdr
+	compA2_quotient
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_data.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_data.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module compA2_data
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	compA2_data
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_data.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_data.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
@@ -151,13 +151,13 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	mux_data
 
-} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_data.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/compA2_data.sv
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mdr.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mdr.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module compA2_data
+-- Compiling module mdr
 -- Importing package pkg_system_mdr
 
 Top level modules:
-	compA2_data
+	mdr
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_rq.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR2/mux_rq.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015

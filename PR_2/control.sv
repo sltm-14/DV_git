@@ -1,0 +1,218 @@
+`ifndef CONTROL_SV
+    `define CONTROL_SV
+
+module control
+import pkg_system_mdr::*;
+(
+	input	clk,
+	input 	rst,
+
+	input	i_start,
+	input   i_load,
+	input	i_error,
+	input 	i_ovf,
+	
+	output  o_clean,
+	output	o_loadX,
+	output	o_loadY,
+	output  o_veri,
+	output	o_error_sig,
+	output	o_enable,
+	output	o_ready,
+	output  o_init
+);
+
+st_control r_control;
+
+always_ff@(posedge clk, negedge rst)begin: state_machine
+	if(!rst)			
+		r_control.state <= IDLE;
+	else begin
+		case (r_control.state)
+			IDLE: begin
+				if(!i_start)
+					r_control.state <= CLEAN;
+				else 
+					r_control.state <= IDLE;
+			end
+
+			CLEAN: begin
+				r_control.state <= WAIT_X;
+			end
+
+			WAIT_X: begin
+				if(!i_load)
+					r_control.state <= WAIT_Y;
+				else
+					r_control.state <= WAIT_X;
+			end
+
+			WAIT_Y: begin
+				if(!i_load)
+					r_control.state <= VERIFICATION;
+				else
+					r_control.state <= WAIT_Y;
+			end
+
+			VERIFICATION: begin
+				if(i_error)
+					r_control.state <= IDLE;
+				else
+					r_control.state <= INIT;
+			end
+
+			INIT: begin
+				r_control.state <= CALCULATION;
+			end
+
+			CALCULATION:  begin
+				if (i_ovf ) 
+					r_control.state <= READY;
+				else
+					r_control.state <= CALCULATION;
+			end
+					
+			READY:	begin
+				r_control.state <= IDLE;
+			end
+						 
+			default:
+				r_control.state <= IDLE;
+				
+		endcase 
+	end
+end: state_machine
+
+
+always@(r_control.state, i_error, rst) begin: outputs
+	if(!rst)begin
+		r_control.loadX 	= 1'b0;
+		r_control.loadY 	= 1'b0;
+		r_control.clean 	= 1'b0;
+		r_control.veri 		= 1'b0;
+		r_control.init 		= 1'b0;
+		r_control.error 	= 1'b0;
+		r_control.enable 	= 1'b0;
+		r_control.ready 	= 1'b0;
+	end
+	else begin
+ 
+		case (r_control.state)
+			IDLE:  begin
+				r_control.clean 	= 1'b0; 	
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			CLEAN:  begin
+				r_control.clean 	= 1'b1; 		
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+					
+			WAIT_X: begin
+				r_control.clean 	= 1'b0; 
+				r_control.loadX 	= 1'b1;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			WAIT_Y: begin
+				r_control.clean 	= 1'b0; 
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b1;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			VERIFICATION: begin
+				r_control.clean 	= 1'b0; 
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b1;
+				r_control.init 		= 1'b0;
+				r_control.error 	= i_error;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			INIT:begin
+				r_control.clean 	= 1'b0; 
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b1;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			CALCULATION: begin
+				r_control.clean 	= 1'b0; 
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b1;
+				r_control.ready 	= 1'b0;
+			end
+		
+			READY: begin
+				r_control.clean 	= 1'b0; 
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b1;
+			end
+
+			default:begin
+				r_control.clean 	= 1'b0;					
+				r_control.loadX 	= 1'b0;
+				r_control.loadY 	= 1'b0;
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+		endcase 	
+	end
+end: outputs 
+
+assign o_clean 		=	r_control.clean;					
+assign o_loadX 		=	r_control.loadX;
+assign o_loadY 		=	r_control.loadY;
+assign o_veri 		=	r_control.veri;
+assign o_init 		=	r_control.init;
+assign o_error_sig 	=	r_control.error;
+assign o_enable 	=	r_control.enable;
+assign o_ready 		=	r_control.ready;
+
+
+endmodule
+`endif
+
+
+
+	
