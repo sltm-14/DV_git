@@ -13,8 +13,8 @@ import pkg_system_mdr::*;
 	input 	i_ovf,
 	
 	output  o_clean,
-	output	o_loadX,
-	output	o_loadY,
+	output	o_load_x,
+	output	o_load_y,
 	output  o_veri,
 	output	o_error_sig,
 	output	o_enable,
@@ -86,8 +86,8 @@ end: state_machine
 
 always@(r_control.state, i_error, rst) begin: outputs
 	if(!rst)begin
-		r_control.loadX 	= 1'b0;
-		r_control.loadY 	= 1'b0;
+		r_control.load_x 	= 1'b0;
+		r_control.load_y 	= 1'b0;
 		r_control.clean 	= 1'b0;
 		r_control.veri 		= 1'b0;
 		r_control.init 		= 1'b0;
@@ -100,8 +100,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 		case (r_control.state)
 			IDLE:  begin
 				r_control.clean 	= 1'b0; 	
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -111,8 +111,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 
 			CLEAN:  begin
 				r_control.clean 	= 1'b1; 		
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -122,8 +122,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 					
 			WAIT_X: begin
 				r_control.clean 	= 1'b0; 
-				r_control.loadX 	= 1'b1;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b1;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -133,8 +133,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 
 			WAIT_Y: begin
 				r_control.clean 	= 1'b0; 
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b1;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b1;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -144,8 +144,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 
 			VERIFICATION: begin
 				r_control.clean 	= 1'b0; 
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b1;
 				r_control.init 		= 1'b0;
 				r_control.error 	= i_error;
@@ -155,8 +155,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 
 			INIT:begin
 				r_control.clean 	= 1'b0; 
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b1;
 				r_control.error 	= 1'b0;
@@ -166,8 +166,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 
 			CALCULATION: begin
 				r_control.clean 	= 1'b0; 
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -177,8 +177,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 		
 			READY: begin
 				r_control.clean 	= 1'b0; 
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -188,8 +188,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 
 			default:begin
 				r_control.clean 	= 1'b0;					
-				r_control.loadX 	= 1'b0;
-				r_control.loadY 	= 1'b0;
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -201,8 +201,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 end: outputs 
 
 assign o_clean 		=	r_control.clean;					
-assign o_loadX 		=	r_control.loadX;
-assign o_loadY 		=	r_control.loadY;
+assign o_load_x 	=	r_control.load_x;
+assign o_load_y		=	r_control.load_y;
 assign o_veri 		=	r_control.veri;
 assign o_init 		=	r_control.init;
 assign o_error_sig 	=	r_control.error;

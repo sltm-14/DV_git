@@ -13,7 +13,7 @@ import pkg_system_mdr::*;
     output  logic   o_ovf
 );
 
-count_t r_count = '0;
+count_t r_count;
 
 always_ff@(posedge clk, negedge rst)begin
     if (!rst)

@@ -1,10 +1,34 @@
-C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv
+C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/demux_2powerN.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/demux_2powerN.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module demux_2powerN
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	demux_2powerN
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_reg_right.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_reg_right.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module shift_reg_right
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	shift_reg_right
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module or_gate
 -- Importing package pkg_system_mdr
 
 Top level modules:
 	or_gate
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/control.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/control.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module control
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	control
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/alu.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/alu.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
@@ -22,6 +46,24 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	shift_right
 
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mdr.sv {0 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mdr.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mdr
+-- Importing package pkg_system_mdr
+** Error: C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mdr.sv(45): Field/method name (loadX) not in 'wires'
+** Error: C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mdr.sv(46): Field/method name (loadY) not in 'wires'
+** Error: C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mdr.sv(126): Illegal bit-select into scalar variable "mdr_enabler".
+** Warning: C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mdr.sv(126): (vlog-2576) [BSOB] - Bit-select into 'mdr_enabler' is out of bounds.
+
+
+} {5.0 8.0} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/compA2_data.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/compA2_data.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module compA2_data
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	compA2_data
+
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_left.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_left.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module shift_left
@@ -29,6 +71,22 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 
 Top level modules:
 	shift_left
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_reg_left.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_reg_left.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module shift_left
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	shift_left
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mux_2powerN.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/mux_2powerN.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux_2powerN
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	mux_2powerN
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_left.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_left.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
@@ -46,6 +104,14 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	shift_reg_right
 
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_left.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_left.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module shift_left
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	shift_left
+
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module control
@@ -53,6 +119,19 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 
 Top level modules:
 	control
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/pipo.sv {0 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/pipo.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module pipo
+** Error: C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/pipo.sv(5): near "import": syntax error, unexpected import, expecting ')'
+
+} {4.0 5.0} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/or_gate.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/or_gate.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module or_gate
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	or_gate
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/couter.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/couter.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
@@ -62,8 +141,40 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	counter
 
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/couter.sv {1 {vlog -work work -sv {C:\Users\c18560\Documents\Carem\DYV\DV_GIT\PR_2\couter.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module counter
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	counter
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/alu.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/alu.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alu
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	alu
+
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/and_gate.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/and_gate.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module and_gate
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	and_gate
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_right.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/shift_right.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module shift_right
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	shift_right
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/and_gate.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/and_gate.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module and_gate
 -- Importing package pkg_system_mdr
 
@@ -85,5 +196,21 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 
 Top level modules:
 	root_square
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/square_root.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/square_root.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module square_root
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	square_root
+
+} {} {}} C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/root_op_calc.sv {1 {vlog -work work -sv C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PR_2/root_op_calc.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module root_op_calc
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	root_op_calc
 
 } {} {}}

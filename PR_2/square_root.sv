@@ -1,7 +1,7 @@
-`ifndef ROOT_SQUARE_SV
+`ifndef SQUARE_ROOT_SV
     `define ROOT_SQUARE_SV
 
-module root_square
+module square_root
 import pkg_system_mdr::*;
 (
 	input clk,
@@ -14,15 +14,13 @@ import pkg_system_mdr::*;
 
 	//output o_result,
 	//output o_reminder,
-	output data_t o_root_alu_a,
-	output data_t o_root_alu_b,
+	output data_t   o_root_alu_a,
+	output data_t   o_root_alu_b,
 	output alu_op_t o_root_op
 
 );
 
 st_root_square rs;
-
-
 
 
 shift_left QUOTIENT(
