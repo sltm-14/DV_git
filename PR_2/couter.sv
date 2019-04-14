@@ -9,8 +9,8 @@ import pkg_system_mdr::*;
 
     input           i_enable,
 
-    output          o_counter,
-    output  logic   o_ovf
+    output count_t  o_counter,
+    output logic   o_ovf
 );
 
 count_t r_count;

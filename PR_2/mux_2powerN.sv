@@ -3,12 +3,13 @@
 
 module mux_2powerN 
 import pkg_system_mdr::*;
-#( parameter MDW = 16)
+#(  parameter MUX_SEL = 2,
+	parameter MDW     = 16  )
  (
-	input   [MDW-1:0]    i_buses,    
-	input   sltr_t      i_sltr,     
+	input   [(2**MUX_SEL)-1:0][MDW-1:0] i_buses,    
+	input   [MUX_SEL-1:0]               i_sltr,     
 
-	output  [2**MUX_SEL-1:0][MDW-1:0]   o_bus      
+	output                  [MDW-1:0]   o_bus      
 );
 
 assign o_bus = i_buses[i_sltr];

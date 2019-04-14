@@ -10,25 +10,27 @@ import pkg_system_mdr::*;
 	input             i_start,
 	input             i_load,
 	input data_in_t   i_data,
-	input op_t        i_op,
+	input op_select_t i_op,
 
-	// output reminder_t o_reminder,
-	// output data_t     o_result,
+/*	output reminder_t o_reminder,
+	output data_t     o_result,*/
 	output            o_load_x,
 	output            o_load_y,
 	output            o_error
 
 	);
 
-st_mdr wires;
+st_mdr  wires;
+count_t count;
+wire    w_clean;
 
-couter COUNT(
+counter COUNT(
 	.clk         (clk),
 	.rst         (rst),
 
 	.i_enable    (wires.enable),
 
-	.o_counter   (),
+	.o_counter   (count),
 	.o_ovf       (wires.ovf)
 );
 
@@ -41,9 +43,9 @@ control CTRL(
 	.i_error     (wires.error),
 	.i_ovf       (wires.ovf),
 	
-	//.o_clean     (),
-	.o_load_x     (wires.load_x),
-	.o_load_y     (wires.load_y),
+	.o_clean     (),
+	.o_load_x    (wires.load_x),
+	.o_load_y    (wires.load_y),
 	.o_veri      (wires.veri),
 	.o_error_sig (wires.error_sig),
 	.o_enable    (wires.enable),
@@ -72,15 +74,15 @@ pipo PIPO_Y(
 	.o_data (wires.data_y)
 );
 
-demux_2powerN #(1) DEM_ENA(
+demux_2powerN #(2,1) DEM_ENA(
 	.i_bus   (wires.enable),  
 	.i_sltr  (i_op),     
 
 	.o_buses (wires.mdr_enabler)     
 );
 
-mux_2powerN #(2) MUX_ALU_OP (
-	.i_buses ({'0,
+mux_2powerN #(2,2) MUX_ALU_OP (
+	.i_buses ({2'b00,
 	          wires.alu_op_root,
 	          wires.alu_op_div,
 	          wires.alu_op_mult}),  
@@ -89,8 +91,8 @@ mux_2powerN #(2) MUX_ALU_OP (
 	.o_bus   (wires.alu_op)  
 );
 
-mux_2powerN #(DW2) MUX_ALU_A (
-	.i_buses ({0,
+mux_2powerN #(2,DW2) MUX_ALU_A (
+	.i_buses ({32'b0000_0000_0000_0000_0000_0000_0000_0000,
 	          wires.root_alu_a,
 	          wires.div_alu_a ,
 	          wires.mult_alu_a}),  
@@ -99,8 +101,8 @@ mux_2powerN #(DW2) MUX_ALU_A (
 	.o_bus   (wires.alu_a)   
 );
 
-mux_2powerN #(DW2) MUX_ALU_B (
-	.i_buses ({'0,
+mux_2powerN #(2,DW2) MUX_ALU_B (
+	.i_buses ({32'b0000_0000_0000_0000_0000_0000_0000_0000,
 	          wires.root_alu_b,
 	          wires.div_alu_b ,
 	          wires.mult_alu_b}),  

@@ -9,10 +9,10 @@ localparam  DWB = $clog2(DW);
 localparam	DW2 = DW<<1;
 
 
-localparam  MUX_SEL = 2;    // Selection bits
-
+/*localparam  MUX_SEL = 2;    // Selection bits
+*/
 /*typedef logic [MDW-1:0]                  mux_dwd_t;  // Input/ output data width*/
-typedef logic [MUX_SEL-1:0]              sltr_t;  // Selector data type  
+//typedef logic [MUX_SEL-1:0]              sltr_t;  // Selector data type  
 /*typedef logic [2**MUX_SEL-1:0][MDW-1:0]  in_bus_t;   // Incoming bus data to multiplexer*/
 
 typedef logic [DW-1:0]	data_in_t;
@@ -28,7 +28,9 @@ typedef logic [DW-1:0]  reminder_t;
 typedef enum logic [3:0] {IDLE, CLEAN,       WAIT_X,   WAIT_Y,   VERIFICATION, 
 						  INIT, CALCULATION, READY     } state_t;	/* enum for states */
 
-typedef enum logic [1:0] {ZERO, SUBS, ADD,NULL} alu_op_t;							 
+typedef enum logic [1:0] {ZERO, SUBS, ADD, NULL} alu_op_t;	
+
+typedef enum logic [1:0] {MULT, DIV, ROOT, NON} op_select_t;							 
 
 typedef struct{
 	logic 		clean;
@@ -67,11 +69,11 @@ typedef struct{
 	logic     ready;
 	data_in_t data_x;
 	data_in_t data_y;
-	logic [2**MUX_SEL-1:0] mdr_enabler;
+	logic [4:0] mdr_enabler;
 
-	alu_op_t alu_op_mult;
-	alu_op_t alu_op_div;
-	alu_op_t alu_op_root;
+	op_t alu_op_mult;
+	op_t alu_op_div;
+	op_t alu_op_root;
 
 	data_t mult_alu_a;
 	data_t mult_alu_b;
@@ -82,7 +84,7 @@ typedef struct{
 	data_t root_alu_a;
 	data_t root_alu_b;
 
-	alu_op_t alu_op;
+	op_t alu_op;
 	data_t alu_a;
 	data_t alu_b;
 
