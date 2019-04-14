@@ -1,18 +1,19 @@
 `ifndef SHIFT_LEFT_SV
     `define SHIFT_LEFT_SV
 
-module shift_left 
+module shift_reg_left 
 import pkg_system_mdr::*;
-#(	parameter SHIFT = 1
-)(
-	input 			clk,
-	input 			rst,
+#(	parameter SHIFT = 1,
+	parameter SDW   = 32 )
+ (
+	input clk,
+	input rst,
 
-	input data_t 	i_val,
-	input 			i_init,
-	input 			i_enable,
+	input logic [SDW-1:0] 	i_val,
+	input 			        i_init,
+	input 		        	i_enable,
 
-	output data_t 	o_val
+	output logic [SDW-1:0] 	o_val
 );
 
 data_t r_val = '0;

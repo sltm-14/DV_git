@@ -4,7 +4,7 @@
 module root_op_calc
 import pkg_system_mdr::*;
 (
-	input   		i_r_msb,
+	input   		    i_r_msb,
 
 	output data_t 		o_or_q,
 	output data_t 		o_or_alu,

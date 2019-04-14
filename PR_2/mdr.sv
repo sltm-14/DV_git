@@ -43,11 +43,11 @@ control CTRL(
 	.i_error     (wires.error),
 	.i_ovf       (wires.ovf),
 	
-	.o_clean     (),
-	.o_load_x    (wires.load_x),
-	.o_load_y    (wires.load_y),
+	.o_clean     (w_clean),
+	.o_load_x    (o_load_x),
+	.o_load_y    (o_load_y),
 	.o_veri      (wires.veri),
-	.o_error_sig (wires.error_sig),
+	.o_error_sig (o_error_sig),
 	.o_enable    (wires.enable),
 	.o_init      (wires.init),
 	.o_ready     (wires.ready)
@@ -114,16 +114,16 @@ mux_2powerN #(2,DW2) MUX_ALU_B (
 alu ALU(
 	.i_val_a  (wires.alu_a),
 	.i_val_b  (wires.alu_b),
-	.i_sltr   (i_op),
+	.i_sltr   (wires.alu_op),
 
-	.o_val    (wires.alu_op)
+	.o_val    (wires.alu_result)
 );
 
 square_root SR(
 	.clk          (clk),
 	.rst          (rst),
 
-	.i_alu_result (wires.alu_op),
+	.i_alu_result (wires.alu_result),
 	.i_val_x      (wires.data_x),
 	.i_enable     (wires.mdr_enabler[2]),
 	.i_init       (wires.init),

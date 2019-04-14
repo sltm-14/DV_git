@@ -1,7 +1,7 @@
 module tb_ms
 	import pkg_system_mdr::*; ();
 
-	logic       clk;
+	logic       clk = 0;
 	logic       rst;
 
 	logic       start;

@@ -51,9 +51,9 @@ typedef struct{
 	data_t q_val;
 	data_t qs_or;
 	data_t r_val;
-	or_q_t op_or_q;
-	logic  op_or_alu;
-	data_t d_and;
+	data_t op_or_q;
+	data_t  op_or_alu;
+	data_in_t d_and;
 	data_t and_or;
 }st_root_square;
 
@@ -87,6 +87,9 @@ typedef struct{
 	op_t alu_op;
 	data_t alu_a;
 	data_t alu_b;
+
+
+	data_t alu_result;
 
 
 

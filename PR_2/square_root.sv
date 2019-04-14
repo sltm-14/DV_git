@@ -7,10 +7,10 @@ import pkg_system_mdr::*;
 	input clk,
 	input rst,
 
-	input data_t i_alu_result,
-	input data_t i_val_x,
-	input 		 i_enable,
-	input 		 i_init,
+	input data_t    i_alu_result,
+	input data_in_t i_val_x,
+	input 		    i_enable,
+	input 		    i_init,
 
 	//output o_result,
 	//output o_reminder,
@@ -23,7 +23,7 @@ import pkg_system_mdr::*;
 st_root_square rs;
 
 
-shift_left QUOTIENT(
+shift_left #(1,32) QUOTIENT(
 	.clk(clk),
 	.rst(rst),
 
@@ -33,7 +33,7 @@ shift_left QUOTIENT(
 	.o_val(rs.q_val)
 );
 
-shift_left Q_SHIFT(
+shift_left #(2,32) Q_SHIFT(
 	.clk(clk),
 	.rst(rst),
 
@@ -66,7 +66,7 @@ or_gate OR_Q_OP_Q(
 	.o_val(rs.or_op_q_q)
 );
 
-shift_left REMINDER(
+shift_left #(2,32) REMINDER(
 	.clk(clk),
 	.rst(rst),
 
@@ -76,7 +76,7 @@ shift_left REMINDER(
 	.o_val(rs.r_val)
 );
 
-shift_reg_right DATA(
+shift_reg_right #(2,16) DATA(
 	.clk(clk),
 	.rst(rst),
 
@@ -88,7 +88,7 @@ shift_reg_right DATA(
 );
 
 and_gate AND_D_3_ALU(
-	.i_val_a(rs.d_and),
+	.i_val_a({16'b0000_0000_0000_0000,rs.d_and}),
 	.i_val_b(3),
 
 	.o_val(rs.and_or)

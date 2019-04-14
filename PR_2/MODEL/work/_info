@@ -10,32 +10,32 @@ cModel Technology
 Z0 dC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/MODEL
 valu
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z2 DXx4 work 14 pkg_system_mdr 0 22 ^cO;lkhdZ0n4lZOHY0S0U0
-Z3 !s110 1555203377
+Z2 DXx4 work 14 pkg_system_mdr 0 22 TR7VR@>2AD]DKMGAQS6ah1
+Z3 !s110 1555218188
 !i10b 1
-!s100 52[4mgVdcHCSXRZC7IGe73
-IB6B`T6^Rj>1<55JmhfaoV1
+!s100 ]P8GEHRL4mgH[`[1n5kmj1
+I4T=38V185f`2DBCAR];;61
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 !s105 alu_sv_unit
 S1
 R0
-Z5 w1555174147
+w1555206760
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/alu.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/alu.sv
 L0 4
-Z6 OV;L;10.4b;61
+Z5 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z7 !s108 1555203377.000000
+Z6 !s108 1555218188.000000
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/alu.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/alu.sv|
 !i113 1
-Z8 o-work work -sv
+Z7 o-work work -sv
 vand_gate
 R1
 R2
-R3
+Z8 !s110 1555218189
 !i10b 1
 !s100 If<1U5406<0aS9[4_f?9P2
 I:DnS=W;dfPGDzDheSh=@P3
@@ -47,19 +47,19 @@ w1554782123
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/and_gate.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/and_gate.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R7
+Z9 !s108 1555218189.000000
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/and_gate.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/and_gate.sv|
 !i113 1
-R8
+R7
 vcompA2_data
 R1
 R2
-Z9 !s110 1555203378
+R8
 !i10b 1
 !s100 mGNjGF60VGDFE]8>H[>FJ0
 IMQXeRl5_I9z_mLH>fSX@m0
@@ -71,20 +71,20 @@ w1554681819
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/compA2_data.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/compA2_data.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-Z10 !s108 1555203378.000000
+R9
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/compA2_data.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/compA2_data.sv|
 !i113 1
-R8
+R7
 ncomp@a2_data
 vcontrol
 R1
 R2
-R9
+R8
 !i10b 1
 !s100 2JAM_[ViJX:L0nZoP?Q9D1
 IRWG12?i?B2J^T5AK=3Tk20
@@ -92,23 +92,23 @@ R4
 !s105 control_sv_unit
 S1
 R0
-R5
+Z10 w1555174147
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv|
 !i113 1
-R8
+R7
 vcounter
 R1
 R2
-R9
+R8
 !i10b 1
 !s100 cMY5lCV2T]8bJ5D`zc6H:1
 I9fES^4YhTokzFjMD_]<_J0
@@ -120,19 +120,19 @@ w1555179695
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/couter.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/couter.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/couter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/couter.sv|
 !i113 1
-R8
+R7
 vdemux_2powerN
 R1
 R2
-R9
+Z11 !s110 1555218190
 !i10b 1
 !s100 >XVT2KibZ2R_RWO;f1zT@1
 IoFZhVa?XLS9]Z0k;]NX4I3
@@ -144,44 +144,44 @@ w1555201739
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/demux_2powerN.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/demux_2powerN.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R10
+R9
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/demux_2powerN.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/demux_2powerN.sv|
 !i113 1
-R8
+R7
 ndemux_2power@n
 vmdr
 R1
 R2
-Z11 !s110 1555203381
+Z12 !s110 1555218192
 !i10b 1
-!s100 9N=REISl>=OK5zX`8HX9V2
-ISEaYS^fP@7[C1zf[mY<h[1
+!s100 ;TZR<:RYkILhi_cORTiF?2
+IY3dN6:D7?I`ETcc1O<X^23
 R4
 !s105 mdr_sv_unit
 S1
 R0
-w1555203191
+w1555217712
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mdr.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mdr.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-Z12 !s108 1555203381.000000
+Z13 !s108 1555218192.000000
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mdr.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mdr.sv|
 !i113 1
-R8
+R7
 vmux_2powerN
 R1
 R2
-Z13 !s110 1555203379
+R11
 !i10b 1
 !s100 _=`dnb`O:Wm?F:dIE<gQ61
 IUaDcoJ4o:[@l[NEk7MFDA3
@@ -193,20 +193,20 @@ w1555202670
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mux_2powerN.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mux_2powerN.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-Z14 !s108 1555203379.000000
+Z14 !s108 1555218190.000000
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mux_2powerN.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mux_2powerN.sv|
 !i113 1
-R8
+R7
 nmux_2power@n
 vor_gate
 R1
 R2
-R13
+R11
 !i10b 1
 !s100 ARW1I]d=:Q_kXEQHN^D9n1
 IC2<`98NTQF<0ohQ860d0:2
@@ -218,7 +218,7 @@ w1554782063
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
@@ -226,11 +226,11 @@ R14
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv|
 !i113 1
-R8
+R7
 vpipo
 R1
 R2
-R13
+R11
 !i10b 1
 !s100 b;h]V3jZndlXeak:WI8n?0
 IJL_mA>bQjiFcm=LAikY2W1
@@ -238,11 +238,11 @@ R4
 !s105 pipo_sv_unit
 S1
 R0
-R5
+R10
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
@@ -250,33 +250,33 @@ R14
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv|
 !i113 1
-R8
+R7
 Xpkg_system_mdr
 R1
 R3
 !i10b 1
-!s100 RVXe3<b>93nhk1C]V=[A<0
-I^cO;lkhdZ0n4lZOHY0S0U0
-V^cO;lkhdZ0n4lZOHY0S0U0
+!s100 INBEJD6Qc8VC;jN40@TGE3
+ITR7VR@>2AD]DKMGAQS6ah1
+VTR7VR@>2AD]DKMGAQS6ah1
 S1
 R0
-w1555203371
+w1555217283
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pkg_system_mdr.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pkg_system_mdr.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R7
+R6
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pkg_system_mdr.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pkg_system_mdr.sv|
 !i113 1
-R8
+R7
 vroot_op_calc
 R1
 R2
-R13
+Z15 !s110 1555218191
 !i10b 1
 !s100 V7f7b6MX1PjTZEN;VMVa83
 ITB60]me6EVmL[5[DJOd`N3
@@ -284,11 +284,11 @@ R4
 !s105 root_op_calc_sv_unit
 S1
 R0
-w1554797476
+w1555213800
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/root_op_calc.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/root_op_calc.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
@@ -296,47 +296,71 @@ R14
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/root_op_calc.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/root_op_calc.sv|
 !i113 1
-R8
+R7
 vshift_left
 R1
 R2
-Z15 !s110 1555203380
+R15
 !i10b 1
-!s100 =6fzP59R[Y<NMY_ZK9c^S0
-IJLamCY:Ma=mHzNPgYEHQb3
+!s100 RMcDXM@f=j?c[Sa=eD?4;2
+I_HS<J843UEZ0;nTO]dzBg2
+R4
+!s105 shift_left_sv_unit
+S1
+R0
+w1555216665
+8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_left.sv
+FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_left.sv
+L0 4
+R5
+r1
+!s85 0
+31
+Z16 !s108 1555218191.000000
+!s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_left.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_left.sv|
+!i113 1
+R7
+vshift_reg_left
+R1
+R2
+R15
+!i10b 1
+!s100 7UX`1]Hc^A?LmFh=ok>nD3
+IfM^XG`0MQ3XgDcf^ZAUA62
 R4
 !s105 shift_reg_left_sv_unit
 S1
 R0
-w1554790791
+w1555216645
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_left.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_left.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-Z16 !s108 1555203380.000000
+R16
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_left.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_left.sv|
 !i113 1
-R8
+R7
 vshift_reg_right
 R1
 R2
 R15
 !i10b 1
-!s100 nn3c1b<USCkBdlj_Za8hH0
-Ic6>4H5FfTf4?3fNFe9FIU2
+!s100 La9cIId`c9hz9Eh0Zh2NS2
+Ioo5`^9cAgh>b72mNa]`XY2
 R4
 !s105 shift_reg_right_sv_unit
 S1
 R0
-w1554796936
+w1555216625
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
@@ -344,76 +368,76 @@ R16
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right.sv|
 !i113 1
-R8
+R7
 vshift_right
 R1
 R2
-R15
+R12
 !i10b 1
-!s100 ITd=4Nl?:I[hHmG_[6S6F2
-ID_lNJ48`MCMTa4>D>6eBh3
+!s100 CI9I3LlB:9>nGb_0E]0f40
+Ig@2MX4NmkU;oYF_;`ZfPI1
 R4
 !s105 shift_right_sv_unit
 S1
 R0
-w1554790911
+w1555215993
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_right.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_right.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_right.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_right.sv|
 !i113 1
-R8
+R7
 vsquare_root
 R1
 R2
-R15
+R12
 !i10b 1
-!s100 ]H6F?NAYc8CR8;bFonD5T1
-IDz0WCez6N]E]?m:`gaXk>1
+!s100 ZzVafGmla>2k<T[BCz:c<0
+I7cd=QNE>WWHaAKI?oL61P1
 R4
 !s105 square_root_sv_unit
 S1
 R0
-R5
+w1555217278
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/square_root.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/square_root.sv
 L0 4
-R6
+R5
 r1
 !s85 0
 31
-R16
+R13
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/square_root.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/square_root.sv|
 !i113 1
-R8
+R7
 vtb_ms
 R1
 R2
-R11
+R12
 !i10b 1
-!s100 I<JJYLSO40PjmK9j0;5UQ1
-I^X[A5VA_4heYZ^ZiZckzJ3
+!s100 6cRANnFo4o>CCD;<nJ87j3
+I<NS:mA6HSekBUC][YWP6<1
 R4
 !s105 TB_mdr_sv_unit
 S1
 R0
-w1555179469
+w1555218100
 8C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/TB_mdr.sv
 FC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/TB_mdr.sv
 L0 1
-R6
+R5
 r1
 !s85 0
 31
-R12
+R13
 !s107 C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/TB_mdr.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/TB_mdr.sv|
 !i113 1
-R8
+R7
