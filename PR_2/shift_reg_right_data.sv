@@ -1,15 +1,16 @@
-`ifndef SHIFT_REG_RIGHT_SV
-    `define SHIFT_REG_RIGHT_SV
+`ifndef SHIFT_REG_RIGHT_DATA_SV
+    `define SHIFT_REG_RIGHT_DATA_SV
     
-module shift_reg_right 
+module shift_reg_right_data 
 import pkg_system_mdr::*;
-#(	parameter SHIFT = 1,
+#(	
 	parameter SDW   = 32 )
  (
 	input clk,
 	input rst,
 
 	input logic [SDW-1:0] 	i_val,
+	input count8_t          i_counter,
 	input 			        i_init,
 	input 			        i_enable,
 
@@ -19,21 +20,29 @@ import pkg_system_mdr::*;
 data_t r_val = '0;
 
 always_ff @(posedge clk or negedge rst) begin
-	if(~rst) 
+	if(~rst) begin
 		r_val <= '0;
+		o_val <= r_val;
+	end
 	 
-	else if (i_init)
+	else if (i_init)begin
 		r_val <= i_val;
+		o_val <= r_val;
+	end
 	
-	else if (i_enable)
-		r_val <= r_val >> SHIFT;
-
-	else
+	else if (i_enable)begin
 		r_val <= r_val;
+		o_val <= r_val >> (i_counter*2);
+	end
+
+	else begin
+		r_val <= r_val;
+		o_val <= r_val;
+	end
 
 end
 
-assign o_val = r_val;
+
 
 endmodule
 `endif

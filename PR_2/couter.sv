@@ -3,29 +3,31 @@
     
 module counter
 import pkg_system_mdr::*;
-(
+#(  parameter LIMIT = 16,
+    parameter LB = $clog2(LIMIT) )
+ (
     input           clk,
     input           rst,
 
     input           i_enable,
 
-    output count_t  o_counter,
+    output logic [LB-1:0]  o_counter,
     output logic   o_ovf
 );
 
-count_t r_count;
+logic [LB-1:0] r_count;
 
 always_ff@(posedge clk, negedge rst)begin
     if (!rst)
-        r_count     <=  '0;
+        r_count     <=  LIMIT-1;
     else if (i_enable)
-        r_count     <= r_count + 1'b1;
+        r_count     <= r_count - 1'b1;
     else
-    	r_count 	<=  '0;
+    	r_count 	<=  LIMIT-1;
 end
 
 always_comb begin
-    if (r_count > DW)
+    if (r_count <= '0)
         o_ovf     =   1'b1;    
     else
         o_ovf     =   1'b0;

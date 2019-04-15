@@ -7,6 +7,7 @@ import pkg_system_mdr::*;
 	input data_t  	i_val_a,
 	input data_t 	i_val_b,
 	input op_t      i_sltr,
+	input           i_init,
 
 	output data_t   o_val
 );

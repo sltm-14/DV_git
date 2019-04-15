@@ -5,6 +5,14 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	--none--
 
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/TB_mdr.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/TB_mdr.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module tb_ms
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	tb_ms
+
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/or_gate.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module or_gate
@@ -61,6 +69,14 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	shift_left
 
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module pipo
+-- Importing package pkg_system_mdr
+
+Top level modules:
+	pipo
+
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 -- Compiling module shift_reg_right
@@ -69,13 +85,13 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 Top level modules:
 	shift_reg_right
 
-} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/pipo.sv
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right_data.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/shift_reg_right_data.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module pipo
+-- Compiling module shift_reg_right_data
 -- Importing package pkg_system_mdr
 
 Top level modules:
-	pipo
+	shift_reg_right_data
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/control.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
@@ -116,14 +132,6 @@ Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
 
 Top level modules:
 	compA2_data
-
-} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/root_op_calc.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/root_op_calc.sv
-Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
--- Compiling module root_op_calc
--- Importing package pkg_system_mdr
-
-Top level modules:
-	root_op_calc
 
 } {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mux_2powerN.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/GIT-DV/PR_2/mux_2powerN.sv
 Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015

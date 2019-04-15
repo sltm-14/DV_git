@@ -13,6 +13,8 @@ import pkg_system_mdr::*;
 	input 	i_ovf,
 	
 	output  o_clean,
+	output	o_save_x,
+	output	o_save_y,
 	output	o_load_x,
 	output	o_load_y,
 	output  o_veri,
@@ -42,16 +44,24 @@ always_ff@(posedge clk, negedge rst)begin: state_machine
 
 			WAIT_X: begin
 				if(!i_load)
-					r_control.state <= WAIT_Y;
+					r_control.state <= SAVE_X;
 				else
 					r_control.state <= WAIT_X;
 			end
 
+			SAVE_X: begin
+				r_control.state <= WAIT_Y;
+			end
+
 			WAIT_Y: begin
 				if(!i_load)
-					r_control.state <= VERIFICATION;
+					r_control.state <= SAVE_Y;
 				else
 					r_control.state <= WAIT_Y;
+			end
+
+			SAVE_Y: begin
+				r_control.state <= VERIFICATION;
 			end
 
 			VERIFICATION: begin
@@ -88,6 +98,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 	if(!rst)begin
 		r_control.load_x 	= 1'b0;
 		r_control.load_y 	= 1'b0;
+		r_control.save_x 	= 1'b0;
+		r_control.save_y 	= 1'b0;		
 		r_control.clean 	= 1'b0;
 		r_control.veri 		= 1'b0;
 		r_control.init 		= 1'b0;
@@ -102,6 +114,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 	
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;		
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -113,6 +127,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b1; 		
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;		
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -124,6 +140,21 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 
 				r_control.load_x 	= 1'b1;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;		
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			SAVE_X: begin
+				r_control.clean 	= 1'b0; 
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b1;
+				r_control.save_y 	= 1'b0;		
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -135,6 +166,21 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b1;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;		
+				r_control.veri 		= 1'b0;
+				r_control.init 		= 1'b0;
+				r_control.error 	= 1'b0;
+				r_control.enable 	= 1'b0;
+				r_control.ready 	= 1'b0;
+			end
+
+			SAVE_Y: begin
+				r_control.clean 	= 1'b0; 
+				r_control.load_x 	= 1'b0;
+				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b1;		
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -146,6 +192,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;
 				r_control.veri 		= 1'b1;
 				r_control.init 		= 1'b0;
 				r_control.error 	= i_error;
@@ -157,6 +205,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b1;
 				r_control.error 	= 1'b0;
@@ -168,6 +218,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -179,6 +231,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0; 
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -190,6 +244,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.clean 	= 1'b0;					
 				r_control.load_x 	= 1'b0;
 				r_control.load_y 	= 1'b0;
+				r_control.save_x 	= 1'b0;
+				r_control.save_y 	= 1'b0;
 				r_control.veri 		= 1'b0;
 				r_control.init 		= 1'b0;
 				r_control.error 	= 1'b0;
@@ -203,6 +259,8 @@ end: outputs
 assign o_clean 		=	r_control.clean;					
 assign o_load_x 	=	r_control.load_x;
 assign o_load_y		=	r_control.load_y;
+assign o_save_x 	=	r_control.save_x;
+assign o_save_y		=	r_control.save_y;
 assign o_veri 		=	r_control.veri;
 assign o_init 		=	r_control.init;
 assign o_error_sig 	=	r_control.error;

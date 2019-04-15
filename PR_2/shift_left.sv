@@ -4,7 +4,7 @@
 module shift_left 
 import pkg_system_mdr::*;
 #(	parameter SHIFT = 1	,
-	parameter SDW   = 32)
+	parameter SDW   = 32  )
  (
 	input 			clk,
 	input 			rst,
@@ -21,10 +21,10 @@ always_ff @(posedge clk or negedge rst) begin
 		o_val <= '0;
 	
 	else if (i_enable)
-		o_val <= i_val >> SHIFT;
+		o_val <= i_val << SHIFT;
 
 	else
-		o_val <= i_val;
+		o_val <= '0;
 
 end
 

@@ -21,16 +21,15 @@ import pkg_system_mdr::*;
 	);
 
 st_mdr  wires;
-count_t count;
 wire    w_clean;
 
-counter COUNT(
+counter #(8) COUNT(
 	.clk         (clk),
 	.rst         (rst),
 
-	.i_enable    (wires.enable),
+	.i_enable    (wires.enable ),
 
-	.o_counter   (count),
+	.o_counter   (wires.counter_8),
 	.o_ovf       (wires.ovf)
 );
 
@@ -40,12 +39,14 @@ control CTRL(
 
 	.i_start     (i_start),
 	.i_load      (i_load),
-	.i_error     (wires.error),
+	.i_error     (1'b0),//(wires.error),
 	.i_ovf       (wires.ovf),
 	
 	.o_clean     (w_clean),
 	.o_load_x    (o_load_x),
 	.o_load_y    (o_load_y),
+	.o_save_x    (wires.save_x),
+	.o_save_y    (wires.save_y),
 	.o_veri      (wires.veri),
 	.o_error_sig (o_error_sig),
 	.o_enable    (wires.enable),
@@ -58,7 +59,7 @@ pipo PIPO_X(
 	.clk    (clk),
 	.rst    (rst),
 
-	.i_ena  (wires.load_x),
+	.i_ena  (wires.save_x),
 	.i_data (i_data),
 
 	.o_data (wires.data_x)
@@ -68,7 +69,7 @@ pipo PIPO_Y(
 	.clk    (clk),
 	.rst    (rst),
 
-	.i_ena  (wires.load_y),
+	.i_ena  (wires.save_y),
 	.i_data (i_data),
 
 	.o_data (wires.data_y)
@@ -112,6 +113,7 @@ mux_2powerN #(2,DW2) MUX_ALU_B (
 );
 
 alu ALU(
+	.i_init   (wires.init),
 	.i_val_a  (wires.alu_a),
 	.i_val_b  (wires.alu_b),
 	.i_sltr   (wires.alu_op),
@@ -127,6 +129,7 @@ square_root SR(
 	.i_val_x      (wires.data_x),
 	.i_enable     (wires.mdr_enabler[2]),
 	.i_init       (wires.init),
+	.i_counter    (wires.counter_8),
 
 	// .o_result     (),
 	// .o_reminder   (),

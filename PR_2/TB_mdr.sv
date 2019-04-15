@@ -39,9 +39,9 @@ module tb_ms
 		load   = 1; 
 		rst    = 1;
 		start  = 1;
-	    data   = 0;   #4;
+	    data   = 0;   
        
-	    rst    = 0;   #10;
+	    rst    = 0;   #4;
 	    rst    = 1;   #3;
 		
 	    start  = 0;   #2;

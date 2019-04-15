@@ -26,7 +26,7 @@ always_ff @(posedge clk or negedge rst) begin
 		r_val <= i_val;
 	
 	else if (i_enable)
-		r_val <= r_val >> SHIFT;
+		r_val <= r_val << SHIFT;
 
 	else
 		r_val <= r_val;

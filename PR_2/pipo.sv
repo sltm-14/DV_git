@@ -22,7 +22,7 @@ always_ff@(posedge clk or negedge rst) begin: rgstr_pipo
         r_data  <= i_data;
 end:rgstr_pipo
 
-assign out = r_data;
+assign o_data = r_data;
 
 endmodule
 `endif
