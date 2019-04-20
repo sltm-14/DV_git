@@ -6,9 +6,6 @@ import pkg_system_mdr::*;
 #(	
 	parameter SDW   = 32 )
  (
-	input clk,
-	input rst,
-
 	input logic [SDW-1:0] 	i_val,
 	input count8_t          i_counter,
 	input 			        i_init,
@@ -18,14 +15,9 @@ import pkg_system_mdr::*;
 );
 
 data_t r_val = '0;
+always_comb begin
 
-always_ff @(posedge clk or negedge rst) begin
-	if(~rst) begin
-		r_val <= '0;
-		o_val <= r_val;
-	end
-	 
-	else if (i_init)begin
+	if (i_init)begin
 		r_val <= i_val;
 		o_val <= r_val;
 	end

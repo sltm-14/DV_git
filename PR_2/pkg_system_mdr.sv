@@ -10,12 +10,6 @@ localparam  DW8B = $clog2(8);
 localparam	DW2 = DW<<1;
 
 
-/*localparam  MUX_SEL = 2;    // Selection bits
-*/
-/*typedef logic [MDW-1:0]                  mux_dwd_t;  // Input/ output data width*/
-//typedef logic [MUX_SEL-1:0]              sltr_t;  // Selector data type  
-/*typedef logic [2**MUX_SEL-1:0][MDW-1:0]  in_bus_t;   // Incoming bus data to multiplexer*/
-
 typedef logic [DW-1:0]	  data_in_t;
 typedef logic [DW2-1:0]	  data_t;
 typedef logic [1:0]		  enb_t;
@@ -45,8 +39,6 @@ typedef struct{
 	logic 		enable;
 	logic 		ready;
 	logic		init;
-	/*logic		ovf;
-	count_t     count;*/
 	state_t		state;
 }st_control;
 
@@ -60,6 +52,8 @@ typedef struct{
 	data_in_t d_and;
 	data_t    and_or;
 	count8_t   counter;
+	data_t    r_reg_val;
+	logic     r_bit;
 }st_root_square;
 
 typedef struct{
@@ -67,8 +61,8 @@ typedef struct{
 	logic     ovf;
 	logic     load_x;
 	logic     load_y;
-	logic       save_x;
-	logic       save_y;
+	logic     save_x;
+	logic     save_y;
 	logic     veri;
 	logic     error_sig;
 	logic     enable;
@@ -99,7 +93,8 @@ typedef struct{
 	data_t alu_result;
 
 	count8_t counter_8;
-
+	data_t alu_result_reg;
+	data_t alu_result_reg2;
 
 }st_mdr;
 

@@ -6,9 +6,11 @@ import pkg_system_mdr::*;
 (
 	input   clk,
 	input   rst,
-	input   		    i_r_msb,
+
 	input               i_alu_msb,
 	input               i_init,
+	input               i_enable,
+	input               i_msb,
 
 	output data_t 		o_or_q,
 	output data_t 		o_or_alu,
@@ -16,19 +18,29 @@ import pkg_system_mdr::*;
 );
 
 
-always @(posedge clk or negedge rst) begin
-	if (i_alu_msb)
-		o_or_q 	 = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
-	else 
-		o_or_q 	 = 32'b0000_0000_0000_0000_0000_0000_0000_0001;
-	
-	if (i_init)begin
-		o_or_q 	 = '0;
-		o_or_alu = '0;
-		o_op_val = ZERO;
+ always_ff@(posedge clk or negedge rst) begin
+
+	if(~rst) begin
+		o_or_q = '0;
 	end
-	else 
-	if(i_r_msb)begin
+
+	if (i_enable) begin
+		if(i_msb)begin
+			o_or_q 	 = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+		end
+		else begin
+			o_or_q 	 = 32'b0000_0000_0000_0000_0000_0000_0000_0001;
+		end
+	end
+	else begin
+			o_or_q 	 = 32'b0000_0000_0000_0000_0000_0000_0000_0000;
+	end
+
+end
+
+always_comb begin
+	
+	if(i_alu_msb)begin
 		o_op_val = ADD;
 		o_or_alu =  3;
 	end
@@ -36,9 +48,7 @@ always @(posedge clk or negedge rst) begin
 		o_op_val = SUBS;
 		o_or_alu = 1;
 	end
-
-
-
+	
 end
 
 endmodule 

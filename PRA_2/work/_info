@@ -1,0 +1,489 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\c18560\Documents\Carem\DYV\DV_GIT\PRA_2
+valu
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 DXx4 work 14 pkg_system_mdr 0 22 f9<C>ze;T?[5lD1UCjTJd0
+Z3 !s100 FD>fh6doA[dSgf5ZfG@1f1
+Z4 IJ<FIe8DG?U4ickU2_Z`?C3
+Z5 VGh<]1F6b:z_bz[9@6?0Tf3
+Z6 !s105 alu_sv_unit
+S1
+Z7 dC:\Users\c18560\Documents\Carem\DYV\DV_GIT\PRA_2
+Z8 w1555442342
+Z9 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/alu.sv
+Z10 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/alu.sv
+L0 4
+Z11 OV;L;10.1d;51
+r1
+31
+Z12 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/alu.sv|
+Z13 o-work work -sv -O0
+Z14 !s108 1555692357.523000
+Z15 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/alu.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vand_gate
+R1
+R2
+Z16 !s100 j1An@@EeSFeFESoi>X[1L1
+Z17 IKN:gkgJJdIez@1@ZPIcTZ2
+Z18 Vg:^fA8zCIiGWMM=UdWRg:2
+Z19 !s105 and_gate_sv_unit
+S1
+R7
+Z20 w1555429769
+Z21 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/and_gate.sv
+Z22 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/and_gate.sv
+L0 4
+R11
+r1
+31
+Z23 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/and_gate.sv|
+R13
+Z24 !s108 1555692357.697000
+Z25 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/and_gate.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vcompA2_data
+R1
+R2
+Z26 !s100 PURJoA]KeVo9`aQlW8cof1
+Z27 IMQbO2kcNifG4?YXl?o[@a1
+Z28 V^7`@7a:85c38GOM8ebTVG0
+Z29 !s105 compA2_data_sv_unit
+S1
+R7
+R20
+Z30 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/compA2_data.sv
+Z31 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/compA2_data.sv
+L0 4
+R11
+r1
+31
+Z32 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/compA2_data.sv|
+R13
+Z33 ncomp@a2_data
+Z34 !s108 1555692357.877000
+Z35 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/compA2_data.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol
+R1
+R2
+Z36 !s100 :BgcFb^cjFjX@]XZAo[>;0
+Z37 IENXV7BzLFOgYTkbeJm8Si1
+Z38 VzMOJ;96eHNjB@j3hQN1Gl0
+Z39 !s105 control_sv_unit
+S1
+R7
+R20
+Z40 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/control.sv
+Z41 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/control.sv
+L0 4
+R11
+r1
+31
+Z42 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/control.sv|
+R13
+Z43 !s108 1555692358.122000
+Z44 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/control.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vcounter
+R1
+R2
+Z45 !s100 ^z>88TNMmQZD^F=U9h==02
+Z46 IP6>Del<JPLKB?j3gJF>PE1
+Z47 V0m>;13F7F@Go_Mo9;c5=e2
+Z48 !s105 couter_sv_unit
+S1
+R7
+R20
+Z49 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/couter.sv
+Z50 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/couter.sv
+L0 4
+R11
+r1
+31
+Z51 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/couter.sv|
+R13
+Z52 !s108 1555692358.306000
+Z53 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/couter.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vdemux_2powerN
+R1
+R2
+Z54 !s100 kJAia3G72eaZVoo>bI91U0
+Z55 Iz0YS`VDLnkZkcOkH8;i5X1
+Z56 Vc5OC[aLA0mJzb@hZi6Q6H0
+Z57 !s105 demux_2powerN_sv_unit
+S1
+R7
+R20
+Z58 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/demux_2powerN.sv
+Z59 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/demux_2powerN.sv
+L0 4
+R11
+r1
+31
+Z60 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/demux_2powerN.sv|
+R13
+Z61 ndemux_2power@n
+Z62 !s108 1555692358.482000
+Z63 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/demux_2powerN.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmdr
+R1
+R2
+Z64 !s100 364e5VWX[EXS7Z:KL8fZC3
+Z65 IYlP:i163j1=C5o21YiMhF0
+Z66 VZ]gBgj8:533@zFllj3T710
+Z67 !s105 mdr_sv_unit
+S1
+R7
+Z68 w1555535010
+Z69 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mdr.sv
+Z70 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mdr.sv
+L0 4
+R11
+r1
+31
+Z71 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mdr.sv|
+R13
+Z72 !s108 1555692358.676000
+Z73 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mdr.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux_2powerN
+R1
+R2
+Z74 !s100 Uam4iDGW[K7HSB]Q4CmlK3
+Z75 I3X:NQ05FmT?_>YbcjUWN=3
+Z76 V3QoX;9`mONX?K@mEn98>f3
+Z77 !s105 mux_2powerN_sv_unit
+S1
+R7
+R20
+Z78 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mux_2powerN.sv
+Z79 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mux_2powerN.sv
+L0 4
+R11
+r1
+31
+Z80 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mux_2powerN.sv|
+R13
+Z81 nmux_2power@n
+Z82 !s108 1555692358.857000
+Z83 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/mux_2powerN.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vor_gate
+R1
+R2
+Z84 !s100 <5o`FWUI6Z45jSzCjd;NJ0
+Z85 IN8[CaKm>?QVgAT0lVlBaD0
+Z86 V_dEmkW4`iDCgN`Vng5^Ff1
+Z87 !s105 or_gate_sv_unit
+S1
+R7
+R20
+Z88 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/or_gate.sv
+Z89 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/or_gate.sv
+L0 4
+R11
+r1
+31
+Z90 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/or_gate.sv|
+R13
+Z91 !s108 1555692359.032000
+Z92 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/or_gate.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vpipo
+R1
+R2
+Z93 !s100 8`j6@H=I7Xz1XcQ:HM<eH1
+Z94 ISCjdFNEWRl@UoKBQh`m@[0
+Z95 V2aZTbXTJ^525L[]5]^AUG0
+Z96 !s105 pipo_sv_unit
+S1
+R7
+R20
+Z97 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pipo.sv
+Z98 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pipo.sv
+L0 4
+R11
+r1
+31
+Z99 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pipo.sv|
+R13
+Z100 !s108 1555692359.240000
+Z101 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pipo.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+Xpkg_system_mdr
+R1
+Z102 !s100 :0?>l[F`nBdXP5AOmMDig0
+Z103 If9<C>ze;T?[5lD1UCjTJd0
+Z104 Vf9<C>ze;T?[5lD1UCjTJd0
+S1
+R7
+Z105 w1555534371
+Z106 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pkg_system_mdr.sv
+Z107 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pkg_system_mdr.sv
+L0 4
+R11
+r1
+31
+Z108 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pkg_system_mdr.sv|
+R13
+Z109 !s108 1555692359.457000
+Z110 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/pkg_system_mdr.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister
+R1
+R2
+Z111 IF@l33^d^4_4ZXOj:aj:Qf2
+Z112 V9F@M30ZQ5B7T06i2TbmjZ3
+S1
+R7
+Z113 w1555682326
+Z114 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/register.sv
+Z115 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/register.sv
+L0 4
+R11
+r1
+31
+R13
+Z116 !s100 KNUo3_:56_flBF6D9F0@B2
+Z117 !s105 register_sv_unit
+Z118 !s108 1555692359.804000
+Z119 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/register.sv|
+Z120 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/register.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vroot_op_calc
+R1
+R2
+Z121 !s100 n_;iHaTVQ^11[[[IN4YHV2
+Z122 I6F]j7S_1AK80KV7AhjaO=3
+Z123 V]WAOch7`4HTnkZ0ZCB@_O2
+Z124 !s105 root_op_calc_sv_unit
+S1
+R7
+Z125 w1555692062
+Z126 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/root_op_calc.sv
+Z127 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/root_op_calc.sv
+L0 4
+R11
+r1
+31
+Z128 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/root_op_calc.sv|
+R13
+Z129 !s108 1555692360.033000
+Z130 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/root_op_calc.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_left
+R1
+R2
+Z131 !s100 j9d5lCB<2dZ9X23T:f]0K2
+Z132 I:SSnRnK0ZSIdT7OXDZJek2
+Z133 VUI7>3iOAJRMgV`ml5B_;]3
+Z134 !s105 shift_left_sv_unit
+S1
+R7
+Z135 w1555526769
+Z136 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left.sv
+Z137 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left.sv
+L0 4
+R11
+r1
+31
+Z138 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left.sv|
+R13
+Z139 !s108 1555692360.241000
+Z140 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_left_quotient
+R1
+R2
+Z141 !s100 ihR^PONm3;Fi:YP0hYn_o0
+Z142 Ih9I<:[Gj[b]PXQzPmlNlh0
+Z143 VcRePH4aL^=Q>_>NYAIJ7?1
+Z144 !s105 shift_left_quotient_sv_unit
+S1
+R7
+Z145 w1555525641
+Z146 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left_quotient.sv
+Z147 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left_quotient.sv
+L0 4
+R11
+r1
+31
+Z148 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left_quotient.sv|
+R13
+Z149 !s108 1555692360.467000
+Z150 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_left_quotient.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_reg_left
+R1
+R2
+Z151 !s100 ;>XRB_<_dLWV`eY@`0Jdl3
+Z152 IlIeVhjaHN3mE<ZI=Dc_]60
+Z153 V:TCW;R?8XT7T[bB04XJY=1
+Z154 !s105 shift_reg_left_sv_unit
+S1
+R7
+R20
+Z155 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_left.sv
+Z156 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_left.sv
+L0 4
+R11
+r1
+31
+Z157 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_left.sv|
+R13
+Z158 !s108 1555692360.656000
+Z159 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_left.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_reg_right
+R1
+R2
+Z160 !s100 nmBkQnWmm:k3MF<_0hlET0
+Z161 IMkZciNQP@BO4R>Qhi<e`S2
+Z162 Ve;FlcF^5CP]:=kilenKK[1
+Z163 !s105 shift_reg_right_sv_unit
+S1
+R7
+R20
+Z164 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right.sv
+Z165 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right.sv
+L0 4
+R11
+r1
+31
+Z166 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right.sv|
+R13
+Z167 !s108 1555692360.874000
+Z168 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_reg_right_data
+R1
+R2
+Z169 !s100 1Gf21B1@4NP:303CJ5n]j2
+Z170 IEVRc241o:GY9zTf6Ie>6i2
+Z171 VlX8L]mDo6^3B6f3]C^KAj2
+Z172 !s105 shift_reg_right_data_sv_unit
+S1
+R7
+Z173 w1555691879
+Z174 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right_data.sv
+Z175 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right_data.sv
+L0 4
+R11
+r1
+31
+Z176 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right_data.sv|
+R13
+Z177 !s108 1555692361.052000
+Z178 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_reg_right_data.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_right
+R1
+R2
+Z179 !s100 15SeHlMe0PU9KHWPzjkX[1
+Z180 I4Ei=3@22>^=oFBH9HKFXE2
+Z181 VaFiGhY^2^P;miQL]e`U]L3
+Z182 !s105 shift_right_sv_unit
+S1
+R7
+R20
+Z183 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_right.sv
+Z184 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_right.sv
+L0 4
+R11
+r1
+31
+Z185 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_right.sv|
+R13
+Z186 !s108 1555692361.258000
+Z187 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/shift_right.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vsquare_root
+R1
+R2
+Z188 I3:?UFGF<bgRWX@e^5]62Y1
+Z189 VZ[TNCSIz7E27fg;Zc9IcB2
+Z190 !s105 square_root_sv_unit
+S1
+R7
+Z191 w1555692334
+Z192 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/square_root.sv
+Z193 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/square_root.sv
+L0 4
+R11
+r1
+31
+Z194 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/square_root.sv|
+R13
+!i10b 1
+Z195 !s100 I1AGZd=C]>ScWRkMozSB:3
+!s85 0
+Z196 !s108 1555692361.450000
+Z197 !s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/square_root.sv|
+!s101 -O0
+vtb_ms
+R1
+R2
+!i10b 1
+Z198 !s100 Wjeae2MOZT^3NH8]8]?FU1
+Z199 IJ8JL^ekbaR5S>USCU6imZ1
+Z200 VN:6B?<oi12=9@EhJfoUGG0
+Z201 !s105 TB_mdr_sv_unit
+S1
+R7
+R20
+Z202 8C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/TB_mdr.sv
+Z203 FC:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/TB_mdr.sv
+L0 1
+R11
+r1
+!s85 0
+31
+!s108 1555692361.642000
+!s107 C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/TB_mdr.sv|
+Z204 !s90 -reportprogress|300|-work|work|-sv|C:/Users/c18560/Documents/Carem/DYV/DV_GIT/PRA_2/TB_mdr.sv|
+!s101 -O0
+R13

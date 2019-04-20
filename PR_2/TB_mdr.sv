@@ -9,8 +9,8 @@ module tb_ms
 	data_in_t   data;
 	op_select_t op;
 
-/*	reminder_t  reminder;
-	data_t      result;*/
+	data_t      reminder;
+	data_t      result;
 	logic       load_x;
 	logic       load_y;
 	logic       error;
@@ -25,8 +25,8 @@ module tb_ms
 		.i_data     (data),
 		.i_op       (op),
 
-/*		.o_reminder (reminder),
-		.o_result   (result),*/
+		.o_reminder (reminder),
+		.o_result   (result),
 		.o_load_x   (load_x),
 		.o_load_y   (load_y),
 		.o_error    (error)
@@ -47,7 +47,7 @@ module tb_ms
 	    start  = 0;   #2;
 	    start  = 1;   #2;
  	    
-	    data   = 25;  #4;
+	    data   = 14435;  #4;
 	    load   = 0;   #2;
 	    load   = 1;   #2;
 	    
