@@ -1,0 +1,75 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Apr 29 15:27:40 2019
+| Host         : MXGUA05NBC18560 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_uart_control_sets_placed.rpt
+| Design       : TOP_uart
+| Device       : xc7z020
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            2 |
+|     12 |            2 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              10 |            2 |
+| No           | Yes                   | No                     |              44 |           12 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              94 |           10 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------+------------------------------+------------------+----------------+
+|  Clock Signal  |              Enable Signal              |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------+------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | RX0/baudgen0/r_count_reg[0][0]          | TX0/SHIFTER/shifter_reg[9]_0 |                1 |              8 |
+|  clk_IBUF_BUFG | RX0/CONTROL/FSM_onehot_state[3]_i_1_n_0 | TX0/SHIFTER/shifter_reg[9]_0 |                1 |              8 |
+|  clk_IBUF_BUFG |                                         | RX0/CONTROL/SR[0]            |                3 |             12 |
+|  clk_IBUF_BUFG |                                         | TX0/CONTROL/SR[0]            |                2 |             12 |
+|  clk_IBUF_BUFG | RX0/CONTROL/D[3]                        | TX0/SHIFTER/shifter_reg[9]_0 |                1 |             16 |
+|  clk_IBUF_BUFG | TX0/CONTROL/out[0]                      | TX0/SHIFTER/shifter_reg[9]_0 |                1 |             16 |
+|  clk_IBUF_BUFG | RX0/baudgen0/E[0]                       | TX0/SHIFTER/shifter_reg[9]_0 |                3 |             18 |
+|  clk_IBUF_BUFG | TX0/BAUD0/E[0]                          | TX0/SHIFTER/shifter_reg[9]_0 |                3 |             28 |
+|  clk_IBUF_BUFG |                                         | TX0/SHIFTER/shifter_reg[9]_0 |                9 |             30 |
++----------------+-----------------------------------------+------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1556487330">
+  <File Type="PA-TCL" Name="echo.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="echo_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="echo_reports.tcl"/>
+  <File Type="RDS-RDS" Name="echo.vds"/>
+  <File Type="RDS-UTIL" Name="echo_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="echo_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="echo.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="echo_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="echo_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/baudgen_rx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/baudgen_rx.v"/>
+        <Attr Name="ImportTime" Val="1546529080"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/baudgen_tx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/baudgen_tx.v"/>
+        <Attr Name="ImportTime" Val="1546449774"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_rx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/uart_rx.v"/>
+        <Attr Name="ImportTime" Val="1556485554"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_tx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/uart_tx.v"/>
+        <Attr Name="ImportTime" Val="1546529080"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/TOP_uart.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/TOP_uart.v"/>
+        <Attr Name="ImportTime" Val="1546451026"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="echo"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc"/>
+        <Attr Name="ImportTime" Val="1546443762"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

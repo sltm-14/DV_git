@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1556487331">
+  <File Type="BITSTR-BMM" Name="echo_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="echo_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="echo_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="echo_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="echo.tcl"/>
+  <File Type="OPT-TIMING" Name="echo_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="echo_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="echo_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="echo_reports.tcl"/>
+  <File Type="OPT-DRC" Name="echo_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="echo.hwdef"/>
+  <File Type="PWROPT-DCP" Name="echo_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="echo_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="echo_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="echo_placed.dcp"/>
+  <File Type="PLACE-IO" Name="echo_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="echo_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="echo_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="echo_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="echo_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="echo_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="echo_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="echo.bgn"/>
+  <File Type="PLACE-TIMING" Name="echo_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="echo_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="echo.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="echo_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="echo_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="echo_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="echo.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="echo_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="echo_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="echo_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="echo_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="echo_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="echo_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="echo.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="echo_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="echo.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="echo_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="echo_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="echo.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="echo_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="echo_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="echo_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="echo_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="echo_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="echo_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="echo_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="echo_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="echo_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="echo_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="echo_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="echo_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="echo_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="echo_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="echo_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="echo_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="echo_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="echo_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="echo_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="echo.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="echo_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="echo.rbt"/>
+  <File Type="BITSTR-NKY" Name="echo.nky"/>
+  <File Type="BG-DRC" Name="echo.drc"/>
+  <File Type="RDI-RDI" Name="echo.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/baudgen_rx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/baudgen_rx.v"/>
+        <Attr Name="ImportTime" Val="1546529080"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/baudgen_tx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/baudgen_tx.v"/>
+        <Attr Name="ImportTime" Val="1546449774"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_rx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/uart_rx.v"/>
+        <Attr Name="ImportTime" Val="1556485554"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_tx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/uart_tx.v"/>
+        <Attr Name="ImportTime" Val="1546529080"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/TOP_uart.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/sources_1/new/TOP_uart.v"/>
+        <Attr Name="ImportTime" Val="1546451026"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="echo"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../uart_FPGA_origin/uart_FPGA.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc"/>
+        <Attr Name="ImportTime" Val="1546443762"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
