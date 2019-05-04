@@ -1,0 +1,8 @@
+`ifndef QUOTATION_ADD_SV
+    `define QUOTATION_ADD_SV
+    
+module quotation_add
+import pkg_system_mdr::*;
+(
+
+);

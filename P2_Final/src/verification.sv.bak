@@ -1,0 +1,17 @@
+`ifndef VERIFICATION_SV
+    `define VERIFICATION_SV
+
+module verification
+import pkg_system_mdr::*; 
+(
+	input i_enable,
+	input data_t		i_dataX,
+	input data_t		i_dataY,
+	input op_select_t	i_op,
+	
+	output 				o_error
+);
+
+
+endmodule
+`endif

@@ -1,0 +1,15 @@
+`ifndef OPERATION_MULT_SV
+    `define OPERATION_MULT_SV
+
+module operation_mult
+import pkg_system_mdr::*;
+(
+	input [1:0] i_msb2,
+	output op_t	o_op
+);
+
+
+
+
+endmodule
+`endif

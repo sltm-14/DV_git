@@ -1,0 +1,43 @@
+`ifndef COUNTER_SV
+    `define COUNTER_SV
+    
+module counter
+import pkg_system_mdr::*;
+(
+    input           clk,
+    input           rst,
+
+    input           i_enable,
+
+    output logic		o_ready,
+	 output [7:0] o_count,
+    output logic   	o_ovf
+);
+
+logic [7:0] r_count;
+
+always_ff@(posedge clk, negedge rst)begin
+    if (!rst)
+        r_count     <=  '0;
+    else if (i_enable)
+		if(r_count >= 32)
+			r_count 	<=  '0;
+		else
+			r_count     <= r_count + 1'b1;
+end
+
+always_comb begin
+    if (r_count >= 32)begin
+        o_ovf     =   1'b1;  
+		  o_ready     =   1'b1; 
+		end  
+    else begin
+        o_ovf     =   1'b0;
+		  o_ready     =   1'b0; 
+		  end
+end
+
+assign o_count = r_count;
+
+endmodule
+`endif

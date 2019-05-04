@@ -1,0 +1,25 @@
+`ifndef MULTIPLICATION_SV
+    `define MULTIPLICATION_SV
+
+module multiplication
+import pkg_system_mdr::*;
+(
+	input clk,
+	input rst,
+
+	input data_t    i_alu_result,
+	input data_in_t i_val_x,
+	input 		    i_enable,
+	input 		    i_init,
+
+	//output o_result,
+	//output o_reminder,
+	output data_t   o_root_alu_a,
+	output data_t   o_root_alu_b,
+	output alu_op_t o_root_op
+
+);
+
+
+endmodule //multiplication
+`endif

@@ -1,0 +1,30 @@
+`ifndef FINAL_PRODUCT_SV
+    `define FINAL_PRODUCT_SV
+
+module final_product
+import pkg_system_mdr::*;
+(
+	input clk,
+	input rst, 
+	input i_flag,
+	input signed [32:0] i_data,
+	
+	output signed[31:0] o_data
+);
+
+logic signed[31:0] r_data;
+
+always_ff@(posedge clk, negedge rst) begin
+	if(~rst)
+		r_data <= '0;
+	else if(~i_flag)
+		r_data <= '0;
+	else 
+		r_data <= i_data[32:0];
+end
+
+assign o_data <= r_data;
+
+endmodule
+`endif
+ 

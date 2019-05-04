@@ -1,0 +1,14 @@
+`ifndef PRODUCT_REG_SV
+    `define PRODUCT_REG_SV
+    
+module product_reg
+import pkg_system_mdr::*;
+(
+	input clk,
+	input rst, 
+	input i_multiplier,
+	input i_ovf,
+	input
+	
+	output
+);

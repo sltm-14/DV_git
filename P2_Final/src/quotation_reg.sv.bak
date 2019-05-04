@@ -1,0 +1,28 @@
+`ifndef QUOTATION_REG_SV
+    `define QUOTATION_REG_SV
+    
+module quotation_reg
+import pkg_system_mdr::*;
+(
+	input clk,
+	input rst, 
+	input i_msb, 
+	
+	output [15:0] o_quotation
+);
+
+logic [15:0] r_quotation;
+
+always_ff@(posedge clk, negedge rst) begin
+	if(~rst)
+		r_quotation <= '0;
+	else if(~i_msb)
+		r_quotation <= '0;
+	else
+		r_quotation <= (r_quotation<<1) + 1b'1;
+end
+
+assign o_quotation = r_quotation;
+
+endmodule
+`endif

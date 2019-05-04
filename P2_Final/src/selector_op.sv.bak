@@ -1,0 +1,14 @@
+`ifndef SELECTOR_OP_SV
+    `define SELECTOR_OP_SV
+	 
+module selector_op
+import pkg_system_mdr::*;
+(
+	input i_enable,
+	input op_select_t i_op,
+	
+	output logic[3:0]	o_op
+);
+
+endmodule 
+`endif
