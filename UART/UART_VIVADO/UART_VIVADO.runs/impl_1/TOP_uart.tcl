@@ -65,17 +65,16 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/c18560/Documents/Carem/DYV/TEST/UART/UART_VIVADO/UART_VIVADO.cache/wt [current_project]
-  set_property parent.project_path C:/Users/c18560/Documents/Carem/DYV/TEST/UART/UART_VIVADO/UART_VIVADO.xpr [current_project]
-  set_property ip_output_repo C:/Users/c18560/Documents/Carem/DYV/TEST/UART/UART_VIVADO/UART_VIVADO.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/c18560/Documents/Carem/DYV/DV_GIT/UART/UART_VIVADO/UART_VIVADO.cache/wt [current_project]
+  set_property parent.project_path C:/Users/c18560/Documents/Carem/DYV/DV_GIT/UART/UART_VIVADO/UART_VIVADO.xpr [current_project]
+  set_property ip_output_repo C:/Users/c18560/Documents/Carem/DYV/DV_GIT/UART/UART_VIVADO/UART_VIVADO.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/c18560/Documents/Carem/DYV/TEST/UART/UART_VIVADO/UART_VIVADO.runs/synth_1/TOP_uart.dcp
-  read_xdc C:/Users/c18560/Documents/Carem/DYV/TEST/UART/UART_VIVADO/UART_VIVADO.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc
+  add_files -quiet C:/Users/c18560/Documents/Carem/DYV/DV_GIT/UART/UART_VIVADO/UART_VIVADO.runs/synth_1/TOP_uart.dcp
+  read_xdc C:/Users/c18560/Documents/Carem/DYV/DV_GIT/UART/UART_VIVADO/UART_VIVADO.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc
   link_design -top TOP_uart -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]

@@ -30,3 +30,4 @@ assign clk_out = (counter == 0) ? clk_ena : 0;
 
 
 endmodule
+`endif  

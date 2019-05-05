@@ -62,7 +62,7 @@ register #(1) REG_RX(
 
 
 baudgen_tx #( .BAUDRATE(BAUDRATE)) BAUD0 (
-  .rstn(rst),
+  .rst(rst),
   .clk(clk),
 
   .clk_ena(wires.bauden),

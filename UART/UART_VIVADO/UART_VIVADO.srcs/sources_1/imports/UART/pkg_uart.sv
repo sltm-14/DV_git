@@ -6,6 +6,8 @@ package pkg_uart;
 localparam  DW  = 8;
 localparam  DW1 = DW + 1;
 
+localparam BAUDRATE = (125000000/115200);
+
 localparam BW  = $clog2(BAUDRATE);
 localparam BWH = (BAUDRATE >> 1);
 

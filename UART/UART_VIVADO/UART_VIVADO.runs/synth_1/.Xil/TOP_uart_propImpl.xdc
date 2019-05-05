@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/c18560/Documents/Carem/DYV/TEST/UART/UART_VIVADO/UART_VIVADO.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc rfile:../../../UART_VIVADO.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/c18560/Documents/Carem/DYV/DV_GIT/UART/UART_VIVADO/UART_VIVADO.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc rfile:../../../UART_VIVADO.srcs/constrs_1/imports/PYNQ/pynq-z2_v1.0.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk   ---> sysclk
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

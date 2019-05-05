@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Apr 29 15:28:16 2019
+| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date             : Sat May  4 18:16:28 2019
 | Host             : MXGUA05NBC18560 running 64-bit major release  (build 9200)
 | Command          : report_power -file TOP_uart_power_routed.rpt -pb TOP_uart_power_summary_routed.pb -rpx TOP_uart_power_routed.rpx
 | Design           : TOP_uart
@@ -53,11 +53,11 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      157 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       56 |     53200 |            0.11 |
+| Slice Logic    |    <0.001 |      145 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       50 |     53200 |            0.09 |
 |   Register     |    <0.001 |       74 |    106400 |            0.07 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |      113 |       --- |             --- |
+| Signals        |    <0.001 |      100 |       --- |             --- |
 | I/O            |    <0.001 |        4 |       125 |            3.20 |
 | Static Power   |     0.106 |          |           |                 |
 | Total          |     0.108 |          |           |                 |
@@ -143,24 +143,10 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------+-----------+
-| Name          | Power (W) |
-+---------------+-----------+
-| TOP_uart      |     0.002 |
-|   RX0         |    <0.001 |
-|     CONTROL   |    <0.001 |
-|     COUNT     |    <0.001 |
-|     REG_DATA  |    <0.001 |
-|     REG_RX    |    <0.001 |
-|     SIPO_DATA |    <0.001 |
-|     baudgen0  |    <0.001 |
-|   TX0         |    <0.001 |
-|     BAUD0     |    <0.001 |
-|     CONTROL   |    <0.001 |
-|     COUNT     |    <0.001 |
-|     REG_DATA  |    <0.001 |
-|     REG_RX    |    <0.001 |
-|     SHIFTER   |    <0.001 |
-+---------------+-----------+
++----------+-----------+
+| Name     | Power (W) |
++----------+-----------+
+| TOP_uart |     0.002 |
++----------+-----------+
 
 

@@ -26,7 +26,7 @@ register #(1) REG_RX(
 
 
 baudgen_rx #(BAUDRATE) baudgen0 (
-    .rstn(rst),
+    .rst(rst),
     .clk(clk),
     .clk_ena(wires.bauden),
     .clk_out(wires.clk_baud)
