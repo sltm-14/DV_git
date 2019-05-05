@@ -10,7 +10,7 @@ import pkg_uart::*;
 	input i_clear,
 	input i_ena,
 
-	output o_count
+	output count_t o_count
 );
 
 	logic [3:0] r_count;
@@ -29,4 +29,4 @@ import pkg_uart::*;
 	assign o_count = r_count;
 
 endmodule
- `endif  
+`endif  

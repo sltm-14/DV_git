@@ -6,26 +6,26 @@ import pkg_uart::*;
 #(	
 	parameter SDW   = 32  )
  (
-	input 			clk,
-	input 			rst,
+	input 			 clk,
+	input 			 rst,
 
-	input logic [SDW-1:0]	i_val,
-	input                   i_ena,
+	input  [SDW-1:0] i_val,
+	input            i_ena,
 
-	output logic [SDW-1:0] 	o_val
+	output logic [SDW-1:0] o_val
 );
 
 
 always_ff @(posedge clk, negedge rst) begin
-	if(~rst) 
+	if(!rst) 
 		o_val <= '0;
 
 	else if (i_ena)
 		o_val <= i_val;
-	else 
-		o_val <= '0;
 
 end
+
+
 
 endmodule
 `endif

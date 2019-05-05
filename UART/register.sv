@@ -16,7 +16,7 @@ import pkg_uart::*;
 
 
 always_ff @(posedge clk, negedge rst) begin
-	if(~rst) 
+	if(!rst) 
 		o_val <= '0;
 
 	else 

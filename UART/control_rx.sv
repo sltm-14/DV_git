@@ -1,18 +1,19 @@
-`ifndef RX_CONTROL_SV
-    `define RX_CONTROL_SV
+`ifndef CONTROL_RX_SV
+    `define CONTROL_RX_SV
 
-module rx_control 
+module control_rx 
 import pkg_uart::*;
 (
   input clk,    
   input rst, 
 
   input i_rx, 
-  input i_count,
+  input count_t i_count,
   
   output o_bauden,
   output o_clear,
   output o_load,
+  output o_pbit,
   output o_rcv
 );
 
@@ -20,24 +21,12 @@ import pkg_uart::*;
 logic bauden = '0;  
 logic clear  = '0;   
 logic load   = '0;   
-
-/*localparam IDLE = 2'd0;  
-localparam RECV = 2'd1;  
-localparam LOAD = 2'd2;  
-localparam READY  = 2'd3;   */
-
-state_t state = IDLE;
-
-/*logic [1:0] next_state = state; */
+logic rcv    = '0;
+logic pbit   = '0;
 
 
 
-
-/*always @(posedge clk, posedge rstn)
-  if (!rstn)
-    state <= IDLE;
-  else
-    state <= next_state;*/
+state_rx_t state = IDLE;
 
 
 always @(posedge clk, posedge rst) begin
@@ -46,43 +35,33 @@ always @(posedge clk, posedge rst) begin
         state <= IDLE;
     else
 
-    /*  next_state = state;      
-      bauden     = 0;
-      clear      = 0;
-      load    = 0;*/
-
     case(state)
 
        IDLE: begin
-       /*   clear = 1;
-          rcv   = 0;*/
           if (i_rx == 0)
             state <= RECV;
         end
 
         RECV: begin
-    /*      bauden = 1;
-          rcv    = 0;*/
           if (i_count == 4'd10)
             state <= LOAD;
         end
 
         
         LOAD: begin
-    /*      load = 1;
-          rcv  = 0;*/
+          state <= PBIT;
+        end
+
+        PBIT: begin
           state <= READY;
         end
 
-        
         READY: begin
-      /*    rcv        = 1;*/
           state <= IDLE;
         end
 
         default: begin
           state <= IDLE;
-    /*     rcv = 0;*/
         end 
 
     endcase
@@ -94,6 +73,7 @@ always @(*) begin
 
        IDLE: begin
           rcv    = 0;
+          pbit   = 0;
           load   = 0;
           clear  = 1;
           bauden = 0;
@@ -101,6 +81,7 @@ always @(*) begin
 
         RECV: begin
           rcv    = 0;
+          pbit   = 0;
           load   = 0;
           clear  = 0;
           bauden = 1;
@@ -109,7 +90,16 @@ always @(*) begin
         
         LOAD: begin
           rcv    = 0;
+          pbit   = 0;
           load   = 1;
+          clear  = 0;
+          bauden = 0;
+        end
+
+        PBIT: begin
+          rcv    = 0;
+          pbit   = 1;
+          load   = 0;
           clear  = 0;
           bauden = 0;
         end
@@ -117,6 +107,7 @@ always @(*) begin
         
         READY: begin
           rcv    = 1;
+          pbit   = 0;
           load   = 0;
           clear  = 0;
           bauden = 0;
@@ -125,18 +116,20 @@ always @(*) begin
 
         default: begin
           rcv    = 0;
+          pbit   = 0;
           load   = 0;
-          clear  = 1;
+          clear  = 0;
           bauden = 0;
         end 
 
     endcase
 end
 
-   assign o_bauden = o_bauden;
-   assign o_clear  = o_clear;
-   assign o_load   = o_load;
-   assign o_rcv    = o_rcv;
+   assign o_bauden = bauden;
+   assign o_clear  = clear;
+   assign o_load   = load;
+   assign o_pbit   = pbit;
+   assign o_rcv    = rcv;
 
 endmodule
  `endif  
