@@ -59,7 +59,7 @@ package mxv_pkg;
 
     /* ENUMS ----------------------------------- */
 
-    typedef enum logic [2:0] {IDLE, SIZE, START, MATRIX, 
+    typedef enum logic [3:0] {IDLE, SIZE, START, MATRIX, 
                               FIFO_0, FIFO_1, FIFO_2, FIFO_3
                               FIFO_4, FIFO_5, FIFO_6, FIFO_7, } state_ctrl_t;
 
