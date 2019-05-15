@@ -1,0 +1,166 @@
+C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/control_rx.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/control_rx.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module control_rx
+-- Importing package pkg_uart
+
+Top level modules:
+	control_rx
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/parity_error.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/parity_error.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module parity_error
+-- Importing package pkg_uart
+
+Top level modules:
+	parity_error
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/control_tx.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/control_tx.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module control_tx
+-- Importing package pkg_uart
+
+Top level modules:
+	control_tx
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/uart_rx.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/uart_rx.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module uart_rx
+-- Importing package pkg_uart
+
+Top level modules:
+	uart_rx
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/shifter.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/shifter.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module shifter
+-- Importing package pkg_uart
+
+Top level modules:
+	shifter
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/register.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/register.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module register
+-- Importing package pkg_uart
+
+Top level modules:
+	register
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/pkg_uart.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/pkg_uart.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling package pkg_uart
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/TOP_uart.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/TOP_uart.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module TOP_uart
+-- Importing package pkg_uart
+
+Top level modules:
+	TOP_uart
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/gray2bin.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/gray2bin.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module bin2gray
+-- Importing package fifo_pkg
+
+Top level modules:
+	bin2gray
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/uart_tx.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/uart_tx.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module uart_tx
+-- Importing package pkg_uart
+
+Top level modules:
+	uart_tx
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/register_en.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/register_en.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module register_en
+-- Importing package pkg_uart
+
+Top level modules:
+	register_en
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/baudgen_rx.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/baudgen_rx.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module baudgen_rx
+-- Importing package pkg_uart
+
+Top level modules:
+	baudgen_rx
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/sp_dc_ram.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/sp_dc_ram.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module sdp_dc_ram
+-- Importing package fifo_pkg
+
+Top level modules:
+	sdp_dc_ram
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/synch_ff.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/synch_ff.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module synch_ff
+-- Importing package fifo_pkg
+
+Top level modules:
+	synch_ff
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/baudgen_tx.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/baudgen_tx.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module baudgen_tx
+-- Importing package pkg_uart
+
+Top level modules:
+	baudgen_tx
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/xor_gate.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/xor_gate.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module xor_gate
+
+Top level modules:
+	xor_gate
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/sipo.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/sipo.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module sipo
+-- Importing package pkg_uart
+
+Top level modules:
+	sipo
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/parity_bit_generator.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/parity_bit_generator.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module parity_bit_gen
+-- Importing package pkg_uart
+
+Top level modules:
+	parity_bit_gen
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/fifo_pkg.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/fifo_pkg.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling package fifo_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/bin2gray.sv {1 {vlog -work work -sv -stats=none {C:\Users\Tomoyo\Documents\ITESO\2019-A-Primavera\DYV\DV_GIT\T08_fifo\bin2gray.sv}
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module gray2bin
+-- Importing package fifo_pkg
+
+Top level modules:
+	gray2bin
+
+} {} {}} C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/counter.sv {1 {vlog -work work -sv -stats=none C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/T08_fifo/counter.sv
+Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+-- Compiling module counter
+-- Importing package pkg_uart
+
+Top level modules:
+	counter
+
+} {} {}}

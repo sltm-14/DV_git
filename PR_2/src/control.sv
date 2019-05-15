@@ -4,24 +4,24 @@
 module control
 import pkg_system_mdr::*;
 (
-	input		clk,
+	input	clk,
 	input 	rst,
 
-	input		i_start,
-	input   	i_load,
-	input		i_error,
+	input	i_start,
+	input   i_load,
+	input	i_error,
 	input 	i_done,
 	
-	output  	o_clean,
+	output  o_clean,
 	output	o_save_x,
 	output	o_save_y,
 	output	o_load_x,
 	output	o_load_y,
-	output  	o_veri,
+	output  o_veri,
 	output	o_error,
 	output	o_enable,
 	output	o_ready,
-	output  	o_init
+	output  o_init
 );
 
 st_control 	r_control;
@@ -102,8 +102,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 		r_control.save_x 	= 1'b0;
 		r_control.save_y 	= 1'b0;		
 		r_control.clean 	= 1'b0;
-		r_control.veri 	= 1'b0;
-		r_control.init 	= 1'b0;
+		r_control.veri  	= 1'b0;
+		r_control.init  	= 1'b0;
 		r_control.error 	= 1'b0;
 		r_control.enable 	= 1'b0;
 		r_control.ready 	= 1'b0;
@@ -117,8 +117,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;		
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -130,8 +130,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;		
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -143,8 +143,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;		
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -156,8 +156,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b1;
 				r_control.save_y 	= 1'b0;		
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -169,8 +169,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b1;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;		
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -182,8 +182,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b1;		
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -195,8 +195,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;
-				r_control.veri 	= 1'b1;
-				r_control.init 	= 1'b0;
+				r_control.veri  	= 1'b1;
+				r_control.init  	= 1'b0;
 				r_control.error 	= i_error;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -208,8 +208,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b1;
+				r_control.veri  	= 1'b0;
+				r_control.init  	= 1'b1;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -221,8 +221,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri 	    = 1'b0;
+				r_control.init   	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b1;
 				r_control.ready 	= 1'b0;
@@ -234,8 +234,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri 	    = 1'b0;
+				r_control.init  	= 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b1;
@@ -247,8 +247,8 @@ always@(r_control.state, i_error, rst) begin: outputs
 				r_control.load_y 	= 1'b0;
 				r_control.save_x 	= 1'b0;
 				r_control.save_y 	= 1'b0;
-				r_control.veri 	= 1'b0;
-				r_control.init 	= 1'b0;
+				r_control.veri   	= 1'b0;
+				r_control.init 	    = 1'b0;
 				r_control.error 	= 1'b0;
 				r_control.enable 	= 1'b0;
 				r_control.ready 	= 1'b0;
@@ -258,14 +258,14 @@ always@(r_control.state, i_error, rst) begin: outputs
 end: outputs 
 
 assign o_clean 		=	r_control.clean;					
-assign o_load_x 		=	r_control.load_x;
+assign o_load_x 	=	r_control.load_x;
 assign o_load_y		=	r_control.load_y;
-assign o_save_x 		=	r_control.save_x;
+assign o_save_x 	=	r_control.save_x;
 assign o_save_y		=	r_control.save_y;
-assign o_veri 			=	r_control.veri;
-assign o_init 			=	r_control.init;
-assign o_error		 	=	r_control.error;
-assign o_enable 		=	r_control.enable;
+assign o_veri 		=	r_control.veri;
+assign o_init 		=	r_control.init;
+assign o_error		=	r_control.error;
+assign o_enable 	=	r_control.enable;
 assign o_ready 		=	r_control.ready;
 
 endmodule

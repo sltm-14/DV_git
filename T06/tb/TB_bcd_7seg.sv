@@ -1,15 +1,16 @@
 /*----------------------------------------------------------------------------------------
 ** NOMBRE DEL MODULO: tb_bcd.sv
 ** DESCRIPCION: TB para BCD
-** ENTRADAS: in_Bin
-** SALIDAS:  out_displays, out_Signo
-** VERSION:  1.0
-** AUTORES:  Andres Hernandez, Carem Bernabe
-** FECHA:    17 / 03 / 19
+** ENTRADAS:    in_Bin
+** SALIDAS:     out_displays, out_Signo
+** VERSION:     1.0
+** AUTORES:     Andres Hernandez, Carem Bernabe
+** FECHA:       17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+
 module TB_bcd_7seg
-	import pkg_bin_to_thto::*;
-	();
+import pkg_bin_to_thto::*;
+();
 
     t_iv       in_Bin; 			/* Valor en complemento A2 */
     

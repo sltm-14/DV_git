@@ -49,7 +49,7 @@ typedef struct{
 	logic 		error;
 	logic 		enable;
 	logic 		ready;
-	logic			init;
+	logic		init;
 	state_t		state;
 } st_control;
 
@@ -60,7 +60,7 @@ typedef struct{
 	data_t    	r_val;
 	data_t    	op_or_q;
 	data_t    	op_or_alu;
-	data_t 	d_and;
+	data_in_t 		d_and;
 	data_t    	and_or;
 	count8_t   	counter;
 	data_t    	r_reg_val;
@@ -96,18 +96,18 @@ typedef struct{
 	data_t 		root_alu_a;
 	data_t 		root_alu_b;
 
-	op_t 			alu_op;
-	data_in_t 		alu_a;
-	data_in_t 		alu_b;
+	op_t 		alu_op;
+	data_t 		alu_a;
+	data_t 		alu_b;
 
-	logic [DW2-1:0] 		alu_result;
+	data_t 		alu_result;
 
 	count8_t 	counter_8;
 	data_t 		alu_result_reg;
 	data_t 		alu_result_reg2;
 	
 	logic 		clean;
-	logic			ovf;
+	logic		ovf;
 } st_mdr;
 
 typedef struct{

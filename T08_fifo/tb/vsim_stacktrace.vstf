@@ -1,0 +1,23 @@
+# Current time Thu May 09 22:07:56 2019
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.4b"
+# Version = "2015.05"
+# Date = "May 27 2015"
+# Platform = win32pe
+# Signature = c2b01b574afad2e59ddf0fbe54b96de5
+# 0    0x007fa664: '<unknown (@0x7fa664)>'
+# 1    0x007fa340: '<unknown (@0x7fa340)>'
+# 2    0x009b5c4d: '<unknown (@0x9b5c4d)>'
+# 3    0x009b5f7a: '<unknown (@0x9b5f7a)>'
+# 4    0x009b6c2a: '<unknown (@0x9b6c2a)>'
+# 5    0x009b6f47: '<unknown (@0x9b6f47)>'
+# 6    0x1000cb1f: 'TclInvokeStringCommand + 0x8f' in 'c:\altera_lite\15.1\modelsim_ase\win32aloem\tcl85.dll'
+# 7    0x1000ecba: 'Tcl_EvalEx + 0x7da' in 'c:\altera_lite\15.1\modelsim_ase\win32aloem\tcl85.dll'
+# 8    0x1000e500: 'Tcl_EvalEx + 0x20' in 'c:\altera_lite\15.1\modelsim_ase\win32aloem\tcl85.dll'
+# 9    0x00f9a144: '<unknown (@0xf9a144)>'
+# 10   0x1005fb86: 'Tcl_NotifyChannel + 0x136' in 'c:\altera_lite\15.1\modelsim_ase\win32aloem\tcl85.dll'
+# 11   0x100aab09: 'TclpHasSockets + 0x379' in 'c:\altera_lite\15.1\modelsim_ase\win32aloem\tcl85.dll'
+# End of Stack Trace
+
+

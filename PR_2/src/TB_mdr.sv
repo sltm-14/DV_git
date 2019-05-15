@@ -37,23 +37,23 @@ module tb_ms
 	always #1 clk <= ~clk;
 
 	initial begin
-		op     = MULT;
+		op     = ROOT;
 		load   = 1; 
 		rst    = 1;
 		start  = 1;
-	    data   = 0;   #4;
+	    data   = 0;   
        
-	    rst    = 0;   #10;
+	    rst    = 0;   #4;
 	    rst    = 1;   #3;
 		
 	    start  = 0;   #2;
 	    start  = 1;   #2;
  	    
-	    data   = 4;  #4;
+	    data   = 14435;  #4;
 	    load   = 0;   #2;
 	    load   = 1;   #2;
 	    
-	    data   = 6;  #4;
+	    data   = 00;  #4;
 	    load   = 0;   #2;
 	    load   = 1;   #2;
 
