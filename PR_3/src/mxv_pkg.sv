@@ -21,7 +21,7 @@ package mxv_pkg;
 
     localparam  DWUART  = 8;
     localparam  DHEX    = 4;
-    localparam  DDEC    = 8;
+    localparam  DDEC    = 9;
 
     localparam  KEY_0   = 48;
     localparam  KEY_9   = 56;
@@ -33,16 +33,20 @@ package mxv_pkg;
     localparam NMAX     = 8;
     localparam NW       = $clog2(NMAX);
 
-    localparam SIZE_FRAME        = {8'hF,8'hE,"_","0","3","_","0","1","_","0",8'b????_????,"_","E","F"};
-    localparam START_FRAME       = {"F","E","_","0","2","_","0","3","_","E","F"};
-    localparam MATRIX_FRAME      = {"F","E","_",8'b????_????,8'b????_????,"_","0","4","_"};
-    localparam END_FIFO_FRAME    = 
-    localparam END_MATRIX_FRAME  = 
-    localparam VECTOR_FRAME      = 
-    localparam FIFO_VECTOR_FRAME = 
-    localparam END_VECTOR_FRAME  = 
-    localparam REPEAT_FRAME      = 
-    localparam ERROR_FRAME       = 
+    localparam COMW     = $clog2(5);
+
+    localparam FW       = $clog2(16);
+
+
+
+
+    localparam FE_FRAME       = 9'h0FE;
+    localparam EF_FRAME       = 9'h0EF;
+    localparam UNDERSCORE     = 9'h123;
+    localparam COMMAND_SIZE   = 9'h001;
+    localparam COMMAND_REPEAT = 9'h002;
+    localparam COMMAND_START  = 9'h003;
+    localparam COMMAND_MV     = 9'h004;
 
     /* TYPEDEFS -------------------------------- */
 
@@ -70,17 +74,18 @@ package mxv_pkg;
     typedef logic [CW-1:0]       count_t;
     typedef logic [NW-1]         n_t;
 
+    typedef logic [COMW -1:0]    command_t;
+    typedef logic [FW-1:0]       frame_size_t;
+
+
+
     /* ENUMS ----------------------------------- */
 
-    typedef enum logic [4:0] {IDLE, SIZE, START, MATRIX, 
-                              FIFO_0, FIFO_1, FIFO_2, FIFO_3,
-                              FIFO_4, FIFO_5, FIFO_6, FIFO_7, FIFO_GUION,
-                              END_FIFO_M,END_MATRIX,VECTOR, FIFO_VECTOR, 
-                              END_VECTOR, REPEAT, CLEAN} state_ctrl_t;
+    typedef enum logic [4:0] {FE, UC_1,FRAME_SIZE,UC_2,COMMAND,UC_3,SIZE,UC_S2,
+                              FIFO_M0,UC_M0,FIFO_M1,UC_M1,FIFO_M2,UC_M2,FIFO_M3,UC_M3,
+                              FIFO_M4,UC_M4,FIFO_M5,UC_M5,FIFO_M6,UC_M6,FIFO_M7,UC_M7,
+                              FIFO_V,UC_V,EF,CLEAN} state_ctrl_t;
 
-/*    typedef enum logic [3:0] {SIZE_FRAME, START_FRAME,MATRIX_FRAME, END_FIFO_FRAME,
-                              END_MATRIX_FRAME, VECTOR_FRAME, FIFO_VECTOR_FRAME, 
-                              END_VECTOR_FRAME, REPEAT_FRAME, ERROR_FRAME} frames_t;*/
 
     /* STRUCTS --------------------------------- */
 

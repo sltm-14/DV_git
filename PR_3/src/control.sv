@@ -4,199 +4,443 @@
 module control
 import mxv_pkg::*;
 (
-	input clk_wr,
-	input clk_rd,
+//	input clk_wr,
+	input clk,
 	input rst,
 
-	input        rcv,
-	//input frames_t frame,
-	input logic    error,
-	input count_t  count,
-	input logic    match,
-	input logic    repeat,
-	input n_t      n,
+	input logic      rcv,
+	input data_dec_t data,
+	input logic      cv_ovf,
+	input logic      cc_ovf,
+	input count_t    counter,
 
-	output state_ctrl_t state_out
+
+	output 
 );
-
+	n_t          n;
     state_ctrl_t state;
+    command_t    command;
+    frame_size_t frame_size;
 
-    always@(posedge clk_wr, negedge rst)begin
+    always@(posedge clk, negedge rst)begin
     	if (!rst)begin
     		state = IDLE;
     	end
     	else begin
     		case(state)
-    			IDLE: begin
-    				if (rcv)
+    			FE:begin
+    				if ( cc_ovf ) begin
+    					if ( data == FE ) begin
+    						state = UC_1;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = FE;
+    				end
+    			end
+
+    			UC_1:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FRAME_SIZE;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_1;
+    				end
+    			end
+
+    			FRAME_SIZE:begin
+    				if ( cc_ovf ) begin
+    					if ( data == FE ) begin
+    						state = UC_2;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = FRAME_SIZE;
+    				end	
+    			end
+
+    			UC_2:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = COMMAND;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_2;
+    				end
+    			end
+
+    			COMMAND:begin
+    				if ( cc_ovf ) begin
+    					if ( data > 0 && data < 5 ) begin
+    						state = UC_3;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = COMMAND;
+    				end	
+    			end
+
+    			UC_3:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						if (command == COMMAND_REPEAT || command == COMMAND_START )
+    							state = EF;
+    						else if ( command == COMMAND_SIZE)
+    							state = SIZE;
+    						else if ( command == COMMAND_MV && (frame_size == n*n) )
+    							state = FIFO_0;
+    						else if ( frame_size == n+1 )
+    							state = FIFO_V;
+    						else 
+    							state = CLEAN;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_3;
+    				end
+    			end
+
+    			SIZE:begin
+    				if ( cc_ovf ) begin
+    					if ( data > 0 && data < 9 ) begin
+    						state = UC_SZ;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
     					state = SIZE;
+    				end	
     			end
-    			SIZE: begin
-					if (error)
-						state = CLEAN;
-					else if ( match )
-						state = START;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = SIZE;
+
+    			UC_SZ:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = EF;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_SZ;
+    				end
     			end
-    			START: begin
-    				if (error)
-						state = CLEAN;
-    				else if ( match )
-						state = MATRIX;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = START;
+
+    			FIFO_M0:begin
+    				if ( cc_ovf ) begin
+    					if ( data == FE ) begin
+    						state = UC_2;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = FRAME_SIZE;
+    				end	
     			end
-    			MATRIX: begin
-    				if (error)
-						state = CLEAN;
-    				else if ( match )
-						state = FIFO_0;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = MATRIX;
+
+    			UC_M0:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M1;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M0;
+    				end
     			end
-    			FIFO_0: begin
-    				if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_1;
-					else
-						state = FIFO_GUION;
+
+    			FIFO_M1:begin
     			end
-    			FIFO_1: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_2;
-					else
-						state = FIFO_GUION;
+
+    			UC_M1:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M2;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M1;
+    				end
     			end
-    			FIFO_2: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_3;
-					else
-						state = FIFO_GUION;
+
+    			FIFO_M2:begin
     			end
-    			FIFO_3: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_4;
-					else
-						state = FIFO_GUION;
+
+    			UC_M2:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M3;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M2;
+    				end
     			end
-    			FIFO_4: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_5;
-					else
-						state = FIFO_GUION;
+
+    			FIFO_M3:begin
+    				
     			end
-    			FIFO_5: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_6;
-					else
-						state = FIFO_GUION;
+
+    			UC_M3:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M4;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M3;
+    				end
     			end
-    			FIFO_6: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_7;
-					else
-						state = FIFO_GUION;
+
+    			FIFO_M4:begin
     			end
-    			FIFO_7: begin
-					if (error)
-						state = CLEAN;
-    				else if (count % n*2)
-						state = FIFO_0;
-					else
-						state = FIFO_GUION;
+
+    			UC_M4:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M5;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M4;
+    				end
     			end
-    			FIFO_GUION: begin
-    				if (error)
-						state = CLEAN;
-					else if ( count == ( ((n*2)+1)*n) )
-						state = END_MATRIX;
-    				else if (count % ((n*2)+1) )
-						state = FIFO_0;
-					else
-						state = FIFO_GUION;
+
+    			FIFO_M5:begin
     			end
-    			END_FIFO_M: begin
-    				if (error)
-						state = CLEAN;
-					else if ( count == ( ((n*2)+1)*n) )
-						state = END_MATRIX;
-    				else if (count % ((n*2)+1) )
-						state = FIFO_0;
-					else
-						state = FIFO_GUION;    				
+
+    			UC_M5:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M6;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M5;
+    				end
     			end
-    			END_MATRIX: begin
-    				if (error)
-						state = CLEAN;
-    				else if ( match )
-						state = VECTOR;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = END_MATRIX;
+
+    			FIFO_M6:begin
     			end
-    			VECTOR: begin
-    				if (error)
-						state = CLEAN;
-    				else if ( match )
-						state = FIFO_VECTOR;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = VECTOR;
+
+    			UC_M6:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						state = FIFO_M7;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M6;
+    				end
     			end
-    			FIFO_VECTOR: begin
-    				if (error)
-						state = CLEAN;
-    				else if ( match )
-						state = END_VECTOR;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = VECTOR;
+
+    			FIFO_M7:begin
     			end
-    			END_VECTOR: begin
-    				if (error)
-						state = CLEAN;
-    				else if ( match )
-						state = CLEAN;
-					else if ( repeat )
-						state = REPEAT;
-					else
-						state = END_VECTOR;
+
+    			UC_M7:begin
+    				if ( rcv ) begin
+    					if ( data == UNDERSCORE ) begin
+    						if( counter == ( (n*n) + 1 + n ) )
+    							state = EF;
+    						else 
+    							state = FIFO_M0;
+    					end
+    					else begin
+    						state = CLEAN;
+    					end 
+    				end
+    				else begin
+    					state = UC_M7;
+    				end
     			end
+
+    			FIFO_V:begin
+    			end
+
+    			UC_V:begin
+    			end
+
+    			EF:begin
+    			end
+
     			REPEAT: begin
-    				state = IDLE;
+    				state = FE;
     			end
+
     			CLEAN: begin
-    				state = IDLE;
+    				state = FE;
     			end
     		endcase
     	end
     end
 
 
+    always@(*)begin
+ 	    case(state)
+    		FE:begin
 
+    		end
+
+    		UC_1:begin
+
+    		end
+
+    		FRAME_SIZE:begin
+
+    		end
+
+    		UC_2:begin
+    	
+    		end
+
+    		COMMAND:begin
+    		
+    		end
+
+    		UC_3:begin
+    		
+    		end
+
+    		SIZA:begin
+    		
+    		end
+
+    		UC_SZ:begin
+    		
+    		end
+
+    		FIFO_M0:begin
+    		
+    		end
+
+    		UC_M0:begin
+    		
+    		end
+
+    		FIFO_M1:begin
+    		
+    		end
+
+    		UC_M1:begin
+    		
+    		end
+
+    		FIFO_M2:begin
+    		
+    		end
+
+    		UC_M2:begin
+    		
+    		end
+
+    		FIFO_M3:begin
+    		
+    		end
+
+    		UC_M3:begin
+    		
+    		end
+
+    		FIFO_M4:begin
+    		
+    		end
+
+    		UC_M4:begin
+    		
+    		end
+
+    		FIFO_M5:begin
+    		
+    		end
+
+    		UC_M5:begin
+    		
+    		end
+
+    		FIFO_M6:begin
+    		
+    		end
+
+    		UC_M6:begin
+    		
+    		end
+
+    		FIFO_M7:begin
+    		
+    		end
+
+    		UC_M7:begin
+    		
+    		end
+
+    		FIFO_V:begin
+    		
+    		end
+
+    		UC_V:begin
+    		
+    		end
+
+    		EF:begin
+    		
+    		end
+
+    		REPEAT: begin
+
+   			end
+
+    		CLEAN: begin
+
+    		end
+
+    	endcase
+    end
 
 
 
