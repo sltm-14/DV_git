@@ -28,13 +28,24 @@
 ../src/fifo/src/TOP_fifo_ram_dc.sv
 
 ../src/mxv_pkg.sv
-../src/demux_1_4_W4B.sv
-../src/demux_1_8_W1B.sv
-../src/demux_1_8_W4B.sv
-../src/mux_2_1.sv
-../src/processor.sv
-../src/register_en.sv
-../src/top_mxv.sv
 
+../src/mxv/demux_1_4_W4B.sv
+../src/mxv/demux_1_8_W1B.sv
+../src/mxv/demux_1_8_W4B.sv
+../src/mxv/mux_2_1.sv
+../src/mxv/processor.sv
+../src/mxv/register_en.sv
+../src/mxv/top_mxv.sv
+
+../src/ascii2hex.sv
+../src/comparison.sv
+../src/control.sv
+../src/counter_ctrl.sv
+../src/demux_1_2_W4B.sv
+../src/demux_1_2_W8B.sv
+../src/hex2dec.sv
+../src/register_8.sv
+../src/sipo.sv
+../src/validation.sv
 
 TB_MxV.sv

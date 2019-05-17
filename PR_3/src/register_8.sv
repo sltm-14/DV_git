@@ -2,7 +2,7 @@
     `define REGISTER_8_SV
 
 module register_8 
-import pkg_uart::*;
+import mxv_pkg::*;
 (
 	input  clk,
 	input  rst,

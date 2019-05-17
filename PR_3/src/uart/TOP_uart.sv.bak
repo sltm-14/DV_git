@@ -13,7 +13,7 @@ import pkg_uart::*;
     
     output        tx,
     output        error,
-    output data_t data,
+    output data_t data
     output logic  rcv
     
 );

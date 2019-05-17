@@ -9,12 +9,10 @@ import mxv_pkg::*;
 	input rst,
 
 	input        rcv,
-	//input frames_t frame,
-	input logic    error,
+	input frames_t frame,
+	input        error,
 	input count_t  count,
-	input logic    match,
-	input logic    repeat,
-	input n_t      n,
+	input [3:0]  n,
 
 	output state_ctrl_t state_out
 );
@@ -34,9 +32,9 @@ import mxv_pkg::*;
     			SIZE: begin
 					if (error)
 						state = CLEAN;
-					else if ( match )
+					else if ( SIZE_FRAME == frame)
 						state = START;
-					else if ( repeat )
+					else if ( REPEAT_FRAME == frame)
 						state = REPEAT;
 					else
 						state = SIZE;
@@ -44,9 +42,9 @@ import mxv_pkg::*;
     			START: begin
     				if (error)
 						state = CLEAN;
-    				else if ( match )
+    				else if ( START_FRAME == frame )
 						state = MATRIX;
-					else if ( repeat )
+					else if ( REPEAT_FRAME == frame )
 						state = REPEAT;
 					else
 						state = START;
@@ -54,9 +52,9 @@ import mxv_pkg::*;
     			MATRIX: begin
     				if (error)
 						state = CLEAN;
-    				else if ( match )
+    				else if ( MATRIX_FRAME == frame )
 						state = FIFO_0;
-					else if ( repeat )
+					else if ( REPEAT_FRAME == frame )
 						state = REPEAT;
 					else
 						state = MATRIX;
@@ -121,7 +119,7 @@ import mxv_pkg::*;
 					if (error)
 						state = CLEAN;
     				else if (count % n*2)
-						state = FIFO_0;
+						state = FIFO_8;
 					else
 						state = FIFO_GUION;
     			end
@@ -148,9 +146,9 @@ import mxv_pkg::*;
     			END_MATRIX: begin
     				if (error)
 						state = CLEAN;
-    				else if ( match )
+    				else if ( END_MATRIX_FRAME == frame )
 						state = VECTOR;
-					else if ( repeat )
+					else if ( REPEAT_FRAME == frame )
 						state = REPEAT;
 					else
 						state = END_MATRIX;
@@ -158,9 +156,9 @@ import mxv_pkg::*;
     			VECTOR: begin
     				if (error)
 						state = CLEAN;
-    				else if ( match )
+    				else if ( VECTOR_FRAME == frame )
 						state = FIFO_VECTOR;
-					else if ( repeat )
+					else if ( REPEAT_FRAME == frame )
 						state = REPEAT;
 					else
 						state = VECTOR;
@@ -168,9 +166,9 @@ import mxv_pkg::*;
     			FIFO_VECTOR: begin
     				if (error)
 						state = CLEAN;
-    				else if ( match )
-						state = END_VECTOR;
-					else if ( repeat )
+    				else if ( VECTOR_FRAME == frame )
+						state = FIFO_VECTOR_FRAME;
+					else if ( REPEAT_FRAME == frame )
 						state = REPEAT;
 					else
 						state = VECTOR;
@@ -178,9 +176,9 @@ import mxv_pkg::*;
     			END_VECTOR: begin
     				if (error)
 						state = CLEAN;
-    				else if ( match )
+    				else if ( END_VECTOR_FRAME == frame )
 						state = CLEAN;
-					else if ( repeat )
+					else if ( REPEAT_FRAME == frame )
 						state = REPEAT;
 					else
 						state = END_VECTOR;
@@ -191,8 +189,8 @@ import mxv_pkg::*;
     			CLEAN: begin
     				state = IDLE;
     			end
-    		endcase
     	end
+
     end
 
 

@@ -1,7 +1,7 @@
- `ifndef COUNTER_SV
-    `define COUNTER_SV
+ `ifndef COUNTER_CTRL_SV
+    `define COUNTER_CTRL_SV
 
-module counter 
+module counter_ctrl 
 import mxv_pkg::*;
 (
 	input clk,

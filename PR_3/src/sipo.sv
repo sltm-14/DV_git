@@ -17,7 +17,7 @@ data_hex_sipo_t   rgstr_r;
 
 always_ff@(posedge clk or negedge rst) begin: rgstr_label
     if(!rst)
-        rgstr_r  <= '0;
+        rgstr_r  <= {'0,'0,'0,'0,'0,'0,'0,'0,'0,'0,'0,'0,'0,'0};
     else if (enb)
         rgstr_r  <= {rgstr_r[SIPO_REG-2:0], inp};
 end:rgstr_label
