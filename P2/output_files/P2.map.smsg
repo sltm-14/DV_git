@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(14): object "A" differs only in case from object "a" in the same scope File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv Line: 14
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(15): object "B" differs only in case from object "b" in the same scope File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv Line: 15
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(16): object "C" differs only in case from object "c" in the same scope File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv Line: 16
+Info (10281): Verilog HDL Declaration information at bin_to_7seg.sv(17): object "D" differs only in case from object "d" in the same scope File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv Line: 17
