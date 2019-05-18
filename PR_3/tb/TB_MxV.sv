@@ -70,7 +70,7 @@ initial begin
 	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
-	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
 
@@ -95,7 +95,7 @@ initial begin
 	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
-	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "1"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
 
@@ -107,7 +107,7 @@ initial begin
 	rcv  = 1; data = "E"; #2;	rcv  = 0; data = 0; #4;
 	rcv  = 1; data = "F"; #2;	rcv  = 0; data = 0; #4; #14;
 
-	/* Indicar comienzo de transmision -------------------- */
+	/* Datos matriz ------------------------------------- */
 
 	rcv  = 1; data = "F"; #2;	rcv  = 0; data = 0; #4;
 	rcv  = 1; data = "E"; #2;	rcv  = 0; data = 0; #4;
@@ -160,7 +160,36 @@ initial begin
 	rcv  = 1; data = "E"; #2;	rcv  = 0; data = 0; #4;
 	rcv  = 1; data = "F"; #2;	rcv  = 0; data = 0; #4; #14;
 
+	/* Datos vector ------------------------------------ */
 
+	rcv  = 1; data = "F"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "E"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "4"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4; /*---*/
+	rcv  = 1; data = "4"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "4"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "4"; #2;	rcv  = 0; data = 0; #4; /*---*/
+
+	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
+
+	rcv  = 1; data = "E"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "F"; #2;	rcv  = 0; data = 0; #4; #14;
 
 end
 

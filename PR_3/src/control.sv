@@ -35,30 +35,6 @@ import mxv_pkg::*;
 	output logic      clear_val,
     output logic      clear_comm
 
-
-/*	n            = ;    // n_t
-    state        = ;    // state_ctrl_t
-    command      = ;    // command_t
-    frame_size   = ;    // frame_size_t
-
-	ena_cc       = ;    // logic
-	ena_cv       = ;    // logic
-	ena_comp     = ;    // logic
-	n_val        = ;    // n_t
-	push_result  = ;    // logic
-	pop_result   = ;    // logic
-	push_vector  = ;    // logic
-	pop_vector   = ;    // logic
-	push_matrix  = ;    // push_pop_t
-	pop_matrix   = ;    // push_pop_t
-	val          = ;    // val_t
-	dmx_val_sltr = ;    // sltr_8_t
-	dmx_a_sltr   = ;    // sltr_2_t
-	dmx_b_sltr   = ;    // sltr_2_t
-	dmx_c_sltr   = ;    // sltr_2_t
-    */
-
-
 );
 	n_t          n          = 0;
     state_ctrl_t state      = FE;
@@ -153,7 +129,7 @@ import mxv_pkg::*;
     							state <= SIZE;
     						else if ( command == COMMAND_MV && (frame_size == n*n) )
     							state <= FIFO_M0;
-    						else if ( command == COMMAND_MV && frame_size == n+1 )
+    						else if ( command == COMMAND_MV && frame_size == n )
     							state <= FIFO_V;
     						else 
     							state <= CLEAN;
@@ -470,7 +446,7 @@ import mxv_pkg::*;
     			FIFO_V:begin
     				if ( cc_ovf ) begin
     					if ( data >= 0 && data <= 9'hFF) begin
-    						if (counter < n)
+    						if (counter < n*2)
     							state <= FIFO_V;
     						else 
     							state <= UC_V;
@@ -487,10 +463,7 @@ import mxv_pkg::*;
     			UC_V:begin
     				if ( rcv ) begin
     					if ( data == UNDERSCORE ) begin
-    						if( counter == ( (n*n*2) + 1 + n ) )
     							state <= EF;
-    						else 
-    							state <= FIFO_M0;
     					end
     					else begin
     						state <= CLEAN;

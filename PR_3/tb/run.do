@@ -5,4 +5,4 @@ onbreak {resume}
 set NoQuitOnFinish 1
 vsim -voptargs=+acc work.TB_MxV
 do wave.do
-run 300ps
+run 520ps
