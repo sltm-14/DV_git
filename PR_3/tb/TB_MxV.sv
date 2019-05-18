@@ -128,29 +128,29 @@ initial begin
 	rcv  = 1; data = "1"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
-	rcv  = 1; data = "1"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
-	rcv  = 1; data = "1"; #2;	rcv  = 0; data = 0; #4; /*---*/
+	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4; /*---*/
 
 	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4; /*---*/
-	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "1"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
 	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4;
 	
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
-	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4; /*---*/
+	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4; /*---*/
 
 	rcv  = 1; data = "_"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4; /*---*/
-	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "1"; #2;	rcv  = 0; data = 0; #4;
 
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
-	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4;
+	rcv  = 1; data = "2"; #2;	rcv  = 0; data = 0; #4;
 	
 	rcv  = 1; data = "0"; #2;	rcv  = 0; data = 0; #4;
 	rcv  = 1; data = "3"; #2;	rcv  = 0; data = 0; #4; /*---*/

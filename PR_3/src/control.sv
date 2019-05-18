@@ -10,13 +10,9 @@ import mxv_pkg::*;
 
 	input logic       rcv,
 	input data_dec_t  data,
-/*	input logic       cv_ovf,*/
 	input logic       cc_ovf,
 	input count_t     counter,
 
-	
-/*	output logic      ena_comp,
-	output n_t        n_val,*/
     output logic      ena_cv,
 	output logic      ena_cc,
 	output logic      push_result,
@@ -36,13 +32,14 @@ import mxv_pkg::*;
     output logic      clear_comm
 
 );
-	n_t          n          = 0;
-    state_ctrl_t state      = FE;
-    command_t    command    = NO_COMMAND;
-    frame_size_t frame_size = 0;
+	n_t            n          = 0;
+    state_ctrl_t   state      = FE;
+    command_t      command    = NO_COMMAND;
+    frame_size_t   frame_size = 0;
 
     assign ena_cc = rcv;
     assign ena_cv = rcv && ( data != UNDERSCORE );
+    assign val = data[VW-1:0];
 
     always@(posedge clk, negedge rst)begin
     	if (!rst)begin
@@ -507,13 +504,10 @@ import mxv_pkg::*;
 				command      = command;     // command_t
 			    frame_size   = frame_size;   // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -531,13 +525,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -555,13 +546,10 @@ import mxv_pkg::*;
 			    command      = command;    // command_t
 			    frame_size   = data; // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -579,13 +567,10 @@ import mxv_pkg::*;
 			    command      = command;    // command_t
 			    frame_size   = frame_size; // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -603,13 +588,10 @@ import mxv_pkg::*;
 			    command      = data;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -627,13 +609,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -651,13 +630,10 @@ import mxv_pkg::*;
 			    command      = command;    // command_t
 			    frame_size   = data;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -675,13 +651,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -699,26 +672,24 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-                if (rcv) begin
+                
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0001;    // sltr_8_t
-				push_matrix  = 8'b0000_0001;    // push_pop_t
+				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix[0]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
-                end
+                
     		end
 
     		UC_M0:begin
@@ -726,13 +697,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -750,19 +718,17 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
-				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix  = 8'b0000_0000;    // push_pop_t
+				push_matrix[1]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
@@ -774,13 +740,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -798,19 +761,17 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix[2]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
@@ -822,13 +783,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -846,19 +804,17 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix[3]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
@@ -870,13 +826,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -894,19 +847,17 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix[4]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
@@ -918,13 +869,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -942,19 +890,17 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix[5]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
@@ -966,13 +912,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -990,19 +933,17 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
 				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
+                push_matrix[6]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
@@ -1014,13 +955,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -1038,23 +976,21 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
                 dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
-				push_matrix  = 8'b0000_0000;    // push_pop_t
-				pop_matrix   = 8'b0000_0000;    // push_pop_t
-                sipo_ena     = 0;               // logic
-                clear_val    = 0;               // logic
-                clear_comm   = 0;               // logic
+				dmx_val_sltr = 8'b0000_0000; // sltr_8_t
+				push_matrix  = 8'b0000_0000; // push_pop_t
+                push_matrix[1]  = cc_ovf;    // push_pop_t
+				pop_matrix   = 8'b0000_0000; // push_pop_t
+                sipo_ena     = 0;            // logic
+                clear_val    = 0;            // logic
+                clear_comm   = 0;            // logic
     		end
 
     		UC_M7:begin
@@ -1062,13 +998,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -1086,13 +1019,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
-				push_vector  = 0;    // logic
+				push_vector  = cc_ovf;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -1111,13 +1041,10 @@ import mxv_pkg::*;
 			    frame_size   = frame_size; // frame_size_t
 
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -1135,13 +1062,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
@@ -1159,13 +1083,10 @@ import mxv_pkg::*;
 			    command      = command;       // command_t
 			    frame_size   = frame_size;    // frame_size_t
 
-				//ena_comp     = 0;    // logic
-				//n_val        = 0;    // n_t
 				push_result  = 0;    // logic
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				val          = 0;    // val_t
 				dmx_a_sltr   = 0;    // sltr_2_t
 				dmx_b_sltr   = 0;    // sltr_2_t
 				dmx_c_sltr   = 0;    // sltr_2_t
