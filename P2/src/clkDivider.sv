@@ -1,0 +1,42 @@
+//-----------------------------------------------
+// NOMBRE DEL MODULO: clkDivider.sv
+// DESCRIPCION: Implementeacion de divisor de frecuencia
+// ENTRADAS: i_clk_FPGA (Reloj inicial) reset (reinicio del programa)
+// SALIDAS:  o_clk (Reloj de salida)
+// VERSION:  1.0
+// AUTORES:  Andres Hernandez, Carem Bernabe
+// FECHA:    18 / 02 / 19
+//----------------------------------------------
+
+module clkDivider
+import pkg_system_mdr::*;
+(
+	// Input signals
+	input 			rst, 
+	input 			clk_FPGA,
+	
+	// Output signal
+	output logic  	o_clk
+);
+	
+counter_t r_counter = '0; 							// Frequency counter
+
+always_ff@(posedge clk_FPGA, negedge rst) begin: count
+	if(!rst) 											// Reset counter
+	begin
+		o_clk   		<= '0;
+		r_counter 	<= '0;
+	end
+	else if(r_counter == (MAX_COUNT - 1'b1)) 	// If counter gets to the limit
+	begin
+		o_clk   		<= ~o_clk; 						// o_clk suffles its state
+		r_counter 	<= '0;      					// counter is set to 0
+	end
+	else
+	begin
+		r_counter 	<= r_counter + 1'b1; 		//add one to counter
+		o_clk   		<= o_clk;		   			//o_clk keeps its value
+	end
+end: count
+	
+endmodule
