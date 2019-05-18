@@ -20,11 +20,11 @@ package mxv_pkg;
     localparam  SLTR_8   = $clog2(DMX_IN_8);
 
     localparam  DWUART  = 8;
-    localparam  DHEX    = 4;
+    localparam  DHEX    = 5;
     localparam  DDEC    = 9;
 
     localparam  KEY_0   = 48;
-    localparam  KEY_9   = 56;
+    localparam  KEY_9   = 57;
     localparam  KEY_A   = 65;
     localparam  KEY_F   = 70;
 
@@ -37,12 +37,16 @@ package mxv_pkg;
 
     localparam FW       = $clog2(16);
 
+    localparam PPS      = 8;
+    localparam VW       = 8;
+
 
 
 
     localparam FE_FRAME       = 9'h0FE;
     localparam EF_FRAME       = 9'h0EF;
-    localparam UNDERSCORE     = 9'h123;
+    localparam UNDERSCORE     = 300;
+    localparam NO_COMMAND     = 9'h000;
     localparam COMMAND_SIZE   = 9'h001;
     localparam COMMAND_REPEAT = 9'h002;
     localparam COMMAND_START  = 9'h003;
@@ -76,12 +80,14 @@ package mxv_pkg;
 
     typedef logic [COMW -1:0]    command_t;
     typedef logic [FW-1:0]       frame_size_t;
+    typedef logic [PPS-1:0]      push_pop_t;
+    typedef logic [VW-1:0]       val_t;
 
 
 
     /* ENUMS ----------------------------------- */
 
-    typedef enum logic [4:0] {FE, UC_1,FRAME_SIZE,UC_2,COMMAND,UC_3,SIZE,UC_S2,
+    typedef enum logic [4:0] {FE, UC_1,FRAME_SIZE,UC_2,COMMAND,UC_3,SIZE,UC_SZ,
                               FIFO_M0,UC_M0,FIFO_M1,UC_M1,FIFO_M2,UC_M2,FIFO_M3,UC_M3,
                               FIFO_M4,UC_M4,FIFO_M5,UC_M5,FIFO_M6,UC_M6,FIFO_M7,UC_M7,
                               FIFO_V,UC_V,EF,CLEAN} state_ctrl_t;
@@ -157,7 +163,27 @@ package mxv_pkg;
         data_i_t      fifo_result;
 
     }mxv_st; 
-    
+
+    typedef struct {
+        data_uart_t data_reg_a2h;
+        data_hex_t  data_hex;
+        data_dec_t  data_dec;
+
+        logic   cv_ovf;
+        logic   cc_ovf;
+        count_t counter;  
+
+        logic   ena_cv;
+        logic   ena_cc;
+        logic   clear;
+        logic   sipo_ena;
+        logic   rcv;
+        logic   ena_rcv;
+        logic   clear_val;
+        logic   clear_comm;
+        logic   deb;
+    }ctrl_st;
+        
 endpackage
 `endif
 

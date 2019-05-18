@@ -12,13 +12,18 @@ import mxv_pkg::*;
 	output logic o_val
 );
 
+reg val;
 
 always_ff @(posedge clk, negedge rst) begin
 	if(!rst) 
-		o_val <= '0;
+		val <= '0;
 
 	else 
-		o_val <= i_val;
+		val <= i_val;
+end
+
+always @(*)begin
+	o_val = val;
 end
 
 endmodule
