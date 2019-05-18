@@ -11,7 +11,7 @@ Z0 dC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/PR_3/tb
 vaddrs_synch
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
 Z2 DXx4 work 8 fifo_pkg 0 22 8^WIiCXNS84kQD1>^Q6`m1
-Z3 !s110 1558199548
+Z3 !s110 1558199933
 !i10b 1
 !s100 RO[b@MnSZkToQ_ZXM0zRF3
 I[Ck178mVQA>[33Rgf2PkC2
@@ -27,7 +27,7 @@ Z5 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z6 !s108 1558199548.000000
+Z6 !s108 1558199933.000000
 Z7 !s107 TB_MxV.sv|../src/ctrl_top.sv|../src/sipo.sv|../src/register_8.sv|../src/register_1.sv|../src/hex2dec.sv|../src/demux_1_2_W8B.sv|../src/demux_1_2_W4B.sv|../src/debouncer.sv|../src/counter_ctrl.sv|../src/counter_command.sv|../src/control.sv|../src/comparison.sv|../src/ascii2hex.sv|../src/mxv/top_mxv.sv|../src/mxv/register_en.sv|../src/mxv/processor.sv|../src/mxv/mux_2_1.sv|../src/mxv/demux_1_8_W4B.sv|../src/mxv/demux_1_8_W1B.sv|../src/mxv/demux_1_4_W4B.sv|../src/mxv_pkg.sv|../src/fifo/src/TOP_fifo_ram_dc.sv|../src/fifo/src/xor_gate.sv|../src/fifo/src/synch_ff.sv|../src/fifo/src/ram_dc.sv|../src/fifo/src/pointer_wr.sv|../src/fifo/src/pointer_rd.sv|../src/fifo/src/gray2bin.sv|../src/fifo/src/ff_d.sv|../src/fifo/src/comp.sv|../src/fifo/src/bin2gray.sv|../src/fifo/src/addrs_synch.sv|../src/fifo/src/fifo_pkg.sv|../src/uart/TOP_uart.sv|../src/uart/uart_tx.sv|../src/uart/uart_rx.sv|../src/uart/sipo_dw_11.sv|../src/uart/shifter.sv|../src/uart/register_en_dw_8.sv|../src/uart/register.sv|../src/uart/parity_bit_generator.sv|../src/uart/parity_error.sv|../src/uart/counter.sv|../src/uart/control_tx.sv|../src/uart/control_rx.sv|../src/uart/baudgen_tx.sv|../src/uart/baudgen_rx.sv|../src/uart/pkg_uart.sv|
 Z8 !s90 -reportprogress|300|-f|files.f|
 !i113 1
