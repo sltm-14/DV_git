@@ -7,21 +7,21 @@ vadd
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
 Z2 DXx4 work 14 pkg_system_mdr 0 22 z3<@aSEm=KlHW;>^o>LJB3
 !i10b 1
-!s100 4dddOCN_1kV7QX[dQX5Bf3
-IREMZ8oZX1EZZ`Z6G]n52<1
+!s100 :CaGBbzimOOZ1[2m5@fPN1
+Ieb8dWFnzZDaNCi`:98f=^0
 VkJXn7FNQzKV;VX7hM`Q240
 !s105 add_sv_unit
 S1
 Z3 dC:\Users\C18561\Documents\Code\SV\REPOSITORIO\DV_git\P2\tb
-w1557934039
+w1558182102
 8../src/add.sv
 F../src/add.sv
-L0 11
+L0 14
 Z4 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z5 !s108 1558144021.111000
+Z5 !s108 1558196289.391000
 Z6 !s107 TB_mdr.sv|../src/verification2.sv|../src/sipo.sv|../src/clkDivider.sv|../src/mux_output.sv|../src/final_values.sv|../src/register_en.sv|../src/final_quotation.sv|../src/final_remainder.sv|../src/mux_data.sv|../src/mux_2powerN2.sv|../src/alu_mult.sv|../src/counter2.sv|../src/operation_mult.sv|../src/selector_op.sv|../src/verification.sv|../src/core.sv|../src/quotation_add.sv|../src/rem_full_reg.sv|../src/quotation_reg.sv|../src/divisor_reg.sv|../src/sub.sv|../src/remainder_reg.sv|../src/division.sv|../src/final_product.sv|../src/multiplicand_reg.sv|../src/shift_right_sign.sv|../src/product_reg.sv|../src/multiplication.sv|../src/control.sv|../src/mdr.sv|../src/pipo.sv|../src/counter.sv|../src/and_gate.sv|../src/demux_2powerN.sv|../src/multiplier_reg.sv|../src/mux_2powerN.sv|../src/or_gate.sv|../src/register.sv|../src/root_op_calc.sv|../src/shift_reg_right_data.sv|../src/shift_left_quotient.sv|../src/shift_left.sv|../src/square_root.sv|../src/add.sv|../src/add_con.sv|../src/bin_to_7seg.sv|../src/bin_to_thto.sv|../src/complement_a2.sv|../src/displays.sv|../src/pkg_bin_to_thto.sv|../src/TOP_bcd_7seg.sv|../src/pkg_system_mdr.sv|
 Z7 !s90 -reportprogress|300|-f|files.f|
 !s101 -O0
@@ -36,7 +36,7 @@ VfA:4h0F0?YV<WbK^1VXjN0
 !s105 add_con_sv_unit
 S1
 R3
-w1557934041
+Z8 w1558144377
 8../src/add_con.sv
 F../src/add_con.sv
 L0 10
@@ -59,7 +59,7 @@ VjFYQjzm6]?3h`MQ0a[NMb1
 !s105 alu_mult_sv_unit
 S1
 R3
-w1558129490
+R8
 8../src/alu_mult.sv
 F../src/alu_mult.sv
 L0 4
@@ -82,7 +82,7 @@ Vg:^fA8zCIiGWMM=UdWRg:2
 !s105 and_gate_sv_unit
 S1
 R3
-w1557903996
+R8
 8../src/and_gate.sv
 F../src/and_gate.sv
 L0 4
@@ -98,16 +98,16 @@ o-O0
 vbin_to_7seg
 R1
 !i10b 1
-!s100 Qg?jHdT:N<7D8436CaMM`0
-I;R3X]_7?OhmKVRPz`efgY1
+!s100 ]JM8R;QeMiiCVCS8Dkd5>1
+IG9MEf9]AOEDWie2mnB?jS1
 VUC=PhCaWn`6^61;fOgK@Y0
 !s105 bin_to_7seg_sv_unit
 S1
 R3
-w1557080604
+w1558182077
 8../src/bin_to_7seg.sv
 F../src/bin_to_7seg.sv
-L0 10
+L0 13
 R4
 r1
 !s85 0
@@ -121,16 +121,16 @@ vbin_to_thto
 R1
 R2
 !i10b 1
-!s100 b<J^]ROT[?eU6JdzNz]]l0
-IhM=i[>B0F5ieeSI59dEIi3
+!s100 `1C6nLMi9`>N`=4>]=LK50
+IzN0eHlJaH3LbYjaLVO04z0
 Vlje@7Y<iK0ZfOZSIh[Eh[2
 !s105 bin_to_thto_sv_unit
 S1
 R3
-w1557934045
+w1558182028
 8../src/bin_to_thto.sv
 F../src/bin_to_thto.sv
-L0 10
+L0 14
 R4
 r1
 !s85 0
@@ -150,7 +150,7 @@ VTD67n6D9f]K>9:ocj?m6P3
 !s105 clkDivider_sv_unit
 S1
 R3
-w1557980695
+R8
 8../src/clkDivider.sv
 F../src/clkDivider.sv
 L0 11
@@ -168,16 +168,16 @@ vcomplement_a2
 R1
 R2
 !i10b 1
-!s100 _h[9?YmYlfBR=F1U=JX:m1
-I4e;^_57X>T:Rm:d5dTge[3
+!s100 5ZPE_]gZbEh1MmRLCdXOG0
+IN127;XONUGBJ2;B<Xm]:W1
 VgJbbDGT0oEG0Ud02?5cM10
 !s105 complement_a2_sv_unit
 S1
 R3
-w1557934046
+w1558182052
 8../src/complement_a2.sv
 F../src/complement_a2.sv
-L0 10
+L0 13
 R4
 r1
 !s85 0
@@ -197,7 +197,7 @@ V5JInnKCPUc?9GbOZjUWP61
 !s105 control_sv_unit
 S1
 R3
-w1558135008
+w1558196036
 8../src/control.sv
 F../src/control.sv
 L0 4
@@ -220,7 +220,7 @@ VSV1P5iV5FQFe2bJ4_XIAH2
 !s105 core_sv_unit
 S1
 R3
-w1558128876
+R8
 8../src/core.sv
 F../src/core.sv
 L0 4
@@ -243,7 +243,7 @@ V0m>;13F7F@Go_Mo9;c5=e2
 !s105 counter_sv_unit
 S1
 R3
-w1557904070
+R8
 8../src/counter.sv
 F../src/counter.sv
 L0 4
@@ -266,7 +266,7 @@ VYIW@B5Mab5XnG;LY_7ncG2
 !s105 counter2_sv_unit
 S1
 R3
-w1557904871
+R8
 8../src/counter2.sv
 F../src/counter2.sv
 L0 4
@@ -289,7 +289,7 @@ Vc5OC[aLA0mJzb@hZi6Q6H0
 !s105 demux_2powerN_sv_unit
 S1
 R3
-w1557903962
+R8
 8../src/demux_2powerN.sv
 F../src/demux_2powerN.sv
 L0 4
@@ -307,16 +307,16 @@ vdisplays
 R1
 R2
 !i10b 1
-!s100 XhFmDJ4jW8jN4;QPF;Oe<2
-IJ;dgVnbYUL92^Hc:GAE7]3
+!s100 =gM826jd@DoTn9eQ_a:TC3
+Ijk7[;jdz?61Y6k;T?JUb81
 VZ_M9Mlhm_4if2>E[^<Mof0
 !s105 displays_sv_unit
 S1
 R3
-w1557966661
+w1558182004
 8../src/displays.sv
 F../src/displays.sv
-L0 11
+L0 14
 R4
 r1
 !s85 0
@@ -336,7 +336,7 @@ VCOS1NAW4OHm;P3>W2ZckO0
 !s105 division_sv_unit
 S1
 R3
-w1557901134
+R8
 8../src/division.sv
 F../src/division.sv
 L0 4
@@ -359,7 +359,7 @@ V4<n:9O<8YbkFQoU:13o@73
 !s105 divisor_reg_sv_unit
 S1
 R3
-w1557904692
+R8
 8../src/divisor_reg.sv
 F../src/divisor_reg.sv
 L0 4
@@ -382,7 +382,7 @@ V4lD1C;DZTJX7=L^VX1D5B1
 !s105 final_product_sv_unit
 S1
 R3
-w1558128415
+R8
 8../src/final_product.sv
 F../src/final_product.sv
 L0 4
@@ -405,7 +405,7 @@ VD[em2NFFMVhPAT__U__h_1
 !s105 final_quotation_sv_unit
 S1
 R3
-w1557749464
+R8
 8../src/final_quotation.sv
 F../src/final_quotation.sv
 L0 4
@@ -428,7 +428,7 @@ V>heEm?aB4iW?S^b8WzIIH3
 !s105 final_remainder_sv_unit
 S1
 R3
-w1557754650
+R8
 8../src/final_remainder.sv
 F../src/final_remainder.sv
 L0 4
@@ -451,7 +451,7 @@ V_OFLzge[kNRz3NC3;h5NU1
 !s105 final_values_sv_unit
 S1
 R3
-w1557901026
+R8
 8../src/final_values.sv
 F../src/final_values.sv
 L0 4
@@ -474,7 +474,7 @@ VOYGY_ceQA9696jQHBPLBA0
 !s105 mdr_sv_unit
 S1
 R3
-w1558137655
+R8
 8../src/mdr.sv
 F../src/mdr.sv
 L0 4
@@ -497,7 +497,7 @@ V3j?VX]>dVl7i?CE[PijBV1
 !s105 multiplicand_reg_sv_unit
 S1
 R3
-w1557904530
+R8
 8../src/multiplicand_reg.sv
 F../src/multiplicand_reg.sv
 L0 4
@@ -520,7 +520,7 @@ Vz8f2j>Eh^8lDmV_G]JWdf1
 !s105 multiplication_sv_unit
 S1
 R3
-w1557900983
+R8
 8../src/multiplication.sv
 F../src/multiplication.sv
 L0 4
@@ -543,7 +543,7 @@ VkmmlFZaEJFjfJejn3>e=61
 !s105 multiplier_reg_sv_unit
 S1
 R3
-w1557903860
+R8
 8../src/multiplier_reg.sv
 F../src/multiplier_reg.sv
 L0 4
@@ -566,7 +566,7 @@ V3QoX;9`mONX?K@mEn98>f3
 !s105 mux_2powerN_sv_unit
 S1
 R3
-w1557903767
+R8
 8../src/mux_2powerN.sv
 F../src/mux_2powerN.sv
 L0 4
@@ -590,7 +590,7 @@ V;::`9S0NWCdB=h=I3PA7N0
 !s105 mux_2powerN2_sv_unit
 S1
 R3
-w1557254038
+R8
 8../src/mux_2powerN2.sv
 F../src/mux_2powerN2.sv
 L0 4
@@ -614,7 +614,7 @@ V:DMMMogZd7WbL;h[ej[OD2
 !s105 mux_data_sv_unit
 S1
 R3
-w1558117502
+R8
 8../src/mux_data.sv
 F../src/mux_data.sv
 L0 4
@@ -637,7 +637,7 @@ VBX?S>Nbi6fm`fKi2__kLB2
 !s105 mux_output_sv_unit
 S1
 R3
-w1557898565
+R8
 8../src/mux_output.sv
 F../src/mux_output.sv
 L0 4
@@ -660,7 +660,7 @@ VbT?3:VCCb[ZnkTU^bhYJO3
 !s105 operation_mult_sv_unit
 S1
 R3
-w1556934736
+R8
 8../src/operation_mult.sv
 F../src/operation_mult.sv
 L0 4
@@ -683,7 +683,7 @@ V_dEmkW4`iDCgN`Vng5^Ff1
 !s105 or_gate_sv_unit
 S1
 R3
-w1557903742
+R8
 8../src/or_gate.sv
 F../src/or_gate.sv
 L0 4
@@ -706,7 +706,7 @@ V2aZTbXTJ^525L[]5]^AUG0
 !s105 pipo_sv_unit
 S1
 R3
-w1557904095
+R8
 8../src/pipo.sv
 F../src/pipo.sv
 L0 4
@@ -722,15 +722,15 @@ o-O0
 Xpkg_bin_to_thto
 R1
 !i10b 1
-!s100 dW1<jmY`hcdOn5MbVPSY?3
-IgE7edl:06HoD:>TcTQNT30
-VgE7edl:06HoD:>TcTQNT30
+!s100 1ETD2hcUP21<abI7UUmEK1
+ISHMAMF3knh]oS8j4a@zRN1
+VSHMAMF3knh]oS8j4a@zRN1
 S1
 R3
-w1557926370
+w1558181968
 8../src/pkg_bin_to_thto.sv
 F../src/pkg_bin_to_thto.sv
-L0 11
+L0 14
 R4
 r1
 !s85 0
@@ -748,7 +748,7 @@ Iz3<@aSEm=KlHW;>^o>LJB3
 Vz3<@aSEm=KlHW;>^o>LJB3
 S1
 R3
-w1558129119
+R8
 8../src/pkg_system_mdr.sv
 F../src/pkg_system_mdr.sv
 L0 4
@@ -771,7 +771,7 @@ VADd^=ChkPCg3a>Q02e^eY1
 !s105 product_reg_sv_unit
 S1
 R3
-w1557904368
+R8
 8../src/product_reg.sv
 F../src/product_reg.sv
 L0 4
@@ -794,7 +794,7 @@ VLofSgjadmbONXQ:a2Ac@c3
 !s105 quotation_add_sv_unit
 S1
 R3
-w1557904760
+R8
 8../src/quotation_add.sv
 F../src/quotation_add.sv
 L0 4
@@ -817,7 +817,7 @@ VK;i`Z1g<Y5dXefTJZ1?Qg2
 !s105 quotation_reg_sv_unit
 S1
 R3
-w1557904715
+R8
 8../src/quotation_reg.sv
 F../src/quotation_reg.sv
 L0 4
@@ -840,7 +840,7 @@ V9F@M30ZQ5B7T06i2TbmjZ3
 !s105 register_sv_unit
 S1
 R3
-w1557981245
+R8
 8../src/register.sv
 F../src/register.sv
 L0 4
@@ -863,7 +863,7 @@ VZBYOjOBI9gzXl0Mi7n8gX3
 !s105 register_en_sv_unit
 S1
 R3
-w1557905457
+R8
 8../src/register_en.sv
 F../src/register_en.sv
 L0 4
@@ -886,7 +886,7 @@ VY3nQj=gNLKS<^8aWe`PFL3
 !s105 rem_full_reg_sv_unit
 S1
 R3
-w1557904745
+R8
 8../src/rem_full_reg.sv
 F../src/rem_full_reg.sv
 L0 4
@@ -909,7 +909,7 @@ VD`Qa=<RE`_Z=dBcT8mNU20
 !s105 remainder_reg_sv_unit
 S1
 R3
-w1557904652
+R8
 8../src/remainder_reg.sv
 F../src/remainder_reg.sv
 L0 4
@@ -926,16 +926,16 @@ vroot_op_calc
 R1
 R2
 !i10b 1
-!s100 0[;_PHL?enAeLGH;7G8Nb1
-I8eD2eRc5eUlWo<@S>1O140
+!s100 `OZTofLgB^:TOKCU3`@Bz1
+IC>PC34MYk@`Rb9:]T4PX;0
 VNaF86`lcGGLbUEJPDN0UO0
 !s105 root_op_calc_sv_unit
 S1
 R3
-w1558115913
+w1558182170
 8../src/root_op_calc.sv
 F../src/root_op_calc.sv
-L0 4
+L0 11
 R4
 r1
 !s85 0
@@ -955,7 +955,7 @@ VfW4T@fHK`><`k_mL?=mU;0
 !s105 selector_op_sv_unit
 S1
 R3
-w1557904782
+R8
 8../src/selector_op.sv
 F../src/selector_op.sv
 L0 4
@@ -972,16 +972,16 @@ vshift_left
 R1
 R2
 !i10b 1
-!s100 ;1AoY;IV]G=dPJBn0?a8W2
-I^HhhFBhYQN1NmiGP9Eoc^3
+!s100 PjHz`@<SS8T<BkGY2C<fS2
+IfM=nkJXhn8K7>8b_E04iN1
 VUI7>3iOAJRMgV`ml5B_;]3
 !s105 shift_left_sv_unit
 S1
 R3
-w1558118234
+w1558182162
 8../src/shift_left.sv
 F../src/shift_left.sv
-L0 4
+L0 11
 R4
 r1
 !s85 0
@@ -995,16 +995,16 @@ vshift_left_quotient
 R1
 R2
 !i10b 1
-!s100 CMmWiH@7=5[6d_7aKkKQJ2
-IeA6eUbMOPbXXj_noh0NiG1
+!s100 :ziDAX`Zc>j^X@eB92D1`1
+IOHb=7HMe^lSdInkCRG[jJ2
 VcRePH4aL^=Q>_>NYAIJ7?1
 !s105 shift_left_quotient_sv_unit
 S1
 R3
-w1557902926
+w1558182151
 8../src/shift_left_quotient.sv
 F../src/shift_left_quotient.sv
-L0 4
+L0 11
 R4
 r1
 !s85 0
@@ -1018,16 +1018,16 @@ vshift_reg_right_data
 R1
 R2
 !i10b 1
-!s100 YK2W6V_@FAMd_J617MEQS3
-I<TID[n1GZCgS9W<W0F=L61
+!s100 `4Ncb:US2Te><PYigdh4J3
+IiYDRLPS2T>PH41fBig[A;1
 VlX8L]mDo6^3B6f3]C^KAj2
 !s105 shift_reg_right_data_sv_unit
 S1
 R3
-w1557981835
+w1558182141
 8../src/shift_reg_right_data.sv
 F../src/shift_reg_right_data.sv
-L0 4
+L0 12
 R4
 r1
 !s85 0
@@ -1047,7 +1047,7 @@ V6Z0]zijT3@9l79V3KV@6b0
 !s105 shift_right_sign_sv_unit
 S1
 R3
-w1557981024
+R8
 8../src/shift_right_sign.sv
 F../src/shift_right_sign.sv
 L0 4
@@ -1070,7 +1070,7 @@ VX94g4BGm=^MPUREUIfLKS1
 !s105 sipo_sv_unit
 S1
 R3
-w1557939129
+R8
 8../src/sipo.sv
 F../src/sipo.sv
 L0 1
@@ -1087,16 +1087,16 @@ vsquare_root
 R1
 R2
 !i10b 1
-!s100 RMjlD8DLA5V:3oVgOlci30
-I?SkeKZm?H8IimVeoVW<UV2
+!s100 C23z>5]W_T9:F4VGbofhW1
+IOmYJ>FSC=LOk=k_I9;==<3
 VR<o9I][5Mm919BoK]7zM^0
 !s105 square_root_sv_unit
 S1
 R3
-w1557898515
+w1558182128
 8../src/square_root.sv
 F../src/square_root.sv
-L0 4
+L0 11
 R4
 r1
 !s85 0
@@ -1116,7 +1116,7 @@ VVhPPnRU>]Di?l[BXICGob2
 !s105 sub_sv_unit
 S1
 R3
-w1557904670
+R8
 8../src/sub.sv
 F../src/sub.sv
 L0 4
@@ -1139,7 +1139,7 @@ VN:6B?<oi12=9@EhJfoUGG0
 !s105 TB_mdr_sv_unit
 S1
 R3
-w1558139648
+R8
 8TB_mdr.sv
 FTB_mdr.sv
 L0 1
@@ -1156,16 +1156,16 @@ vTOP_bcd_7seg
 R1
 R2
 !i10b 1
-!s100 PYG2hNl1A8K1[QkYj:zRX0
-I8NG0RWme^6aG7YEMHLnC^2
+!s100 6V@IVQWPM<29@;[QX8LP90
+I3VdfLUEn`DJJ_WQ5g;=j72
 VeiQdKQX4BKYlh;lMBZOe?2
 !s105 TOP_bcd_7seg_sv_unit
 S1
 R3
-w1557938658
+w1558181942
 8../src/TOP_bcd_7seg.sv
 F../src/TOP_bcd_7seg.sv
-L0 11
+L0 13
 R4
 r1
 !s85 0
@@ -1186,7 +1186,7 @@ VcRLf:>FOR12GJ[g>N5]^Z0
 !s105 verification_sv_unit
 S1
 R3
-w1557983817
+R8
 8../src/verification.sv
 F../src/verification.sv
 L0 4
@@ -1209,7 +1209,7 @@ V9Md4[c@5ozkHeXgz2UL<W0
 !s105 verification2_sv_unit
 S1
 R3
-w1558111736
+R8
 8../src/verification2.sv
 F../src/verification2.sv
 L0 4

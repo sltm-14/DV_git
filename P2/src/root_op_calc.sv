@@ -1,3 +1,10 @@
+ /*-----------------------------------------------
+* MODULE: 	  root_op_calc.sv
+* DESCRITION: Choose the operation to the ALU
+* VERSION:    1.0
+* AUTHORS:    Andres Hernandez, Carem Acosta
+* DATE:       01 / 05 / 19
+* ----------------------------------------------*/
 `ifndef ROOT_OP_CALC_SV
     `define ROOT_OP_CALC_SV
 

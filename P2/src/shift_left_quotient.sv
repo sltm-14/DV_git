@@ -1,3 +1,10 @@
+ /*-----------------------------------------------
+* MODULE: 	  shift_left_quotient.sv
+* DESCRITION: Shift to the left the quotient
+* VERSION:    1.0
+* AUTHORS:    Andres Hernandez, Carem Acosta
+* DATE:       01 / 05 / 19
+* ----------------------------------------------*/
 `ifndef SHIFT_LEFT_QUOTIENT_SV
     `define SHIFT_LEFT_QUOTIENT_SV
 

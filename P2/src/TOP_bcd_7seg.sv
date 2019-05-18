@@ -7,7 +7,9 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
-
+`ifndef TOP_BCD_7SEG_SV
+    `define TOP_BCD_7SEG_SV
+	 
 module TOP_bcd_7seg
 import pkg_system_mdr::*;
 (
@@ -45,3 +47,4 @@ complement_a2 A2_COM
  );
 
 endmodule
+`endif

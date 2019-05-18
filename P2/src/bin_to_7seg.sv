@@ -7,6 +7,9 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+`ifndef BIN_TO_7SEG_SV
+    `define BIN_TO_7SEG_SV
+	 
 module bin_to_7seg(
 	input A, /* A, B, C y D son las entradas, valores de 0 a 9 siendo A el bit mas significativo */
 	input B,
@@ -31,3 +34,4 @@ module bin_to_7seg(
     assign g = ~(  A | ( B &( ~C )) | (( ~B ) & C ) | ( C & ( ~D ) )  );
 
 endmodule
+`endif

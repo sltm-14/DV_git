@@ -8,6 +8,9 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+`ifndef ADD_SV
+    `define ADD_SV
+	 
 module add
 import pkg_system_mdr::*;
 	(
@@ -40,3 +43,4 @@ import pkg_system_mdr::*;
     assign o_hto_full[IVW-1:0]   = i_hto_full[IVW-1:0];
 
 endmodule
+`endif

@@ -8,6 +8,9 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+`ifndef PKG_BIN_TO_THTO_SV
+    `define PKG_BIN_TO_THTO_SV
+	 
 package pkg_bin_to_thto;
 
 localparam OTHW   				= 4;  				/* Number of active displays  */
@@ -37,3 +40,4 @@ typedef struct{
 }struct_add;
 
 endpackage
+`endif

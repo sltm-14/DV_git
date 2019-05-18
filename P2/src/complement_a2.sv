@@ -7,6 +7,9 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+`ifndef COMPLEMENT_A2_SV
+    `define COMPLEMENT_A2_SV
+	 
 module complement_a2
 import pkg_system_mdr::*;
 	(
@@ -22,3 +25,4 @@ assign o_Val   =  ( i_Val[IVW-1] ) ? ( (~i_Val) + 1'b1 ) : i_Val;
 assign o_Signo = ~( i_Val[IVW-1] ) ? 1'b1 : 1'b0;
 
 endmodule
+`endif

@@ -46,7 +46,7 @@ always_ff@(posedge clk, negedge rst) begin: state_machine
 
 			WAIT_X: begin
 				if(~i_load)
-					r_control.state 	<= SAVE_X;
+					r_control.state 	<= SAVE_X; 
 				else
 					r_control.state 	<= WAIT_X;
 			end

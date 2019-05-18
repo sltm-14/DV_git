@@ -8,6 +8,9 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+`ifndef DISPLAYS_SV
+    `define DISPLAYS_SV
+	 
 module displays
 import pkg_system_mdr::*;
 	(
@@ -32,3 +35,4 @@ import pkg_system_mdr::*;
 
 endmodule
 
+`endif

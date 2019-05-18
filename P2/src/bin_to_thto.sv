@@ -7,6 +7,10 @@
 ** AUTORES:  Andres Hernandez, Carem Bernabe
 ** FECHA:    17 / 03 / 19
 ** -------------------------------------------------------------------------------------- */
+
+`ifndef BIN_TO_THTO
+    `define BIN_TO_THTO
+	 
 module bin_to_thto
 import pkg_system_mdr::*;
     (
@@ -37,3 +41,4 @@ import pkg_system_mdr::*;
 
     
 endmodule
+`endif

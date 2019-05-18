@@ -1,5 +1,5 @@
 Analysis & Synthesis report for P2
-Fri May 17 17:56:28 2019
+Sat May 18 07:28:18 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -17,54 +17,44 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for sld_signaltap:auto_signaltap_0
- 16. Parameter Settings for User Entity Instance: core:CORE|counter2:COUNTER_MULT
- 17. Parameter Settings for User Entity Instance: core:CORE|counter2:COUNTER_DIV
- 18. Parameter Settings for User Entity Instance: core:CORE|counter:COUNT_ROOT
- 19. Parameter Settings for User Entity Instance: core:CORE|mux_2powerN:MUX_ALU_OP
- 20. Parameter Settings for User Entity Instance: core:CORE|register:REG_ALU
- 21. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_left:REMINDER
- 22. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA
- 23. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|register:REG_ENA
- 24. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_left:QUOTIENT
- 25. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|register_en:REG_OR_Q
- 26. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_left:Q_SHIFT
- 27. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|final_values:REM_QUO
- 28. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 29. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[10].add"
- 30. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[9].add"
- 31. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[8].add"
- 32. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[7].add"
- 33. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[6].add"
- 34. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[5].add"
- 35. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[4].add"
- 36. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[3].add"
- 37. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[2].add"
- 38. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[1].add"
- 39. Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[0].add"
- 40. Port Connectivity Checks: "verification2:VERIFICATION2"
- 41. Port Connectivity Checks: "core:CORE|square_root:SQUARE_ROOT|and_gate:AND_D_3_ALU"
- 42. Port Connectivity Checks: "core:CORE|division:DIVISION|quotation_reg:QUOTATION"
- 43. Port Connectivity Checks: "core:CORE|division:DIVISION|quotation_add:QUOTATION_ADD"
- 44. Port Connectivity Checks: "core:CORE|division:DIVISION"
- 45. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION|final_product:FINAL"
- 46. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS"
- 47. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT"
- 48. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION"
- 49. Port Connectivity Checks: "core:CORE|mux_data:MUX_ALU_B"
- 50. Port Connectivity Checks: "core:CORE|mux_data:MUX_ALU_A"
- 51. Port Connectivity Checks: "core:CORE|mux_2powerN:MUX_ALU_OP"
- 52. Port Connectivity Checks: "core:CORE|counter:COUNT_ROOT"
- 53. Port Connectivity Checks: "core:CORE|selector_op:SELECTOR"
- 54. Signal Tap Logic Analyzer Settings
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Connections to In-System Debugging Instance "auto_signaltap_0"
- 58. Analysis & Synthesis Messages
- 59. Analysis & Synthesis Suppressed Messages
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for sld_signaltap:auto_signaltap_0
+ 17. Parameter Settings for User Entity Instance: core:CORE|counter2:COUNTER_MULT
+ 18. Parameter Settings for User Entity Instance: core:CORE|counter2:COUNTER_DIV
+ 19. Parameter Settings for User Entity Instance: core:CORE|counter:COUNT_ROOT
+ 20. Parameter Settings for User Entity Instance: core:CORE|mux_2powerN:MUX_ALU_OP
+ 21. Parameter Settings for User Entity Instance: core:CORE|register:REG_ALU
+ 22. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_left:REMINDER
+ 23. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA
+ 24. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|register:REG_ENA
+ 25. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_left:QUOTIENT
+ 26. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|register_en:REG_OR_Q
+ 27. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|shift_left:Q_SHIFT
+ 28. Parameter Settings for User Entity Instance: core:CORE|square_root:SQUARE_ROOT|final_values:REM_QUO
+ 29. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 30. Port Connectivity Checks: "core:CORE|square_root:SQUARE_ROOT|and_gate:AND_D_3_ALU"
+ 31. Port Connectivity Checks: "core:CORE|division:DIVISION|quotation_reg:QUOTATION"
+ 32. Port Connectivity Checks: "core:CORE|division:DIVISION|quotation_add:QUOTATION_ADD"
+ 33. Port Connectivity Checks: "core:CORE|division:DIVISION"
+ 34. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION|final_product:FINAL"
+ 35. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS"
+ 36. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT"
+ 37. Port Connectivity Checks: "core:CORE|multiplication:MULTIPLICATION"
+ 38. Port Connectivity Checks: "core:CORE|mux_data:MUX_ALU_B"
+ 39. Port Connectivity Checks: "core:CORE|mux_data:MUX_ALU_A"
+ 40. Port Connectivity Checks: "core:CORE|mux_2powerN:MUX_ALU_OP"
+ 41. Port Connectivity Checks: "core:CORE|counter:COUNT_ROOT"
+ 42. Port Connectivity Checks: "core:CORE|selector_op:SELECTOR"
+ 43. Signal Tap Logic Analyzer Settings
+ 44. Post-Synthesis Netlist Statistics for Top Partition
+ 45. Post-Synthesis Netlist Statistics for Partition sld_signaltap:auto_signaltap_0
+ 46. Elapsed Time Per Partition
+ 47. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 48. Analysis & Synthesis Messages
+ 49. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -90,16 +80,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 17 17:56:28 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat May 18 07:28:18 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; P2                                          ;
 ; Top-level Entity Name              ; mdr                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,682                                       ;
-;     Total combinational functions  ; 1,349                                       ;
-;     Dedicated logic registers      ; 889                                         ;
-; Total registers                    ; 889                                         ;
-; Total pins                         ; 78                                          ;
+; Total logic elements               ; 1,565                                       ;
+;     Total combinational functions  ; 1,232                                       ;
+;     Dedicated logic registers      ; 893                                         ;
+; Total registers                    ; 893                                         ;
+; Total pins                         ; 58                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -215,13 +205,6 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                               ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
-; src/TOP_bcd_7seg.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/TOP_bcd_7seg.sv                                                ;             ;
-; src/displays.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/displays.sv                                                    ;             ;
-; src/complement_a2.sv                                               ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/complement_a2.sv                                               ;             ;
-; src/bin_to_thto.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_thto.sv                                                 ;             ;
-; src/bin_to_7seg.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv                                                 ;             ;
-; src/add_con.sv                                                     ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add_con.sv                                                     ;             ;
-; src/add.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add.sv                                                         ;             ;
 ; src/square_root.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv                                                 ;             ;
 ; src/shift_reg_right_data.sv                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv                                        ;             ;
 ; src/shift_left.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_left.sv                                                  ;             ;
@@ -257,7 +240,7 @@ refer to the applicable agreement for further details.
 ; src/final_quotation.sv                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/final_quotation.sv                                             ;             ;
 ; src/register_en.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/register_en.sv                                                 ;             ;
 ; src/final_values.sv                                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/final_values.sv                                                ;             ;
-; src/demux_data.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/demux_data.sv                                                  ;             ;
+; src/mux_output.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mux_output.sv                                                  ;             ;
 ; src/verification2.sv                                               ; yes             ; User SystemVerilog HDL File                  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/verification2.sv                                               ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sld_signaltap.vhd                                                   ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                              ;             ;
@@ -314,6 +297,7 @@ refer to the applicable agreement for further details.
 ; db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                    ;             ;
+; src/demux_data.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; src/demux_data.sv                                                                                                          ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -322,31 +306,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,682     ;
+; Estimated Total logic elements              ; 1,565     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1349      ;
+; Total combinational functions               ; 1232      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 731       ;
-;     -- 3 input functions                    ; 387       ;
-;     -- <=2 input functions                  ; 231       ;
+;     -- 4 input functions                    ; 662       ;
+;     -- 3 input functions                    ; 353       ;
+;     -- <=2 input functions                  ; 217       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1184      ;
-;     -- arithmetic mode                      ; 165       ;
+;     -- normal mode                          ; 1078      ;
+;     -- arithmetic mode                      ; 154       ;
 ;                                             ;           ;
-; Total registers                             ; 889       ;
-;     -- Dedicated logic registers            ; 889       ;
+; Total registers                             ; 893       ;
+;     -- Dedicated logic registers            ; 893       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 78        ;
+; I/O pins                                    ; 58        ;
 ; Total memory bits                           ; 2048      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 595       ;
-; Total fan-out                               ; 7944      ;
-; Average fan-out                             ; 3.29      ;
+; Maximum fan-out                             ; 599       ;
+; Total fan-out                               ; 7520      ;
+; Average fan-out                             ; 3.33      ;
 +---------------------------------------------+-----------+
 
 
@@ -355,51 +339,17 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |mdr                                                                                                                                    ; 1349 (0)            ; 889 (0)                   ; 2048        ; 0            ; 0       ; 0         ; 78   ; 0            ; |mdr                                                                                                                                                                                                                                                                                                                                            ; mdr                               ; work         ;
-;    |TOP_bcd_7seg:BCD|                                                                                                                   ; 122 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD                                                                                                                                                                                                                                                                                                                           ; TOP_bcd_7seg                      ; work         ;
-;       |bin_to_thto:OTHT|                                                                                                                ; 73 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT                                                                                                                                                                                                                                                                                                          ; bin_to_thto                       ; work         ;
-;          |add:generate_add[10].add|                                                                                                     ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[10].add                                                                                                                                                                                                                                                                                 ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[10].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                 ; add_con                           ; work         ;
-;             |add_con:generate_con[1].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[10].add|add_con:generate_con[1].ADD_CON                                                                                                                                                                                                                                                 ; add_con                           ; work         ;
-;             |add_con:generate_con[2].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[10].add|add_con:generate_con[2].ADD_CON                                                                                                                                                                                                                                                 ; add_con                           ; work         ;
-;          |add:generate_add[2].add|                                                                                                      ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[2].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[2].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[3].add|                                                                                                      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[3].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[3].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[4].add|                                                                                                      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[4].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[4].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[5].add|                                                                                                      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[5].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[5].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[6].add|                                                                                                      ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[6].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[6].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;             |add_con:generate_con[1].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[6].add|add_con:generate_con[1].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[7].add|                                                                                                      ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[7].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[7].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;             |add_con:generate_con[1].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[7].add|add_con:generate_con[1].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[8].add|                                                                                                      ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[8].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[8].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;             |add_con:generate_con[1].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[8].add|add_con:generate_con[1].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;             |add_con:generate_con[2].ADD_CON|                                                                                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[8].add|add_con:generate_con[2].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;          |add:generate_add[9].add|                                                                                                      ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[9].add                                                                                                                                                                                                                                                                                  ; add                               ; work         ;
-;             |add_con:generate_con[0].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[9].add|add_con:generate_con[0].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;             |add_con:generate_con[1].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[9].add|add_con:generate_con[1].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;             |add_con:generate_con[2].ADD_CON|                                                                                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[9].add|add_con:generate_con[2].ADD_CON                                                                                                                                                                                                                                                  ; add_con                           ; work         ;
-;       |complement_a2:A2_COM|                                                                                                            ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|complement_a2:A2_COM                                                                                                                                                                                                                                                                                                      ; complement_a2                     ; work         ;
-;       |displays:DISPLAY|                                                                                                                ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|displays:DISPLAY                                                                                                                                                                                                                                                                                                          ; displays                          ; work         ;
-;          |bin_to_7seg:generate_7seg[0].B7S_O|                                                                                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|displays:DISPLAY|bin_to_7seg:generate_7seg[0].B7S_O                                                                                                                                                                                                                                                                       ; bin_to_7seg                       ; work         ;
-;          |bin_to_7seg:generate_7seg[1].B7S_O|                                                                                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|displays:DISPLAY|bin_to_7seg:generate_7seg[1].B7S_O                                                                                                                                                                                                                                                                       ; bin_to_7seg                       ; work         ;
-;          |bin_to_7seg:generate_7seg[2].B7S_O|                                                                                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|displays:DISPLAY|bin_to_7seg:generate_7seg[2].B7S_O                                                                                                                                                                                                                                                                       ; bin_to_7seg                       ; work         ;
-;          |bin_to_7seg:generate_7seg[3].B7S_O|                                                                                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|TOP_bcd_7seg:BCD|displays:DISPLAY|bin_to_7seg:generate_7seg[3].B7S_O                                                                                                                                                                                                                                                                       ; bin_to_7seg                       ; work         ;
-;    |control:CTRL|                                                                                                                       ; 21 (21)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|control:CTRL                                                                                                                                                                                                                                                                                                                               ; control                           ; work         ;
-;    |core:CORE|                                                                                                                          ; 662 (0)             ; 344 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE                                                                                                                                                                                                                                                                                                                                  ; core                              ; work         ;
-;       |alu_mult:ALU|                                                                                                                    ; 211 (211)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|alu_mult:ALU                                                                                                                                                                                                                                                                                                                     ; alu_mult                          ; work         ;
+; |mdr                                                                                                                                    ; 1232 (0)            ; 893 (0)                   ; 2048        ; 0            ; 0       ; 0         ; 58   ; 0            ; |mdr                                                                                                                                                                                                                                                                                                                                            ; mdr                               ; work         ;
+;    |control:CTRL|                                                                                                                       ; 22 (22)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|control:CTRL                                                                                                                                                                                                                                                                                                                               ; control                           ; work         ;
+;    |core:CORE|                                                                                                                          ; 664 (0)             ; 345 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE                                                                                                                                                                                                                                                                                                                                  ; core                              ; work         ;
+;       |alu_mult:ALU|                                                                                                                    ; 208 (208)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|alu_mult:ALU                                                                                                                                                                                                                                                                                                                     ; alu_mult                          ; work         ;
 ;       |counter2:COUNTER_DIV|                                                                                                            ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|counter2:COUNTER_DIV                                                                                                                                                                                                                                                                                                             ; counter2                          ; work         ;
 ;       |counter2:COUNTER_MULT|                                                                                                           ; 9 (9)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|counter2:COUNTER_MULT                                                                                                                                                                                                                                                                                                            ; counter2                          ; work         ;
 ;       |counter:COUNT_ROOT|                                                                                                              ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|counter:COUNT_ROOT                                                                                                                                                                                                                                                                                                               ; counter                           ; work         ;
-;       |division:DIVISION|                                                                                                               ; 122 (0)             ; 146 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION                                                                                                                                                                                                                                                                                                                ; division                          ; work         ;
+;       |division:DIVISION|                                                                                                               ; 122 (0)             ; 147 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION                                                                                                                                                                                                                                                                                                                ; division                          ; work         ;
 ;          |divisor_reg:DIVISOR|                                                                                                          ; 34 (34)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|divisor_reg:DIVISOR                                                                                                                                                                                                                                                                                            ; divisor_reg                       ; work         ;
 ;          |final_quotation:FINAL_QUO|                                                                                                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|final_quotation:FINAL_QUO                                                                                                                                                                                                                                                                                      ; final_quotation                   ; work         ;
-;          |final_remainder:FINAL_REM|                                                                                                    ; 0 (0)               ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|final_remainder:FINAL_REM                                                                                                                                                                                                                                                                                      ; final_remainder                   ; work         ;
+;          |final_remainder:FINAL_REM|                                                                                                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|final_remainder:FINAL_REM                                                                                                                                                                                                                                                                                      ; final_remainder                   ; work         ;
 ;          |quotation_reg:QUOTATION|                                                                                                      ; 18 (18)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|quotation_reg:QUOTATION                                                                                                                                                                                                                                                                                        ; quotation_reg                     ; work         ;
 ;          |rem_full_reg:FULL|                                                                                                            ; 32 (32)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|rem_full_reg:FULL                                                                                                                                                                                                                                                                                              ; rem_full_reg                      ; work         ;
 ;          |remainder_reg:REMAINDER|                                                                                                      ; 38 (38)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|division:DIVISION|remainder_reg:REMAINDER                                                                                                                                                                                                                                                                                        ; remainder_reg                     ; work         ;
@@ -409,12 +359,12 @@ refer to the applicable agreement for further details.
 ;          |product_reg:PRODUCT|                                                                                                          ; 36 (36)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT                                                                                                                                                                                                                                                                                ; product_reg                       ; work         ;
 ;          |shift_right_sign:SRS|                                                                                                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS                                                                                                                                                                                                                                                                               ; shift_right_sign                  ; work         ;
 ;       |mux_2powerN:MUX_ALU_OP|                                                                                                          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_2powerN:MUX_ALU_OP                                                                                                                                                                                                                                                                                                           ; mux_2powerN                       ; work         ;
-;       |mux_data:MUX_ALU_A|                                                                                                              ; 72 (72)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_data:MUX_ALU_A                                                                                                                                                                                                                                                                                                               ; mux_data                          ; work         ;
-;       |mux_data:MUX_ALU_B|                                                                                                              ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_data:MUX_ALU_B                                                                                                                                                                                                                                                                                                               ; mux_data                          ; work         ;
-;       |mux_output:MUX_OUT|                                                                                                              ; 38 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_output:MUX_OUT                                                                                                                                                                                                                                                                                                               ; mux_output                        ; work         ;
+;       |mux_data:MUX_ALU_A|                                                                                                              ; 71 (71)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_data:MUX_ALU_A                                                                                                                                                                                                                                                                                                               ; mux_data                          ; work         ;
+;       |mux_data:MUX_ALU_B|                                                                                                              ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_data:MUX_ALU_B                                                                                                                                                                                                                                                                                                               ; mux_data                          ; work         ;
+;       |mux_output:MUX_OUT|                                                                                                              ; 41 (41)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|mux_output:MUX_OUT                                                                                                                                                                                                                                                                                                               ; mux_output                        ; work         ;
 ;       |register:REG_ALU|                                                                                                                ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|register:REG_ALU                                                                                                                                                                                                                                                                                                                 ; register                          ; work         ;
 ;       |selector_op:SELECTOR|                                                                                                            ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|selector_op:SELECTOR                                                                                                                                                                                                                                                                                                             ; selector_op                       ; work         ;
-;       |square_root:SQUARE_ROOT|                                                                                                         ; 122 (0)             ; 34 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT                                                                                                                                                                                                                                                                                                          ; square_root                       ; work         ;
+;       |square_root:SQUARE_ROOT|                                                                                                         ; 123 (0)             ; 34 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT                                                                                                                                                                                                                                                                                                          ; square_root                       ; work         ;
 ;          |final_values:REM_QUO|                                                                                                         ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|final_values:REM_QUO                                                                                                                                                                                                                                                                                     ; final_values                      ; work         ;
 ;          |or_gate:OR_Q_OP_Q|                                                                                                            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|or_gate:OR_Q_OP_Q                                                                                                                                                                                                                                                                                        ; or_gate                           ; work         ;
 ;          |register:REG_ENA|                                                                                                             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|register:REG_ENA                                                                                                                                                                                                                                                                                         ; register                          ; work         ;
@@ -422,7 +372,7 @@ refer to the applicable agreement for further details.
 ;          |root_op_calc:OPCALCROOT|                                                                                                      ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|root_op_calc:OPCALCROOT                                                                                                                                                                                                                                                                                  ; root_op_calc                      ; work         ;
 ;          |shift_left:QUOTIENT|                                                                                                          ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|shift_left:QUOTIENT                                                                                                                                                                                                                                                                                      ; shift_left                        ; work         ;
 ;          |shift_left:REMINDER|                                                                                                          ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|shift_left:REMINDER                                                                                                                                                                                                                                                                                      ; shift_left                        ; work         ;
-;          |shift_reg_right_data:DATA|                                                                                                    ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA                                                                                                                                                                                                                                                                                ; shift_reg_right_data              ; work         ;
+;          |shift_reg_right_data:DATA|                                                                                                    ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA                                                                                                                                                                                                                                                                                ; shift_reg_right_data              ; work         ;
 ;    |pipo:PIPO_X|                                                                                                                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|pipo:PIPO_X                                                                                                                                                                                                                                                                                                                                ; pipo                              ; work         ;
 ;    |pipo:PIPO_Y|                                                                                                                        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|pipo:PIPO_Y                                                                                                                                                                                                                                                                                                                                ; pipo                              ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 127 (1)             ; 91 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
@@ -477,8 +427,8 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 17 (17)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |verification2:VERIFICATION2|                                                                                                        ; 66 (66)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|verification2:VERIFICATION2                                                                                                                                                                                                                                                                                                                ; verification2                     ; work         ;
-;    |verification:VERIFICATION|                                                                                                          ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|verification:VERIFICATION                                                                                                                                                                                                                                                                                                                  ; verification                      ; work         ;
+;    |verification2:VERIFICATION2|                                                                                                        ; 70 (70)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|verification2:VERIFICATION2                                                                                                                                                                                                                                                                                                                ; verification2                     ; work         ;
+;    |verification:VERIFICATION|                                                                                                          ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mdr|verification:VERIFICATION                                                                                                                                                                                                                                                                                                                  ; verification                      ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -579,19 +529,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                  ;
-+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
-; Register name                                                              ; Reason for Removal                                                                     ;
-+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
-; verification2:VERIFICATION2|r_remainder[15]                                ; Stuck at GND due to stuck port data_in                                                 ;
-; core:CORE|square_root:SQUARE_ROOT|root_op_calc:OPCALCROOT|o_or_q[1..31]    ; Stuck at GND due to stuck port data_in                                                 ;
-; core:CORE|multiplication:MULTIPLICATION|final_product:FINAL|r_data[31]     ; Merged with core:CORE|multiplication:MULTIPLICATION|final_product:FINAL|r_data[30]     ;
-; core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS|r_product[32] ; Merged with core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS|r_product[31] ;
-; core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[32]      ; Merged with core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[31]      ;
-; core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_op[0]                ; Stuck at VCC due to stuck port data_in                                                 ;
-; Total Number of Removed Registers = 36                                     ;                                                                                        ;
-+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                                                                                                                                                          ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                                                          ; Reason for Removal                                                                                                                                                                                 ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; verification2:VERIFICATION2|r_result[15]                                                                                                                                               ; Stuck at GND due to stuck port data_in                                                                                                                                                             ;
+; verification2:VERIFICATION2|r_remainder[15]                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                                                                                                             ;
+; core:CORE|square_root:SQUARE_ROOT|root_op_calc:OPCALCROOT|o_or_q[1..31]                                                                                                                ; Stuck at GND due to stuck port data_in                                                                                                                                                             ;
+; core:CORE|multiplication:MULTIPLICATION|final_product:FINAL|r_data[31]                                                                                                                 ; Merged with core:CORE|multiplication:MULTIPLICATION|final_product:FINAL|r_data[30]                                                                                                                 ;
+; core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS|r_product[32]                                                                                                             ; Merged with core:CORE|multiplication:MULTIPLICATION|shift_right_sign:SRS|r_product[31]                                                                                                             ;
+; core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[32]                                                                                                                  ; Merged with core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[31]                                                                                                                  ;
+; core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_op[0]                                                                                                                            ; Stuck at VCC due to stuck port data_in                                                                                                                                                             ;
+; Total Number of Removed Registers = 37                                                                                                                                                 ;                                                                                                                                                                                                    ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|segment_shift_clk_ena                                                      ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_enable_delayed                                                ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[0] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[0] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[1] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[1] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[2] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[2] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[3] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[3] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[4] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[4] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[5] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[5] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[6] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[6] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[7] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[7] ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[0]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[0]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[1]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[1]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[2]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[2]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[3]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[3]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[4]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[4]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[5]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[5]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[6]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[6]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[7]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[7]                                            ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[13..15]                       ; Stuck at GND due to stuck port data_in                                                                                                                                                             ;
+; Total Number of Removed Registers = 20                                                                                                                                                 ;                                                                                                                                                                                                    ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                                                                                              ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                                ; Reason for Removal        ; Registers Removed due to This Register                                                                                                                        ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[15] ; Stuck at GND              ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[14], ;
+;                                                                                                                                                              ; due to stuck port data_in ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[13]  ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -599,12 +579,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 889   ;
+; Total registers                              ; 893   ;
 ; Number of registers using Synchronous Clear  ; 66    ;
 ; Number of registers using Synchronous Load   ; 63    ;
-; Number of registers using Asynchronous Clear ; 579   ;
+; Number of registers using Asynchronous Clear ; 583   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 603   ;
+; Number of registers using Clock Enable       ; 606   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -614,10 +594,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_op[1]                                                                                                                                                                                                                                                                     ; 5       ;
 ; core:CORE|counter:COUNT_ROOT|r_count[2]                                                                                                                                                                                                                                                                                         ; 5       ;
-; core:CORE|counter:COUNT_ROOT|r_count[1]                                                                                                                                                                                                                                                                                         ; 11      ;
-; core:CORE|counter:COUNT_ROOT|r_count[0]                                                                                                                                                                                                                                                                                         ; 9       ;
+; core:CORE|counter:COUNT_ROOT|r_count[0]                                                                                                                                                                                                                                                                                         ; 8       ;
+; core:CORE|counter:COUNT_ROOT|r_count[1]                                                                                                                                                                                                                                                                                         ; 10      ;
+; core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_op[1]                                                                                                                                                                                                                                                                     ; 5       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]                                                                                                                                                   ; 1       ;
@@ -633,25 +613,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_rem[27]         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_rem[13]         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[30] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|divisor_reg:DIVISOR|r_divisor[3]          ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|divisor_reg:DIVISOR|r_divisor[21]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|rem_full_reg:FULL|r_register[15]          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|quotation_reg:QUOTATION|r_quotation[9]    ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |mdr|core:CORE|mux_output:MUX_OUT|Selector23                               ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mdr|core:CORE|alu_mult:ALU|Add0                                           ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |mdr|core:CORE|alu_mult:ALU|r_val_DR[29]                                   ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |mdr|core:CORE|alu_mult:ALU|r_val_M[14]                                    ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |mdr|core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA|o_val[1]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_rem[31]                                                                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|remainder_reg:REMAINDER|r_rem[15]                                                                                                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[0]                                                                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|multiplication:MULTIPLICATION|product_reg:PRODUCT|r_val[1]                                                                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|divisor_reg:DIVISOR|r_divisor[2]                                                                                                        ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|divisor_reg:DIVISOR|r_divisor[30]                                                                                                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|rem_full_reg:FULL|r_register[20]                                                                                                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |mdr|core:CORE|division:DIVISION|quotation_reg:QUOTATION|r_quotation[9]                                                                                                  ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |mdr|verification:VERIFICATION|Selector0                                                                                                                                 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mdr|core:CORE|alu_mult:ALU|Add0                                                                                                                                         ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |mdr|core:CORE|alu_mult:ALU|r_val_DR[16]                                                                                                                                 ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |mdr|core:CORE|alu_mult:ALU|r_val_M[12]                                                                                                                                  ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |mdr|core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA|o_val[1]                                                                                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|tdo_crc_val_shift_reg[13]                               ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|tdo_crc_val_shift_reg[3]                                ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[9]         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|tdo_crc_len_reg[10]                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr|word_counter[0]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[5]   ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[0]                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |mdr|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|offset_count ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -854,126 +842,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[10].add"                                   ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[9].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[8].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[7].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[6].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[5].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[4].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[3].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[2].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[1].add"                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[0].add"                                        ;
-+--------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port               ; Type   ; Severity ; Details                                                                             ;
-+--------------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_hto_full[31..13] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; i_hto_full[0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_hto_full[31]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "verification2:VERIFICATION2"                                                                    ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; o_result[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "core:CORE|square_root:SQUARE_ROOT|and_gate:AND_D_3_ALU" ;
 +-----------------+-------+----------+-----------------------------------------------+
@@ -1108,34 +976,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 78                          ;
-; cycloneiii_ff         ; 408                         ;
-;     CLR               ; 110                         ;
-;     ENA CLR           ; 280                         ;
+; boundary_port         ; 58                          ;
+; cycloneiii_ff         ; 412                         ;
+;     CLR               ; 111                         ;
+;     ENA CLR           ; 283                         ;
 ;     ENA CLR SCLR      ; 18                          ;
-; cycloneiii_lcell_comb ; 920                         ;
-;     arith             ; 89                          ;
-;         2 data inputs ; 27                          ;
+; cycloneiii_lcell_comb ; 774                         ;
+;     arith             ; 78                          ;
+;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 62                          ;
-;     normal            ; 831                         ;
+;     normal            ; 696                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 32                          ;
-;         2 data inputs ; 66                          ;
-;         3 data inputs ; 187                         ;
-;         4 data inputs ; 545                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 64                          ;
+;         3 data inputs ; 153                         ;
+;         4 data inputs ; 476                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.10                       ;
-; Average LUT depth     ; 6.31                        ;
+; Max LUT depth         ; 11.10                       ;
+; Average LUT depth     ; 5.38                        ;
 +-----------------------+-----------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
++--------------------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition sld_signaltap:auto_signaltap_0 ;
++-----------------------+--------------------------------------------------------+
+; Type                  ; Count                                                  ;
++-----------------------+--------------------------------------------------------+
+; boundary_port         ; 124                                                    ;
+; cycloneiii_ff         ; 390                                                    ;
+;     CLR               ; 47                                                     ;
+;     ENA               ; 110                                                    ;
+;     ENA CLR           ; 86                                                     ;
+;     ENA SCLR SLD      ; 36                                                     ;
+;     ENA SLD           ; 9                                                      ;
+;     SLD               ; 8                                                      ;
+;     plain             ; 94                                                     ;
+; cycloneiii_lcell_comb ; 332                                                    ;
+;     arith             ; 68                                                     ;
+;         2 data inputs ; 67                                                     ;
+;         3 data inputs ; 1                                                      ;
+;     normal            ; 264                                                    ;
+;         0 data inputs ; 5                                                      ;
+;         1 data inputs ; 6                                                      ;
+;         2 data inputs ; 21                                                     ;
+;         3 data inputs ; 97                                                     ;
+;         4 data inputs ; 135                                                    ;
+; cycloneiii_ram_block  ; 8                                                      ;
+;                       ;                                                        ;
+; Max LUT depth         ; 5.00                                                   ;
+; Average LUT depth     ; 2.13                                                   ;
++-----------------------+--------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Elapsed Time Per Partition                    ;
++--------------------------------+--------------+
+; Partition Name                 ; Elapsed Time ;
++--------------------------------+--------------+
+; Top                            ; 00:00:03     ;
+; sld_signaltap:auto_signaltap_0 ; 00:00:03     ;
++--------------------------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1202,36 +1102,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri May 17 17:55:40 2019
+    Info: Processing started: Sat May 18 07:27:11 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off P2 -c P2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file src/top_bcd_7seg.sv
-    Info (12023): Found entity 1: TOP_bcd_7seg File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/TOP_bcd_7seg.sv Line: 11
+    Info (12023): Found entity 1: TOP_bcd_7seg File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/TOP_bcd_7seg.sv Line: 13
 Info (12021): Found 1 design units, including 0 entities, in source file src/pkg_bin_to_thto.sv
-    Info (12022): Found design unit 1: pkg_bin_to_thto (SystemVerilog) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/pkg_bin_to_thto.sv Line: 11
+    Info (12022): Found design unit 1: pkg_bin_to_thto (SystemVerilog) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/pkg_bin_to_thto.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file src/displays.sv
-    Info (12023): Found entity 1: displays File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/displays.sv Line: 11
+    Info (12023): Found entity 1: displays File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/displays.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file src/complement_a2.sv
-    Info (12023): Found entity 1: complement_a2 File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/complement_a2.sv Line: 10
+    Info (12023): Found entity 1: complement_a2 File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/complement_a2.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file src/bin_to_thto.sv
-    Info (12023): Found entity 1: bin_to_thto File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_thto.sv Line: 10
+    Info (12023): Found entity 1: bin_to_thto File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_thto.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file src/bin_to_7seg.sv
-    Info (12023): Found entity 1: bin_to_7seg File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv Line: 10
+    Info (12023): Found entity 1: bin_to_7seg File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_7seg.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file src/add_con.sv
     Info (12023): Found entity 1: add_con File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add_con.sv Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file src/add.sv
-    Info (12023): Found entity 1: add File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add.sv Line: 11
+    Info (12023): Found entity 1: add File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file src/square_root.sv
-    Info (12023): Found entity 1: square_root File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 4
+    Info (12023): Found entity 1: square_root File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file src/shift_reg_right_data.sv
-    Info (12023): Found entity 1: shift_reg_right_data File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 4
+    Info (12023): Found entity 1: shift_reg_right_data File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file src/shift_left_quotient.sv
-    Info (12023): Found entity 1: shift_left_quotient File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_left_quotient.sv Line: 4
+    Info (12023): Found entity 1: shift_left_quotient File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_left_quotient.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file src/shift_left.sv
-    Info (12023): Found entity 1: shift_left File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_left.sv Line: 4
+    Info (12023): Found entity 1: shift_left File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_left.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file src/root_op_calc.sv
-    Info (12023): Found entity 1: root_op_calc File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/root_op_calc.sv Line: 4
+    Info (12023): Found entity 1: root_op_calc File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/root_op_calc.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file src/register.sv
     Info (12023): Found entity 1: register File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/register.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file src/or_gate.sv
@@ -1304,9 +1204,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/reg
     Info (12023): Found entity 1: register_en File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/register_en.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file src/final_values.sv
     Info (12023): Found entity 1: final_values File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/final_values.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file src/demux_data.sv
-    Info (12023): Found entity 1: mux_output File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/demux_data.sv Line: 4
-Info (12021): Found 0 design units, including 0 entities, in source file src/mux_output.sv
+Info (12021): Found 1 design units, including 1 entities, in source file src/mux_output.sv
+    Info (12023): Found entity 1: mux_output File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mux_output.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file src/clkdivider.sv
     Info (12023): Found entity 1: clkDivider File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/clkDivider.sv Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file src/sipo.sv
@@ -1315,10 +1214,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/ver
     Info (12023): Found entity 1: verification2 File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/verification2.sv Line: 4
 Warning (10236): Verilog HDL Implicit Net warning at sipo.sv(24): created implicit net for "out" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/sipo.sv Line: 24
 Info (12127): Elaborating entity "mdr" for the top level hierarchy
-Info (12128): Elaborating entity "control" for hierarchy "control:CTRL" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 66
-Info (12128): Elaborating entity "pipo" for hierarchy "pipo:PIPO_X" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 76
-Info (12128): Elaborating entity "verification" for hierarchy "verification:VERIFICATION" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 96
-Info (12128): Elaborating entity "core" for hierarchy "core:CORE" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 118
+Info (12128): Elaborating entity "control" for hierarchy "control:CTRL" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 67
+Info (12128): Elaborating entity "pipo" for hierarchy "pipo:PIPO_X" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 77
+Info (12128): Elaborating entity "verification" for hierarchy "verification:VERIFICATION" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 97
+Info (12128): Elaborating entity "core" for hierarchy "core:CORE" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 113
 Info (12128): Elaborating entity "selector_op" for hierarchy "core:CORE|selector_op:SELECTOR" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/core.sv Line: 29
 Info (12128): Elaborating entity "counter2" for hierarchy "core:CORE|counter2:COUNTER_MULT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/core.sv Line: 39
 Info (12128): Elaborating entity "counter2" for hierarchy "core:CORE|counter2:COUNTER_DIV" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/core.sv Line: 49
@@ -1395,62 +1294,53 @@ Info (12128): Elaborating entity "quotation_reg" for hierarchy "core:CORE|divisi
 Info (12128): Elaborating entity "final_remainder" for hierarchy "core:CORE|division:DIVISION|final_remainder:FINAL_REM" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/division.sv Line: 100
 Info (12128): Elaborating entity "final_quotation" for hierarchy "core:CORE|division:DIVISION|final_quotation:FINAL_QUO" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/division.sv Line: 110
 Info (12128): Elaborating entity "square_root" for hierarchy "core:CORE|square_root:SQUARE_ROOT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/core.sv Line: 179
-Info (12128): Elaborating entity "shift_left" for hierarchy "core:CORE|square_root:SQUARE_ROOT|shift_left:REMINDER" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 33
-Info (12128): Elaborating entity "shift_reg_right_data" for hierarchy "core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at shift_reg_right_data.sv(23): truncated value with size 32 to match size of target (16) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at shift_reg_right_data.sv(28): truncated value with size 32 to match size of target (16) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 28
-Warning (10230): Verilog HDL assignment warning at shift_reg_right_data.sv(33): truncated value with size 32 to match size of target (16) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 33
-Warning (10240): Verilog HDL Always Construct warning at shift_reg_right_data.sv(21): inferring latch(es) for variable "r_val", which holds its previous value in one or more paths through the always construct File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 21
-Info (10041): Inferred latch for "r_val[0]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[1]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[2]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[3]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[4]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[5]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[6]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[7]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[8]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[9]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[10]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[11]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[12]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[13]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[14]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[15]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[16]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[17]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[18]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[19]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[20]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[21]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[22]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[23]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[24]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[25]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[26]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[27]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[28]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[29]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[30]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (10041): Inferred latch for "r_val[31]" at shift_reg_right_data.sv(26) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 26
-Info (12128): Elaborating entity "and_gate" for hierarchy "core:CORE|square_root:SQUARE_ROOT|and_gate:AND_D_3_ALU" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 51
-Info (12128): Elaborating entity "or_gate" for hierarchy "core:CORE|square_root:SQUARE_ROOT|or_gate:OR_R_D_ALU" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 59
-Info (12128): Elaborating entity "root_op_calc" for hierarchy "core:CORE|square_root:SQUARE_ROOT|root_op_calc:OPCALCROOT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 73
-Info (12128): Elaborating entity "register" for hierarchy "core:CORE|square_root:SQUARE_ROOT|register:REG_ENA" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 82
-Info (12128): Elaborating entity "shift_left" for hierarchy "core:CORE|square_root:SQUARE_ROOT|shift_left:QUOTIENT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 90
-Info (12128): Elaborating entity "register_en" for hierarchy "core:CORE|square_root:SQUARE_ROOT|register_en:REG_OR_Q" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 110
-Info (12128): Elaborating entity "final_values" for hierarchy "core:CORE|square_root:SQUARE_ROOT|final_values:REM_QUO" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 139
+Info (12128): Elaborating entity "shift_left" for hierarchy "core:CORE|square_root:SQUARE_ROOT|shift_left:REMINDER" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 40
+Info (12128): Elaborating entity "shift_reg_right_data" for hierarchy "core:CORE|square_root:SQUARE_ROOT|shift_reg_right_data:DATA" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at shift_reg_right_data.sv(31): truncated value with size 32 to match size of target (16) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at shift_reg_right_data.sv(36): truncated value with size 32 to match size of target (16) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at shift_reg_right_data.sv(41): truncated value with size 32 to match size of target (16) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 41
+Warning (10240): Verilog HDL Always Construct warning at shift_reg_right_data.sv(29): inferring latch(es) for variable "r_val", which holds its previous value in one or more paths through the always construct File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 29
+Info (10041): Inferred latch for "r_val[0]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[1]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[2]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[3]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[4]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[5]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[6]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[7]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[8]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[9]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[10]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[11]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[12]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[13]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[14]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[15]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[16]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[17]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[18]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[19]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[20]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[21]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[22]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[23]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[24]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[25]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[26]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[27]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[28]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[29]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[30]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (10041): Inferred latch for "r_val[31]" at shift_reg_right_data.sv(34) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/shift_reg_right_data.sv Line: 34
+Info (12128): Elaborating entity "and_gate" for hierarchy "core:CORE|square_root:SQUARE_ROOT|and_gate:AND_D_3_ALU" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 58
+Info (12128): Elaborating entity "or_gate" for hierarchy "core:CORE|square_root:SQUARE_ROOT|or_gate:OR_R_D_ALU" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 66
+Info (12128): Elaborating entity "root_op_calc" for hierarchy "core:CORE|square_root:SQUARE_ROOT|root_op_calc:OPCALCROOT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 80
+Info (12128): Elaborating entity "register" for hierarchy "core:CORE|square_root:SQUARE_ROOT|register:REG_ENA" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 89
+Info (12128): Elaborating entity "shift_left" for hierarchy "core:CORE|square_root:SQUARE_ROOT|shift_left:QUOTIENT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 97
+Info (12128): Elaborating entity "register_en" for hierarchy "core:CORE|square_root:SQUARE_ROOT|register_en:REG_OR_Q" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 117
+Info (12128): Elaborating entity "final_values" for hierarchy "core:CORE|square_root:SQUARE_ROOT|final_values:REM_QUO" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/square_root.sv Line: 146
 Info (12128): Elaborating entity "mux_output" for hierarchy "core:CORE|mux_output:MUX_OUT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/core.sv Line: 196
-Info (12128): Elaborating entity "verification2" for hierarchy "verification2:VERIFICATION2" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 131
-Info (12128): Elaborating entity "TOP_bcd_7seg" for hierarchy "TOP_bcd_7seg:BCD" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 139
-Info (12128): Elaborating entity "complement_a2" for hierarchy "TOP_bcd_7seg:BCD|complement_a2:A2_COM" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/TOP_bcd_7seg.sv Line: 29
-Info (12128): Elaborating entity "bin_to_thto" for hierarchy "TOP_bcd_7seg:BCD|bin_to_thto:OTHT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/TOP_bcd_7seg.sv Line: 37
-Info (12128): Elaborating entity "add" for hierarchy "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[0].add" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/bin_to_thto.sv Line: 31
-Warning (10034): Output port "o_hto_full[31..28]" at add.sv(17) has no driver File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add.sv Line: 17
-Info (12128): Elaborating entity "add_con" for hierarchy "TOP_bcd_7seg:BCD|bin_to_thto:OTHT|add:generate_add[0].add|add_con:generate_con[0].ADD_CON" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/add.sv Line: 35
-Info (12128): Elaborating entity "displays" for hierarchy "TOP_bcd_7seg:BCD|displays:DISPLAY" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/TOP_bcd_7seg.sv Line: 45
-Warning (10034): Output port "o_7seg[4]" at displays.sv(17) has no driver File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/displays.sv Line: 17
-Info (12128): Elaborating entity "bin_to_7seg" for hierarchy "TOP_bcd_7seg:BCD|displays:DISPLAY|bin_to_7seg:generate_7seg[0].B7S_O" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/displays.sv Line: 28
+Info (12128): Elaborating entity "verification2" for hierarchy "verification2:VERIFICATION2" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 130
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "core:CORE|division:DIVISION|wires.quotation[31]" is missing source, defaulting to GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/division.sv Line: 27
     Warning (12110): Net "core:CORE|division:DIVISION|wires.quotation[30]" is missing source, defaulting to GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/division.sv Line: 27
@@ -1490,7 +1380,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/db/cmpr_ngc.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2019.05.17.17:56:11 Progress: Loading sld08000000/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2019.05.18.07:27:53 Progress: Loading sld08000000/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1513,6 +1403,41 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/db/ip/sld08000000/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (12069): Ignored assignment(s) for "o_result[0][0]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[0][1]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[0][2]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[0][3]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[0][4]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[0][5]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[0][6]" because "o_result[0]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][0]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][1]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][2]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][3]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][4]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][5]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[1][6]" because "o_result[1]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][0]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][1]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][2]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][3]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][4]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][5]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[2][6]" because "o_result[2]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][0]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][1]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][2]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][3]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][4]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][5]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[3][6]" because "o_result[3]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][0]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][1]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][2]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][3]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][4]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][5]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+Warning (12069): Ignored assignment(s) for "o_result[4][6]" because "o_result[4]" is not a bus or array File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch core:CORE|alu_mult:ALU|r_val_DR[31] has unsafe behavior File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/alu_mult.sv Line: 71
     Warning (13013): Ports D and ENA on the latch are fed by the same signal i_op[0] File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 12
@@ -1610,32 +1535,29 @@ Warning (13012): Latch core:CORE|alu_mult:ALU|r_val_DR[16] has unsafe behavior F
     Warning (13013): Ports D and ENA on the latch are fed by the same signal i_op[0] File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 12
 Warning (13012): Latch core:CORE|alu_mult:ALU|r_val_DR[15] has unsafe behavior File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/alu_mult.sv Line: 71
     Warning (13013): Ports D and ENA on the latch are fed by the same signal i_op[0] File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 12
-Info (13000): Registers with preset signals will power-up high File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/remainder_reg.sv Line: 30
+Info (13000): Registers with preset signals will power-up high File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/counter.sv Line: 22
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_result[4][0]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_result[4][1]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_result[4][2]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_result[4][3]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_result[4][4]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_result[4][5]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_result[4][6]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 21
-    Warning (13410): Pin "o_remainder[15]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 25
+    Warning (13410): Pin "o_result[15]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 18
+    Warning (13410): Pin "o_remainder[15]" is stuck at GND File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/src/mdr.sv Line: 26
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sld_buffer_manager.vhd Line: 356
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286031): Timing-Driven Synthesis is running on partition "sld_signaltap:auto_signaltap_0"
 Info (144001): Generated suppressed messages file C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/P2/output_files/P2.map.smsg
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 50 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1835 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1699 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
-    Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1744 logic cells
+    Info (21059): Implemented 37 output pins
+    Info (21061): Implemented 1628 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 138 warnings
-    Info: Peak virtual memory: 733 megabytes
-    Info: Processing ended: Fri May 17 17:56:28 2019
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:01:21
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 165 warnings
+    Info: Peak virtual memory: 730 megabytes
+    Info: Processing ended: Sat May 18 07:28:18 2019
+    Info: Elapsed time: 00:01:07
+    Info: Total CPU time (on all processors): 00:01:52
 
 
 +------------------------------------------+
