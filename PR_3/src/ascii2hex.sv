@@ -16,8 +16,11 @@ import mxv_pkg::*;
 		else if  ( (ascii >= KEY_A) && (ascii <= KEY_F) ) begin
 			hex = ascii - 55;
 		end 
+		else if(ascii == 95)begin
+			hex = 30;
+		end
 		else begin
-			hex = 4'bxxxx;
+			hex = 5'b0_0000;
 		end 
 	end
 

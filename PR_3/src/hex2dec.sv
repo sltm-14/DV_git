@@ -10,7 +10,8 @@ import mxv_pkg::*;
 	input ena,
 	input data_hex_t hex,
 
-	output data_dec_t dec
+	output data_dec_t dec,
+	output logic      ena_o
 );    
 
 data_h2d_reg_t  rgstr_r;
@@ -19,18 +20,17 @@ data_h2d_reg_t  rgstr_r;
 	    if(!rst) begin
 	        rgstr_r  <= {'0,'0};
 	    end
-	    else if (ena)begin
-	        rgstr_r  <= {rgstr_r[0], hex};
+	    else if (ena) begin
+	    	if (hex == 30)
+	    		rgstr_r  <= {18, 12};
+	    	else
+	        	rgstr_r  <= {rgstr_r[0], hex};
 	    end
+	    ena_o    <= ena;
 	end
 
 	always @(*) begin
-		if (ena)begin
-			dec = (rgstr_r[1] << 4) + rgstr_r[0];
-		end
-		else begin
-			dec = '0;
-		end
+		dec = (rgstr_r[1] << 4) + rgstr_r[0];
 	end
 
 endmodule 

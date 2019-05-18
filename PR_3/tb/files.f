@@ -40,12 +40,15 @@
 ../src/ascii2hex.sv
 ../src/comparison.sv
 ../src/control.sv
+../src/counter_command.sv
 ../src/counter_ctrl.sv
+../src/debouncer.sv
 ../src/demux_1_2_W4B.sv
 ../src/demux_1_2_W8B.sv
 ../src/hex2dec.sv
+../src/register_1.sv
 ../src/register_8.sv
 ../src/sipo.sv
-../src/validation.sv
+../src/ctrl_top.sv
 
 TB_MxV.sv
