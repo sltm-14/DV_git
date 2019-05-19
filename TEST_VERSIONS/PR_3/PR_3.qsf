@@ -1,0 +1,90 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+# Date created = 00:33:12  May 19, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		PR_3_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY top_full_mxv
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:33:12  MAY 19, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE src/xor_gate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/top_mxv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/top_full_mxv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/TOP_fifo_ram_dc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/synch_ff.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/sipo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/register_en.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/register_8.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/register_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/ram_dc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/processor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/pointer_wr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/pointer_rd.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/mxv_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/mux_2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/hex2dec.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/gray2bin.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/fifo_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/ff_d.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/demux_1_8_W4B.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/demux_1_8_W1B.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/demux_1_4_W4B.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/demux_1_2_W8B.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/demux_1_2_W4B.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/debouncer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/ctrl_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/counter_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/counter_command.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/comparison.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/comp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/bin2gray.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/ascii2hex.sv
+set_global_assignment -name SYSTEMVERILOG_FILE src/addrs_synch.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
