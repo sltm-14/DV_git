@@ -8,21 +8,24 @@ import mxv_pkg::*;
 
 	output data_hex_t hex
 );
-
+	data_uart_t hex_r;
+	
 	always @(*) begin
 		if ( (ascii >= KEY_0) && (ascii <= KEY_9) ) begin
-			hex = ascii - 48;
+			hex_r = ascii - 48;
 		end 
 		else if  ( (ascii >= KEY_A) && (ascii <= KEY_F) ) begin
-			hex = ascii - 55;
+			hex_r = ascii - 55;
 		end 
 		else if(ascii == 95)begin
-			hex = 30;
+			hex_r = 30;
 		end
 		else begin
-			hex = 5'b0_0000;
+			hex_r = 5'b0_0000;
 		end 
 	end
+	
+	assign hex = hex_r[4:0];
 
 endmodule 
 `endif

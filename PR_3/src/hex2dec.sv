@@ -18,14 +18,20 @@ data_h2d_reg_t  rgstr_r;
 
 	always_ff@(posedge clk or negedge rst) begin
 	    if(!rst) begin
-	        rgstr_r  <= {'0,'0};
+	        rgstr_r[0]  <= '0;
+			  rgstr_r[1]  <= '0;
 	    end
 	    else if (ena) begin
-	    	if (hex == 30)
-	    		rgstr_r  <= {18, 12};
-	    	else
-	        	rgstr_r  <= {rgstr_r[0], hex};
+	    	if (hex == 30)begin
+	    	  rgstr_r[0]  <= 12;
+			  rgstr_r[1]  <= 18;
+			 end
+	    	else begin
+			  rgstr_r[0]  <= hex;
+			  rgstr_r[1]  <= rgstr_r[0];
+			end
 	    end
+		 
 	    ena_o    <= ena;
 	end
 

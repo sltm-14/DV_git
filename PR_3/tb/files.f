@@ -50,5 +50,6 @@
 ../src/register_8.sv
 ../src/sipo.sv
 ../src/ctrl_top.sv
+../src/top_full_mxv.sv
 
 TB_MxV.sv

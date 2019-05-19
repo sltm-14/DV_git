@@ -4,17 +4,17 @@
 module top_full_mxv
 import mxv_pkg::*;
 (
-	input clk,
-	input rst,
+	input logic clk,
+	input logic rst,
 
 /*	input rx,
 
 	output tx,*/
-	input             clk_b,   
-	input             rcv,
-	input data_uart_t data
+	input logic       clk_b,   
+	input logic       rcv,
+	input data_uart_t data,
 
-	output            error,
+//	output logic      error,
 	output result_t   result
 
 );
@@ -51,7 +51,7 @@ ctrl_top CONTROL(
 	.mx_reg_sltr (wires.mx_reg_sltr), 
 	.mx_a_sltr   (wires.mx_a_sltr),
 	.mx_b_sltr   (wires.mx_b_sltr),
-	.mx_c_sltrv  (wires.mx_c_sltrv),
+	.mx_c_sltr  (wires.mx_c_sltr),
 	.mx_d_sltr   (wires.mx_d_sltr),
 	.ena_proc_a  (wires.ena_proc_a),
     .ena_proc_b  (wires.ena_proc_b),
@@ -75,12 +75,12 @@ top_mxv MXV(
 	.mx_reg_sltr (wires.mx_reg_sltr), 
 	.mx_a_sltr   (wires.mx_a_sltr),
 	.mx_b_sltr   (wires.mx_b_sltr),
-	.mx_c_sltrv  (wires.mx_c_sltrv),
+	.mx_c_sltr  (wires.mx_c_sltr),
 	.mx_d_sltr   (wires.mx_d_sltr),
 	.ena_proc_a  (wires.ena_proc_a),
     .ena_proc_b  (wires.ena_proc_b),
     .ena_proc_c  (wires.ena_proc_c),
-    .ena_proc_d  (wires.ena_proc_d)
+    .ena_proc_d  (wires.ena_proc_d),
 
 	.fifo_result (result)
 );

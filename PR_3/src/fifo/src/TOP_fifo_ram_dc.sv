@@ -8,7 +8,7 @@ import fifo_pkg::*;
 	input clk_rd,
 	input rst,
 
-	input data_t data_i,
+	input val_t data_i,
 	input logic  push,
 	input logic  pop,
 

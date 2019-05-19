@@ -26,16 +26,17 @@ import mxv_pkg::*;
 		else if (i_ena )begin
 			r_count <= r_count + 1;
 			o_ovf   <= 0;
+			if (r_count == 2) begin
+				r_count <= '0;
+				o_ovf   <=  1;
+			end
 		end
 		else begin
 			r_count <= r_count;
 			o_ovf   <=  0;
 		end
 
-		if (r_count == 2) begin
-			r_count <= '0;
-			o_ovf   <=  1;
-		end
+		
 	end
 
 

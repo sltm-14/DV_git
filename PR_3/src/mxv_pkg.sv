@@ -23,10 +23,10 @@ package mxv_pkg;
     localparam  DHEX    = 5;
     localparam  DDEC    = 9;
 
-    localparam  KEY_0   = 48;
-    localparam  KEY_9   = 57;
-    localparam  KEY_A   = 65;
-    localparam  KEY_F   = 70;
+    localparam [7:0] KEY_0   = 48;
+    localparam [7:0] KEY_9   = 57;
+    localparam [7:0] KEY_A   = 65;
+    localparam [7:0] KEY_F   = 70;
 
     localparam SIPO_REG = 14;
     localparam CW       = 7;
@@ -39,9 +39,7 @@ package mxv_pkg;
 
     localparam PPS      = 8;
     localparam VW       = 8;
-
-
-
+    
 
     localparam FE_FRAME       = 9'h0FE;
     localparam EF_FRAME       = 9'h0EF;

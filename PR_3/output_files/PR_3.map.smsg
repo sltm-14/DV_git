@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at TOP_uart.sv(12): object "rx" differs only in case from object "RX" in the same scope File: C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/PR_3/src/uart/TOP_uart.sv Line: 12
+Info (10281): Verilog HDL Declaration information at TOP_uart.sv(14): object "tx" differs only in case from object "TX" in the same scope File: C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/PR_3/src/uart/TOP_uart.sv Line: 14
+Info (10281): Verilog HDL Declaration information at top_mxv.sv(30): object "fifo_result" differs only in case from object "FIFO_RESULT" in the same scope File: C:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/PR_3/src/mxv/src/top_mxv.sv Line: 30
