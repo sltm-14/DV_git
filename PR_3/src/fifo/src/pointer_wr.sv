@@ -14,22 +14,22 @@ import fifo_pkg::*;
 	output logic  led_error
 );
 
-addr_t head_r = W_DEPTH - 1;
+addr_t head_r = W_DEPTH - 1'b1;
 
 always_ff @(posedge clk) begin 
 
 	if (full_flag) begin
-		led_error <= 1;
+		led_error <= 1'b1;
 	end
 	else if(push) begin 
-		led_error <= 0;
-		ena_wr    <= 1;
+		led_error <= 1'b0;
+		ena_wr    <= 1'b1;
 		head_r    <= (head_r + 1'b1) % W_DEPTH;
 	end
 
 	else begin
-		ena_wr    <= 0;
-		led_error <= 0;	
+		ena_wr    <= 1'b0;
+		led_error <= 1'b0;	
 	end
 	
 end

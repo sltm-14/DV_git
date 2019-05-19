@@ -8,34 +8,36 @@ import mxv_pkg::*;
 	input clk_rd,
 	input rst,
 
-	input data_i_t val
+	input  logic      push_result,
+	input  logic      pop_result,
+	input  logic      push_vector,
+	input  logic      pop_vector,
+	input  push_pop_t push_matrix,
+	input  push_pop_t pop_matrix,
+	input  val_t      val,
+	input  sltr_4_t   dmx_v_sltr,
+	input  sltr_2_t   mx_reg_sltr,
+	input  sltr_2_t   mx_a_sltr,
+	input  sltr_2_t   mx_b_sltr,
+	input  sltr_2_t   mx_c_sltr,
+	input  sltr_2_t   mx_d_sltr,
+	input  logic      ena_proc_a,
+    input  logic      ena_proc_b,
+    input  logic      ena_proc_c,
+    input  logic      ena_proc_d
+
+	output result_t fifo_result
 );
 
 mxv_st wires;
 
-demux_1_8_W4B DMX_DATA
+/*demux_1_8_W4B DMX_DATA
 (
-	.i_bus   (wires.ctrl_data),  
+	.i_bus   (val),  
 	.i_sltr  (wires.dmx_sltr),     
 
 	.o_buses (wires.dmx_fifo)     
-);
-
-demux_1_8_W1B DMX_PUSH
-(
-	.i_bus   (wires.ctrl_push),  
-	.i_sltr  (wires.dmx_sltr),     
-
-	.o_buses (wires.dmx_push)     
-);
-
-demux_1_8_W1B DMX_POP
-(
-	.i_bus   (wires.ctrl_pop),  
-	.i_sltr  (wires.dmx_sltr),     
-
-	.o_buses (wires.dmx_pop)     
-);
+);*/
 
 /* FIFO VECTOR ---------------------------------------------- */
 
@@ -45,9 +47,9 @@ TOP_fifo_ram_dc FIFO_VECTOR
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.fifo_vector),
-	.push    (wires.push_vector),
-	.pop     (wires.pop_vector),
+	.data_i  (val),
+	.push    (push_vector),
+	.pop     (pop_vector),
 
 	.data_o  (wires.fifo_dmx_vctr),
 	.empty   (),
@@ -56,7 +58,7 @@ TOP_fifo_ram_dc FIFO_VECTOR
 
 demux_1_4_W4B DEMUX_VECTOR(
 	.i_bus   (wires.fifo_dmx_vctr),  
-	.i_sltr  (wires.dmx_4_sltr),     
+	.i_sltr  (dmx_v_sltr),     
 
 	.o_buses (wires.dmx_prcsr_vctr)     
 );
@@ -65,9 +67,9 @@ demux_1_4_W4B DEMUX_VECTOR(
 
 mux_2_1 MUX_PRCS
 (
-	.i_buses ({0,
-			  wires.result_reg_d}),    
-	.i_sltr  (wires.mux_x_r_sltr),     
+	.i_bus_a ('0),
+	.i_bus_b (wires.result_reg_d),    
+	.i_sltr  (mx_reg_sltr),     
 
 	.o_bus   (wires.result_mux)      
 );
@@ -78,9 +80,9 @@ TOP_fifo_ram_dc FIFO_0
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[0]),
-	.push    (wires.dmx_push[0]),
-	.pop     (wires.dmx_pop[0]),
+	.data_i  (val),
+	.push    (push_matrix[0]),
+	.pop     (pop_matrix[0]),
 
 	.data_o  (wires.data_fifo_0),
 	.empty   (),
@@ -93,9 +95,9 @@ TOP_fifo_ram_dc FIFO_4
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[4]),
-	.push    (wires.dmx_push[4]),
-	.pop     (wires.dmx_pop[4]),
+	.data_i  (val),
+	.push    (push_matrix[4]),
+	.pop     (pop_matrix[4]),
 
 	.data_o  (wires.data_fifo_4),
 	.empty   (),
@@ -103,20 +105,21 @@ TOP_fifo_ram_dc FIFO_4
 );
 
 mux_2_1 MUX_FIFO_0_4
-(
-	.i_buses ({wires.data_fifo_4,
-		       wires.data_fifo_0}),    
-	.i_sltr  (wires.mux_0_4_sltr),     
+(	
+	.i_bus_a (wires.data_fifo_4),
+	.i_bus_b (wires.data_fifo_0),   
+	   
+	.i_sltr  (mx_a_sltr),     
 
 	.o_bus   (wires.matrix_0_4)      
 );
 
-procesor PROCESSOR_A
+processor PROCESSOR_A
 (
 	.clk (clk_rd),
 	.rst (rst),
 
-	.ena         (wires.ena_prcs_a),
+	.ena         (ena_proc_a),
 	.matriz      (wires.matrix_0_4), 
 	.vector      (wires.dmx_prcsr_vctr[0]), 
 	.last_result (wires.result_mux), 
@@ -143,9 +146,9 @@ TOP_fifo_ram_dc FIFO_1
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[1]),
-	.push    (wires.dmx_push[1]),
-	.pop     (wires.dmx_pop[1]),
+	.data_i  (val),
+	.push    (push_matrix[1]),
+	.pop     (pop_matrix[1]),
 
 	.data_o  (wires.data_fifo_1),
 	.empty   (),
@@ -158,9 +161,9 @@ TOP_fifo_ram_dc FIFO_5
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[5]),
-	.push    (wires.dmx_push[5]),
-	.pop     (wires.dmx_pop[5]),
+	.data_i  (val),
+	.push    (push_matrix[5]),
+	.pop     (pop_matrix[5]),
 
 	.data_o  (wires.data_fifo_5),
 	.empty   (),
@@ -168,20 +171,21 @@ TOP_fifo_ram_dc FIFO_5
 );
 
 mux_2_1 MUX_FIFO_1_5
-(
-	.i_buses ({wires.data_fifo_5,
-		       wires.data_fifo_1}),    
-	.i_sltr  (wires.mux_1_5_sltr),     
+(	
+	.i_bus_a (wires.data_fifo_5),
+	.i_bus_b (wires.data_fifo_1), 
+    
+	.i_sltr  (mx_b_sltr),     
 
 	.o_bus   (wires.matrix_1_5)      
 );
 
-procesor PROCESSOR_B
+processor PROCESSOR_B
 (
 	.clk (clk_rd),
 	.rst (rst),
 
-	.ena         (wires.ena_prcs_b),
+	.ena         (ena_proc_b),
 	.matriz      (wires.matrix_1_5), 
 	.vector      (wires.dmx_prcsr_vctr[1]), 
 	.last_result (wires.result_reg_a), 
@@ -208,9 +212,9 @@ TOP_fifo_ram_dc FIFO_2
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[2]),
-	.push    (wires.dmx_push[2]),
-	.pop     (wires.dmx_pop[2]),
+	.data_i  (val),
+	.push    (push_matrix[2]),
+	.pop     (pop_matrix[2]),
 
 	.data_o  (wires.data_fifo_2),
 	.empty   (),
@@ -223,9 +227,9 @@ TOP_fifo_ram_dc FIFO_6
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[6]),
-	.push    (wires.dmx_push[6]),
-	.pop     (wires.dmx_pop[6]),
+	.data_i  (val),
+	.push    (push_matrix[6]),
+	.pop     (pop_matrix[6]),
 
 	.data_o  (wires.data_fifo_6),
 	.empty   (),
@@ -234,19 +238,19 @@ TOP_fifo_ram_dc FIFO_6
 
 mux_2_1 MUX_FIFO_2_6
 (
-	.i_buses ({wires.data_fifo_6,
-		       wires.data_fifo_2}),    
-	.i_sltr  (wires.mux_2_6_sltr),     
+	.i_bus_a (wires.data_fifo_6),
+	.i_bus_b (wires.data_fifo_2),    
+	.i_sltr  (mx_c_sltr),     
 
 	.o_bus   (wires.matrix_2_6)      
 );
 
-procesor PROCESSOR_C
+processor PROCESSOR_C
 (
-	.clk (clk_rd),
+	.clk (clk_wr),
 	.rst (rst),
 
-	.ena         (wires.ena_prcs_c),
+	.ena         (ena_proc_c),
 	.matriz      (wires.matrix_2_6), 
 	.vector      (wires.dmx_prcsr_vctr[2]), 
 	.last_result (wires.result_reg_b), 
@@ -256,7 +260,7 @@ procesor PROCESSOR_C
 
 register_en REG_C
 (
-	.clk (clk_rd),
+	.clk (clk_wr),
 	.rst (rst),
 
 	.i_enable (wires.ena_reg_c),
@@ -273,9 +277,9 @@ TOP_fifo_ram_dc FIFO_3
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[3]),
-	.push    (wires.dmx_push[3]),
-	.pop     (wires.dmx_pop[3]),
+	.data_i  (val),
+	.push    (push_matrix[3]),
+	.pop     (pop_matrix[3]),
 
 	.data_o  (wires.data_fifo_3),
 	.empty   (),
@@ -288,9 +292,9 @@ TOP_fifo_ram_dc FIFO_7
 	.clk_rd  (clk_rd),
 	.rst     (rst),
 
-	.data_i  (wires.dmx_fifo[7]),
-	.push    (wires.dmx_push[7]),
-	.pop     (wires.dmx_pop[7]),
+	.data_i  (val),
+	.push    (push_matrix[7]),
+	.pop     (pop_matrix[7]),
 
 	.data_o  (wires.data_fifo_7),
 	.empty   (),
@@ -299,19 +303,19 @@ TOP_fifo_ram_dc FIFO_7
 
 mux_2_1 MUX_FIFO_3_7
 (
-	.i_buses ({wires.data_fifo_7,
-		       wires.data_fifo_3}),    
-	.i_sltr  (wires.mux_3_7_sltr),     
+	.i_bus_a (wires.data_fifo_7),
+	.i_bus_b (wires.data_fifo_3),   
+	.i_sltr  (mx_d_sltr),     
 
 	.o_bus   (wires.matrix_3_7)      
 );
 
-procesor PROCESSOR_D
+processor PROCESSOR_D
 (
-	.clk (clk_rd),
+	.clk (clk_wr),
 	.rst (rst),
 
-	.ena         (wires.ena_prcs_d),
+	.ena         (ena_proc_d),
 	.matriz      (wires.matrix_3_7), 
 	.vector      (wires.dmx_prcsr_vctr[3]), 
 	.last_result (wires.result_reg_c), 
@@ -321,7 +325,7 @@ procesor PROCESSOR_D
 
 register_en REG_D
 (
-	.clk (clk_rd),
+	.clk (clk_wr),
 	.rst (rst),
 
 	.i_enable (wires.ena_reg_d),
@@ -339,10 +343,10 @@ TOP_fifo_ram_dc FIFO_RESULT
 	.rst     (rst),
 
 	.data_i  (wires.result_reg_d),
-	.push    (wires.push_result),
-	.pop     (wires.pop_result),
+	.push    (push_result),
+	.pop     (pop_result),
 
-	.data_o  (wires.fifo_result),
+	.data_o  (fifo_result),
 	.empty   (),
 	.full    ()
 );

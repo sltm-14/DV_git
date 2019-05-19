@@ -10,7 +10,7 @@ import fifo_pkg::*;
 	output  flag_o
 );
 
-assign flag_o = ( val_a_i == val_b_i )? 1'b1 : 0;
+assign flag_o = ( val_a_i == val_b_i )? 1'b1 : 1'b0;
 
 endmodule
 `endif

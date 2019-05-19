@@ -60,7 +60,7 @@ addrs_synch SYNCH_FULL(
 	.rst    (rst),
 
 	.addr_1 (wires.addr_poin_ram_rd ), 
-	.addr_2 (wires.addr_poin_ram_wr + 1), 
+	.addr_2 (wires.addr_poin_ram_wr + 1'b1), 
 
 	.flag   (full)
 );

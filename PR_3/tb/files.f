@@ -29,13 +29,13 @@
 
 ../src/mxv_pkg.sv
 
-../src/mxv/demux_1_4_W4B.sv
-../src/mxv/demux_1_8_W1B.sv
-../src/mxv/demux_1_8_W4B.sv
-../src/mxv/mux_2_1.sv
-../src/mxv/processor.sv
-../src/mxv/register_en.sv
-../src/mxv/top_mxv.sv
+../src/mxv/src/demux_1_4_W4B.sv
+../src/mxv/src/demux_1_8_W1B.sv
+../src/mxv/src/demux_1_8_W4B.sv
+../src/mxv/src/mux_2_1.sv
+../src/mxv/src/processor.sv
+../src/mxv/src/register_en.sv
+../src/mxv/src/top_mxv.sv
 
 ../src/ascii2hex.sv
 ../src/comparison.sv
