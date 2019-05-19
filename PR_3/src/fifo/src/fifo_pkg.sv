@@ -10,6 +10,9 @@ package fifo_pkg;
     typedef logic [W_DATA-1:0]  data_t;
     typedef logic [W_ADDR-1:0]  addr_t;
 
+    localparam VW       = 8;
+    typedef logic [VW-1:0]       val_t;
+
 	typedef struct{
     	addr_t addr_bin_synch;
     	addr_t addr_synch_gray;

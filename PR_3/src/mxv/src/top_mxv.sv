@@ -24,7 +24,7 @@ import mxv_pkg::*;
 	input  logic      ena_proc_a,
     input  logic      ena_proc_b,
     input  logic      ena_proc_c,
-    input  logic      ena_proc_d
+    input  logic      ena_proc_d,
 
 	output result_t fifo_result
 );

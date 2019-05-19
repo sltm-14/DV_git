@@ -11,11 +11,11 @@ import fifo_pkg::*;
 
 	input         en_wr,    /* Write enable */
 	input         en_rd,    /* Write enable */
-	input  data_t data_wr,  /* data to be stored */
+	input  val_t data_wr,  /* data to be stored */
 	input  addr_t addr_wr,  /* Read write address */
 	input  addr_t addr_dr,  /* Read write address */
 
-	output data_t data_rd   /* read data from memory */
+	output val_t data_rd   /* read data from memory */
 );
 
 logic [W_DATA-1:0]  ram [W_DEPTH-1:0];

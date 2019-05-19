@@ -10,8 +10,8 @@ cModel Technology
 Z0 dC:/Users/Tomoyo/Documents/ITESO/2019-A-Primavera/DYV/DV_GIT/PR_3/tb
 vaddrs_synch
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z2 DXx4 work 8 fifo_pkg 0 22 A6je<>83TB^E_0O_kHkUX2
-Z3 !s110 1558225893
+Z2 DXx4 work 8 fifo_pkg 0 22 XmaC4K4me47?HNM=ZC`We1
+Z3 !s110 1558233492
 !i10b 1
 !s100 RO[b@MnSZkToQ_ZXM0zRF3
 I[Ck178mVQA>[33Rgf2PkC2
@@ -27,14 +27,14 @@ Z5 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z6 !s108 1558225893.000000
-Z7 !s107 TB_MxV.sv|../src/ctrl_top.sv|../src/sipo.sv|../src/register_8.sv|../src/register_1.sv|../src/hex2dec.sv|../src/demux_1_2_W8B.sv|../src/demux_1_2_W4B.sv|../src/debouncer.sv|../src/counter_ctrl.sv|../src/counter_command.sv|../src/control.sv|../src/comparison.sv|../src/ascii2hex.sv|../src/mxv/src/top_mxv.sv|../src/mxv/src/register_en.sv|../src/mxv/src/processor.sv|../src/mxv/src/mux_2_1.sv|../src/mxv/src/demux_1_8_W4B.sv|../src/mxv/src/demux_1_8_W1B.sv|../src/mxv/src/demux_1_4_W4B.sv|../src/mxv_pkg.sv|../src/fifo/src/TOP_fifo_ram_dc.sv|../src/fifo/src/xor_gate.sv|../src/fifo/src/synch_ff.sv|../src/fifo/src/ram_dc.sv|../src/fifo/src/pointer_wr.sv|../src/fifo/src/pointer_rd.sv|../src/fifo/src/gray2bin.sv|../src/fifo/src/ff_d.sv|../src/fifo/src/comp.sv|../src/fifo/src/bin2gray.sv|../src/fifo/src/addrs_synch.sv|../src/fifo/src/fifo_pkg.sv|../src/uart/TOP_uart.sv|../src/uart/uart_tx.sv|../src/uart/uart_rx.sv|../src/uart/sipo_dw_11.sv|../src/uart/shifter.sv|../src/uart/register_en_dw_8.sv|../src/uart/register.sv|../src/uart/parity_bit_generator.sv|../src/uart/parity_error.sv|../src/uart/counter.sv|../src/uart/control_tx.sv|../src/uart/control_rx.sv|../src/uart/baudgen_tx.sv|../src/uart/baudgen_rx.sv|../src/uart/pkg_uart.sv|
+Z6 !s108 1558233492.000000
+Z7 !s107 TB_MxV.sv|../src/top_full_mxv.sv|../src/ctrl_top.sv|../src/sipo.sv|../src/register_8.sv|../src/register_1.sv|../src/hex2dec.sv|../src/demux_1_2_W8B.sv|../src/demux_1_2_W4B.sv|../src/debouncer.sv|../src/counter_ctrl.sv|../src/counter_command.sv|../src/control.sv|../src/comparison.sv|../src/ascii2hex.sv|../src/mxv/src/top_mxv.sv|../src/mxv/src/register_en.sv|../src/mxv/src/processor.sv|../src/mxv/src/mux_2_1.sv|../src/mxv/src/demux_1_8_W4B.sv|../src/mxv/src/demux_1_8_W1B.sv|../src/mxv/src/demux_1_4_W4B.sv|../src/mxv_pkg.sv|../src/fifo/src/TOP_fifo_ram_dc.sv|../src/fifo/src/xor_gate.sv|../src/fifo/src/synch_ff.sv|../src/fifo/src/ram_dc.sv|../src/fifo/src/pointer_wr.sv|../src/fifo/src/pointer_rd.sv|../src/fifo/src/gray2bin.sv|../src/fifo/src/ff_d.sv|../src/fifo/src/comp.sv|../src/fifo/src/bin2gray.sv|../src/fifo/src/addrs_synch.sv|../src/fifo/src/fifo_pkg.sv|../src/uart/TOP_uart.sv|../src/uart/uart_tx.sv|../src/uart/uart_rx.sv|../src/uart/sipo_dw_11.sv|../src/uart/shifter.sv|../src/uart/register_en_dw_8.sv|../src/uart/register.sv|../src/uart/parity_bit_generator.sv|../src/uart/parity_error.sv|../src/uart/counter.sv|../src/uart/control_tx.sv|../src/uart/control_rx.sv|../src/uart/baudgen_tx.sv|../src/uart/baudgen_rx.sv|../src/uart/pkg_uart.sv|
 Z8 !s90 -reportprogress|300|-f|files.f|
 !i113 1
 vascii2hex
 R1
-Z9 DXx4 work 7 mxv_pkg 0 22 @LDWc8JHG81a:Bk5n=ai03
-R3
+Z9 DXx4 work 7 mxv_pkg 0 22 >kJP<bTiZjY=6YP<UX`Nz3
+Z10 !s110 1558233493
 !i10b 1
 !s100 j5ITPMbH<4[]hVE4ZoNzH1
 IW?JZQ89GFjmZh3GAjm]AZ0
@@ -56,7 +56,7 @@ R8
 !i113 1
 vbaudgen_rx
 R1
-Z10 DXx4 work 8 pkg_uart 0 22 F_Q<6Pj=BHQ]hP=S6f:fT0
+Z11 DXx4 work 8 pkg_uart 0 22 F_Q<6Pj=BHQ]hP=S6f:fT0
 R3
 !i10b 1
 !s100 ;8Xe`A8[F_=S]V8Y2^YHC1
@@ -65,7 +65,7 @@ R4
 !s105 baudgen_rx_sv_unit
 S1
 R0
-Z11 w1557081091
+Z12 w1557081091
 8../src/uart/baudgen_rx.sv
 F../src/uart/baudgen_rx.sv
 L0 4
@@ -79,7 +79,7 @@ R8
 !i113 1
 vbaudgen_tx
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 aHAe_B>9SDAUJbW<bUPKd1
@@ -88,7 +88,7 @@ R4
 !s105 baudgen_tx_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/baudgen_tx.sv
 F../src/uart/baudgen_tx.sv
 L0 4
@@ -126,7 +126,7 @@ R8
 vcomp
 R1
 R2
-R3
+R10
 !i10b 1
 !s100 ^ee:HKDgRzNe3o^c3nQ>l0
 I=mAH_8gd>PAQ2Jk5[OOjh3
@@ -149,7 +149,7 @@ R8
 vcomparison
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 ^<I`NAo1FmIUie]W<9?jZ0
 I^UZnUAzdDldTHY9oA`P@L1
@@ -157,7 +157,7 @@ R4
 !s105 comparison_sv_unit
 S1
 R0
-w1557780373
+w1558228746
 8../src/comparison.sv
 F../src/comparison.sv
 L0 4
@@ -172,7 +172,7 @@ R8
 vcontrol
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 PA@f[PREJdZ`b>H3Xb<SI3
 I2Jej>L;bcLlW:Sz;Y<:9X1
@@ -194,7 +194,7 @@ R8
 !i113 1
 vcontrol_rx
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 DI`Q9]k]RLefdmPk719HD1
@@ -203,7 +203,7 @@ R4
 !s105 control_rx_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/control_rx.sv
 F../src/uart/control_rx.sv
 L0 4
@@ -217,7 +217,7 @@ R8
 !i113 1
 vcontrol_tx
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 4;H9ZJkZ::ShA7B5SdM?a3
@@ -226,7 +226,7 @@ R4
 !s105 control_tx_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/control_tx.sv
 F../src/uart/control_tx.sv
 L0 4
@@ -240,7 +240,7 @@ R8
 !i113 1
 vcounter
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 T0Edm^S2dQ16Ac;27n7CM0
@@ -249,7 +249,7 @@ R4
 !s105 counter_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/counter.sv
 F../src/uart/counter.sv
 L0 4
@@ -264,7 +264,7 @@ R8
 vcounter_command
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 O<e3zHo^F;zK;_iJgY1K@2
 InCDKWR;d5JN3VD:l]eAJz0
@@ -287,7 +287,7 @@ R8
 vcounter_ctrl
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 4;a9U8eiM3`J5`BAQ=LnS1
 IG]n3EBXG3=Toa9QbR[33l2
@@ -310,15 +310,15 @@ R8
 vctrl_top
 R1
 R9
-R3
+R10
 !i10b 1
-!s100 6iK<WXUl]h4Po@hz6`=KG0
-IG18mLUU4b68S_0X;@]WVH0
+!s100 O><9;D@JSo4bVji4ko8LV3
+I8e:kJbJ3JF46ofR?<1`3[0
 R4
 !s105 ctrl_top_sv_unit
 S1
 R0
-w1558225883
+w1558230533
 8../src/ctrl_top.sv
 F../src/ctrl_top.sv
 L0 4
@@ -332,7 +332,7 @@ R8
 !i113 1
 vdebouncer
 R1
-R3
+R10
 !i10b 1
 !s100 ATPHTPbT;EZ[5I`i]Po162
 I[eL:bIM7Tj>lcjMol=:>g2
@@ -355,7 +355,7 @@ R8
 vdemux_1_2_W4B
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 OmaF1Rh<0XLJ^;^bnEKVd2
 ICEGn4G9R=_X7gF2Sj1?gY3
@@ -379,7 +379,7 @@ ndemux_1_2_@w4@b
 vdemux_1_2_W8B
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 0U::kPJ]n__T3lI0gB2Y21
 Id9:W8;5Cm<QXUb^AEKhHQ2
@@ -403,7 +403,7 @@ ndemux_1_2_@w8@b
 vdemux_1_4_W4B
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 2EQFDM_1ml;S8n=fC>J>:1
 I]5RR5JeYO3]P00`dz@8F41
@@ -427,7 +427,7 @@ ndemux_1_4_@w4@b
 vdemux_1_8_W1B
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 g]RDJ3Y9XoG0YE<M8oP:P1
 IaUj4K:6NH1=?`7Zc9hl2D0
@@ -451,7 +451,7 @@ ndemux_1_8_@w1@b
 vdemux_8_1_W4B
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 jRQRANmPFXIL@oH<fc7`Z2
 IDO[I8jK5V=d>0^`z7DYgQ0
@@ -475,7 +475,7 @@ ndemux_8_1_@w4@b
 vff_d
 R1
 R2
-R3
+R10
 !i10b 1
 !s100 Vfc_O;hBYf_SMlDWc4Dj?1
 IV0hAZ0c96cDj3fcJ@jS7>0
@@ -499,12 +499,12 @@ Xfifo_pkg
 R1
 R3
 !i10b 1
-!s100 T<K1BnTkI6WSQC_o8Em8b1
-IA6je<>83TB^E_0O_kHkUX2
-VA6je<>83TB^E_0O_kHkUX2
+!s100 1gE5`L:NB`44>Mo8;];=F2
+IXmaC4K4me47?HNM=ZC`We1
+VXmaC4K4me47?HNM=ZC`We1
 S1
 R0
-w1558221998
+w1558233311
 8../src/fifo/src/fifo_pkg.sv
 F../src/fifo/src/fifo_pkg.sv
 L0 4
@@ -519,7 +519,7 @@ R8
 vgray2bin
 R1
 R2
-R3
+R10
 !i10b 1
 !s100 dRb_=B=EUoil9f0T4_CU?0
 IaFB[;c<9z5Hh@c=BefVJ>2
@@ -542,7 +542,7 @@ R8
 vhex2dec
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 3hgL8kFi8Xj_Yi:1=WWEH0
 IZ[cH07SH;ac8d4In`:`S80
@@ -565,7 +565,7 @@ R8
 vmux_2_1
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 E^R42GLD=CLY98K5hWT1d0
 IO>EjooO=O]G6h:AYY1VLD3
@@ -587,14 +587,14 @@ R8
 !i113 1
 Xmxv_pkg
 R1
-R3
+R10
 !i10b 1
-!s100 0RoORYFWS@RT]FW=_7EO=1
-I@LDWc8JHG81a:Bk5n=ai03
-V@LDWc8JHG81a:Bk5n=ai03
+!s100 >BX5cZ==n:laTMAOG;X<i3
+I>kJP<bTiZjY=6YP<UX`Nz3
+V>kJP<bTiZjY=6YP<UX`Nz3
 S1
 R0
-w1558221216
+w1558230986
 8../src/mxv_pkg.sv
 F../src/mxv_pkg.sv
 L0 4
@@ -608,7 +608,7 @@ R8
 !i113 1
 vparity_bit_gen
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 DI99>K<zdXXOGJWMVUVaa0
@@ -617,7 +617,7 @@ R4
 !s105 parity_bit_generator_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/parity_bit_generator.sv
 F../src/uart/parity_bit_generator.sv
 L0 4
@@ -631,7 +631,7 @@ R8
 !i113 1
 vparity_error
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 a6oo>CaQe86NP<f3KN?CD0
@@ -640,7 +640,7 @@ R4
 !s105 parity_error_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/parity_error.sv
 F../src/uart/parity_error.sv
 L0 4
@@ -676,7 +676,7 @@ R8
 vpointer_rd
 R1
 R2
-R3
+R10
 !i10b 1
 !s100 d:e?@R[iHaj@5Fe_FV@In3
 IVBD<NInkebo^jhSKYB>DA0
@@ -699,7 +699,7 @@ R8
 vpointer_wr
 R1
 R2
-R3
+R10
 !i10b 1
 !s100 0daOUY_6?BJS>8BFfd2e?2
 IiXdTX3OSb9aOOX2TK3XLe3
@@ -722,7 +722,7 @@ R8
 vprocessor
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 ]KhoVAVL?1B^CE46k0m=Q1
 I:Mh<RS59Cin^@N[]A?34R2
@@ -745,15 +745,15 @@ R8
 vram_dc
 R1
 R2
-R3
+R10
 !i10b 1
-!s100 TzNP:=9Db94A>5MX>>5VC1
-IjUG1SIH4bG1cTMn;XQYm<2
+!s100 zo;8;I19<Aj6^N42K6zbo3
+I<gRdK7o3P7_Kfgi5V=nXX0
 R4
 !s105 ram_dc_sv_unit
 S1
 R0
-w1557429910
+w1558233484
 8../src/fifo/src/ram_dc.sv
 F../src/fifo/src/ram_dc.sv
 L0 6
@@ -767,7 +767,7 @@ R8
 !i113 1
 vregister
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 I`?_zOTBaR`MH<h81Wj623
@@ -791,7 +791,7 @@ R8
 vregister_1
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 g1oZSm?T?KVBLQSkDFBSe3
 I8Y@5lzZT?44^MHDf@^8jb2
@@ -814,7 +814,7 @@ R8
 vregister_8
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 Qdaf<QDDA@5_fZoJ^oMY?1
 ISI8V1?@Ea91jV<`8AfoAn0
@@ -837,7 +837,7 @@ R8
 vregister_en
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 JSJ_964Y]^a^9lTTBEU3i0
 IMh?EcBD_kF3J5Z@X0n2CF3
@@ -859,7 +859,7 @@ R8
 !i113 1
 vregister_en_dw_8
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 NnzJXSS=D4SQ<[JJ6DfHD0
@@ -882,7 +882,7 @@ R8
 !i113 1
 vshifter
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 d]26g^hLlHj;<9hBT16Ic0
@@ -891,7 +891,7 @@ R4
 !s105 shifter_sv_unit
 S1
 R0
-R11
+R12
 8../src/uart/shifter.sv
 F../src/uart/shifter.sv
 L0 4
@@ -906,7 +906,7 @@ R8
 vsipo
 R1
 R9
-R3
+R10
 !i10b 1
 !s100 ]_XCa^TXmL>X>nUgIf0?W2
 I2H`XhRTbzomL1=@SM1RZh0
@@ -928,7 +928,7 @@ R8
 !i113 1
 vsipo_dw_11
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 K6OR3l3oQf;V>j><mLNmo3
@@ -952,7 +952,7 @@ R8
 vsynch_ff
 R1
 R2
-R3
+R10
 !i10b 1
 !s100 ]oZ=GI?jC6FJ4KEnVAaUm0
 I9]RB^di4aUPjEjocj?G0k2
@@ -975,15 +975,15 @@ R8
 vTB_MxV
 R1
 R9
-R3
+R10
 !i10b 1
-!s100 VUWUH509W3c?`:FS;3BZl0
-IRH<NJRDe4B9H;L0Te1BIT1
+!s100 d<IebkgaZC2Pg2GeA>4SB3
+IP[lSG0zG2jG?B0e56K1S;3
 R4
 !s105 TB_MxV_sv_unit
 S1
 R0
-w1558225838
+w1558232346
 8TB_MxV.sv
 FTB_MxV.sv
 L0 4
@@ -999,15 +999,15 @@ n@t@b_@mx@v
 vTOP_fifo_ram_dc
 R1
 R2
-R3
+R10
 !i10b 1
-!s100 []SDR:j?WGDYHV>5zEHVO2
-IlZhPTB4P1A=QMU]WMM8oK2
+!s100 @<i0S12?hkN;]R:_V8KI;3
+I214=LW8D2zb]_U770?eVJ0
 R4
 !s105 TOP_fifo_ram_dc_sv_unit
 S1
 R0
-w1558220248
+w1558233383
 8../src/fifo/src/TOP_fifo_ram_dc.sv
 F../src/fifo/src/TOP_fifo_ram_dc.sv
 L0 4
@@ -1020,18 +1020,41 @@ R7
 R8
 !i113 1
 n@t@o@p_fifo_ram_dc
+vtop_full_mxv
+R1
+R9
+R10
+!i10b 1
+!s100 zY1^]ngc15L[]25FPnQGN0
+Im@?C3R:0XzNEbUmUXzb_A2
+R4
+!s105 top_full_mxv_sv_unit
+S1
+R0
+w1558232654
+8../src/top_full_mxv.sv
+F../src/top_full_mxv.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
 vtop_mxv
 R1
 R9
-R3
+R10
 !i10b 1
-!s100 d2MC]KIaj?g`QJV484KAi3
-I;azn26E9:lW2oM4>1_f561
+!s100 Q]Rm672>Ez^gNRF>Z[N=a1
+Ilz=LHe;lLRO9n<HTgc^kE0
 R4
 !s105 top_mxv_sv_unit
 S1
 R0
-w1558222662
+w1558232263
 8../src/mxv/src/top_mxv.sv
 F../src/mxv/src/top_mxv.sv
 L0 4
@@ -1045,16 +1068,16 @@ R8
 !i113 1
 vTOP_uart
 R1
-R10
+R11
 R3
 !i10b 1
-!s100 H_f^Ez^L@>M^;z;VaF3N90
-IfozPRd_m9U0^aY[5Xf=0z1
+!s100 cni:bRAO]5UTI35VT`G`j0
+I?L_Pm41c?[3KaKh?g1U?X1
 R4
 !s105 TOP_uart_sv_unit
 S1
 R0
-w1558004410
+w1558229503
 8../src/uart/TOP_uart.sv
 F../src/uart/TOP_uart.sv
 L0 4
@@ -1069,7 +1092,7 @@ R8
 n@t@o@p_uart
 vuart_rx
 R1
-R10
+R11
 R3
 !i10b 1
 !s100 aYXDb<ChUhAYIcdASQYHO2
@@ -1092,16 +1115,16 @@ R8
 !i113 1
 vuart_tx
 R1
-R10
+R11
 R3
 !i10b 1
-!s100 ^gMIN6?4z8QanG>T_D6VF2
-I]4ZZ8NMBDY=e9Gfn;1koT1
+!s100 B43>ao0>]@KefNS>>LldT0
+I<<h;MS3aZPNTc1bWM<jm^2
 R4
 !s105 uart_tx_sv_unit
 S1
 R0
-w1557674135
+w1558229469
 8../src/uart/uart_tx.sv
 F../src/uart/uart_tx.sv
 L0 2
@@ -1115,7 +1138,7 @@ R8
 !i113 1
 vxor_gate
 R1
-R3
+R10
 !i10b 1
 !s100 MPg>jY:cM@]cTi:`n1<z50
 IjcRdCjgzP5MA:[`]0d4lN3
