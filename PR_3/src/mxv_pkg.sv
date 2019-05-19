@@ -173,6 +173,35 @@ package mxv_pkg;
         logic   clear_comm;
         logic   deb;
     }ctrl_st;
+
+
+    typedef struct{
+        logic   clk_baud;
+        logic   tx;
+        logic   error_uart;
+
+        logic       rcv;
+        data_uart_t data;
+
+        logic      push_result;
+        logic      pop_result;
+        logic      push_vector;
+        logic      pop_vector;
+        push_pop_t push_matrix;
+        push_pop_t pop_matrix;
+        val_t      val;
+        sltr_4_t   dmx_v_sltr;
+        sltr_2_t   mx_reg_sltr; 
+        sltr_2_t   mx_a_sltr;
+        sltr_2_t   mx_b_sltr;
+        sltr_2_t   mx_c_sltr;
+        sltr_2_t   mx_d_sltr;
+
+        logic      ena_proc_a;
+        logic      ena_proc_b;
+        logic      ena_proc_c;
+        logic      ena_proc_d;
+    }top_mxv_st;
         
 endpackage
 `endif

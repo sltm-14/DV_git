@@ -1,5 +1,5 @@
- `ifndef COMPARISON_SV
-    `define COMPARISON_SV
+`ifndef COMPARISON_SV
+   `define COMPARISON_SV
 
 module comparison
 import mxv_pkg::*;
@@ -13,4 +13,4 @@ import mxv_pkg::*;
 assign match = (val_a == val_b)? 1:0;
 
 endmodule
- `endif  
+`endif  

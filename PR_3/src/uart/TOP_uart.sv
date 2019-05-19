@@ -14,7 +14,8 @@ import pkg_uart::*;
     output        tx,
     output        error,
     output data_t data,
-    output logic  rcv
+    output logic  rcv,
+    output logic  clk_baud
     
 );
 
@@ -38,7 +39,8 @@ uart_tx #(.BAUDRATE(BAUDRATE)) TX (
     .data(data),
     
     .tx(tx),
-    .ready(wires.ready)
+    .ready(wires.ready),
+    .clk_baud(clk_baud)
 );
 
 endmodule

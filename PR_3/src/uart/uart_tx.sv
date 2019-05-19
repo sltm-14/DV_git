@@ -11,7 +11,8 @@ import pkg_uart::*;
     input  data_t data, 
          
     output        tx,         
-    output        ready      
+    output        ready,
+    output logic  clk_baud      
 );
 
 st_uart_tx wires;
@@ -22,7 +23,7 @@ baudgen_tx #( .BAUDRATE(BAUDRATE)) BAUDGEN_TX (
 
   .clk_ena(wires.bauden),
 
-  .clk_out(wires.clk_baud)
+  .clk_out(clk_baud)
 );
 
 
@@ -48,7 +49,7 @@ shifter SHIFTER(
 
   .i_data  ({wires.par_bit,wires.rcv_data}),
   .i_load  (wires.load),
-  .i_ena   (wires.clk_baud),
+  .i_ena   (clk_baud),
 
   .o_shift_lsb (wires.shifter)
 );
@@ -59,7 +60,7 @@ counter COUNT(
   .rst(rst),
 
   .i_clear (wires.load),
-  .i_ena   (wires.clk_baud),
+  .i_ena   (clk_baud),
 
   .o_count(wires.count)
 );

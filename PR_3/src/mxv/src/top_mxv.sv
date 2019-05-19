@@ -20,7 +20,13 @@ import mxv_pkg::*;
 	input  sltr_2_t   mx_a_sltr,
 	input  sltr_2_t   mx_b_sltr,
 	input  sltr_2_t   mx_c_sltr,
-	input  sltr_2_t   mx_d_sltr
+	input  sltr_2_t   mx_d_sltr,
+	input  logic      ena_proc_a,
+    input  logic      ena_proc_b,
+    input  logic      ena_proc_c,
+    input  logic      ena_proc_d
+
+	output result_t fifo_result
 );
 
 mxv_st wires;
@@ -113,7 +119,7 @@ processor PROCESSOR_A
 	.clk (clk_rd),
 	.rst (rst),
 
-	.ena         (),
+	.ena         (ena_proc_a),
 	.matriz      (wires.matrix_0_4), 
 	.vector      (wires.dmx_prcsr_vctr[0]), 
 	.last_result (wires.result_mux), 
@@ -179,7 +185,7 @@ processor PROCESSOR_B
 	.clk (clk_rd),
 	.rst (rst),
 
-	.ena         (),
+	.ena         (ena_proc_b),
 	.matriz      (wires.matrix_1_5), 
 	.vector      (wires.dmx_prcsr_vctr[1]), 
 	.last_result (wires.result_reg_a), 
@@ -244,7 +250,7 @@ processor PROCESSOR_C
 	.clk (clk_wr),
 	.rst (rst),
 
-	.ena         (),
+	.ena         (ena_proc_c),
 	.matriz      (wires.matrix_2_6), 
 	.vector      (wires.dmx_prcsr_vctr[2]), 
 	.last_result (wires.result_reg_b), 
@@ -309,7 +315,7 @@ processor PROCESSOR_D
 	.clk (clk_wr),
 	.rst (rst),
 
-	.ena         (),
+	.ena         (ena_proc_d),
 	.matriz      (wires.matrix_3_7), 
 	.vector      (wires.dmx_prcsr_vctr[3]), 
 	.last_result (wires.result_reg_c), 
@@ -340,7 +346,7 @@ TOP_fifo_ram_dc FIFO_RESULT
 	.push    (push_result),
 	.pop     (pop_result),
 
-	.data_o  (wires.fifo_result),
+	.data_o  (fifo_result),
 	.empty   (),
 	.full    ()
 );

@@ -23,7 +23,6 @@ import mxv_pkg::*;
 	output sltr_2_t   mx_b_sltr,
 	output sltr_2_t   mx_c_sltr,
 	output sltr_2_t   mx_d_sltr,
-
 	output logic      ena_proc_a,
     output logic      ena_proc_b,
     output logic      ena_proc_c,
