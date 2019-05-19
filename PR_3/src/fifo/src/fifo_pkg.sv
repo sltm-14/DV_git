@@ -5,7 +5,7 @@ package fifo_pkg;
 
     localparam  W_DATA  = 15;
     localparam  W_ADDR  = 12;
-    localparam  W_DEPTH = 4;
+    localparam [3:0] W_DEPTH = 4;
 
     typedef logic [W_DATA-1:0]  data_t;
     typedef logic [W_ADDR-1:0]  addr_t;

@@ -18,11 +18,12 @@ import mxv_pkg::*;
 	push_pop_t push_matrix;
 	push_pop_t pop_matrix;
 	val_t      val;
-	sltr_8_t   dmx_val_sltr;
-	sltr_2_t   dmx_a_sltr;
-	sltr_2_t   dmx_b_sltr;
-	sltr_2_t   dmx_c_sltr;
-	sltr_2_t   dmx_d_sltr;
+	sltr_4_t   dmx_v_sltr;
+	sltr_2_t   mx_reg_sltr;
+	sltr_2_t   mx_a_sltr;
+	sltr_2_t   mx_b_sltr;
+	sltr_2_t   mx_c_sltr;
+	sltr_2_t   mx_d_sltr;
 
 ctrl_top CTRL_TOP(	
 	.clk   (clk),
@@ -38,11 +39,17 @@ ctrl_top CTRL_TOP(
 	.push_matrix  (push_matrix),
 	.pop_matrix   (pop_matrix),
 	.val          (val),
-	.dmx_val_sltr (dmx_val_sltr),
-	.dmx_a_sltr   (dmx_a_sltr),
-	.dmx_b_sltr   (dmx_b_sltr),
-	.dmx_c_sltr   (dmx_c_sltr),
-	.dmx_d_sltr   (dmx_d_sltr)
+	.dmx_v_sltr   (dmx_v_sltr),
+	.mx_reg_sltr  (mx_reg_sltr),
+	.mx_a_sltr   (mx_a_sltr),
+	.mx_b_sltr   (mx_b_sltr),
+	.mx_c_sltr   (mx_c_sltr),
+	.mx_d_sltr   (mx_d_sltr),
+	.ena_proc_a   (ena_proc_a),
+    .ena_proc_b   (ena_proc_b),
+    .ena_proc_c   (ena_proc_c),
+    .ena_proc_d   (ena_proc_d)
+
 
 );
 

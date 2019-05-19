@@ -22,14 +22,21 @@ import mxv_pkg::*;
 	output push_pop_t push_matrix,
 	output push_pop_t pop_matrix,
 	output val_t      val,
-	output sltr_8_t   dmx_val_sltr,
-	output sltr_2_t   dmx_a_sltr,
-	output sltr_2_t   dmx_b_sltr,
-	output sltr_2_t   dmx_c_sltr,
-	output sltr_2_t   dmx_d_sltr,
+	output sltr_4_t   dmx_v_sltr,
+    output sltr_2_t   mx_reg_sltr,
+
+	output sltr_2_t   mx_a_sltr,
+	output sltr_2_t   mx_b_sltr,
+	output sltr_2_t   mx_c_sltr,
+	output sltr_2_t   mx_d_sltr,
     output logic      sipo_ena,
 	output logic      clear_val,
-    output logic      clear_comm
+    output logic      clear_comm,
+
+    output logic      ena_proc_a,
+    output logic      ena_proc_b,
+    output logic      ena_proc_c,
+    output logic      ena_proc_d
 
 );
 	n_t            n          = 0;
@@ -508,16 +515,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_1:begin
@@ -529,16 +541,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FRAME_SIZE:begin
@@ -550,16 +567,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_2:begin
@@ -571,16 +593,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		COMMAND:begin
@@ -592,16 +619,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_3:begin
@@ -613,16 +645,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 1;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		SIZE:begin
@@ -634,16 +671,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_SZ:begin
@@ -655,16 +697,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M0:begin
@@ -678,17 +725,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0001;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0001;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
                 push_matrix[0]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
                 
     		end
 
@@ -701,16 +753,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M1:begin
@@ -722,17 +779,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
                 push_matrix  = 8'b0000_0000;    // push_pop_t
 				push_matrix[1]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_M1:begin
@@ -744,16 +806,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M2:begin
@@ -765,17 +832,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
                 push_matrix[2]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_M2:begin
@@ -787,16 +859,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr  = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M3:begin
@@ -808,17 +885,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
                 push_matrix[3]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_M3:begin
@@ -830,16 +912,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M4:begin
@@ -851,17 +938,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
                 push_matrix[4]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_M4:begin
@@ -873,16 +965,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M5:begin
@@ -894,17 +991,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
                 push_matrix[5]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_M5:begin
@@ -916,16 +1018,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M6:begin
@@ -937,17 +1044,22 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
                 push_matrix[6]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_M6:begin
@@ -959,16 +1071,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_M7:begin
@@ -980,11 +1097,12 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000; // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000; // sltr_8_t
 				push_matrix  = 8'b0000_0000; // push_pop_t
                 push_matrix[1]  = cc_ovf;    // push_pop_t
 				pop_matrix   = 8'b0000_0000; // push_pop_t
@@ -1002,16 +1120,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		FIFO_V:begin
@@ -1023,16 +1146,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = cc_ovf;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		UC_V:begin
@@ -1045,16 +1173,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		EF:begin
@@ -1066,16 +1199,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 0;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     		CLEAN: begin
@@ -1087,16 +1225,21 @@ import mxv_pkg::*;
 				pop_result   = 0;    // logic
 				push_vector  = 0;    // logic
 				pop_vector   = 0;    // logic
-				dmx_a_sltr   = 0;    // sltr_2_t
-				dmx_b_sltr   = 0;    // sltr_2_t
-				dmx_c_sltr   = 0;    // sltr_2_t
-                dmx_d_sltr   = 0;    // sltr_2_t
-				dmx_val_sltr = 8'b0000_0000;    // sltr_8_t
+                mx_reg_sltr = 0;
+				mx_a_sltr   = 0;    // sltr_2_t
+				mx_b_sltr   = 0;    // sltr_2_t
+				mx_c_sltr   = 0;    // sltr_2_t
+                mx_d_sltr   = 0;    // sltr_2_t
+				dmx_v_sltr = 8'b0000_0000;    // sltr_8_t
 				push_matrix  = 8'b0000_0000;    // push_pop_t
 				pop_matrix   = 8'b0000_0000;    // push_pop_t
                 sipo_ena     = 0;               // logic
                 clear_val    = 0;               // logic
                 clear_comm   = 1;               // logic
+                ena_proc_a   = 0;
+                ena_proc_b   = 0;
+                ena_proc_c   = 0;
+                ena_proc_d   = 0;
     		end
 
     	endcase

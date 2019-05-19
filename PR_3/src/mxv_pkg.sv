@@ -57,13 +57,13 @@ package mxv_pkg;
     typedef logic [DW-1:0]       data_t;
     typedef logic [DIW-1:0]      data_i_t;
     typedef logic [RW-1:0]       result_t;
-    typedef logic [MUX_IN_2-1:0] mux_2_1_t [DIW-1:0];
+    typedef logic [DIW-1:0]      mux_2_1_t;
     typedef logic [SLTR_2-1:0]   sltr_2_t;
     typedef logic [DMX_IN_8-1:0] dmx_1_8_w4b_t [DIW-1:0];
     typedef logic [SLTR_8-1:0]   sltr_8_t;
     typedef logic [DMX_IN_8-1:0] dmx_1_8_w1b_t;
     typedef logic [SLTR_4-1:0]   sltr_4_t;
-    typedef logic [DMX_IN_4-1:0] dmx_1_4_w4b_t [DIW-1:0];
+    typedef logic [DIW-1:0] dmx_1_4_w4b_t [DMX_IN_4-1:0] ;
 
    
     typedef logic [DMX_IN_4-1:0] dmx_1_2_w4b_t [DHEX-1:0];
@@ -76,7 +76,7 @@ package mxv_pkg;
     typedef logic [DHEX-1:0]     data_h2d_reg_t  [1:0];
 
     typedef logic [CW-1:0]       count_t;
-    typedef logic [NW-1]         n_t;
+    typedef logic [NW-1:0]       n_t;
 
     typedef logic [COMW -1:0]    command_t;
     typedef logic [FW-1:0]       frame_size_t;
@@ -104,18 +104,12 @@ package mxv_pkg;
         data_t        matrix_val;
         sltr_8_t      dmx_sltr;
 
-        dmx_1_8_w4b_t dmx_fifo;
-        dmx_1_8_w1b_t dmx_push;
-        dmx_1_8_w1b_t dmx_pop;
+     
 
         data_t        vector_val;
         sltr_4_t      dmx_4_sltr;
         data_i_t      fifo_dmx_vctr;
         dmx_1_4_w4b_t dmx_prcsr_vctr;
-
-        data_i_t      fifo_vector;
-        logic         push_vector;
-        logic         pop_vector;
 
         data_t        data_fifo_0;
         data_t        data_fifo_1;
@@ -141,11 +135,7 @@ package mxv_pkg;
         result_t      result_d;
         result_t      result_reg_d;
 
-        logic         mux_x_r_sltr;
-        logic         mux_0_4_sltr;
-        logic         mux_1_5_sltr;
-        logic         mux_2_6_sltr;
-        logic         mux_3_7_sltr;
+
 
         logic         ena_prcs_a;
         logic         ena_prcs_b;
