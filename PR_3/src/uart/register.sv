@@ -3,13 +3,15 @@
 
 module register 
 import pkg_uart::*;
-(
-	input  clk,
-	input  rst,
+#(	
+	parameter SDW   = 8  )
+ (
+	input 			clk,
+	input 			rst,
 
-	input  logic i_val,
+	input logic [SDW-1:0]	i_val,
 
-	output logic o_val
+	output logic [SDW-1:0] 	o_val
 );
 
 

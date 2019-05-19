@@ -4,7 +4,7 @@
 module baudgen_tx
 import pkg_uart::*; 
 #( 
-  parameter BAUDRATE = (125000000/115200) 
+  parameter BAUDRATE = (50000000/115200) 
 )(
   input   rst,      
   input   clk,        

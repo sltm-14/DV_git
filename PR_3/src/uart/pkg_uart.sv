@@ -3,26 +3,24 @@
 	 
 package pkg_uart;
 
-localparam  DW  = 8;
-localparam  DW1 = DW + 1;
-localparam  FW  = 11;
+localparam  DW  		= 8;
+localparam  DW1 		= DW + 1;
 
-localparam BAUDRATE = (125000000/115200);
+localparam BAUDRATE 	= (50000000/115200);
 
-localparam BW  = $clog2(BAUDRATE);
-localparam BWH = (BAUDRATE >> 1);
+localparam BW  		= $clog2(BAUDRATE);
+localparam BWH 		= (BAUDRATE >> 1);
 
-typedef logic [3:0]     count_t;
-typedef logic [DW1+1:0] rcv_data_t;
-typedef logic [DW-1:0]  data_t;
+typedef logic [3:0]     	count_t;
+typedef logic [DW1+1:0] 	rcv_data_t;
+typedef logic [DW-1:0]  	data_t;
 
-typedef logic [DW1-1:0] data_tx_t;
-typedef logic [DW1+2:0] trn_data_t;
-typedef logic [FW-1:0]  frame_t;
+typedef logic [DW1-1:0] 	data_tx_t;
+typedef logic [DW1+2:0] 	trn_data_t;
 
 
-typedef enum logic [2:0] {IDLE, RECV,  LOAD, PBIT,  READY} state_rx_t;	/* enum for states */
-typedef enum logic [1:0] {IDLE_TX, START, TRANS}          state_tx_t;	/* enum for states */
+typedef enum logic [2:0] {IDLE, RECV,  LOAD, PBIT,  READY} 	state_rx_t;	/* enum for states */
+typedef enum logic [1:0] {IDLE_TX, START, TRANS}       		state_tx_t;	/* enum for states */
 				 
 
 typedef struct{

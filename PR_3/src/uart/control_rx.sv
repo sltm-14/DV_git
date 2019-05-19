@@ -29,9 +29,9 @@ logic pbit   = '0;
 state_rx_t state = IDLE;
 
 
-always @(posedge clk, posedge rst) begin
+always @(posedge clk, negedge rst) begin
 
-    if (!rst)
+    if (~rst)
         state <= IDLE;
     else
 

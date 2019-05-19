@@ -25,7 +25,7 @@ logic ready  = '0;
 state_tx_t state = IDLE_TX;
 
 
-always @(posedge clk, posedge rst) begin
+always @(posedge clk, negedge rst) begin
 
     if (!rst)
         state <= IDLE_TX;

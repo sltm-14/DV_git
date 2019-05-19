@@ -4,43 +4,35 @@
 module TOP_uart 
 import pkg_uart::*;
 #( 
-    parameter BAUDRATE = (125000000/115200)
+    parameter BAUDRATE = (50000000/115200)
 )(
     input  clk, 
     input  rstn,    
-
-    input         rx,          
+    input  rx,          
     
-    output        tx,
-    output        error,
-    output data_t data,
-    output logic  rcv,
-    output logic  clk_baud
-    
+    output tx,
+    output error
 );
 
 st_uart_top wires;
-
+if_uart		top_if();
 
 uart_rx #(.BAUDRATE(BAUDRATE)) RX (
     .clk(clk),
     .rst(rstn),
     .rx(rx),
-       
-    .rcv(rcv),
-    .data(data),
+
+	 .rx_if(top_if),
     .error(error)
 );
 
 uart_tx #(.BAUDRATE(BAUDRATE)) TX ( 
     .clk(clk),
     .rst(rstn),
-    .start(rcv),
-    .data(data),
-    
+
+	 .tx_if(top_if),    
     .tx(tx),
-    .ready(wires.ready),
-    .clk_baud(clk_baud)
+    .ready(wires.ready)
 );
 
 endmodule
