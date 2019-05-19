@@ -1,0 +1,14 @@
+
+State Machine - |TOP_uart|uart_tx:TX|control_tx:CONTROL|state
+Name state.IDLE_TX state.TRANS state.START 
+state.IDLE_TX 0 0 0 
+state.START 1 0 1 
+state.TRANS 1 1 0 
+
+State Machine - |TOP_uart|uart_rx:RX|control_rx:CONTROL|state
+Name state.PBIT state.LOAD state.RECV state.IDLE state.READY 
+state.IDLE 0 0 0 0 0 
+state.RECV 0 0 1 1 0 
+state.LOAD 0 1 0 1 0 
+state.PBIT 1 0 0 1 0 
+state.READY 0 0 0 1 1 

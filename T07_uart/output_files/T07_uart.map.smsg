@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at TOP_uart.sv(11): object "rx" differs only in case from object "RX" in the same scope File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv Line: 11
+Info (10281): Verilog HDL Declaration information at TOP_uart.sv(13): object "tx" differs only in case from object "TX" in the same scope File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv Line: 13

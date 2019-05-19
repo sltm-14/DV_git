@@ -1,0 +1,603 @@
+Analysis & Synthesis report for T07_uart
+Sun May 19 12:35:30 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |TOP_uart|uart_tx:TX|control_tx:CONTROL|state
+  9. State Machine - |TOP_uart|uart_rx:RX|control_rx:CONTROL|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |TOP_uart
+ 15. Parameter Settings for User Entity Instance: uart_rx:RX
+ 16. Parameter Settings for User Entity Instance: uart_rx:RX|register:REG_RX
+ 17. Parameter Settings for User Entity Instance: uart_rx:RX|baudgen_rx:BAUDGEN_RX
+ 18. Parameter Settings for User Entity Instance: uart_rx:RX|sipo:SIPO_DATA
+ 19. Parameter Settings for User Entity Instance: uart_rx:RX|register_en:REG_DATA
+ 20. Parameter Settings for User Entity Instance: uart_tx:TX
+ 21. Parameter Settings for User Entity Instance: uart_tx:TX|baudgen_tx:BAUDGEN_TX
+ 22. Parameter Settings for User Entity Instance: uart_tx:TX|register_en:REG_DATA
+ 23. Parameter Settings for User Entity Instance: uart_tx:TX|register:REG_RX
+ 24. Port Connectivity Checks: "uart_tx:TX|shifter:SHIFTER"
+ 25. Port Connectivity Checks: "uart_tx:TX"
+ 26. Port Connectivity Checks: "uart_rx:RX|sipo:SIPO_DATA"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun May 19 12:35:30 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; T07_uart                                    ;
+; Top-level Entity Name              ; TOP_uart                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 105                                         ;
+;     Total combinational functions  ; 77                                          ;
+;     Dedicated logic registers      ; 72                                          ;
+; Total registers                    ; 72                                          ;
+; Total pins                         ; 5                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; TOP_uart           ; T07_uart           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; src/uart_tx.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_tx.sv              ;         ;
+; src/uart_rx.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv              ;         ;
+; src/TOP_uart.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv             ;         ;
+; src/sipo.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/sipo.sv                 ;         ;
+; src/shifter.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/shifter.sv              ;         ;
+; src/register_en.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/register_en.sv          ;         ;
+; src/register.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/register.sv             ;         ;
+; src/pkg_uart.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/pkg_uart.sv             ;         ;
+; src/parity_error.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/parity_error.sv         ;         ;
+; src/parity_bit_generator.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/parity_bit_generator.sv ;         ;
+; src/if_uart.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/if_uart.sv              ;         ;
+; src/counter.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/counter.sv              ;         ;
+; src/control_tx.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/control_tx.sv           ;         ;
+; src/control_rx.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/control_rx.sv           ;         ;
+; src/baudgen_tx.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_tx.sv           ;         ;
+; src/baudgen_rx.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_rx.sv           ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 105       ;
+;                                             ;           ;
+; Total combinational functions               ; 77        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 26        ;
+;     -- 3 input functions                    ; 15        ;
+;     -- <=2 input functions                  ; 36        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 61        ;
+;     -- arithmetic mode                      ; 16        ;
+;                                             ;           ;
+; Total registers                             ; 72        ;
+;     -- Dedicated logic registers            ; 72        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 5         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 72        ;
+; Total fan-out                               ; 493       ;
+; Average fan-out                             ; 3.10      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name    ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+----------------+--------------+
+; |TOP_uart                         ; 77 (1)              ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |TOP_uart                                      ; TOP_uart       ; work         ;
+;    |uart_rx:RX|                   ; 27 (0)              ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX                           ; uart_rx        ; work         ;
+;       |baudgen_rx:BAUDGEN_RX|     ; 14 (14)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|baudgen_rx:BAUDGEN_RX     ; baudgen_rx     ; work         ;
+;       |control_rx:CONTROL|        ; 5 (5)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|control_rx:CONTROL        ; control_rx     ; work         ;
+;       |counter:COUNT|             ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|counter:COUNT             ; counter        ; work         ;
+;       |parity_error:BIT_ERROR|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|parity_error:BIT_ERROR    ; parity_error   ; work         ;
+;       |register:REG_RX|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|register:REG_RX           ; register       ; work         ;
+;       |register_en:REG_DATA|      ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|register_en:REG_DATA      ; register_en    ; work         ;
+;       |sipo:SIPO_DATA|            ; 0 (0)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_rx:RX|sipo:SIPO_DATA            ; sipo           ; work         ;
+;    |uart_tx:TX|                   ; 49 (0)              ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX                           ; uart_tx        ; work         ;
+;       |baudgen_tx:BAUDGEN_TX|     ; 25 (25)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|baudgen_tx:BAUDGEN_TX     ; baudgen_tx     ; work         ;
+;       |control_tx:CONTROL|        ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|control_tx:CONTROL        ; control_tx     ; work         ;
+;       |counter:COUNT|             ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|counter:COUNT             ; counter        ; work         ;
+;       |parity_bit_gen:PARBIT_GEN| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|parity_bit_gen:PARBIT_GEN ; parity_bit_gen ; work         ;
+;       |register:REG_RX|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|register:REG_RX           ; register       ; work         ;
+;       |register_en:REG_DATA|      ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|register_en:REG_DATA      ; register_en    ; work         ;
+;       |shifter:SHIFTER|           ; 13 (13)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_uart|uart_tx:TX|shifter:SHIFTER           ; shifter        ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------+
+; State Machine - |TOP_uart|uart_tx:TX|control_tx:CONTROL|state ;
++---------------+---------------+-------------+-----------------+
+; Name          ; state.IDLE_TX ; state.TRANS ; state.START     ;
++---------------+---------------+-------------+-----------------+
+; state.IDLE_TX ; 0             ; 0           ; 0               ;
+; state.START   ; 1             ; 0           ; 1               ;
+; state.TRANS   ; 1             ; 1           ; 0               ;
++---------------+---------------+-------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |TOP_uart|uart_rx:RX|control_rx:CONTROL|state                 ;
++-------------+------------+------------+------------+------------+-------------+
+; Name        ; state.PBIT ; state.LOAD ; state.RECV ; state.IDLE ; state.READY ;
++-------------+------------+------------+------------+------------+-------------+
+; state.IDLE  ; 0          ; 0          ; 0          ; 0          ; 0           ;
+; state.RECV  ; 0          ; 0          ; 1          ; 1          ; 0           ;
+; state.LOAD  ; 0          ; 1          ; 0          ; 1          ; 0           ;
+; state.PBIT  ; 1          ; 0          ; 0          ; 1          ; 0           ;
+; state.READY ; 0          ; 0          ; 0          ; 1          ; 1           ;
++-------------+------------+------------+------------+------------+-------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; uart_rx:RX|control_rx:CONTROL|state~4 ; Lost fanout        ;
+; uart_rx:RX|control_rx:CONTROL|state~5 ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 72    ;
+; Number of registers using Synchronous Clear  ; 3     ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 63    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 43    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; uart_tx:TX|shifter:SHIFTER|r_shifter[0] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[1] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[2] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[3] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[4] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[5] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[6] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[7] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[8] ; 1       ;
+; uart_tx:TX|shifter:SHIFTER|r_shifter[9] ; 1       ;
+; Total number of inverted registers = 10 ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_uart|uart_rx:RX|counter:COUNT|r_count[0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_uart|uart_tx:TX|counter:COUNT|r_count[0]         ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |TOP_uart|uart_rx:RX|baudgen_rx:BAUDGEN_RX|counter[4] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |TOP_uart|uart_tx:TX|baudgen_tx:BAUDGEN_TX|counter[6] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP_uart|uart_tx:TX|shifter:SHIFTER|r_shifter[0]     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TOP_uart|uart_tx:TX|shifter:SHIFTER|r_shifter[2]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |TOP_uart ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX|register:REG_RX ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; SDW            ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX|baudgen_rx:BAUDGEN_RX ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX|sipo:SIPO_DATA ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; SDW            ; 11    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX|register_en:REG_DATA ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; SDW            ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_tx:TX ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_tx:TX|baudgen_tx:BAUDGEN_TX ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_tx:TX|register_en:REG_DATA ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; SDW            ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_tx:TX|register:REG_RX ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; SDW            ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_tx:TX|shifter:SHIFTER"                                                                       ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_shift_lsb[11..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_tx:TX"                                                                          ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_rx:RX|sipo:SIPO_DATA"                                                                 ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_val[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_val[10]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 72                          ;
+;     CLR               ; 11                          ;
+;     CLR SLD           ; 9                           ;
+;     ENA CLR           ; 40                          ;
+;     ENA CLR SCLR      ; 3                           ;
+;     plain             ; 9                           ;
+; cycloneiii_lcell_comb ; 77                          ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 61                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 26                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.95                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sun May 19 12:35:11 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off T07_uart -c T07_uart
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart_tx.sv
+    Info (12023): Found entity 1: uart_tx File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_tx.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file src/uart_rx.sv
+    Info (12023): Found entity 1: uart_rx File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/top_uart.sv
+    Info (12023): Found entity 1: TOP_uart File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/sipo.sv
+    Info (12023): Found entity 1: sipo File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/sipo.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/shifter.sv
+    Info (12023): Found entity 1: shifter File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/shifter.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/register_en.sv
+    Info (12023): Found entity 1: register_en File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/register_en.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/register.sv
+    Info (12023): Found entity 1: register File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/register.sv Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file src/pkg_uart.sv
+    Info (12022): Found design unit 1: pkg_uart (SystemVerilog) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/pkg_uart.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/parity_error.sv
+    Info (12023): Found entity 1: parity_error File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/parity_error.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/parity_bit_generator.sv
+    Info (12023): Found entity 1: parity_bit_gen File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/parity_bit_generator.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/if_uart.sv
+    Info (12023): Found entity 1: if_uart File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/if_uart.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file src/counter.sv
+    Info (12023): Found entity 1: counter File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/counter.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/control_tx.sv
+    Info (12023): Found entity 1: control_tx File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/control_tx.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/control_rx.sv
+    Info (12023): Found entity 1: control_rx File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/control_rx.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/baudgen_tx.sv
+    Info (12023): Found entity 1: baudgen_tx File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_tx.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file src/baudgen_rx.sv
+    Info (12023): Found entity 1: baudgen_rx File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_rx.sv Line: 4
+Info (12127): Elaborating entity "TOP_uart" for the top level hierarchy
+Info (12128): Elaborating entity "if_uart" for hierarchy "if_uart:top_if" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv Line: 18
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:RX" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv Line: 27
+Info (12128): Elaborating entity "register" for hierarchy "uart_rx:RX|register:REG_RX" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 24
+Info (12128): Elaborating entity "baudgen_rx" for hierarchy "uart_rx:RX|baudgen_rx:BAUDGEN_RX" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at baudgen_rx.sv(24): truncated value with size 32 to match size of target (9) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_rx.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at baudgen_rx.sv(26): truncated value with size 32 to match size of target (9) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_rx.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at baudgen_rx.sv(30): truncated value with size 32 to match size of target (1) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_rx.sv Line: 30
+Info (12128): Elaborating entity "counter" for hierarchy "uart_rx:RX|counter:COUNT" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at counter.sv(24): truncated value with size 32 to match size of target (4) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/counter.sv Line: 24
+Info (12128): Elaborating entity "sipo" for hierarchy "uart_rx:RX|sipo:SIPO_DATA" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 55
+Info (12128): Elaborating entity "register_en" for hierarchy "uart_rx:RX|register_en:REG_DATA" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 66
+Info (12128): Elaborating entity "parity_bit_gen" for hierarchy "uart_rx:RX|parity_bit_gen:PARBIT_GEN" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 72
+Info (12128): Elaborating entity "parity_error" for hierarchy "uart_rx:RX|parity_error:BIT_ERROR" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at parity_error.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/parity_error.sv Line: 14
+Info (12128): Elaborating entity "control_rx" for hierarchy "uart_rx:RX|control_rx:CONTROL" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_rx.sv Line: 95
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:TX" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/TOP_uart.sv Line: 36
+Info (12128): Elaborating entity "baudgen_tx" for hierarchy "uart_tx:TX|baudgen_tx:BAUDGEN_TX" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_tx.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at baudgen_tx.sv(23): truncated value with size 32 to match size of target (9) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_tx.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at baudgen_tx.sv(26): truncated value with size 32 to match size of target (9) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_tx.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at baudgen_tx.sv(29): truncated value with size 32 to match size of target (1) File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/baudgen_tx.sv Line: 29
+Info (12128): Elaborating entity "shifter" for hierarchy "uart_tx:TX|shifter:SHIFTER" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_tx.sv Line: 53
+Info (12128): Elaborating entity "control_tx" for hierarchy "uart_tx:TX|control_tx:CONTROL" File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/uart_tx.sv Line: 89
+Info (13000): Registers with preset signals will power-up high File: C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/src/shifter.sv Line: 26
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/output_files/T07_uart.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 105 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 619 megabytes
+    Info: Processing ended: Sun May 19 12:35:30 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:37
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/C18561/Documents/Code/SV/REPOSITORIO/DV_git/T07_uart/output_files/T07_uart.map.smsg.
+
+

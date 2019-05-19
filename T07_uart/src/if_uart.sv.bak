@@ -1,0 +1,13 @@
+`ifndef IF_UART_SV
+    `define IF_UART_SV
+
+import pkg_uart::*;
+
+interface if_uart ();
+
+
+
+
+endinterface
+	 
+`endif
