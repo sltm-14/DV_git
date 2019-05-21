@@ -21,7 +21,7 @@ Z4 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z5 !s108 1558199144.462000
+Z5 !s108 1558408879.341000
 Z6 !s107 TB_mdr.sv|../src/verification2.sv|../src/sipo.sv|../src/clkDivider.sv|../src/mux_output.sv|../src/final_values.sv|../src/register_en.sv|../src/final_quotation.sv|../src/final_remainder.sv|../src/mux_data.sv|../src/mux_2powerN2.sv|../src/alu_mult.sv|../src/counter2.sv|../src/operation_mult.sv|../src/selector_op.sv|../src/verification.sv|../src/core.sv|../src/quotation_add.sv|../src/rem_full_reg.sv|../src/quotation_reg.sv|../src/divisor_reg.sv|../src/sub.sv|../src/remainder_reg.sv|../src/division.sv|../src/final_product.sv|../src/multiplicand_reg.sv|../src/shift_right_sign.sv|../src/product_reg.sv|../src/multiplication.sv|../src/control.sv|../src/mdr.sv|../src/pipo.sv|../src/counter.sv|../src/and_gate.sv|../src/demux_2powerN.sv|../src/multiplier_reg.sv|../src/mux_2powerN.sv|../src/or_gate.sv|../src/register.sv|../src/root_op_calc.sv|../src/shift_reg_right_data.sv|../src/shift_left_quotient.sv|../src/shift_left.sv|../src/square_root.sv|../src/add.sv|../src/add_con.sv|../src/bin_to_7seg.sv|../src/bin_to_thto.sv|../src/complement_a2.sv|../src/displays.sv|../src/pkg_bin_to_thto.sv|../src/TOP_bcd_7seg.sv|../src/pkg_system_mdr.sv|
 Z7 !s90 -reportprogress|300|-f|files.f|
 !s101 -O0
